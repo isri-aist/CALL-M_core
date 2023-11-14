@@ -20,9 +20,15 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+
+### Custom Interfaces 
+rosidl_generate_interfaces(${PROJECT_NAME}
+        "msg/StateVector.msg"
+        )
+
+#keyboard_control_node
+add_executable(keyboard_control_node src/keyboard_control.cpp)
+ament_target_dependencies(keyboard_control_node rclcpp std_msgs)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -34,5 +40,10 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+#install nodes
+install(TARGETS
+  keyboard_control_node
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

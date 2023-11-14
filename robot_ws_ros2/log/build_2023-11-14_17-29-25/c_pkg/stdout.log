@@ -1,0 +1,10 @@
+[  4%] Built target c_pkg__cpp
+[ 16%] Built target c_pkg__rosidl_generator_c
+[ 20%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control.cpp.o[0m
+[ 33%] Built target c_pkg__rosidl_typesupport_cpp
+[ 45%] Built target c_pkg__rosidl_typesupport_introspection_c
+[ 58%] Built target c_pkg__rosidl_typesupport_c
+[ 70%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[ 83%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[ 95%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[ 95%] Built target c_pkg

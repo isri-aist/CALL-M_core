@@ -1,0 +1,225 @@
+[0.000000] (-) TimerEvent: {}
+[0.000625] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict([('c_pkg', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg')])}
+[0.000694] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.099804] (-) TimerEvent: {}
+[0.200446] (-) TimerEvent: {}
+[0.204023] (c_pkg) Command: {'cmd': ['/usr/bin/ctest', '-C', 'Release', '-D', 'ExperimentalTest', '--no-compress-output', '-V', '--force-new-ctest-process'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1815'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_composition/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1591'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '12128'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:49244'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1853,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1853'), ('INVOCATION_ID', '2b063b96c217489ea0b73909a591a451'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_subscriber:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_service:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_server:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_executors:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_multithreaded_executor:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_timer:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_service:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_composition:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_action_server:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_action_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:2f06330b-9821-4d99-8a56-83f1fff8a47b'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_subscriber:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_subscriber/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_service:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_service/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_client/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_action_server:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_server/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_action_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_client/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_executors:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_executors/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_multithreaded_executor:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_timer:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_service:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_composition:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_action_server:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_action_client')]), 'shell': False}
+[0.211602] (c_pkg) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini\n'}
+[0.212094] (c_pkg) StdoutLine: {'line': b'Parse Config file:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini\n'}
+[0.212300] (c_pkg) StdoutLine: {'line': b'   Site: jrlintern-XPS-15-9560\n'}
+[0.212379] (c_pkg) StdoutLine: {'line': b'   Build name: (empty)\n'}
+[0.212447] (c_pkg) StdoutLine: {'line': b' Add coverage exclude regular expressions.\n'}
+[0.212512] (c_pkg) StdoutLine: {'line': b'Create new tag: 20231114-0739 - Experimental\n'}
+[0.212623] (c_pkg) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini\n'}
+[0.212706] (c_pkg) StdoutLine: {'line': b'Parse Config file:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini\n'}
+[0.212847] (c_pkg) StdoutLine: {'line': b'Test project /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg\n'}
+[0.212912] (c_pkg) StdoutLine: {'line': b'Constructing a list of tests\n'}
+[0.212986] (c_pkg) StdoutLine: {'line': b'Done constructing a list of tests\n'}
+[0.213046] (c_pkg) StdoutLine: {'line': b'Updating test list for fixtures\n'}
+[0.213105] (c_pkg) StdoutLine: {'line': b'Added 0 tests to meet fixture requirements\n'}
+[0.213189] (c_pkg) StdoutLine: {'line': b'Checking test dependency graph...\n'}
+[0.213250] (c_pkg) StdoutLine: {'line': b'Checking test dependency graph end\n'}
+[0.213311] (c_pkg) StdoutLine: {'line': b'test 1\n'}
+[0.213372] (c_pkg) StdoutLine: {'line': b'    Start 1: copyright\n'}
+[0.213445] (c_pkg) StdoutLine: {'line': b'\n'}
+[0.213506] (c_pkg) StdoutLine: {'line': b'1: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_copyright/copyright.txt" "--command" "/opt/ros/foxy/bin/ament_copyright" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml"\n'}
+[0.213576] (c_pkg) StdoutLine: {'line': b'1: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg\n'}
+[0.213638] (c_pkg) StdoutLine: {'line': b'1: Test timeout computed to be: 60\n'}
+[0.277256] (c_pkg) StdoutLine: {'line': b"1: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':\n"}
+[0.277427] (c_pkg) StdoutLine: {'line': b'1:  - /opt/ros/foxy/bin/ament_copyright --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml\n'}
+[0.300533] (-) TimerEvent: {}
+[0.400838] (-) TimerEvent: {}
+[0.501131] (-) TimerEvent: {}
+[0.507596] (c_pkg) StdoutLine: {'line': b'1: src/keyboard_control.cpp: could not find copyright notice\n'}
+[0.507745] (c_pkg) StdoutLine: {'line': b'1: 1 errors, checked 1 files\n'}
+[0.519073] (c_pkg) StdoutLine: {'line': b'1: -- run_test.py: return code 1\n'}
+[0.519381] (c_pkg) StdoutLine: {'line': b"1: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml'\n"}
+[0.527627] (c_pkg) StdoutLine: {'line': b'1/6 Test #1: copyright ........................***Failed    0.31 sec\n'}
+[0.527965] (c_pkg) StdoutLine: {'line': b'test 2\n'}
+[0.528064] (c_pkg) StdoutLine: {'line': b'    Start 2: cppcheck\n'}
+[0.528168] (c_pkg) StdoutLine: {'line': b'\n'}
+[0.528231] (c_pkg) StdoutLine: {'line': b'2: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cppcheck.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/foxy/bin/ament_cppcheck" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cppcheck.xunit.xml"\n'}
+[0.528346] (c_pkg) StdoutLine: {'line': b'2: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg\n'}
+[0.528453] (c_pkg) StdoutLine: {'line': b'2: Test timeout computed to be: 300\n'}
+[0.598761] (c_pkg) StdoutLine: {'line': b"2: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':\n"}
+[0.598933] (c_pkg) StdoutLine: {'line': b'2:  - /opt/ros/foxy/bin/ament_cppcheck --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cppcheck.xunit.xml\n'}
+[0.601243] (-) TimerEvent: {}
+[0.701546] (-) TimerEvent: {}
+[0.801865] (-) TimerEvent: {}
+[0.838069] (c_pkg) StdoutLine: {'line': b'2: No problems found\n'}
+[0.854890] (c_pkg) StdoutLine: {'line': b'2: -- run_test.py: return code 0\n'}
+[0.855331] (c_pkg) StdoutLine: {'line': b"2: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cppcheck.xunit.xml'\n"}
+[0.865990] (c_pkg) StdoutLine: {'line': b'2/6 Test #2: cppcheck .........................   Passed    0.34 sec\n'}
+[0.866211] (c_pkg) StdoutLine: {'line': b'test 3\n'}
+[0.866325] (c_pkg) StdoutLine: {'line': b'    Start 3: cpplint\n'}
+[0.866455] (c_pkg) StdoutLine: {'line': b'\n'}
+[0.866565] (c_pkg) StdoutLine: {'line': b'3: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cpplint.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cpplint/cpplint.txt" "--command" "/opt/ros/foxy/bin/ament_cpplint" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cpplint.xunit.xml"\n'}
+[0.866742] (c_pkg) StdoutLine: {'line': b'3: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg\n'}
+[0.866815] (c_pkg) StdoutLine: {'line': b'3: Test timeout computed to be: 120\n'}
+[0.901983] (-) TimerEvent: {}
+[0.935874] (c_pkg) StdoutLine: {'line': b"3: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':\n"}
+[0.936110] (c_pkg) StdoutLine: {'line': b'3:  - /opt/ros/foxy/bin/ament_cpplint --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cpplint.xunit.xml\n'}
+[1.002099] (-) TimerEvent: {}
+[1.102361] (-) TimerEvent: {}
+[1.179574] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]\n'}
+[1.179887] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:3:  Found C system header after C++ system header. Should be: keyboard_control.h, c system, c++ system, other.  [build/include_order] [4]\n'}
+[1.180201] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:4:  Found C system header after C++ system header. Should be: keyboard_control.h, c system, c++ system, other.  [build/include_order] [4]\n'}
+[1.180291] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:13:  Should have a space between // and comment  [whitespace/comments] [4]\n'}
+[1.180362] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:14:  Lines should be <= 100 characters long  [whitespace/line_length] [2]\n'}
+[1.180429] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:15:  Should have a space between // and comment  [whitespace/comments] [4]\n'}
+[1.180501] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:16:  Lines should be <= 100 characters long  [whitespace/line_length] [2]\n'}
+[1.180566] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:17:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]\n'}
+[1.180632] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:20:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]\n'}
+[1.180700] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:20:  Should have a space between // and comment  [whitespace/comments] [4]\n'}
+[1.180764] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:23:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]\n'}
+[1.180827] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:24:  Should have a space between // and comment  [whitespace/comments] [4]\n'}
+[1.180890] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:29:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]\n'}
+[1.180954] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:35:  Add #include <memory> for make_shared<>  [build/include_what_you_use] [4]\n'}
+[1.181017] (c_pkg) StdoutLine: {'line': b'3: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:38:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]\n'}
+[1.181087] (c_pkg) StdoutLine: {'line': b"3: Category 'build/include_order' errors found: 2\n"}
+[1.181151] (c_pkg) StdoutLine: {'line': b"3: Category 'build/include_what_you_use' errors found: 1\n"}
+[1.181214] (c_pkg) StdoutLine: {'line': b"3: Category 'legal/copyright' errors found: 1\n"}
+[1.181275] (c_pkg) StdoutLine: {'line': b"3: Category 'whitespace/blank_line' errors found: 1\n"}
+[1.181337] (c_pkg) StdoutLine: {'line': b"3: Category 'whitespace/comments' errors found: 4\n"}
+[1.181397] (c_pkg) StdoutLine: {'line': b"3: Category 'whitespace/end_of_line' errors found: 3\n"}
+[1.181459] (c_pkg) StdoutLine: {'line': b"3: Category 'whitespace/ending_newline' errors found: 1\n"}
+[1.181521] (c_pkg) StdoutLine: {'line': b"3: Category 'whitespace/line_length' errors found: 2\n"}
+[1.181582] (c_pkg) StdoutLine: {'line': b'3: Total errors found: 15\n'}
+[1.181645] (c_pkg) StdoutLine: {'line': b"3: Using '--root=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src' argument\n"}
+[1.181710] (c_pkg) StdoutLine: {'line': b'3: \n'}
+[1.181772] (c_pkg) StdoutLine: {'line': b'3: Done processing /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp\n'}
+[1.181835] (c_pkg) StdoutLine: {'line': b'3: \n'}
+[1.192302] (c_pkg) StdoutLine: {'line': b'3: -- run_test.py: return code 1\n'}
+[1.192754] (c_pkg) StdoutLine: {'line': b"3: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/cpplint.xunit.xml'\n"}
+[1.201892] (c_pkg) StdoutLine: {'line': b'3/6 Test #3: cpplint ..........................***Failed    0.34 sec\n'}
+[1.202236] (c_pkg) StdoutLine: {'line': b'test 4\n'}
+[1.202315] (c_pkg) StdoutLine: {'line': b'    Start 4: lint_cmake\n'}
+[1.202377] (-) TimerEvent: {}
+[1.202504] (c_pkg) StdoutLine: {'line': b'\n'}
+[1.202632] (c_pkg) StdoutLine: {'line': b'4: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/foxy/bin/ament_lint_cmake" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml"\n'}
+[1.202739] (c_pkg) StdoutLine: {'line': b'4: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg\n'}
+[1.202810] (c_pkg) StdoutLine: {'line': b'4: Test timeout computed to be: 60\n'}
+[1.267703] (c_pkg) StdoutLine: {'line': b"4: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':\n"}
+[1.267882] (c_pkg) StdoutLine: {'line': b'4:  - /opt/ros/foxy/bin/ament_lint_cmake --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml\n'}
+[1.302547] (-) TimerEvent: {}
+[1.402833] (-) TimerEvent: {}
+[1.471549] (c_pkg) StdoutLine: {'line': b'4: \n'}
+[1.471697] (c_pkg) StdoutLine: {'line': b'4: No problems found\n'}
+[1.481138] (c_pkg) StdoutLine: {'line': b'4: -- run_test.py: return code 0\n'}
+[1.481461] (c_pkg) StdoutLine: {'line': b"4: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml'\n"}
+[1.489705] (c_pkg) StdoutLine: {'line': b'4/6 Test #4: lint_cmake .......................   Passed    0.29 sec\n'}
+[1.490020] (c_pkg) StdoutLine: {'line': b'test 5\n'}
+[1.490095] (c_pkg) StdoutLine: {'line': b'    Start 5: uncrustify\n'}
+[1.490160] (c_pkg) StdoutLine: {'line': b'\n'}
+[1.490222] (c_pkg) StdoutLine: {'line': b'5: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/uncrustify.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/foxy/bin/ament_uncrustify" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/uncrustify.xunit.xml"\n'}
+[1.490291] (c_pkg) StdoutLine: {'line': b'5: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg\n'}
+[1.490405] (c_pkg) StdoutLine: {'line': b'5: Test timeout computed to be: 60\n'}
+[1.502942] (-) TimerEvent: {}
+[1.554422] (c_pkg) StdoutLine: {'line': b"5: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':\n"}
+[1.554636] (c_pkg) StdoutLine: {'line': b'5:  - /opt/ros/foxy/bin/ament_uncrustify --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/uncrustify.xunit.xml\n'}
+[1.603057] (-) TimerEvent: {}
+[1.703336] (-) TimerEvent: {}
+[1.783936] (c_pkg) StdoutLine: {'line': b"5: Code style divergence in file 'src/keyboard_control.cpp':\n"}
+[1.784196] (c_pkg) StdoutLine: {'line': b'5: \n'}
+[1.784345] (c_pkg) StdoutLine: {'line': b'5: --- src/keyboard_control.cpp\n'}
+[1.784453] (c_pkg) StdoutLine: {'line': b'5: +++ src/keyboard_control.cpp.uncrustify\n'}
+[1.784517] (c_pkg) StdoutLine: {'line': b'5: @@ -8 +8 @@\n'}
+[1.784579] (c_pkg) StdoutLine: {'line': b'5: -class Keyboard_control:public rclcpp::Node\n'}
+[1.784639] (c_pkg) StdoutLine: {'line': b'5: +class Keyboard_control : public rclcpp::Node\n'}
+[1.784699] (c_pkg) StdoutLine: {'line': b'5: @@ -10,8 +10,9 @@\n'}
+[1.784759] (c_pkg) StdoutLine: {'line': b'5: -    public:\n'}
+[1.784819] (c_pkg) StdoutLine: {'line': b'5: -        Keyboard_control():Node("keyboard_control_node")\n'}
+[1.784895] (c_pkg) StdoutLine: {'line': b'5: -        {\n'}
+[1.785036] (c_pkg) StdoutLine: {'line': b'5: -            //create pubisher that will publish message of type [vx,vy,w]\n'}
+[1.785159] (c_pkg) StdoutLine: {'line': b'5: -            publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("bot_command", 10);\n'}
+[1.785224] (c_pkg) StdoutLine: {'line': b'5: -            //create timer that will call repetitively the function timer_callback\n'}
+[1.785287] (c_pkg) StdoutLine: {'line': b'5: -            timer_ = this->create_wall_timer(500ms, std::bind(&Keyboard_control::timer_callback, this));\n'}
+[1.785352] (c_pkg) StdoutLine: {'line': b'5: -        } \n'}
+[1.785419] (c_pkg) StdoutLine: {'line': b'5: +public:\n'}
+[1.785486] (c_pkg) StdoutLine: {'line': b'5: +  Keyboard_control()\n'}
+[1.785551] (c_pkg) StdoutLine: {'line': b'5: +  : Node("keyboard_control_node")\n'}
+[1.785616] (c_pkg) StdoutLine: {'line': b'5: +  {\n'}
+[1.785680] (c_pkg) StdoutLine: {'line': b'5: +    //create pubisher that will publish message of type [vx,vy,w]\n'}
+[1.785746] (c_pkg) StdoutLine: {'line': b'5: +    publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("bot_command", 10);\n'}
+[1.785811] (c_pkg) StdoutLine: {'line': b'5: +    //create timer that will call repetitively the function timer_callback\n'}
+[1.785877] (c_pkg) StdoutLine: {'line': b'5: +    timer_ = this->create_wall_timer(500ms, std::bind(&Keyboard_control::timer_callback, this));\n'}
+[1.785964] (c_pkg) StdoutLine: {'line': b'5: +  }\n'}
+[1.786114] (c_pkg) StdoutLine: {'line': b'5: @@ -19,10 +20,10 @@\n'}
+[1.786281] (c_pkg) StdoutLine: {'line': b'5: -    private:\n'}
+[1.786390] (c_pkg) StdoutLine: {'line': b'5: -        //global variables    \n'}
+[1.786457] (c_pkg) StdoutLine: {'line': b'5: -        rclcpp::TimerBase::SharedPtr timer_;\n'}
+[1.786523] (c_pkg) StdoutLine: {'line': b'5: -        rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;\n'}
+[1.786594] (c_pkg) StdoutLine: {'line': b'5: -        \n'}
+[1.786658] (c_pkg) StdoutLine: {'line': b'5: -        //Functions\n'}
+[1.786722] (c_pkg) StdoutLine: {'line': b'5: -        void timer_callback()\n'}
+[1.786789] (c_pkg) StdoutLine: {'line': b'5: -        {\n'}
+[1.786852] (c_pkg) StdoutLine: {'line': b'5: -            printf("ok\\n");\n'}
+[1.786915] (c_pkg) StdoutLine: {'line': b'5: -        }\n'}
+[1.786978] (c_pkg) StdoutLine: {'line': b'5: +private:\n'}
+[1.787041] (c_pkg) StdoutLine: {'line': b'5: +  //global variables\n'}
+[1.787104] (c_pkg) StdoutLine: {'line': b'5: +  rclcpp::TimerBase::SharedPtr timer_;\n'}
+[1.787166] (c_pkg) StdoutLine: {'line': b'5: +  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;\n'}
+[1.787229] (c_pkg) StdoutLine: {'line': b'5: +\n'}
+[1.787291] (c_pkg) StdoutLine: {'line': b'5: +  //Functions\n'}
+[1.787355] (c_pkg) StdoutLine: {'line': b'5: +  void timer_callback()\n'}
+[1.787450] (c_pkg) StdoutLine: {'line': b'5: +  {\n'}
+[1.787519] (c_pkg) StdoutLine: {'line': b'5: +    printf("ok\\n");\n'}
+[1.787582] (c_pkg) StdoutLine: {'line': b'5: +  }\n'}
+[1.787647] (c_pkg) StdoutLine: {'line': b'5: @@ -38 +39 @@\n'}
+[1.787711] (c_pkg) StdoutLine: {'line': b'5: -}\n'}
+[1.787776] (c_pkg) StdoutLine: {'line': b'5: +}\n'}
+[1.787841] (c_pkg) StdoutLine: {'line': b'5: \n'}
+[1.787927] (c_pkg) StdoutLine: {'line': b'5: 1 files with code style divergence\n'}
+[1.803545] (-) TimerEvent: {}
+[1.811095] (c_pkg) StdoutLine: {'line': b'5: -- run_test.py: return code 1\n'}
+[1.811548] (c_pkg) StdoutLine: {'line': b"5: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/uncrustify.xunit.xml'\n"}
+[1.826710] (c_pkg) StdoutLine: {'line': b'5/6 Test #5: uncrustify .......................***Failed    0.34 sec\n'}
+[1.827140] (c_pkg) StdoutLine: {'line': b'test 6\n'}
+[1.827227] (c_pkg) StdoutLine: {'line': b'    Start 6: xmllint\n'}
+[1.827297] (c_pkg) StdoutLine: {'line': b'\n'}
+[1.827390] (c_pkg) StdoutLine: {'line': b'6: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_xmllint/xmllint.txt" "--command" "/opt/ros/foxy/bin/ament_xmllint" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml"\n'}
+[1.827477] (c_pkg) StdoutLine: {'line': b'6: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg\n'}
+[1.827549] (c_pkg) StdoutLine: {'line': b'6: Test timeout computed to be: 60\n'}
+[1.903707] (-) TimerEvent: {}
+[1.910093] (c_pkg) StdoutLine: {'line': b"6: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':\n"}
+[1.910334] (c_pkg) StdoutLine: {'line': b'6:  - /opt/ros/foxy/bin/ament_xmllint --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml\n'}
+[2.003809] (-) TimerEvent: {}
+[2.104148] (-) TimerEvent: {}
+[2.204646] (-) TimerEvent: {}
+[2.305129] (-) TimerEvent: {}
+[2.405859] (-) TimerEvent: {}
+[2.506702] (-) TimerEvent: {}
+[2.607524] (-) TimerEvent: {}
+[2.708193] (-) TimerEvent: {}
+[2.754303] (c_pkg) StdoutLine: {'line': b"6: File 'package.xml' is valid\n"}
+[2.754790] (c_pkg) StdoutLine: {'line': b'6: \n'}
+[2.755080] (c_pkg) StdoutLine: {'line': b'6: No problems found\n'}
+[2.793926] (c_pkg) StdoutLine: {'line': b'6: -- run_test.py: return code 0\n'}
+[2.794380] (c_pkg) StdoutLine: {'line': b"6: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml'\n"}
+[2.807501] (c_pkg) StdoutLine: {'line': b'6/6 Test #6: xmllint ..........................   Passed    0.98 sec\n'}
+[2.808133] (c_pkg) StdoutLine: {'line': b'\n'}
+[2.808422] (-) TimerEvent: {}
+[2.808561] (c_pkg) StdoutLine: {'line': b'50% tests passed\x1b[0;0m, \x1b[0;31m3 tests failed\x1b[0;0m out of 6\n'}
+[2.808692] (c_pkg) StdoutLine: {'line': b'\n'}
+[2.808804] (c_pkg) StdoutLine: {'line': b'Label Time Summary:\n'}
+[2.808912] (c_pkg) StdoutLine: {'line': b'copyright     =   0.31 sec*proc (1 test)\n'}
+[2.809019] (c_pkg) StdoutLine: {'line': b'cppcheck      =   0.34 sec*proc (1 test)\n'}
+[2.809123] (c_pkg) StdoutLine: {'line': b'cpplint       =   0.34 sec*proc (1 test)\n'}
+[2.809225] (c_pkg) StdoutLine: {'line': b'lint_cmake    =   0.29 sec*proc (1 test)\n'}
+[2.809327] (c_pkg) StdoutLine: {'line': b'linter        =   2.59 sec*proc (6 tests)\n'}
+[2.809431] (c_pkg) StdoutLine: {'line': b'uncrustify    =   0.34 sec*proc (1 test)\n'}
+[2.809534] (c_pkg) StdoutLine: {'line': b'xmllint       =   0.98 sec*proc (1 test)\n'}
+[2.809637] (c_pkg) StdoutLine: {'line': b'\n'}
+[2.809740] (c_pkg) StdoutLine: {'line': b'Total Test time (real) =   2.60 sec\n'}
+[2.809843] (c_pkg) StdoutLine: {'line': b'\n'}
+[2.809943] (c_pkg) StdoutLine: {'line': b'The following tests FAILED:\n'}
+[2.810042] (c_pkg) StdoutLine: {'line': b'\t\x1b[0;31m  1 - copyright (Failed)\x1b[0;0m\n'}
+[2.810142] (c_pkg) StdoutLine: {'line': b'\t\x1b[0;31m  3 - cpplint (Failed)\x1b[0;0m\n'}
+[2.810244] (c_pkg) StdoutLine: {'line': b'\t\x1b[0;31m  5 - uncrustify (Failed)\x1b[0;0m\n'}
+[2.831660] (c_pkg) StderrLine: {'line': b'Errors while running CTest\n'}
+[2.832191] (c_pkg) StderrLine: {'line': b'Output from these tests are in: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/Testing/Temporary/LastTest.log\n'}
+[2.832543] (c_pkg) StderrLine: {'line': b'Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.\n'}
+[2.835767] (c_pkg) CommandEnded: {'returncode': 8}
+[2.836951] (c_pkg) TestFailure: {'identifier': 'c_pkg'}
+[2.837067] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 0}
+[2.838970] (-) EventReactorShutdown: {}

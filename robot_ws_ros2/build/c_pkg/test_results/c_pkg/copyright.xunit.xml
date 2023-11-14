@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite
   name="c_pkg.copyright"
-  tests="0"
+  tests="1"
   errors="0"
-  failures="0"
-  time="0.000"
+  failures="1"
+  time="0.001"
 >
-  <system-out>Checked files:</system-out>
+  <testcase
+    name="src/keyboard_control.cpp"
+    classname="c_pkg.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <system-out>Checked files:
+* src/keyboard_control.cpp</system-out>
 </testsuite>

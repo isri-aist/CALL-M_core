@@ -1,0 +1,58 @@
+-- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':
+ - /opt/ros/foxy/bin/ament_uncrustify --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/uncrustify.xunit.xml
+
+Code style divergence in file 'src/keyboard_control.cpp':
+
+--- src/keyboard_control.cpp
++++ src/keyboard_control.cpp.uncrustify
+@@ -8 +8 @@
+-class Keyboard_control:public rclcpp::Node
++class Keyboard_control : public rclcpp::Node
+@@ -10,8 +10,9 @@
+-    public:
+-        Keyboard_control():Node("keyboard_control_node")
+-        {
+-            //create pubisher that will publish message of type [vx,vy,w]
+-            publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("bot_command", 10);
+-            //create timer that will call repetitively the function timer_callback
+-            timer_ = this->create_wall_timer(500ms, std::bind(&Keyboard_control::timer_callback, this));
+-        } 
++public:
++  Keyboard_control()
++  : Node("keyboard_control_node")
++  {
++    //create pubisher that will publish message of type [vx,vy,w]
++    publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("bot_command", 10);
++    //create timer that will call repetitively the function timer_callback
++    timer_ = this->create_wall_timer(500ms, std::bind(&Keyboard_control::timer_callback, this));
++  }
+@@ -19,10 +20,10 @@
+-    private:
+-        //global variables    
+-        rclcpp::TimerBase::SharedPtr timer_;
+-        rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;
+-        
+-        //Functions
+-        void timer_callback()
+-        {
+-            printf("ok\n");
+-        }
++private:
++  //global variables
++  rclcpp::TimerBase::SharedPtr timer_;
++  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;
++
++  //Functions
++  void timer_callback()
++  {
++    printf("ok\n");
++  }
+@@ -38 +39 @@
+-}
++}
+
+1 files with code style divergence
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/uncrustify.xunit.xml'

@@ -1,0 +1,13 @@
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:[m[K In member function ‘[01m[Kvoid Keyboard_control::timer_callback()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:30:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcommands_vals[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   30 |             float [01;35m[Kcommands_vals[m[K[3];
+      |                   [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:32:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvx[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   32 |             float [01;35m[Kvx[m[K=0.0;
+      |                   [01;35m[K^~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:33:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvy[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   33 |             float [01;35m[Kvy[m[K=0.0;
+      |                   [01;35m[K^~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:34:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kw[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   34 |             float [01;35m[Kw[m[K=0.0;
+      |                   [01;35m[K^[m[K

@@ -1,0 +1,7 @@
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Kc_pkg/msg/statevector.hpp: No such file or directory
+    4 | #include [01;31m[K"c_pkg/msg/statevector.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/keyboard_control_node.dir/build.make:76: CMakeFiles/keyboard_control_node.dir/src/keyboard_control.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:397: CMakeFiles/keyboard_control_node.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

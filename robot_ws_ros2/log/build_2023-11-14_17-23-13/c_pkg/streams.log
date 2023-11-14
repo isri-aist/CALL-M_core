@@ -1,0 +1,77 @@
+[0.196s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_subscriber:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_service:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_server:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_executors:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.214s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.216s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.216s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.216s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.216s]   the cmake_policy command to set the policy and suppress this warning.
+[0.216s] 
+[0.216s] Call Stack (most recent call first):
+[0.216s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.216s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.217s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.217s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.217s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.217s]   CMakeLists.txt:19 (find_package)
+[0.217s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.217s] [0m
+[0.250s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.250s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.454s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.487s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.490s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.617s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.660s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.662s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.789s] [33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):
+[0.789s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.789s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.789s]   the cmake_policy command to set the policy and suppress this warning.
+[0.789s] 
+[0.789s] Call Stack (most recent call first):
+[0.789s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.789s]   CMakeLists.txt:25 (rosidl_generate_interfaces)
+[0.790s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.790s] [0m
+[0.820s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.011s] [31mCMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[1.011s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name c_pkg
+[1.011s]   --arguments-file
+[1.012s]   /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_adapter__arguments__c_pkg.json
+[1.012s]   --output-dir
+[1.012s]   /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_adapter/c_pkg
+[1.012s]   --output-file
+[1.012s]   /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_adapter/c_pkg.idls)
+[1.012s]   returned error code 1:
+[1.012s] 
+[1.012s]   Traceback (most recent call last):
+[1.012s] 
+[1.012s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[1.012s]       return _run_code(code, main_globals, None,
+[1.012s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[1.012s]       exec(code, run_globals)
+[1.012s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.012s]       sys.exit(main())
+[1.012s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.012s]       abs_idl_file = convert_to_idl(
+[1.013s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.013s]       return convert_msg_to_idl(
+[1.013s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.013s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.013s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 540, in parse_message_string
+[1.013s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[1.013s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 387, in __init__
+[1.013s]       self.base_type = BaseType(
+[1.013s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[1.013s]       raise InvalidResourceName(
+[1.013s] 
+[1.013s]   rosidl_adapter.parser.InvalidResourceName: 'State_vector' is an invalid
+[1.013s]   message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[1.013s] 
+[1.013s] Call Stack (most recent call first):
+[1.013s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.013s]   CMakeLists.txt:25 (rosidl_generate_interfaces)
+[1.014s] 
+[1.014s] [0m
+[1.014s] -- Configuring incomplete, errors occurred!
+[1.018s] make: *** [Makefile:267: cmake_check_build_system] Error 1
+[1.019s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_subscriber:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_service:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_server:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_action_client:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_executors:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8

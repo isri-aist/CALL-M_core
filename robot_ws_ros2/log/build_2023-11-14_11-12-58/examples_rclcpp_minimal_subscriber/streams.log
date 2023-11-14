@@ -1,0 +1,94 @@
+[0.321s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/examples/rclcpp/topics/minimal_subscriber -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber
+[2.755s] -- The C compiler identification is GNU 9.4.0
+[2.756s] -- The CXX compiler identification is GNU 9.4.0
+[2.759s] -- Detecting C compiler ABI info
+[2.760s] -- Detecting C compiler ABI info - done
+[2.761s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.762s] -- Detecting C compile features
+[2.763s] -- Detecting C compile features - done
+[2.765s] -- Detecting CXX compiler ABI info
+[2.766s] -- Detecting CXX compiler ABI info - done
+[2.766s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.766s] -- Detecting CXX compile features
+[2.767s] -- Detecting CXX compile features - done
+[2.767s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[2.767s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.767s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.767s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.767s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.768s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.768s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.768s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.768s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.768s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.768s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.768s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.768s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.769s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.769s] -- Looking for pthread_create in pthreads
+[2.769s] -- Looking for pthread_create in pthreads - not found
+[2.769s] -- Looking for pthread_create in pthread
+[2.769s] -- Looking for pthread_create in pthread - found
+[2.769s] -- Found Threads: TRUE  
+[2.769s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.769s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.769s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.770s] -- Configured cppcheck include dirs: 
+[2.770s] -- Configured cppcheck exclude dirs and/or files: 
+[2.770s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.771s] -- Configured cpplint exclude dirs and/or files: 
+[2.771s] -- Added test 'lint_cmake' to check CMake code style
+[2.771s] -- Added test 'uncrustify' to check C / C++ code style
+[2.771s] -- Configured uncrustify additional arguments: 
+[2.771s] -- Added test 'xmllint' to check XML markup files
+[2.771s] -- Configuring done (2.4s)
+[2.771s] -- Generating done (0.0s)
+[2.772s] -- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber
+[2.772s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[2.772s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.772s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.772s]   the cmake_policy command to set the policy and suppress this warning.
+[2.773s] 
+[2.773s] Call Stack (most recent call first):
+[2.773s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[2.773s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[2.773s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[2.773s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[2.773s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[2.773s]   CMakeLists.txt:13 (find_package)
+[2.774s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.774s] [0m
+[2.780s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/examples/rclcpp/topics/minimal_subscriber -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber
+[2.781s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber -- -j8 -l8
+[2.838s] [ 16%] [32mBuilding CXX object CMakeFiles/subscriber_lambda.dir/lambda.cpp.o[0m
+[2.857s] [ 33%] [32mBuilding CXX object CMakeFiles/subscriber_not_composable.dir/not_composable.cpp.o[0m
+[2.871s] [ 50%] [32mBuilding CXX object CMakeFiles/subscriber_member_function.dir/member_function.cpp.o[0m
+[17.185s] [ 66%] [32m[1mLinking CXX executable subscriber_member_function[0m
+[17.347s] [ 83%] [32m[1mLinking CXX executable subscriber_not_composable[0m
+[17.562s] [100%] [32m[1mLinking CXX executable subscriber_lambda[0m
+[17.610s] [100%] Built target subscriber_member_function
+[17.756s] [100%] Built target subscriber_not_composable
+[17.851s] [100%] Built target subscriber_lambda
+[18.584s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber -- -j8 -l8
+[19.878s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber
+[20.146s] -- Install configuration: ""
+[20.146s] -- Execute custom install script
+[20.147s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_lambda
+[20.147s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function
+[20.147s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_not_composable
+[20.147s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_subscriber
+[20.147s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_subscriber
+[20.147s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/ament_prefix_path.sh
+[20.148s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/ament_prefix_path.dsv
+[20.148s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/path.sh
+[20.148s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/path.dsv
+[20.148s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.bash
+[20.148s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.sh
+[20.148s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.zsh
+[20.148s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.dsv
+[20.149s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/package.dsv
+[20.149s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/ament_index/resource_index/packages/examples_rclcpp_minimal_subscriber
+[20.149s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/cmake/examples_rclcpp_minimal_subscriberConfig.cmake
+[20.149s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/cmake/examples_rclcpp_minimal_subscriberConfig-version.cmake
+[20.149s] -- Symlinking: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/package.xml
+[21.418s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_subscriber

@@ -1,0 +1,148 @@
+[0.000000] (-) TimerEvent: {}
+[0.000209] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict()}
+[0.000875] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.100055] (-) TimerEvent: {}
+[0.152320] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'cmake'}
+[0.153064] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'build'}
+[0.153868] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1815'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1591'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4317'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:49244'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1853,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1853'), ('INVOCATION_ID', '2b063b96c217489ea0b73909a591a451'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:821c57e5-1f42-4da8-b2ff-1da2b1faf08e'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.172849] (c_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.174526] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[0.174650] (c_pkg) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.174718] (c_pkg) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.174799] (c_pkg) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.174871] (c_pkg) StderrLine: {'line': b'\n'}
+[0.174929] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.174988] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[0.175045] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[0.175122] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.175193] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.175252] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.175309] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:19 (find_package)\n'}
+[0.175365] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.175421] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.194256] (c_pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.200170] (-) TimerEvent: {}
+[0.300453] (-) TimerEvent: {}
+[0.390930] (c_pkg) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.400558] (-) TimerEvent: {}
+[0.443505] (c_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.451226] (c_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.500686] (-) TimerEvent: {}
+[0.542735] (c_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.574737] (c_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.600804] (-) TimerEvent: {}
+[0.657778] (c_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700930] (-) TimerEvent: {}
+[0.715072] (c_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.716917] (c_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.718484] (c_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.801094] (-) TimerEvent: {}
+[0.894030] (c_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[0.894503] (c_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[0.901187] (-) TimerEvent: {}
+[0.961679] (c_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[0.961963] (c_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.001328] (-) TimerEvent: {}
+[1.041257] (c_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.042755] (c_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.101422] (-) TimerEvent: {}
+[1.192194] (c_pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.201541] (-) TimerEvent: {}
+[1.245291] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:\n'}
+[1.245724] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 27\n'}
+[1.245866] (c_pkg) StderrLine: {'line': b'\n'}
+[1.245956] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[1.246019] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.246078] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[1.246137] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[1.246196] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[1.246255] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:35 (ament_lint_auto_find_test_dependencies)\n'}
+[1.246313] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.246370] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.246428] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:\n'}
+[1.246486] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 38\n'}
+[1.246543] (c_pkg) StderrLine: {'line': b'\n'}
+[1.246600] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[1.246658] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.246716] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[1.246774] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[1.246831] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[1.246895] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:35 (ament_lint_auto_find_test_dependencies)\n'}
+[1.246954] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.247011] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.247068] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:\n'}
+[1.247130] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 34\n'}
+[1.247187] (c_pkg) StderrLine: {'line': b'\n'}
+[1.247244] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[1.247302] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.247359] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[1.247416] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[1.247479] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[1.247540] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:35 (ament_lint_auto_find_test_dependencies)\n'}
+[1.247597] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.247657] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.247715] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:\n'}
+[1.247774] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 45\n'}
+[1.247832] (c_pkg) StderrLine: {'line': b'\n'}
+[1.247888] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[1.247945] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.248002] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[1.248058] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[1.248115] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[1.248172] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:35 (ament_lint_auto_find_test_dependencies)\n'}
+[1.248229] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.248286] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.248342] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:\n'}
+[1.248400] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 26\n'}
+[1.248456] (c_pkg) StderrLine: {'line': b'\n'}
+[1.248512] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[1.248575] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.248632] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[1.248689] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[1.248747] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[1.248804] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:35 (ament_lint_auto_find_test_dependencies)\n'}
+[1.248861] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.248918] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.248975] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:\n'}
+[1.249032] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 37\n'}
+[1.249088] (c_pkg) StderrLine: {'line': b'\n'}
+[1.249145] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[1.249202] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.249260] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[1.249318] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[1.249375] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[1.249432] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:35 (ament_lint_auto_find_test_dependencies)\n'}
+[1.249492] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.249548] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.259810] (c_pkg) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.262120] (c_pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.263594] (c_pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.264941] (c_pkg) StdoutLine: {'line': b'-- Configuring done (1.1s)\n'}
+[1.270372] (c_pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.272176] (c_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg\n'}
+[1.285511] (c_pkg) CommandEnded: {'returncode': 0}
+[1.302883] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'install'}
+[1.303110] (-) TimerEvent: {}
+[1.308464] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1815'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1591'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4317'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:49244'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1853,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1853'), ('INVOCATION_ID', '2b063b96c217489ea0b73909a591a451'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:821c57e5-1f42-4da8-b2ff-1da2b1faf08e'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.312413] (c_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.312701] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/package_run_dependencies/c_pkg\n'}
+[1.313138] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/parent_prefix_path/c_pkg\n'}
+[1.313386] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.sh\n'}
+[1.313478] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.dsv\n'}
+[1.313576] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.sh\n'}
+[1.313687] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.dsv\n'}
+[1.313832] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.bash\n'}
+[1.314015] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.sh\n'}
+[1.314212] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.zsh\n'}
+[1.314337] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.dsv\n'}
+[1.314409] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv\n'}
+[1.314509] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/packages/c_pkg\n'}
+[1.314609] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig.cmake\n'}
+[1.314695] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig-version.cmake\n'}
+[1.314761] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.xml\n'}
+[1.316177] (c_pkg) CommandEnded: {'returncode': 0}
+[1.403486] (-) TimerEvent: {}
+[1.506183] (-) TimerEvent: {}
+[1.607056] (-) TimerEvent: {}
+[1.668672] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 0}
+[1.669287] (-) EventReactorShutdown: {}

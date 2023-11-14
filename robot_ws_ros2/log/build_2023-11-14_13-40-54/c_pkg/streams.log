@@ -1,0 +1,48 @@
+[0.147s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.163s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.165s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.165s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.165s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.165s]   the cmake_policy command to set the policy and suppress this warning.
+[0.165s] 
+[0.165s] Call Stack (most recent call first):
+[0.165s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.165s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.165s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.165s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.166s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.166s]   CMakeLists.txt:19 (find_package)
+[0.166s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.166s] [0m
+[0.184s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.368s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.415s] Error parsing '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/package.xml':
+[0.523s] Traceback (most recent call last):
+[0.523s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 143, in <module>
+[0.523s]     main()
+[0.523s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 52, in main
+[0.523s]     raise e
+[0.524s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 48, in main
+[0.524s]     package = parse_package_string(
+[0.524s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 786, in parse_package_string
+[0.524s]     raise InvalidPackage('Error(s):%s' % (''.join(['\n- %s' % e for e in errors])), filename)
+[0.524s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/package.xml':
+[0.524s] Error(s):
+[0.524s] - The generic dependency on '' is redundant with: build_depend, build_export_depend, exec_depend
+[0.524s] - The "depend" tag must not have the following attributes: package
+[0.524s] - The "depend" tag must not have the following attributes: package
+[0.545s] [31mCMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:94 (message):
+[0.545s]   execute_process(/usr/bin/python3
+[0.546s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[0.546s]   /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/package.xml
+[0.546s]   /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake)
+[0.546s]   returned error code 1
+[0.546s] Call Stack (most recent call first):
+[0.546s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.546s]   /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.546s]   CMakeLists.txt:32 (ament_lint_auto_find_test_dependencies)
+[0.546s] 
+[0.546s] [0m
+[0.546s] -- Configuring incomplete, errors occurred!
+[0.547s] make: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.550s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '2': /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8

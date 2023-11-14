@@ -1,0 +1,2 @@
+# generated from colcon_core/shell/template/command_prefix.sh.em
+. "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.sh"

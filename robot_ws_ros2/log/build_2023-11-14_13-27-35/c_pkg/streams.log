@@ -1,0 +1,58 @@
+[0.149s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg -DCMAKE_INSTALL_PREFIX=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg
+[0.344s] -- The C compiler identification is GNU 9.4.0
+[0.483s] -- The CXX compiler identification is GNU 9.4.0
+[0.505s] -- Detecting C compiler ABI info
+[0.580s] -- Detecting C compiler ABI info - done
+[0.591s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.592s] -- Detecting C compile features
+[0.593s] -- Detecting C compile features - done
+[0.605s] -- Detecting CXX compiler ABI info
+[0.683s] -- Detecting CXX compiler ABI info - done
+[0.694s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.694s] -- Detecting CXX compile features
+[0.695s] -- Detecting CXX compile features - done
+[0.700s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.705s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.706s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.706s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.706s]   the cmake_policy command to set the policy and suppress this warning.
+[0.706s] 
+[0.706s] Call Stack (most recent call first):
+[0.706s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.706s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.706s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.706s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.706s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.706s]   CMakeLists.txt:19 (find_package)
+[0.706s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.706s] [0m
+[0.725s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.725s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.937s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.016s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.018s] -- Added test 'lint_cmake' to check CMake code style
+[1.019s] -- Added test 'xmllint' to check XML markup files
+[1.021s] -- Configuring done (0.9s)
+[1.024s] -- Generating done (0.0s)
+[1.025s] -- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[1.029s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg -DCMAKE_INSTALL_PREFIX=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg
+[1.032s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[1.052s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[1.075s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[1.078s] -- Install configuration: ""
+[1.078s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/package_run_dependencies/c_pkg
+[1.079s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/parent_prefix_path/c_pkg
+[1.079s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.sh
+[1.079s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.dsv
+[1.079s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.sh
+[1.079s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.dsv
+[1.079s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.bash
+[1.080s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.sh
+[1.080s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.zsh
+[1.080s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.dsv
+[1.080s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv
+[1.080s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/packages/c_pkg
+[1.080s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig.cmake
+[1.080s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig-version.cmake
+[1.081s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.xml
+[1.082s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg

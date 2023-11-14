@@ -1,0 +1,67 @@
+[0.179s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': AMENT_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[0.185s] UpdateCTestConfiguration  from :/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini
+[0.186s] Parse Config file:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini
+[0.186s]    Site: jrlintern-XPS-15-9560
+[0.186s]    Build name: (empty)
+[0.186s]  Add coverage exclude regular expressions.
+[0.186s] Create new tag: 20231114-0631 - Experimental
+[0.186s] UpdateCTestConfiguration  from :/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini
+[0.186s] Parse Config file:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CTestConfiguration.ini
+[0.187s] Test project /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[0.187s] Constructing a list of tests
+[0.187s] Done constructing a list of tests
+[0.187s] Updating test list for fixtures
+[0.187s] Added 0 tests to meet fixture requirements
+[0.187s] Checking test dependency graph...
+[0.187s] Checking test dependency graph end
+[0.187s] test 1
+[0.187s]     Start 1: copyright
+[0.187s] 
+[0.187s] 1: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_copyright/copyright.txt" "--command" "/opt/ros/foxy/bin/ament_copyright" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml"
+[0.187s] 1: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg
+[0.187s] 1: Test timeout computed to be: 60
+[0.241s] 1: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':
+[0.241s] 1:  - /opt/ros/foxy/bin/ament_copyright --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml
+[0.436s] 1: No repository roots and files found
+[0.436s] 1: No problems found, checked 0 files
+[0.449s] 1: -- run_test.py: return code 0
+[0.449s] 1: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/copyright.xunit.xml'
+[0.458s] 1/3 Test #1: copyright ........................   Passed    0.27 sec
+[0.458s] test 2
+[0.458s]     Start 2: lint_cmake
+[0.458s] 
+[0.458s] 2: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/foxy/bin/ament_lint_cmake" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml"
+[0.458s] 2: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg
+[0.459s] 2: Test timeout computed to be: 60
+[0.508s] 2: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':
+[0.508s] 2:  - /opt/ros/foxy/bin/ament_lint_cmake --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml
+[0.704s] 2: 
+[0.704s] 2: No problems found
+[0.714s] 2: -- run_test.py: return code 0
+[0.714s] 2: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/lint_cmake.xunit.xml'
+[0.723s] 2/3 Test #2: lint_cmake .......................   Passed    0.26 sec
+[0.723s] test 3
+[0.723s]     Start 3: xmllint
+[0.723s] 
+[0.723s] 3: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml" "--package-name" "c_pkg" "--output-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_xmllint/xmllint.txt" "--command" "/opt/ros/foxy/bin/ament_xmllint" "--xunit-file" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml"
+[0.723s] 3: Working Directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg
+[0.723s] 3: Test timeout computed to be: 60
+[0.774s] 3: -- run_test.py: invoking following command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg':
+[0.774s] 3:  - /opt/ros/foxy/bin/ament_xmllint --xunit-file /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml
+[1.434s] 3: File 'package.xml' is valid
+[1.435s] 3: 
+[1.435s] 3: No problems found
+[1.473s] 3: -- run_test.py: return code 0
+[1.473s] 3: -- run_test.py: verify result file '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/test_results/c_pkg/xmllint.xunit.xml'
+[1.483s] 3/3 Test #3: xmllint ..........................   Passed    0.76 sec
+[1.483s] 
+[1.484s] [0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 3
+[1.484s] 
+[1.484s] Label Time Summary:
+[1.484s] copyright     =   0.27 sec*proc (1 test)
+[1.484s] lint_cmake    =   0.26 sec*proc (1 test)
+[1.484s] linter        =   1.30 sec*proc (3 tests)
+[1.484s] xmllint       =   0.76 sec*proc (1 test)
+[1.484s] 
+[1.484s] Total Test time (real) =   1.30 sec
+[1.507s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': AMENT_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process

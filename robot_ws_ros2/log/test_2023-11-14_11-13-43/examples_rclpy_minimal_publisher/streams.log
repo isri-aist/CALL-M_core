@@ -1,0 +1,22 @@
+[2.706s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/examples/rclpy/topics/minimal_publisher': AMENT_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/pytest.xml --junit-prefix=examples_rclpy_minimal_publisher -o cache_dir=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/.pytest_cache PYTHONPATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages /usr/bin/python3 -m pytest
+[3.391s] [1m============================= test session starts ==============================[0m
+[3.391s] platform linux -- Python 3.8.10, pytest-7.4.3, pluggy-0.13.0
+[3.400s] cachedir: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/.pytest_cache
+[3.400s] rootdir: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/examples/rclpy
+[3.400s] configfile: pytest.ini
+[3.400s] plugins: ament-xmllint-0.9.8, ament-pep257-0.9.8, ament-copyright-0.9.8, launch-testing-ros-0.11.7, launch-testing-0.10.10, ament-lint-0.9.8, ament-flake8-0.9.8, rerunfailures-12.0, repeat-0.9.3, timeout-1.3.3, colcon-core-0.15.0, cov-2.8.1, mock-1.10.4
+[3.460s] [1mcollecting ... [0m[1m
+[3.460s] collected 3 items                                                              [0m
+[3.461s] 
+[3.497s] test/test_copyright.py [32m.[0m[33m                                                 [ 33%][0m
+[3.705s] test/test_flake8.py [32m.[0m[33m                                                    [ 66%][0m
+[3.730s] test/test_pep257.py [32m.[0m[33m                                                    [100%][0m
+[3.730s] 
+[3.730s] [33m=============================== warnings summary ===============================[0m
+[3.731s] ../../../../../../../../../../../usr/lib/python3/dist-packages/pydocstyle/config.py:6
+[3.731s]   Warning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+[3.731s] 
+[3.731s] -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+[3.731s] - generated xml file: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/pytest.xml -
+[3.731s] [33m========================= [32m3 passed[0m, [33m[1m1 warning[0m[33m in 0.34s[0m[33m =========================[0m
+[3.846s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/examples/rclpy/topics/minimal_publisher' returned '0': AMENT_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/pytest.xml --junit-prefix=examples_rclpy_minimal_publisher -o cache_dir=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/.pytest_cache PYTHONPATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages /usr/bin/python3 -m pytest

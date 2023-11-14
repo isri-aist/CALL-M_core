@@ -1,0 +1,27 @@
+[4.675s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher': PYTHONPATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/prefix_override:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/build --no-deps install_data
+[4.938s] running develop
+[5.109s] running egg_info
+[5.109s] creating examples_rclpy_minimal_publisher.egg-info
+[5.109s] writing examples_rclpy_minimal_publisher.egg-info/PKG-INFO
+[5.110s] writing dependency_links to examples_rclpy_minimal_publisher.egg-info/dependency_links.txt
+[5.110s] writing entry points to examples_rclpy_minimal_publisher.egg-info/entry_points.txt
+[5.111s] writing requirements to examples_rclpy_minimal_publisher.egg-info/requires.txt
+[5.111s] writing top-level names to examples_rclpy_minimal_publisher.egg-info/top_level.txt
+[5.112s] writing manifest file 'examples_rclpy_minimal_publisher.egg-info/SOURCES.txt'
+[5.144s] reading manifest file 'examples_rclpy_minimal_publisher.egg-info/SOURCES.txt'
+[5.145s] writing manifest file 'examples_rclpy_minimal_publisher.egg-info/SOURCES.txt'
+[5.181s] running build_ext
+[5.181s] Creating /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages/site.py
+[5.185s] Creating /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages/examples-rclpy-minimal-publisher.egg-link (link to .)
+[5.186s] Installing publisher_local_function script to /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[5.186s] Installing publisher_member_function script to /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[5.187s] Installing publisher_old_school script to /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[5.187s] 
+[5.189s] Installed /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher
+[5.189s] running install_data
+[5.190s] creating /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/share/ament_index
+[5.191s] creating /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/share/ament_index/resource_index
+[5.191s] creating /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/share/ament_index/resource_index/packages
+[5.192s] copying resource/examples_rclpy_minimal_publisher -> /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/share/ament_index/resource_index/packages
+[5.193s] copying package.xml -> /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/share/examples_rclpy_minimal_publisher
+[5.428s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher' returned '0': PYTHONPATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/prefix_override:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclpy_minimal_publisher/build --no-deps install_data

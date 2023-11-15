@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/test.dir/src/func.cpp.o CMakeFiles/test.dir/src/kinema.cpp.o CMakeFiles/test.dir/src/main.cpp.o CMakeFiles/test.dir/src/servo3moog.cpp.o -o test 

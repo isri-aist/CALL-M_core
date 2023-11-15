@@ -36,5 +36,9 @@
         "/opt/ros/foxy/lib/python3.8/site-packages",
         "/usr/local/lib/python3.8/dist-packages",
         ""
-    ]
+    ],
+    "files.associations": {
+        "chrono": "cpp",
+        "string": "cpp"
+    }
 }

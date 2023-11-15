@@ -1,0 +1,74 @@
+[0.000000] (-) TimerEvent: {}
+[0.000194] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict()}
+[0.000855] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.100060] (-) TimerEvent: {}
+[0.201039] (-) TimerEvent: {}
+[0.221394] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'cmake'}
+[0.223163] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'build'}
+[0.223230] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1763'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1542'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '10855'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:45935'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1801,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1801'), ('INVOCATION_ID', '66290597249d4c269b6a5230c730d6e6'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:648818b1-d3fb-47fa-b469-3c82a7eebea7'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.258372] (c_pkg) StdoutLine: {'line': b'[  7%] Built target c_pkg__cpp\n'}
+[0.258581] (c_pkg) StdoutLine: {'line': b'[ 10%] Built target c_pkg__rosidl_generator_c\n'}
+[0.271585] (c_pkg) StdoutLine: {'line': b'[ 17%] Built target c_pkg__rosidl_typesupport_cpp\n'}
+[0.272174] (c_pkg) StdoutLine: {'line': b'[ 25%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp\n'}
+[0.272469] (c_pkg) StdoutLine: {'line': b'[ 32%] Built target c_pkg__rosidl_typesupport_c\n'}
+[0.272720] (c_pkg) StdoutLine: {'line': b'[ 40%] Built target c_pkg__rosidl_typesupport_introspection_c\n'}
+[0.275010] (c_pkg) StdoutLine: {'line': b'[ 47%] Built target c_pkg__rosidl_typesupport_introspection_cpp\n'}
+[0.286785] (c_pkg) StdoutLine: {'line': b'[ 55%] Built target c_pkg__rosidl_typesupport_fastrtps_c\n'}
+[0.298416] (c_pkg) StdoutLine: {'line': b'[ 55%] Built target c_pkg\n'}
+[0.301130] (-) TimerEvent: {}
+[0.310060] (c_pkg) StdoutLine: {'line': b'[ 57%] Built target c_pkg__py\n'}
+[0.315645] (c_pkg) StdoutLine: {'line': b'[ 67%] Built target keyboard_control_node\n'}
+[0.322586] (c_pkg) StdoutLine: {'line': b'[ 75%] Built target c_pkg__python\n'}
+[0.322756] (c_pkg) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o\x1b[0m\n'}
+[0.335646] (c_pkg) StdoutLine: {'line': b'[ 85%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.336003] (c_pkg) StdoutLine: {'line': b'[ 85%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext\n'}
+[0.336213] (c_pkg) StdoutLine: {'line': b'[ 90%] Built target c_pkg__rosidl_typesupport_c__pyext\n'}
+[0.401219] (-) TimerEvent: {}
+[0.501512] (-) TimerEvent: {}
+[0.601795] (-) TimerEvent: {}
+[0.702086] (-) TimerEvent: {}
+[0.802372] (-) TimerEvent: {}
+[0.902651] (-) TimerEvent: {}
+[1.002940] (-) TimerEvent: {}
+[1.103193] (-) TimerEvent: {}
+[1.203509] (-) TimerEvent: {}
+[1.303856] (-) TimerEvent: {}
+[1.404221] (-) TimerEvent: {}
+[1.504525] (-) TimerEvent: {}
+[1.568939] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Bot_control_driver::topic_callback_keyboard(c_pkg::msg::StateVector_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.569194] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:32:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.569269] (c_pkg) StderrLine: {'line': b'   32 |         if(msg->vx <\x1b[01;31m\x1b[K>\x1b[m\x1b[K this->keyboard_vx || msg->vy <> this->keyboard_vy || msg->w <> this->keyboard_w)\n'}
+[1.569335] (c_pkg) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.569395] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:32:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.569457] (c_pkg) StderrLine: {'line': b'   32 |         if(msg->vx <> this->keyboard_vx || msg->vy <\x1b[01;31m\x1b[K>\x1b[m\x1b[K this->keyboard_vy || msg->w <> this->keyboard_w)\n'}
+[1.569516] (c_pkg) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.569575] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:32:84:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.569635] (c_pkg) StderrLine: {'line': b'   32 |         if(msg->vx <> this->keyboard_vx || msg->vy <> this->keyboard_vy || msg->w <\x1b[01;31m\x1b[K>\x1b[m\x1b[K this->keyboard_w)\n'}
+[1.569694] (c_pkg) StderrLine: {'line': b'      |                                                                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.604647] (-) TimerEvent: {}
+[1.704929] (-) TimerEvent: {}
+[1.805212] (-) TimerEvent: {}
+[1.905480] (-) TimerEvent: {}
+[2.005853] (-) TimerEvent: {}
+[2.106149] (-) TimerEvent: {}
+[2.206488] (-) TimerEvent: {}
+[2.306833] (-) TimerEvent: {}
+[2.407113] (-) TimerEvent: {}
+[2.507407] (-) TimerEvent: {}
+[2.607777] (-) TimerEvent: {}
+[2.708171] (-) TimerEvent: {}
+[2.808452] (-) TimerEvent: {}
+[2.908752] (-) TimerEvent: {}
+[3.009109] (-) TimerEvent: {}
+[3.109474] (-) TimerEvent: {}
+[3.210046] (-) TimerEvent: {}
+[3.219011] (c_pkg) StderrLine: {'line': b'make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1\n'}
+[3.220055] (c_pkg) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2\n'}
+[3.221824] (c_pkg) StderrLine: {'line': b'make: *** [Makefile:146: all] Error 2\n'}
+[3.226089] (c_pkg) CommandEnded: {'returncode': 2}
+[3.310229] (-) TimerEvent: {}
+[3.410808] (-) TimerEvent: {}
+[3.511223] (-) TimerEvent: {}
+[3.612846] (-) TimerEvent: {}
+[3.645645] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 2}
+[3.656327] (-) EventReactorShutdown: {}

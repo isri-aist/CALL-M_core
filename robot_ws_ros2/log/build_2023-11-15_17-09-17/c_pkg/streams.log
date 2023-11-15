@@ -1,0 +1,46 @@
+[0.346s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.391s] [  8%] Built target c_pkg__cpp
+[0.391s] [ 10%] Built target c_pkg__rosidl_generator_c
+[0.408s] [ 29%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[0.408s] [ 32%] Built target c_pkg__rosidl_typesupport_c
+[0.408s] [ 35%] Built target c_pkg__rosidl_typesupport_introspection_c
+[0.410s] [ 43%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[0.414s] [ 51%] Built target c_pkg__rosidl_typesupport_cpp
+[0.427s] [ 59%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[0.439s] [ 59%] Built target c_pkg
+[0.456s] [ 62%] Built target c_pkg__py
+[0.467s] [ 72%] Built target keyboard_control_node
+[0.470s] [ 75%] [32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o[0m
+[0.471s] [ 81%] Built target c_pkg__python
+[0.487s] [ 86%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[0.488s] [ 91%] Built target c_pkg__rosidl_typesupport_c__pyext
+[0.489s] [ 97%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[2.163s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In constructor ‘[01m[KBot_control_driver::Bot_control_driver()[m[K’:
+[2.164s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:14:120:[m[K [01;31m[Kerror: [m[K‘[01m[KMBot_control_driver[m[K’ has not been declared
+[2.164s]    14 |       subscription_keyboard= this->create_subscription<c_pkg::msg::StateVector>("keyboard_bot_command", 10, std::bind(&[01;31m[KMBot_control_driver[m[K::topic_callback, this, _1));
+[2.164s]       |                                                                                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.167s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.168s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.169s]                  from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:4[m[K:
+[2.169s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In member function ‘[01m[Kvoid Bot_control_driver::topic_callback(c_pkg::msg::StateVector_<std::allocator<void> >::SharedPtr) const[m[K’:
+[2.169s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:20:77:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kc_str[m[K’ in ‘[01m[K((const std::__shared_ptr_access<c_pkg::msg::StateVector_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<c_pkg::msg::StateVector_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->c_pkg::msg::StateVector_<std::allocator<void> >::vx[m[K’, which is of non-class type ‘[01m[Kc_pkg::msg::StateVector_<std::allocator<void> >::_vx_type[m[K’ {aka ‘[01m[Kdouble[m[K’}
+[2.169s]    20 |       RCLCPP_INFO(this->get_logger(), "I heard: '%s' '%s' '%s' ", (msg->vx).[01;31m[Kc_str[m[K(), (msg->vy).c_str(), (msg->w).c_str());
+[2.169s]       |                                                                             [01;31m[K^~~~~[m[K
+[2.169s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:20:96:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kc_str[m[K’ in ‘[01m[K((const std::__shared_ptr_access<c_pkg::msg::StateVector_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<c_pkg::msg::StateVector_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->c_pkg::msg::StateVector_<std::allocator<void> >::vy[m[K’, which is of non-class type ‘[01m[Kc_pkg::msg::StateVector_<std::allocator<void> >::_vy_type[m[K’ {aka ‘[01m[Kdouble[m[K’}
+[2.169s]    20 |       RCLCPP_INFO(this->get_logger(), "I heard: '%s' '%s' '%s' ", (msg->vx).c_str(), (msg->vy).[01;31m[Kc_str[m[K(), (msg->w).c_str());
+[2.169s]       |                                                                                                [01;31m[K^~~~~[m[K
+[2.170s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:20:114:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kc_str[m[K’ in ‘[01m[K((const std::__shared_ptr_access<c_pkg::msg::StateVector_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<c_pkg::msg::StateVector_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->c_pkg::msg::StateVector_<std::allocator<void> >::w[m[K’, which is of non-class type ‘[01m[Kc_pkg::msg::StateVector_<std::allocator<void> >::_w_type[m[K’ {aka ‘[01m[Kdouble[m[K’}
+[2.170s]    20 |       RCLCPP_INFO(this->get_logger(), "I heard: '%s' '%s' '%s' ", (msg->vx).c_str(), (msg->vy).c_str(), (msg->w).[01;31m[Kc_str[m[K());
+[2.170s]       |                                                                                                                  [01;31m[K^~~~~[m[K
+[2.782s] make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1
+[2.782s] make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
+[2.783s] make: *** [Makefile:146: all] Error 2
+[2.787s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8

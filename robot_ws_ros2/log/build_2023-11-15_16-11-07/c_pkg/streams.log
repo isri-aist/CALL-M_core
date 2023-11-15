@@ -1,0 +1,280 @@
+[0.246s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.269s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.271s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.271s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.271s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.271s]   the cmake_policy command to set the policy and suppress this warning.
+[0.271s] 
+[0.271s] Call Stack (most recent call first):
+[0.271s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.271s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.271s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.271s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.271s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.271s]   CMakeLists.txt:19 (find_package)
+[0.271s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.272s] [0m
+[0.291s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.291s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.483s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.514s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.517s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.650s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.692s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.694s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.825s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.834s] [33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):
+[0.834s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.834s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.834s]   the cmake_policy command to set the policy and suppress this warning.
+[0.834s] 
+[0.834s] Call Stack (most recent call first):
+[0.835s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.835s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[0.835s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.835s] [0m
+[0.857s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.965s] [33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:
+[0.965s]   Syntax Warning in cmake code at column 27
+[0.965s] 
+[0.965s]   Argument not separated from preceding token by whitespace.
+[0.965s] Call Stack (most recent call first):
+[0.965s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+[0.965s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.965s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[0.965s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[0.965s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.966s] [0m
+[0.966s] [33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:
+[0.966s]   Syntax Warning in cmake code at column 38
+[0.966s] 
+[0.966s]   Argument not separated from preceding token by whitespace.
+[0.966s] Call Stack (most recent call first):
+[0.966s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+[0.966s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.966s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[0.966s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[0.966s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.966s] [0m
+[0.966s] [33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:
+[0.966s]   Syntax Warning in cmake code at column 34
+[0.966s] 
+[0.966s]   Argument not separated from preceding token by whitespace.
+[0.967s] Call Stack (most recent call first):
+[0.967s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+[0.967s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.967s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[0.967s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[0.967s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.967s] [0m
+[0.967s] [33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:
+[0.967s]   Syntax Warning in cmake code at column 45
+[0.967s] 
+[0.967s]   Argument not separated from preceding token by whitespace.
+[0.967s] Call Stack (most recent call first):
+[0.967s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+[0.967s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.967s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[0.967s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[0.967s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.968s] [0m
+[0.968s] [33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:
+[0.968s]   Syntax Warning in cmake code at column 51
+[0.968s] 
+[0.968s]   Argument not separated from preceding token by whitespace.
+[0.968s] Call Stack (most recent call first):
+[0.968s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+[0.968s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.968s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[0.968s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[0.968s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.968s] [0m
+[0.968s] [33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:
+[0.968s]   Syntax Warning in cmake code at column 62
+[0.968s] 
+[0.968s]   Argument not separated from preceding token by whitespace.
+[0.968s] Call Stack (most recent call first):
+[0.969s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+[0.969s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.969s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[0.969s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[0.969s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.969s] [0m
+[0.970s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.075s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.080s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.082s] [33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[1.082s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.083s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.083s]   the cmake_policy command to set the policy and suppress this warning.
+[1.083s] 
+[1.083s] Call Stack (most recent call first):
+[1.083s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.083s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.083s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[1.083s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.083s] [0m
+[1.103s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.103s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.104s] [33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):
+[1.104s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.104s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.104s]   the cmake_policy command to set the policy and suppress this warning.
+[1.104s] 
+[1.104s] Call Stack (most recent call first):
+[1.104s]   /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.104s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.104s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.104s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[1.104s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.104s] [0m
+[1.125s] [33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):
+[1.125s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.125s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.125s]   the cmake_policy command to set the policy and suppress this warning.
+[1.125s] 
+[1.125s] Call Stack (most recent call first):
+[1.125s]   /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.125s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.125s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.125s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[1.126s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.126s] [0m
+[1.127s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.127s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.127s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.146s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.156s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.157s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.158s] -- Configured cppcheck include dirs: 
+[1.158s] -- Configured cppcheck exclude dirs and/or files: 
+[1.159s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.159s] -- Configured cpplint exclude dirs and/or files: 
+[1.160s] -- Added test 'lint_cmake' to check CMake code style
+[1.162s] -- Added test 'uncrustify' to check C / C++ code style
+[1.162s] -- Configured uncrustify additional arguments: 
+[1.162s] -- Added test 'xmllint' to check XML markup files
+[1.164s] -- Configuring done (0.9s)
+[1.205s] -- Generating done (0.0s)
+[1.208s] -- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[1.231s] [  2%] Built target c_pkg__cpp
+[1.232s] [ 11%] Built target c_pkg__rosidl_generator_c
+[1.244s] [ 20%] Built target c_pkg__rosidl_typesupport_c
+[1.245s] [ 28%] Built target c_pkg__rosidl_typesupport_cpp
+[1.247s] [ 37%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[1.248s] [ 45%] Built target c_pkg__rosidl_typesupport_introspection_c
+[1.249s] [ 54%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[1.263s] [ 62%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[1.273s] [ 62%] Built target c_pkg
+[1.284s] [ 65%] Built target c_pkg__py
+[1.292s] [ 71%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/func.cpp.o[0m
+[1.292s] [ 71%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/kinema.cpp.o[0m
+[1.298s] [ 77%] Built target c_pkg__python
+[1.312s] [ 88%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[1.312s] [ 88%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[1.318s] [ 94%] Built target c_pkg__rosidl_typesupport_c__pyext
+[1.368s] [ 97%] [32m[1mLinking CXX executable keyboard_control_node[0m
+[1.530s] [100%] Built target keyboard_control_node
+[1.538s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[1.601s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[1.608s] -- Install configuration: ""
+[1.608s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/rosidl_interfaces/c_pkg
+[1.608s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[1.608s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[1.608s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_c__visibility_control.h
+[1.608s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.h
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.c
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.h
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.h
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.h
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.sh
+[1.609s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.dsv
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_generator_c.so
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[1.609s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_c.h
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_c.so
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/dds_fastrtps
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_cpp.hpp
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_cpp.so
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_c.h
+[1.610s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.c
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_c.so
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_c.so
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.hpp
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__traits.hpp
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__builder.hpp
+[1.611s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.hpp
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.hpp
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.cpp
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_cpp.hpp
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_cpp.so
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_cpp.so
+[1.612s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.sh
+[1.612s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.dsv
+[1.612s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/__init__.py
+[1.648s] Compiling '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/__init__.py'...
+[1.655s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg
+[1.656s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/__init__.py
+[1.656s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector.py
+[1.656s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector_s.c
+[1.656s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[1.656s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[1.657s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[1.658s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__python.so
+[1.658s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.idl
+[1.658s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.msg
+[1.659s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/keyboard_control_node
+[1.660s] -- Set runtime path of "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/keyboard_control_node" to ""
+[1.660s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/package_run_dependencies/c_pkg
+[1.660s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/parent_prefix_path/c_pkg
+[1.660s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.sh
+[1.661s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.dsv
+[1.661s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.sh
+[1.661s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.dsv
+[1.661s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.bash
+[1.661s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.sh
+[1.661s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.zsh
+[1.661s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.dsv
+[1.662s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv
+[1.662s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/packages/c_pkg
+[1.662s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport.cmake
+[1.662s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport-noconfig.cmake
+[1.662s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport.cmake
+[1.662s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.662s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport.cmake
+[1.662s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport-noconfig.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cppExport.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport-noconfig.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake-extras.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_libraries-extras.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig-version.cmake
+[1.663s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.xml
+[1.665s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg

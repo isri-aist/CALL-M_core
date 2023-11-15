@@ -1,0 +1,64 @@
+[0.207s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.235s] [  2%] Built target c_pkg__cpp
+[0.235s] [ 10%] Built target c_pkg__rosidl_generator_c
+[0.248s] [ 32%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[0.248s] [ 32%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[0.248s] [ 32%] Built target c_pkg__rosidl_typesupport_cpp
+[0.260s] [ 47%] Built target c_pkg__rosidl_typesupport_introspection_c
+[0.261s] [ 47%] Built target c_pkg__rosidl_typesupport_c
+[0.261s] [ 55%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[0.271s] [ 55%] Built target c_pkg
+[0.282s] [ 57%] Built target c_pkg__py
+[0.287s] [ 67%] Built target keyboard_control_node
+[0.294s] [ 70%] [32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o[0m
+[0.294s] [ 75%] Built target c_pkg__python
+[0.307s] [ 90%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[0.307s] [ 90%] Built target c_pkg__rosidl_typesupport_c__pyext
+[0.307s] [ 90%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[1.445s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[1.445s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.446s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.447s]                  from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:5[m[K:
+[1.447s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In member function ‘[01m[Kvoid Bot_control_driver::topic_callback_keyboard(c_pkg::msg::StateVector_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.447s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:31:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdo[m[K’
+[1.447s]    31 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard: '%f' '%f' '%f' ", msg->vx, msg->vy, msg->w);
+[1.447s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[1.447s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:26:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.447s]    26 |     void topic_callback_keyboard([01;35m[Kconst c_pkg::msg::StateVector::SharedPtr msg[m[K) const
+[1.447s]       |                                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[1.447s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In member function ‘[01m[Kvoid Bot_control_driver::apply_commands()[m[K’:
+[1.448s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:36:88:[m[K [01;31m[Kerror: [m[Klvalue required as left operand of assignment
+[1.448s]    36 |         bool command_keyboard = this->keyboard_vx+this->keyboard_vy+this->keyboard_w = [01;31m[K0[m[K;
+[1.448s]       |                                                                                        [01;31m[K^[m[K
+[1.448s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:37:88:[m[K [01;31m[Kerror: [m[Klvalue required as left operand of assignment
+[1.448s]    37 |         bool command_joystick = this->joystick_vx+this->joystick_vy+this->joystick_w = [01;31m[K0[m[K;
+[1.448s]       |                                                                                        [01;31m[K^[m[K
+[1.448s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:50:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kelif[m[K’ was not declared in this scope
+[1.448s]    50 |         [01;31m[Kelif[m[K(!command_keyboard && command_joystick)
+[1.448s]       |         [01;31m[K^~~~[m[K
+[1.449s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:57:41:[m[K [01;31m[Kerror: [m[K‘[01m[KMAX_VX[m[K’ was not declared in this scope
+[1.449s]    57 |         des_velx = constrain(des_velx, -[01;31m[KMAX_VX[m[K, MAX_VX);
+[1.449s]       |                                         [01;31m[K^~~~~~[m[K
+[1.451s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:57:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+[1.451s]    57 |         des_velx = [01;31m[Kconstrain[m[K(des_velx, -MAX_VX, MAX_VX);
+[1.451s]       |                    [01;31m[K^~~~~~~~~[m[K
+[1.453s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:58:42:[m[K [01;31m[Kerror: [m[K‘[01m[KMAX_VY[m[K’ was not declared in this scope
+[1.453s]    58 |         des_vely = constrain (des_vely, -[01;31m[KMAX_VY[m[K, MAX_VY);
+[1.453s]       |                                          [01;31m[K^~~~~~[m[K
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:59:42:[m[K [01;31m[Kerror: [m[K‘[01m[KMAX_W[m[K’ was not declared in this scope
+[1.455s]    59 |         des_velw = constrain (des_velw, -[01;31m[KMAX_W[m[K, MAX_W);
+[1.455s]       |                                          [01;31m[K^~~~~[m[K
+[1.457s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:62:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel2rotor[m[K’ was not declared in this scope
+[1.457s]    62 |         [01;31m[Kvel2rotor[m[K (this->rotor_rad_p_sec, des_velx, des_vely, des_velw);
+[1.457s]       |         [01;31m[K^~~~~~~~~[m[K
+[2.716s] make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1
+[2.717s] make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
+[2.717s] make: *** [Makefile:146: all] Error 2
+[2.719s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.427" timestamp="2023-11-14T11:13:54.144868" hostname="jrlintern-XPS-15-9560"><testcase classname="examples_rclpy_minimal_client.services.minimal_client.test.test_copyright" name="test_copyright" time="0.026" /><testcase classname="examples_rclpy_minimal_client.services.minimal_client.test.test_flake8" name="test_flake8" time="0.211"><failure message="AssertionError: Found 4 code style errors / warnings:&#10;  ./examples_rclpy_minimal_client/client.py:36:1: B902 blind except Exception: statement&#10;  ./examples_rclpy_minimal_client/client_async_callback.py:42:1: B902 blind except Exception: statement&#10;  ./examples_rclpy_minimal_client/client_async_member_function.py:47:1: B902 blind except Exception: statement&#10;  ./examples_rclpy_minimal_client/client_async.py:39:1: B902 blind except Exception: statement&#10;assert 1 == 0">test/test_flake8.py:23: in test_flake8
-    assert rc == 0, \
-E   AssertionError: Found 4 code style errors / warnings:
-E     ./examples_rclpy_minimal_client/client.py:36:1: B902 blind except Exception: statement
-E     ./examples_rclpy_minimal_client/client_async_callback.py:42:1: B902 blind except Exception: statement
-E     ./examples_rclpy_minimal_client/client_async_member_function.py:47:1: B902 blind except Exception: statement
-E     ./examples_rclpy_minimal_client/client_async.py:39:1: B902 blind except Exception: statement
-E   assert 1 == 0</failure></testcase><testcase classname="examples_rclpy_minimal_client.services.minimal_client.test.test_pep257" name="test_pep257" time="0.037" /></testsuite></testsuites>

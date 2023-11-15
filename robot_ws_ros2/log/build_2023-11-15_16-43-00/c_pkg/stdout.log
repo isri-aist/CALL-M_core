@@ -1,0 +1,15 @@
+[ 11%] Built target c_pkg__rosidl_generator_c
+[ 11%] Built target c_pkg__cpp
+[ 20%] Built target c_pkg__rosidl_typesupport_c
+[ 28%] Built target c_pkg__rosidl_typesupport_cpp
+[ 42%] Built target c_pkg__rosidl_typesupport_introspection_c
+[ 45%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[ 54%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[ 62%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[ 62%] Built target c_pkg
+[ 65%] Built target c_pkg__py
+[ 68%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control.cpp.o[0m
+[ 74%] Built target c_pkg__python
+[ 85%] Built target c_pkg__rosidl_typesupport_c__pyext
+[ 85%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext

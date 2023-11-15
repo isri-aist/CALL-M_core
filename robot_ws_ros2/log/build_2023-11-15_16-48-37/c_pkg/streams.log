@@ -1,0 +1,163 @@
+[0.231s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.260s] [  2%] Built target c_pkg__cpp
+[0.260s] [ 11%] Built target c_pkg__rosidl_generator_c
+[0.273s] [ 20%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[0.273s] [ 28%] Built target c_pkg__rosidl_typesupport_cpp
+[0.273s] [ 40%] Built target c_pkg__rosidl_typesupport_c
+[0.274s] [ 45%] Built target c_pkg__rosidl_typesupport_introspection_c
+[0.274s] [ 54%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[0.285s] [ 62%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[0.295s] [ 62%] Built target c_pkg
+[0.306s] [ 65%] Built target c_pkg__py
+[0.317s] [ 68%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control.cpp.o[0m
+[0.319s] [ 74%] Built target c_pkg__python
+[0.333s] [ 80%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[0.334s] [ 85%] Built target c_pkg__rosidl_typesupport_c__pyext
+[0.335s] [ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[1.474s] In file included from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:13[m[K:
+[1.474s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getch()[m[K’:
+[1.474s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:240:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.474s]   240 |       [01;35m[K}[m[K
+[1.474s]       |       [01;35m[K^[m[K
+[1.474s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getche()[m[K’:
+[1.474s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:244:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.475s]   244 |       [01;35m[K}[m[K
+[1.475s]       |       [01;35m[K^[m[K
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::cputs(const char*)[m[K’:
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:299:17:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+[1.475s]   299 |       printf(str[01;35m[K)[m[K;
+[1.475s]       |                 [01;35m[K^[m[K
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kchar* __CONIO_H::getpass(const char*)[m[K’:
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:305:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.475s]   305 |       [01;35m[K}[m[K
+[1.475s]       |       [01;35m[K^[m[K
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:303:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprompt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.475s]   303 |     char*getpass([01;35m[Kconst char*prompt[m[K){
+[1.475s]       |                  [01;35m[K~~~~~~~~~~~^~~~~~[m[K
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::gettext(int, int, int, int, void*)[m[K’:
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:309:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.476s]   309 |       [01;35m[K}[m[K
+[1.476s]       |       [01;35m[K^[m[K
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kl[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.476s]   307 |     int gettext([01;35m[Kint l[m[K,int t,int r,int b,void*destination){
+[1.476s]       |                 [01;35m[K~~~~^[m[K
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.476s]   307 |     int gettext(int l,[01;35m[Kint t[m[K,int r,int b,void*destination){
+[1.476s]       |                       [01;35m[K~~~~^[m[K
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kr[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.476s]   307 |     int gettext(int l,int t,[01;35m[Kint r[m[K,int b,void*destination){
+[1.476s]       |                             [01;35m[K~~~~^[m[K
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kb[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.476s]   307 |     int gettext(int l,int t,int r,[01;35m[Kint b[m[K,void*destination){
+[1.476s]       |                                   [01;35m[K~~~~^[m[K
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdestination[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.476s]   307 |     int gettext(int l,int t,int r,int b,[01;35m[Kvoid*destination[m[K){
+[1.477s]       |                                         [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[1.477s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:[m[K In function ‘[01m[Kvoid flush_input_buffer()[m[K’:
+[1.477s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:37:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kc[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.477s]    37 |         char [01;35m[Kc[m[K = _getche();
+[1.477s]       |              [01;35m[K^[m[K
+[3.136s] [ 94%] [32m[1mLinking CXX executable keyboard_control_node[0m
+[3.293s] [100%] Built target keyboard_control_node
+[3.302s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[3.379s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[3.386s] -- Install configuration: ""
+[3.386s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/rosidl_interfaces/c_pkg
+[3.387s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[3.387s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[3.387s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_c__visibility_control.h
+[3.387s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[3.387s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.h
+[3.388s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.c
+[3.388s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.h
+[3.389s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.h
+[3.389s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.h
+[3.389s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.sh
+[3.390s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.dsv
+[3.390s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_generator_c.so
+[3.391s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[3.391s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[3.391s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[3.391s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_c.h
+[3.391s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.391s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_c.so
+[3.391s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[3.392s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[3.392s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.392s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[3.392s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/dds_fastrtps
+[3.392s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_cpp.hpp
+[3.392s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_cpp.so
+[3.392s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_c.h
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.c
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_c.so
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_c.so
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[3.393s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.hpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__traits.hpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__builder.hpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.hpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.hpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.cpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_cpp.hpp
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_cpp.so
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_cpp.so
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.sh
+[3.394s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.dsv
+[3.395s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/__init__.py
+[3.426s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg
+[3.426s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/__init__.py
+[3.426s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector.py
+[3.426s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector_s.c
+[3.426s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[3.427s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[3.428s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[3.428s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__python.so
+[3.429s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.idl
+[3.429s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.msg
+[3.429s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/keyboard_control_node
+[3.431s] -- Set runtime path of "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/keyboard_control_node" to ""
+[3.431s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/package_run_dependencies/c_pkg
+[3.431s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/parent_prefix_path/c_pkg
+[3.431s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.sh
+[3.432s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.dsv
+[3.432s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.sh
+[3.432s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.dsv
+[3.432s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.bash
+[3.432s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.sh
+[3.433s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.zsh
+[3.433s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.dsv
+[3.433s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv
+[3.433s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/packages/c_pkg
+[3.433s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport.cmake
+[3.433s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport-noconfig.cmake
+[3.433s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport.cmake
+[3.434s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.434s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport.cmake
+[3.434s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport-noconfig.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cppExport.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport-noconfig.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake-extras.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_libraries-extras.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.435s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.436s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig.cmake
+[3.436s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig-version.cmake
+[3.436s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.xml
+[3.436s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg

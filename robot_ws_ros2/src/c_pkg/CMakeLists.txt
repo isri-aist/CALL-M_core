@@ -19,6 +19,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
 
 ### Custom Interfaces 
@@ -26,9 +27,18 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/StateVector.msg"
         )
 
+
 #keyboard_control_node
-add_executable(keyboard_control_node src/keyboard_control.cpp)
-ament_target_dependencies(keyboard_control_node rclcpp std_msgs)
+add_executable(keyboard_control_node src/keyboard_control.cpp src/func.cpp src/kinema.cpp)
+ament_target_dependencies(keyboard_control_node rclcpp std_msgs rosidl_default_generators)
+
+#kbot_control_driver_node
+add_executable(bot_control_driver_node src/bot_control_driver.cpp src/servo3moog.cpp src/func.cpp src/kinema.cpp)
+ament_target_dependencies(bot_control_driver_node rclcpp std_msgs rosidl_default_generators)
+
+#link interfaces to keyboard_control_node
+rosidl_target_interfaces(keyboard_control_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_target_interfaces(bot_control_driver_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -44,6 +54,13 @@ endif()
 #install nodes
 install(TARGETS
   keyboard_control_node
+  bot_control_driver_node
   DESTINATION lib/${PROJECT_NAME})
+
+# Install launch files
+install(DIRECTORY
+  launch/
+  DESTINATION share/${PROJECT_NAME}/launch
+)
 
 ament_package()

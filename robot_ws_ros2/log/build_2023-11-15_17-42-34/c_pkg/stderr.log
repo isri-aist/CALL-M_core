@@ -1,0 +1,34 @@
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:4[m[K:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In member function ‘[01m[Kvoid Bot_control_driver::topic_callback_keyboard(c_pkg::msg::StateVector_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:33:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdo[m[K’
+   33 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard: '%f' '%f' '%f' ", msg->vx, msg->vy, msg->w);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:28:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   28 |     void topic_callback_keyboard([01;35m[Kconst c_pkg::msg::StateVector::SharedPtr msg[m[K) const
+      |                                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In member function ‘[01m[Kvoid Bot_control_driver::apply_commands()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:38:88:[m[K [01;31m[Kerror: [m[Klvalue required as left operand of assignment
+   38 |         bool command_keyboard = this->keyboard_vx+this->keyboard_vy+this->keyboard_w = [01;31m[K0[m[K;
+      |                                                                                        [01;31m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:39:88:[m[K [01;31m[Kerror: [m[Klvalue required as left operand of assignment
+   39 |         bool command_joystick = this->joystick_vx+this->joystick_vy+this->joystick_w = [01;31m[K0[m[K;
+      |                                                                                        [01;31m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kelif[m[K’ was not declared in this scope
+   52 |         [01;31m[Kelif[m[K(!command_keyboard && command_joystick)
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:59:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+   59 |         des_velx = [01;31m[Kconstrain[m[K(des_velx, -MAX_VX, MAX_VX);
+      |                    [01;31m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

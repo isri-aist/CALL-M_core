@@ -1,0 +1,17 @@
+[  2%] Built target c_pkg__cpp
+[ 10%] Built target c_pkg__rosidl_generator_c
+[ 21%] Built target c_pkg__rosidl_typesupport_cpp
+[ 27%] Built target c_pkg__rosidl_typesupport_c
+[ 35%] Built target c_pkg__rosidl_typesupport_introspection_c
+[ 43%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[ 51%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[ 59%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[ 59%] Built target c_pkg
+[ 62%] Built target c_pkg__py
+[ 72%] Built target keyboard_control_node
+[ 75%] [32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o[0m
+[ 81%] Built target c_pkg__python
+[ 97%] Built target c_pkg__rosidl_typesupport_c__pyext
+[ 97%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[ 97%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[100%] [32m[1mLinking CXX executable bot_control_driver_node[0m

@@ -1,0 +1,7 @@
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:35:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids flexible array member ‘[01m[Krotor_rad_p_sec[m[K’ [[01;35m[K-Wpedantic[m[K]
+   35 |     float [01;35m[Krotor_rad_p_sec[m[K[] = {0.0, 0.0, 0.0}; // rev. per sec
+      |           [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:35:11:[m[K [01;31m[Kerror: [m[Kinitializer for flexible array member ‘[01m[Kfloat Bot_control_driver::rotor_rad_p_sec [][m[K’
+make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

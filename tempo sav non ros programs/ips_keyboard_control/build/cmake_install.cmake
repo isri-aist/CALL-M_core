@@ -1,4 +1,4 @@
-# Install script for directory: /home/jrlintern/workspace_mcrtc/tests
+# Install script for directory: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/tempo sav non ros programs/ips_keyboard_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jrlintern/workspace_mcrtc/tests/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/tempo sav non ros programs/ips_keyboard_control/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

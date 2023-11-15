@@ -1,0 +1,89 @@
+[0.217s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.246s] [  6%] Built target c_pkg__cpp
+[0.246s] [ 12%] Built target c_pkg__rosidl_generator_c
+[0.258s] [ 21%] Built target c_pkg__rosidl_typesupport_c
+[0.259s] [ 30%] Built target c_pkg__rosidl_typesupport_cpp
+[0.259s] [ 39%] Built target c_pkg__rosidl_typesupport_introspection_c
+[0.262s] [ 48%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[0.263s] [ 57%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[0.275s] [ 66%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[0.285s] [ 66%] Built target c_pkg
+[0.296s] [ 69%] Built target c_pkg__py
+[0.305s] [ 72%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control.cpp.o[0m
+[0.308s] [ 78%] Built target c_pkg__python
+[0.320s] [ 96%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[0.320s] [ 96%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[0.321s] [ 96%] Built target c_pkg__rosidl_typesupport_c__pyext
+[1.454s] In file included from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:12[m[K:
+[1.454s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getch()[m[K’:
+[1.454s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:240:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.454s]   240 |       [01;35m[K}[m[K
+[1.454s]       |       [01;35m[K^[m[K
+[1.454s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getche()[m[K’:
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:244:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.455s]   244 |       [01;35m[K}[m[K
+[1.455s]       |       [01;35m[K^[m[K
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::cputs(const char*)[m[K’:
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:299:17:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+[1.455s]   299 |       printf(str[01;35m[K)[m[K;
+[1.455s]       |                 [01;35m[K^[m[K
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kchar* __CONIO_H::getpass(const char*)[m[K’:
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:305:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.455s]   305 |       [01;35m[K}[m[K
+[1.455s]       |       [01;35m[K^[m[K
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:303:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprompt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.455s]   303 |     char*getpass([01;35m[Kconst char*prompt[m[K){
+[1.455s]       |                  [01;35m[K~~~~~~~~~~~^~~~~~[m[K
+[1.455s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::gettext(int, int, int, int, void*)[m[K’:
+[1.456s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:309:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.456s]   309 |       [01;35m[K}[m[K
+[1.456s]       |       [01;35m[K^[m[K
+[1.456s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kl[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.456s]   307 |     int gettext([01;35m[Kint l[m[K,int t,int r,int b,void*destination){
+[1.456s]       |                 [01;35m[K~~~~^[m[K
+[1.456s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.456s]   307 |     int gettext(int l,[01;35m[Kint t[m[K,int r,int b,void*destination){
+[1.456s]       |                       [01;35m[K~~~~^[m[K
+[1.456s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kr[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.456s]   307 |     int gettext(int l,int t,[01;35m[Kint r[m[K,int b,void*destination){
+[1.456s]       |                             [01;35m[K~~~~^[m[K
+[1.456s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kb[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.456s]   307 |     int gettext(int l,int t,int r,[01;35m[Kint b[m[K,void*destination){
+[1.456s]       |                                   [01;35m[K~~~~^[m[K
+[1.456s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdestination[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.456s]   307 |     int gettext(int l,int t,int r,int b,[01;35m[Kvoid*destination[m[K){
+[1.457s]       |                                         [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[1.460s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:[m[K At global scope:
+[1.461s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:55:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ is not a type
+[1.461s]    55 |         float sec_dt ([01;31m[Kdt[m[K.count())/1000;
+[1.461s]       |                       [01;31m[K^~[m[K
+[1.461s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:55:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K.[m[K’ token
+[1.461s]    55 |         float sec_dt (dt[01;31m[K.[m[Kcount())/1000;
+[1.461s]       |                         [01;31m[K^[m[K
+[1.461s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:55:33:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.461s]    55 |         float sec_dt (dt.count()[01;31m[K)[m[K/1000;
+[1.461s]       |                                 [01;31m[K^[m[K
+[1.461s]       |                                  [32m[K;[m[K
+[1.461s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:55:34:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K/[m[K’ token
+[1.462s]    55 |         float sec_dt (dt.count())[01;31m[K/[m[K1000;
+[1.462s]       |                                  [01;31m[K^[m[K
+[1.462s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:56:31:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kfloat Keyboard_control::sec_dt(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[1.462s]    56 |         float distance_t = 20*[01;31m[Ksec_dt[m[K;
+[1.462s]       |                               [01;31m[K^~~~~~[m[K
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:[m[K In member function ‘[01m[Kvoid Keyboard_control::timer_callback()[m[K’:
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:167:39:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kfloat Keyboard_control::sec_dt(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[1.475s]   167 |                 this->chrono += [01;31m[Kthis->sec_dt[m[K;
+[1.475s]       |                                 [01;31m[K~~~~~~^~~~~~[m[K
+[1.475s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:177:39:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kfloat Keyboard_control::sec_dt(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[1.475s]   177 |                 this->chrono += [01;31m[Kthis->sec_dt[m[K;
+[1.475s]       |                                 [01;31m[K~~~~~~^~~~~~[m[K
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:187:39:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kfloat Keyboard_control::sec_dt(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[1.476s]   187 |                 this->chrono += [01;31m[Kthis->sec_dt[m[K;
+[1.476s]       |                                 [01;31m[K~~~~~~^~~~~~[m[K
+[1.476s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:197:39:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kfloat Keyboard_control::sec_dt(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[1.476s]   197 |                 this->chrono += [01;31m[Kthis->sec_dt[m[K;
+[1.476s]       |                                 [01;31m[K~~~~~~^~~~~~[m[K
+[2.267s] make[2]: *** [CMakeFiles/keyboard_control_node.dir/build.make:76: CMakeFiles/keyboard_control_node.dir/src/keyboard_control.cpp.o] Error 1
+[2.268s] make[1]: *** [CMakeFiles/Makefile2:545: CMakeFiles/keyboard_control_node.dir/all] Error 2
+[2.268s] make: *** [Makefile:146: all] Error 2
+[2.270s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8

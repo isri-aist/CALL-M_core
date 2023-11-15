@@ -1,0 +1,195 @@
+[0.000000] (-) TimerEvent: {}
+[0.000206] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict()}
+[0.000262] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.099303] (-) TimerEvent: {}
+[0.200823] (-) TimerEvent: {}
+[0.201581] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'cmake'}
+[0.202344] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'build'}
+[0.203500] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1763'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1542'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '10855'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:45935'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1801,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1801'), ('INVOCATION_ID', '66290597249d4c269b6a5230c730d6e6'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:648818b1-d3fb-47fa-b469-3c82a7eebea7'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.223213] (c_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.224806] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[0.224927] (c_pkg) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.224997] (c_pkg) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.225060] (c_pkg) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.225153] (c_pkg) StderrLine: {'line': b'\n'}
+[0.225211] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.225269] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[0.225326] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[0.225417] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.225475] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.225535] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.225592] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:19 (find_package)\n'}
+[0.225649] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.225706] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.245823] (c_pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.246011] (c_pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.300903] (-) TimerEvent: {}
+[0.401214] (-) TimerEvent: {}
+[0.439541] (c_pkg) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.471828] (c_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.475316] (c_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.501335] (-) TimerEvent: {}
+[0.594775] (c_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.601427] (-) TimerEvent: {}
+[0.636924] (c_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.638323] (c_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.701553] (-) TimerEvent: {}
+[0.764050] (c_pkg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.773188] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):\n'}
+[0.773329] (c_pkg) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.773402] (c_pkg) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.773465] (c_pkg) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.773565] (c_pkg) StderrLine: {'line': b'\n'}
+[0.773624] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.773682] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.773741] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[0.773799] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.773857] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.793213] (c_pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.801659] (-) TimerEvent: {}
+[0.901354] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:\n'}
+[0.902035] (-) TimerEvent: {}
+[0.902160] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 27\n'}
+[0.902249] (c_pkg) StderrLine: {'line': b'\n'}
+[0.902326] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[0.902387] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.902447] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[0.902506] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.902564] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)\n'}
+[0.902622] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[0.902678] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.902798] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.902889] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:\n'}
+[0.902948] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 38\n'}
+[0.903005] (c_pkg) StderrLine: {'line': b'\n'}
+[0.903061] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[0.903128] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.903185] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[0.903242] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.903298] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)\n'}
+[0.903358] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[0.903414] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.903471] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.903526] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:\n'}
+[0.903584] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 34\n'}
+[0.903640] (c_pkg) StderrLine: {'line': b'\n'}
+[0.903696] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[0.903753] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.903813] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[0.903869] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.903924] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)\n'}
+[0.903981] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[0.904037] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.904114] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.904184] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:\n'}
+[0.904241] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 45\n'}
+[0.904298] (c_pkg) StderrLine: {'line': b'\n'}
+[0.904353] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[0.904409] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.904464] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[0.904521] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.904581] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)\n'}
+[0.904638] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[0.904694] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.904751] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.904807] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:\n'}
+[0.904864] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 51\n'}
+[0.904919] (c_pkg) StderrLine: {'line': b'\n'}
+[0.904980] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[0.905044] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.905102] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[0.905159] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.905234] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)\n'}
+[0.905304] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[0.905360] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.905417] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.905473] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:\n'}
+[0.905535] (c_pkg) StderrLine: {'line': b'  Syntax Warning in cmake code at column 62\n'}
+[0.905592] (c_pkg) StderrLine: {'line': b'\n'}
+[0.905648] (c_pkg) StderrLine: {'line': b'  Argument not separated from preceding token by whitespace.\n'}
+[0.905705] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.905762] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)\n'}
+[0.905820] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.905876] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)\n'}
+[0.905931] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[0.905987] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.906043] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.906624] (c_pkg) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[1.002178] (-) TimerEvent: {}
+[1.007984] (c_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.013659] (c_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.015815] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[1.015921] (c_pkg) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.015989] (c_pkg) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.016052] (c_pkg) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.016112] (c_pkg) StderrLine: {'line': b'\n'}
+[1.016171] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.016261] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.016318] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.016376] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[1.016432] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.016489] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.036741] (c_pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.037095] (c_pkg) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.037549] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):\n'}
+[1.037646] (c_pkg) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.037735] (c_pkg) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.037817] (c_pkg) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.037886] (c_pkg) StderrLine: {'line': b'\n'}
+[1.037945] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.038003] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[1.038061] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.038139] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.038203] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[1.038286] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.038401] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.060038] (c_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):\n'}
+[1.060224] (c_pkg) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.060297] (c_pkg) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.060362] (c_pkg) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.060424] (c_pkg) StderrLine: {'line': b'\n'}
+[1.060485] (c_pkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.060545] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[1.060626] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.060688] (c_pkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.060764] (c_pkg) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[1.060823] (c_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.060881] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.061904] (c_pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.062023] (c_pkg) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.062095] (c_pkg) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.086323] (c_pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.096204] (c_pkg) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.097580] (c_pkg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.098425] (c_pkg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.098532] (c_pkg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.099601] (c_pkg) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.099713] (c_pkg) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.100363] (c_pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.101638] (c_pkg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.101745] (c_pkg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.102084] (c_pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.102165] (-) TimerEvent: {}
+[1.104002] (c_pkg) StdoutLine: {'line': b'-- Configuring done (0.9s)\n'}
+[1.109406] (c_pkg) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:36 (add_executable):\n'}
+[1.109521] (c_pkg) StderrLine: {'line': b'  Cannot find source file:\n'}
+[1.109598] (c_pkg) StderrLine: {'line': b'\n'}
+[1.109662] (c_pkg) StderrLine: {'line': b'    src/bot_control_driver_node.cpp\n'}
+[1.109741] (c_pkg) StderrLine: {'line': b'\n'}
+[1.109801] (c_pkg) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[1.109877] (c_pkg) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[1.109935] (c_pkg) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[1.109992] (c_pkg) StderrLine: {'line': b'\n'}
+[1.110048] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.111210] (c_pkg) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:36 (add_executable):\n'}
+[1.111312] (c_pkg) StderrLine: {'line': b'  No SOURCES given to target: bot_control_driver_node\n'}
+[1.111378] (c_pkg) StderrLine: {'line': b'\n'}
+[1.111440] (c_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.111500] (c_pkg) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[1.117826] (c_pkg) StderrLine: {'line': b'make: *** [Makefile:814: cmake_check_build_system] Error 1\n'}
+[1.119639] (c_pkg) CommandEnded: {'returncode': 2}
+[1.202795] (-) TimerEvent: {}
+[1.304429] (-) TimerEvent: {}
+[1.404959] (-) TimerEvent: {}
+[1.445164] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 2}
+[1.455857] (-) EventReactorShutdown: {}

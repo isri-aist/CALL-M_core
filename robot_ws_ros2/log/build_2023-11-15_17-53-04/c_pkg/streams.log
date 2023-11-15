@@ -1,0 +1,28 @@
+[0.224s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.257s] [  5%] Built target c_pkg__cpp
+[0.257s] [ 10%] Built target c_pkg__rosidl_generator_c
+[0.272s] [ 17%] Built target c_pkg__rosidl_typesupport_c
+[0.273s] [ 25%] Built target c_pkg__rosidl_typesupport_introspection_c
+[0.273s] [ 37%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[0.273s] [ 40%] Built target c_pkg__rosidl_typesupport_cpp
+[0.273s] [ 47%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[0.285s] [ 55%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[0.297s] [ 55%] Built target c_pkg
+[0.308s] [ 57%] Built target c_pkg__py
+[0.313s] [ 67%] Built target keyboard_control_node
+[0.319s] [ 70%] [32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o[0m
+[0.320s] [ 75%] Built target c_pkg__python
+[0.333s] [ 90%] Built target c_pkg__rosidl_typesupport_c__pyext
+[0.333s] [ 90%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[0.333s] [ 90%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[1.713s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In member function ‘[01m[Kvoid Bot_control_driver::topic_callback_keyboard(c_pkg::msg::StateVector_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.714s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:32:53:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.714s]    32 |         if(msg->vx != this->keyboard_vx || msg->vy <[01;31m[K>[m[K this->keyboard_vy || msg->w <> this->keyboard_w)
+[1.714s]       |                                                     [01;31m[K^[m[K
+[1.714s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:32:84:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.714s]    32 |         if(msg->vx != this->keyboard_vx || msg->vy <> this->keyboard_vy || msg->w <[01;31m[K>[m[K this->keyboard_w)
+[1.714s]       |                                                                                    [01;31m[K^[m[K
+[3.416s] make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1
+[3.416s] make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
+[3.416s] make: *** [Makefile:146: all] Error 2
+[3.419s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8

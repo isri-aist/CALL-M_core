@@ -1,0 +1,6 @@
+/usr/bin/ld: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o: in function `Bot_control_driver::Bot_control_driver()':
+bot_control_driver.cpp:(.text._ZN18Bot_control_driverC2Ev[_ZN18Bot_control_driverC5Ev]+0x2bc): undefined reference to `servomotor_setup()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:155: bot_control_driver_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/examples_rclcpp_minimal_client/client_main" "TARGETS" "client_main" "DESTINATION" "lib/examples_rclcpp_minimal_client")

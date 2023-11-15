@@ -315,6 +315,58 @@ c_pkg__rosidl_typesupport_cpp/fast:
 .PHONY : c_pkg__rosidl_typesupport_cpp/fast
 
 #=============================================================================
+# Target rules for targets named c_pkg__python
+
+# Build rule for target.
+c_pkg__python: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 c_pkg__python
+.PHONY : c_pkg__python
+
+# fast build rule for target.
+c_pkg__python/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__python.dir/build.make CMakeFiles/c_pkg__python.dir/build
+.PHONY : c_pkg__python/fast
+
+#=============================================================================
+# Target rules for targets named c_pkg__rosidl_typesupport_fastrtps_c__pyext
+
+# Build rule for target.
+c_pkg__rosidl_typesupport_fastrtps_c__pyext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 c_pkg__rosidl_typesupport_fastrtps_c__pyext
+.PHONY : c_pkg__rosidl_typesupport_fastrtps_c__pyext
+
+# fast build rule for target.
+c_pkg__rosidl_typesupport_fastrtps_c__pyext/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/build
+.PHONY : c_pkg__rosidl_typesupport_fastrtps_c__pyext/fast
+
+#=============================================================================
+# Target rules for targets named c_pkg__rosidl_typesupport_introspection_c__pyext
+
+# Build rule for target.
+c_pkg__rosidl_typesupport_introspection_c__pyext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 c_pkg__rosidl_typesupport_introspection_c__pyext
+.PHONY : c_pkg__rosidl_typesupport_introspection_c__pyext
+
+# fast build rule for target.
+c_pkg__rosidl_typesupport_introspection_c__pyext/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/build
+.PHONY : c_pkg__rosidl_typesupport_introspection_c__pyext/fast
+
+#=============================================================================
+# Target rules for targets named c_pkg__rosidl_typesupport_c__pyext
+
+# Build rule for target.
+c_pkg__rosidl_typesupport_c__pyext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 c_pkg__rosidl_typesupport_c__pyext
+.PHONY : c_pkg__rosidl_typesupport_c__pyext
+
+# fast build rule for target.
+c_pkg__rosidl_typesupport_c__pyext/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/build
+.PHONY : c_pkg__rosidl_typesupport_c__pyext/fast
+
+#=============================================================================
 # Target rules for targets named keyboard_control_node
 
 # Build rule for target.
@@ -326,6 +378,32 @@ keyboard_control_node: cmake_check_build_system
 keyboard_control_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/build
 .PHONY : keyboard_control_node/fast
+
+#=============================================================================
+# Target rules for targets named bot_control_driver_node
+
+# Build rule for target.
+bot_control_driver_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bot_control_driver_node
+.PHONY : bot_control_driver_node
+
+# fast build rule for target.
+bot_control_driver_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/build
+.PHONY : bot_control_driver_node/fast
+
+#=============================================================================
+# Target rules for targets named c_pkg__py
+
+# Build rule for target.
+c_pkg__py: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 c_pkg__py
+.PHONY : c_pkg__py
+
+# fast build rule for target.
+c_pkg__py/fast:
+	$(MAKE) $(MAKESILENT) -f /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/c_pkg__py/CMakeFiles/c_pkg__py.dir/build.make /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/c_pkg__py/CMakeFiles/c_pkg__py.dir/build
+.PHONY : c_pkg__py/fast
 
 rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.o: rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.c.o
 .PHONY : rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.o
@@ -350,6 +428,102 @@ rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.s: rosidl_generator_
 rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_generator_c.dir/build.make CMakeFiles/c_pkg__rosidl_generator_c.dir/rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.c.s
 .PHONY : rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.c.s
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.o: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.o
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.o
+
+# target to build an object file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.o
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.o
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.i: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.i
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.i
+
+# target to preprocess a source file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.i
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.i
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.s: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.s
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.s
+
+# target to generate assembly for a file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.s
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.c.s
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.o: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.o
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.o
+
+# target to build an object file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.o
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.o
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.i: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.i
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.i
+
+# target to preprocess a source file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.i
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.i
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.s: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.s
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.s
+
+# target to generate assembly for a file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.s
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.s
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.o: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.o
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.o
+
+# target to build an object file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.o
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.o
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.i: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.i
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.i
+
+# target to preprocess a source file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.i
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.i
+
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.s: rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.s
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.s
+
+# target to generate assembly for a file
+rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.s
+.PHONY : rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.c.s
+
+rosidl_generator_py/c_pkg/msg/_state_vector_s.o: rosidl_generator_py/c_pkg/msg/_state_vector_s.c.o
+.PHONY : rosidl_generator_py/c_pkg/msg/_state_vector_s.o
+
+# target to build an object file
+rosidl_generator_py/c_pkg/msg/_state_vector_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__python.dir/build.make CMakeFiles/c_pkg__python.dir/rosidl_generator_py/c_pkg/msg/_state_vector_s.c.o
+.PHONY : rosidl_generator_py/c_pkg/msg/_state_vector_s.c.o
+
+rosidl_generator_py/c_pkg/msg/_state_vector_s.i: rosidl_generator_py/c_pkg/msg/_state_vector_s.c.i
+.PHONY : rosidl_generator_py/c_pkg/msg/_state_vector_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/c_pkg/msg/_state_vector_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__python.dir/build.make CMakeFiles/c_pkg__python.dir/rosidl_generator_py/c_pkg/msg/_state_vector_s.c.i
+.PHONY : rosidl_generator_py/c_pkg/msg/_state_vector_s.c.i
+
+rosidl_generator_py/c_pkg/msg/_state_vector_s.s: rosidl_generator_py/c_pkg/msg/_state_vector_s.c.s
+.PHONY : rosidl_generator_py/c_pkg/msg/_state_vector_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/c_pkg/msg/_state_vector_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__python.dir/build.make CMakeFiles/c_pkg__python.dir/rosidl_generator_py/c_pkg/msg/_state_vector_s.c.s
+.PHONY : rosidl_generator_py/c_pkg/msg/_state_vector_s.c.s
 
 rosidl_typesupport_c/c_pkg/msg/state_vector__type_support.o: rosidl_typesupport_c/c_pkg/msg/state_vector__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/c_pkg/msg/state_vector__type_support.o
@@ -495,6 +669,57 @@ rosidl_typesupport_introspection_cpp/c_pkg/msg/detail/state_vector__type_support
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_pkg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/c_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/c_pkg/msg/detail/state_vector__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/c_pkg/msg/detail/state_vector__type_support.cpp.s
 
+src/bot_control_driver.o: src/bot_control_driver.cpp.o
+.PHONY : src/bot_control_driver.o
+
+# target to build an object file
+src/bot_control_driver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o
+.PHONY : src/bot_control_driver.cpp.o
+
+src/bot_control_driver.i: src/bot_control_driver.cpp.i
+.PHONY : src/bot_control_driver.i
+
+# target to preprocess a source file
+src/bot_control_driver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.i
+.PHONY : src/bot_control_driver.cpp.i
+
+src/bot_control_driver.s: src/bot_control_driver.cpp.s
+.PHONY : src/bot_control_driver.s
+
+# target to generate assembly for a file
+src/bot_control_driver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.s
+.PHONY : src/bot_control_driver.cpp.s
+
+src/func.o: src/func.cpp.o
+.PHONY : src/func.o
+
+# target to build an object file
+src/func.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/func.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/func.cpp.o
+.PHONY : src/func.cpp.o
+
+src/func.i: src/func.cpp.i
+.PHONY : src/func.i
+
+# target to preprocess a source file
+src/func.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/func.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/func.cpp.i
+.PHONY : src/func.cpp.i
+
+src/func.s: src/func.cpp.s
+.PHONY : src/func.s
+
+# target to generate assembly for a file
+src/func.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/func.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/func.cpp.s
+.PHONY : src/func.cpp.s
+
 src/keyboard_control.o: src/keyboard_control.cpp.o
 .PHONY : src/keyboard_control.o
 
@@ -519,6 +744,57 @@ src/keyboard_control.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/keyboard_control.cpp.s
 .PHONY : src/keyboard_control.cpp.s
 
+src/kinema.o: src/kinema.cpp.o
+.PHONY : src/kinema.o
+
+# target to build an object file
+src/kinema.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/kinema.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/kinema.cpp.o
+.PHONY : src/kinema.cpp.o
+
+src/kinema.i: src/kinema.cpp.i
+.PHONY : src/kinema.i
+
+# target to preprocess a source file
+src/kinema.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/kinema.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/kinema.cpp.i
+.PHONY : src/kinema.cpp.i
+
+src/kinema.s: src/kinema.cpp.s
+.PHONY : src/kinema.s
+
+# target to generate assembly for a file
+src/kinema.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/kinema.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/kinema.cpp.s
+.PHONY : src/kinema.cpp.s
+
+src/servo3moog.o: src/servo3moog.cpp.o
+.PHONY : src/servo3moog.o
+
+# target to build an object file
+src/servo3moog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/servo3moog.cpp.o
+.PHONY : src/servo3moog.cpp.o
+
+src/servo3moog.i: src/servo3moog.cpp.i
+.PHONY : src/servo3moog.i
+
+# target to preprocess a source file
+src/servo3moog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/servo3moog.cpp.i
+.PHONY : src/servo3moog.cpp.i
+
+src/servo3moog.s: src/servo3moog.cpp.s
+.PHONY : src/servo3moog.s
+
+# target to generate assembly for a file
+src/servo3moog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/servo3moog.cpp.s
+.PHONY : src/servo3moog.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -534,19 +810,37 @@ help:
 	@echo "... test"
 	@echo "... c_pkg"
 	@echo "... c_pkg__cpp"
+	@echo "... c_pkg__py"
 	@echo "... c_pkg_uninstall"
 	@echo "... uninstall"
+	@echo "... bot_control_driver_node"
+	@echo "... c_pkg__python"
 	@echo "... c_pkg__rosidl_generator_c"
 	@echo "... c_pkg__rosidl_typesupport_c"
+	@echo "... c_pkg__rosidl_typesupport_c__pyext"
 	@echo "... c_pkg__rosidl_typesupport_cpp"
 	@echo "... c_pkg__rosidl_typesupport_fastrtps_c"
+	@echo "... c_pkg__rosidl_typesupport_fastrtps_c__pyext"
 	@echo "... c_pkg__rosidl_typesupport_fastrtps_cpp"
 	@echo "... c_pkg__rosidl_typesupport_introspection_c"
+	@echo "... c_pkg__rosidl_typesupport_introspection_c__pyext"
 	@echo "... c_pkg__rosidl_typesupport_introspection_cpp"
 	@echo "... keyboard_control_node"
 	@echo "... rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.o"
 	@echo "... rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.i"
 	@echo "... rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.s"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.o"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.i"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_c.s"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.o"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.i"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_fastrtps_c.s"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.o"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.i"
+	@echo "... rosidl_generator_py/c_pkg/_c_pkg_s.ep.rosidl_typesupport_introspection_c.s"
+	@echo "... rosidl_generator_py/c_pkg/msg/_state_vector_s.o"
+	@echo "... rosidl_generator_py/c_pkg/msg/_state_vector_s.i"
+	@echo "... rosidl_generator_py/c_pkg/msg/_state_vector_s.s"
 	@echo "... rosidl_typesupport_c/c_pkg/msg/state_vector__type_support.o"
 	@echo "... rosidl_typesupport_c/c_pkg/msg/state_vector__type_support.i"
 	@echo "... rosidl_typesupport_c/c_pkg/msg/state_vector__type_support.s"
@@ -565,9 +859,21 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/c_pkg/msg/detail/state_vector__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/c_pkg/msg/detail/state_vector__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/c_pkg/msg/detail/state_vector__type_support.s"
+	@echo "... src/bot_control_driver.o"
+	@echo "... src/bot_control_driver.i"
+	@echo "... src/bot_control_driver.s"
+	@echo "... src/func.o"
+	@echo "... src/func.i"
+	@echo "... src/func.s"
 	@echo "... src/keyboard_control.o"
 	@echo "... src/keyboard_control.i"
 	@echo "... src/keyboard_control.s"
+	@echo "... src/kinema.o"
+	@echo "... src/kinema.i"
+	@echo "... src/kinema.s"
+	@echo "... src/servo3moog.o"
+	@echo "... src/servo3moog.i"
+	@echo "... src/servo3moog.s"
 .PHONY : help
 
 

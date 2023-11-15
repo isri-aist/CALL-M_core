@@ -1,0 +1,25 @@
+[0.202s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[0.229s] [  2%] Built target c_pkg__cpp
+[0.230s] [ 10%] Built target c_pkg__rosidl_generator_c
+[0.243s] [ 18%] Built target c_pkg__rosidl_typesupport_c
+[0.244s] [ 27%] Built target c_pkg__rosidl_typesupport_introspection_c
+[0.244s] [ 35%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[0.246s] [ 51%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[0.246s] [ 51%] Built target c_pkg__rosidl_typesupport_cpp
+[0.257s] [ 59%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[0.267s] [ 59%] Built target c_pkg
+[0.279s] [ 62%] Built target c_pkg__py
+[0.284s] [ 72%] Built target keyboard_control_node
+[0.288s] [ 75%] [32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o[0m
+[0.290s] [ 81%] Built target c_pkg__python
+[0.303s] [ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[0.303s] [ 91%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[0.303s] [ 97%] Built target c_pkg__rosidl_typesupport_c__pyext
+[1.669s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:35:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids flexible array member ‘[01m[Krotor_rad_p_sec[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.669s]    35 |     float [01;35m[Krotor_rad_p_sec[m[K[] = {0.0, 0.0, 0.0}; // rev. per sec
+[1.669s]       |           [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.669s] [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:35:11:[m[K [01;31m[Kerror: [m[Kinitializer for flexible array member ‘[01m[Kfloat Bot_control_driver::rotor_rad_p_sec [][m[K’
+[3.782s] make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1
+[3.782s] make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
+[3.782s] make: *** [Makefile:146: all] Error 2
+[3.784s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8

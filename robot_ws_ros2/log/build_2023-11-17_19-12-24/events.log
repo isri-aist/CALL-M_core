@@ -1,0 +1,105 @@
+[0.000000] (-) TimerEvent: {}
+[0.000276] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict()}
+[0.000911] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.100120] (-) TimerEvent: {}
+[0.198615] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'cmake'}
+[0.199519] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'build'}
+[0.200230] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1771'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1551'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=969b5a66f033d8cb276ce14e6556b696'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:44698'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1809,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1809'), ('INVOCATION_ID', 'e52ad65dad854c7fa6911a93448a5f09'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0744cec_26fc_45b3_8c8c_53341c7f10f5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.790'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=969b5a66f033d8cb276ce14e6556b696'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.204191] (-) TimerEvent: {}
+[0.230159] (c_pkg) StdoutLine: {'line': b'[  2%] Built target c_pkg__cpp\n'}
+[0.230601] (c_pkg) StdoutLine: {'line': b'[  8%] Built target c_pkg__rosidl_generator_c\n'}
+[0.242795] (c_pkg) StdoutLine: {'line': b'[ 15%] Built target c_pkg__rosidl_typesupport_cpp\n'}
+[0.243323] (c_pkg) StdoutLine: {'line': b'[ 22%] Built target c_pkg__rosidl_typesupport_introspection_c\n'}
+[0.243573] (c_pkg) StdoutLine: {'line': b'[ 28%] Built target c_pkg__rosidl_typesupport_c\n'}
+[0.244619] (c_pkg) StdoutLine: {'line': b'[ 35%] Built target c_pkg__rosidl_typesupport_introspection_cpp\n'}
+[0.245579] (c_pkg) StdoutLine: {'line': b'[ 42%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp\n'}
+[0.257808] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg__rosidl_typesupport_fastrtps_c\n'}
+[0.268642] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg\n'}
+[0.279492] (c_pkg) StdoutLine: {'line': b'[ 51%] Built target c_pkg__py\n'}
+[0.284470] (c_pkg) StdoutLine: {'line': b'[ 60%] Built target keyboard_control_node\n'}
+[0.284955] (c_pkg) StdoutLine: {'line': b'[ 71%] Built target bot_control_driver_node\n'}
+[0.291137] (c_pkg) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.o\x1b[0m\n'}
+[0.291629] (c_pkg) StdoutLine: {'line': b'[ 77%] Built target c_pkg__python\n'}
+[0.304088] (c_pkg) StdoutLine: {'line': b'[ 91%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext\n'}
+[0.304331] (-) TimerEvent: {}
+[0.304488] (c_pkg) StdoutLine: {'line': b'[ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.304613] (c_pkg) StdoutLine: {'line': b'[ 91%] Built target c_pkg__rosidl_typesupport_c__pyext\n'}
+[0.404477] (-) TimerEvent: {}
+[0.504828] (-) TimerEvent: {}
+[0.605139] (-) TimerEvent: {}
+[0.705426] (-) TimerEvent: {}
+[0.805735] (-) TimerEvent: {}
+[0.906026] (-) TimerEvent: {}
+[1.006353] (-) TimerEvent: {}
+[1.106688] (-) TimerEvent: {}
+[1.206986] (-) TimerEvent: {}
+[1.307278] (-) TimerEvent: {}
+[1.407575] (-) TimerEvent: {}
+[1.419357] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:14\x1b[m\x1b[K:\n'}
+[1.419530] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::getch()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.419606] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:240:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.419674] (c_pkg) StderrLine: {'line': b'  240 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.419734] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.419912] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::getche()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.420049] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:244:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.420323] (c_pkg) StderrLine: {'line': b'  244 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.420427] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.420526] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::cputs(const char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.420629] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:299:17:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat not a string literal and no format arguments [\x1b[01;35m\x1b[K-Wformat-security\x1b[m\x1b[K]\n'}
+[1.420730] (c_pkg) StderrLine: {'line': b'  299 |       printf(str\x1b[01;35m\x1b[K)\x1b[m\x1b[K;\n'}
+[1.420829] (c_pkg) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.420927] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kchar* __CONIO_H::getpass(const char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.421027] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:305:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.421127] (c_pkg) StderrLine: {'line': b'  305 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.421226] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.421324] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:303:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kprompt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.421427] (c_pkg) StderrLine: {'line': b'  303 |     char*getpass(\x1b[01;35m\x1b[Kconst char*prompt\x1b[m\x1b[K){\n'}
+[1.421525] (c_pkg) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[1.421624] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::gettext(int, int, int, int, void*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.421730] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:309:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.421834] (c_pkg) StderrLine: {'line': b'  309 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.421932] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.422031] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kl\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.422136] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(\x1b[01;35m\x1b[Kint l\x1b[m\x1b[K,int t,int r,int b,void*destination){\n'}
+[1.422236] (c_pkg) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.422334] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.422434] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,\x1b[01;35m\x1b[Kint t\x1b[m\x1b[K,int r,int b,void*destination){\n'}
+[1.422534] (c_pkg) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.422632] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kr\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.422732] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,int t,\x1b[01;35m\x1b[Kint r\x1b[m\x1b[K,int b,void*destination){\n'}
+[1.422831] (c_pkg) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.422933] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kb\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.423083] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,int t,int r,\x1b[01;35m\x1b[Kint b\x1b[m\x1b[K,void*destination){\n'}
+[1.423182] (c_pkg) StderrLine: {'line': b'      |                                   \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.423281] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:46:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kdestination\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.423381] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,int t,int r,int b,\x1b[01;35m\x1b[Kvoid*destination\x1b[m\x1b[K){\n'}
+[1.423480] (c_pkg) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.425807] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:\x1b[m\x1b[K At global scope:\n'}
+[1.425932] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:105:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmissing initializer for member \xe2\x80\x98\x1b[01m\x1b[Kaxis_state::y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wmissing-field-initializers\x1b[m\x1b[K]\n'}
+[1.426036] (c_pkg) StderrLine: {'line': b'  105 |         struct axis_state axes[3] = {0\x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[1.426158] (c_pkg) StderrLine: {'line': b'      |                                       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.437762] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KJoystick_control::Joystick_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.437941] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:94:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KJoystick_control::show_msg(double, double, double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.438010] (c_pkg) StderrLine: {'line': b'   94 |             show_msg(0.0,0.0,0.0\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[1.438073] (c_pkg) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.438132] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:114:14:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid Joystick_control::show_msg(float, float, float, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.438193] (c_pkg) StderrLine: {'line': b'  114 |         void \x1b[01;36m\x1b[Kshow_msg\x1b[m\x1b[K(float des_velx,float des_vely,float des_velw,bool js_connected){\n'}
+[1.438260] (c_pkg) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[1.438319] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:114:14:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 3 provided\n'}
+[1.507701] (-) TimerEvent: {}
+[1.607988] (-) TimerEvent: {}
+[1.708270] (-) TimerEvent: {}
+[1.808568] (-) TimerEvent: {}
+[1.908857] (-) TimerEvent: {}
+[2.009151] (-) TimerEvent: {}
+[2.109443] (-) TimerEvent: {}
+[2.209743] (-) TimerEvent: {}
+[2.211211] (c_pkg) StderrLine: {'line': b'make[2]: *** [CMakeFiles/joystick_control_node.dir/build.make:76: CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.o] Error 1\n'}
+[2.211464] (c_pkg) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:576: CMakeFiles/joystick_control_node.dir/all] Error 2\n'}
+[2.211719] (c_pkg) StderrLine: {'line': b'make: *** [Makefile:146: all] Error 2\n'}
+[2.213314] (c_pkg) CommandEnded: {'returncode': 2}
+[2.310457] (-) TimerEvent: {}
+[2.410879] (-) TimerEvent: {}
+[2.511330] (-) TimerEvent: {}
+[2.547434] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 2}
+[2.558152] (-) EventReactorShutdown: {}

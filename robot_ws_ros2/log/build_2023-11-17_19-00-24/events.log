@@ -1,0 +1,187 @@
+[0.000000] (-) TimerEvent: {}
+[0.000370] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict()}
+[0.000408] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.099347] (-) TimerEvent: {}
+[0.195894] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'cmake'}
+[0.196714] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'build'}
+[0.197381] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1771'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1551'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=969b5a66f033d8cb276ce14e6556b696'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:44698'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1809,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1809'), ('INVOCATION_ID', 'e52ad65dad854c7fa6911a93448a5f09'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0744cec_26fc_45b3_8c8c_53341c7f10f5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.790'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=969b5a66f033d8cb276ce14e6556b696'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.202303] (-) TimerEvent: {}
+[0.227264] (c_pkg) StdoutLine: {'line': b'[  2%] Built target c_pkg__cpp\n'}
+[0.227757] (c_pkg) StdoutLine: {'line': b'[  8%] Built target c_pkg__rosidl_generator_c\n'}
+[0.240457] (c_pkg) StdoutLine: {'line': b'[ 26%] Built target c_pkg__rosidl_typesupport_introspection_cpp\n'}
+[0.240694] (c_pkg) StdoutLine: {'line': b'[ 28%] Built target c_pkg__rosidl_typesupport_cpp\n'}
+[0.240889] (c_pkg) StdoutLine: {'line': b'[ 28%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp\n'}
+[0.252828] (c_pkg) StdoutLine: {'line': b'[ 42%] Built target c_pkg__rosidl_typesupport_introspection_c\n'}
+[0.253061] (c_pkg) StdoutLine: {'line': b'[ 42%] Built target c_pkg__rosidl_typesupport_c\n'}
+[0.265193] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg__rosidl_typesupport_fastrtps_c\n'}
+[0.275417] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg\n'}
+[0.286001] (c_pkg) StdoutLine: {'line': b'[ 51%] Built target c_pkg__py\n'}
+[0.291192] (c_pkg) StdoutLine: {'line': b'[ 60%] Built target keyboard_control_node\n'}
+[0.298026] (c_pkg) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o\x1b[0m\n'}
+[0.298306] (c_pkg) StdoutLine: {'line': b'[ 75%] Built target c_pkg__python\n'}
+[0.298520] (c_pkg) StdoutLine: {'line': b'[ 77%] Built target joystick_control_node\n'}
+[0.302408] (-) TimerEvent: {}
+[0.310612] (c_pkg) StdoutLine: {'line': b'[ 91%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext\n'}
+[0.310860] (c_pkg) StdoutLine: {'line': b'[ 91%] Built target c_pkg__rosidl_typesupport_c__pyext\n'}
+[0.311011] (c_pkg) StdoutLine: {'line': b'[ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.402525] (-) TimerEvent: {}
+[0.502817] (-) TimerEvent: {}
+[0.603105] (-) TimerEvent: {}
+[0.703495] (-) TimerEvent: {}
+[0.803788] (-) TimerEvent: {}
+[0.904103] (-) TimerEvent: {}
+[1.004395] (-) TimerEvent: {}
+[1.104706] (-) TimerEvent: {}
+[1.204999] (-) TimerEvent: {}
+[1.305316] (-) TimerEvent: {}
+[1.405605] (-) TimerEvent: {}
+[1.505913] (-) TimerEvent: {}
+[1.606207] (-) TimerEvent: {}
+[1.706514] (-) TimerEvent: {}
+[1.806804] (-) TimerEvent: {}
+[1.907097] (-) TimerEvent: {}
+[2.007417] (-) TimerEvent: {}
+[2.107738] (-) TimerEvent: {}
+[2.208053] (-) TimerEvent: {}
+[2.308364] (-) TimerEvent: {}
+[2.408672] (-) TimerEvent: {}
+[2.508981] (-) TimerEvent: {}
+[2.609290] (-) TimerEvent: {}
+[2.709597] (-) TimerEvent: {}
+[2.809913] (-) TimerEvent: {}
+[2.910210] (-) TimerEvent: {}
+[3.010510] (-) TimerEvent: {}
+[3.110812] (-) TimerEvent: {}
+[3.211110] (-) TimerEvent: {}
+[3.311429] (-) TimerEvent: {}
+[3.411727] (-) TimerEvent: {}
+[3.512006] (-) TimerEvent: {}
+[3.612306] (-) TimerEvent: {}
+[3.712595] (-) TimerEvent: {}
+[3.812896] (-) TimerEvent: {}
+[3.913182] (-) TimerEvent: {}
+[4.013463] (-) TimerEvent: {}
+[4.113758] (-) TimerEvent: {}
+[4.214056] (-) TimerEvent: {}
+[4.314353] (-) TimerEvent: {}
+[4.414660] (-) TimerEvent: {}
+[4.433993] (c_pkg) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable bot_control_driver_node\x1b[0m\n'}
+[4.514789] (-) TimerEvent: {}
+[4.615105] (-) TimerEvent: {}
+[4.661686] (c_pkg) StdoutLine: {'line': b'[100%] Built target bot_control_driver_node\n'}
+[4.668465] (c_pkg) CommandEnded: {'returncode': 0}
+[4.715232] (-) TimerEvent: {}
+[4.728171] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'install'}
+[4.735157] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1771'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1551'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=969b5a66f033d8cb276ce14e6556b696'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:44698'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1809,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1809'), ('INVOCATION_ID', 'e52ad65dad854c7fa6911a93448a5f09'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0744cec_26fc_45b3_8c8c_53341c7f10f5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.790'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=969b5a66f033d8cb276ce14e6556b696'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy')]), 'shell': False}
+[4.739399] (c_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.739683] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/rosidl_interfaces/c_pkg\n'}
+[4.739868] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[4.739943] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[4.740110] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.740322] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[4.740405] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.h\n'}
+[4.740471] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.c\n'}
+[4.740548] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.h\n'}
+[4.740609] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.h\n'}
+[4.740670] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.h\n'}
+[4.740749] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.sh\n'}
+[4.740890] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.dsv\n'}
+[4.740959] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_generator_c.so\n'}
+[4.741020] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[4.741101] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[4.741184] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[4.741251] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_c.h\n'}
+[4.741446] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.741570] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_c.so\n'}
+[4.741696] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[4.741845] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[4.741960] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.742064] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[4.742226] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/dds_fastrtps\n'}
+[4.742369] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.742725] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.742930] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[4.743056] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[4.743183] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[4.743289] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_c.h\n'}
+[4.743419] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.c\n'}
+[4.743642] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.743835] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_c.so\n'}
+[4.743964] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_c.so\n'}
+[4.744050] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[4.744190] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[4.744253] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.744340] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.hpp\n'}
+[4.744403] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[4.744465] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__traits.hpp\n'}
+[4.744525] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__builder.hpp\n'}
+[4.744584] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.hpp\n'}
+[4.744644] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.hpp\n'}
+[4.744704] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[4.744763] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[4.744823] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[4.744883] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.cpp\n'}
+[4.744954] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.745015] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_cpp.so\n'}
+[4.745075] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_cpp.so\n'}
+[4.745134] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.sh\n'}
+[4.745198] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.dsv\n'}
+[4.745258] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/__init__.py\n'}
+[4.777717] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg\n'}
+[4.777966] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/__init__.py\n'}
+[4.778052] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector.py\n'}
+[4.778124] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector_s.c\n'}
+[4.778286] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.778480] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.778873] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.779217] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__python.so\n'}
+[4.779571] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.idl\n'}
+[4.779695] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.msg\n'}
+[4.779787] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/keyboard_control_node\n'}
+[4.780227] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/bot_control_driver_node\n'}
+[4.782363] (c_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/bot_control_driver_node" to ""\n'}
+[4.782622] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/joystick_control_node\n'}
+[4.782866] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/launch\n'}
+[4.783086] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/launch/bot_teleoperate_launch.py\n'}
+[4.783241] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/package_run_dependencies/c_pkg\n'}
+[4.783433] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/parent_prefix_path/c_pkg\n'}
+[4.783590] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.sh\n'}
+[4.783777] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.dsv\n'}
+[4.783901] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.sh\n'}
+[4.784038] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.dsv\n'}
+[4.784173] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.bash\n'}
+[4.784271] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.sh\n'}
+[4.784354] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.zsh\n'}
+[4.784447] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.dsv\n'}
+[4.784581] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv\n'}
+[4.784726] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/packages/c_pkg\n'}
+[4.784882] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport.cmake\n'}
+[4.785040] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.785146] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.785250] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.785354] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport.cmake\n'}
+[4.785502] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.785606] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cppExport.cmake\n'}
+[4.785709] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.785813] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.785969] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport.cmake\n'}
+[4.786187] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.786376] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake-extras.cmake\n'}
+[4.786875] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.787546] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.787700] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.787857] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.787997] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.788135] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.788307] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig.cmake\n'}
+[4.788460] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig-version.cmake\n'}
+[4.788611] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.xml\n'}
+[4.788768] (c_pkg) CommandEnded: {'returncode': 0}
+[4.815296] (-) TimerEvent: {}
+[4.915877] (-) TimerEvent: {}
+[5.016335] (-) TimerEvent: {}
+[5.116785] (-) TimerEvent: {}
+[5.217171] (-) TimerEvent: {}
+[5.317586] (-) TimerEvent: {}
+[5.347114] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 0}
+[5.348438] (-) EventReactorShutdown: {}

@@ -22,6 +22,10 @@ class Bot_control_driver : public rclcpp::Node
         rotor_rad_p_sec[2] = 0.0;
         RCLCPP_INFO(this->get_logger(), "Set up finished.");
         subscription_keyboard= this->create_subscription<c_pkg::msg::StateVector>("keyboard_bot_command", 10, std::bind(&Bot_control_driver::topic_callback_keyboard, this, _1));
+        subscription_joystick= this->create_subscription<c_pkg::msg::StateVector>("joystick_bot_command", 10, std::bind(&Bot_control_driver::topic_callback_joystick, this, _1));
+        RCLCPP_INFO(this->get_logger(), "\033[%dm\033[2J\033[1;1f",0);
+        RCLCPP_INFO(this->get_logger(), "ROBOT DRIVER:");
+        RCLCPP_INFO(this->get_logger(), "Waiting commands...");
     }
 
   private:
@@ -31,7 +35,7 @@ class Bot_control_driver : public rclcpp::Node
         //MAIN CODE to get commands from keyboard
         if(msg->vx != this->keyboard_vx || msg->vy != this->keyboard_vy || msg->w != this->keyboard_w)
         {
-            RCLCPP_INFO(this->get_logger(), "Keyboard new commands: vx:'%f' vy:'%f' w:'%f' ", msg->vx, msg->vy, msg->w);
+            //RCLCPP_INFO(this->get_logger(), "Keyboard new commands: vx:'%f' vy:'%f' w:'%f' ", msg->vx, msg->vy, msg->w);
             this->keyboard_vx = msg->vx;
             this->keyboard_vy = msg->vy;
             this->keyboard_w = msg->w;
@@ -39,32 +43,55 @@ class Bot_control_driver : public rclcpp::Node
         }
     }
 
+    void topic_callback_joystick(const c_pkg::msg::StateVector::SharedPtr msg)
+    {
+        //MAIN CODE to get commands from joystick
+        if(msg->vx != this->joystick_vx || msg->vy != this->joystick_vy || msg->w != this->joystick_w)
+        {
+            //RCLCPP_INFO(this->get_logger(), "joystick new commands: vx:'%f' vy:'%f' w:'%f' ", msg->vx, msg->vy, msg->w);
+            this->joystick_vx = msg->vx;
+            this->joystick_vy = msg->vy;
+            this->joystick_w = msg->w;
+            apply_commands();
+        }
+    }
+
     void apply_commands()
     {
-        bool command_keyboard = this->keyboard_vx+this->keyboard_vy+this->keyboard_w != 0;
-        bool command_joystick = this->joystick_vx+this->joystick_vy+this->joystick_w != 0;
+        bool command_keyboard = this->keyboard_vx == 0 && this->keyboard_vy == 0 && this->keyboard_w == 0;
+        bool command_joystick = this->joystick_vx == 0 && this->joystick_vy == 0 && this->joystick_w == 0;
 
         float des_velx = 0.0;
         float des_vely = 0.0;
         float des_velw = 0.0;
 
+        RCLCPP_INFO(this->get_logger(), "\033[%dm\033[2J\033[1;1f",0);
+        RCLCPP_INFO(this->get_logger(), "ROBOT DRIVER:");
+
         //if we receive non nul commands from keyboard, we use keyboard commands whatever any other joysticks
-        if(command_keyboard)
+        if(!command_keyboard)
         {
             des_velx = this->keyboard_vx;
             des_vely = this->keyboard_vy;
             des_velw = this->keyboard_w;
+            RCLCPP_INFO(this->get_logger(),"Keyboard Controling");
         }
-        else if(!command_keyboard && command_joystick)
+        else if(command_keyboard && !command_joystick)
         {
             des_velx = this->joystick_vx;
             des_vely = this->joystick_vy;
             des_velw = this->joystick_w;
+            RCLCPP_INFO(this->get_logger(),"Joystick Controling");
+        }
+        else{
+            RCLCPP_INFO(this->get_logger(),"Waiting commands...");
         }
 
         des_velx = constrain(des_velx, -MAX_VX, MAX_VX);
         des_vely = constrain (des_vely, -MAX_VY, MAX_VY);
         des_velw = constrain (des_velw, -MAX_W, MAX_W);
+
+        RCLCPP_INFO(this->get_logger(), "Vx:%.2f Vy:%.2f Vw:%.2f ",des_velx,des_vely,des_velw);
 
         // convert vehicle vel. -> rotor vel.
         vel2rotor (this->rotor_rad_p_sec, des_velx, des_vely, des_velw);
@@ -75,6 +102,7 @@ class Bot_control_driver : public rclcpp::Node
 
     //global variables
     rclcpp::Subscription<c_pkg::msg::StateVector>::SharedPtr subscription_keyboard;
+    rclcpp::Subscription<c_pkg::msg::StateVector>::SharedPtr subscription_joystick;
     float rotor_rad_p_sec[3] = {0.0, 0.0, 0.0}; // rev. per sec
     float keyboard_vx = 0;
     float keyboard_vy = 0;

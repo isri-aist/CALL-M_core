@@ -1,0 +1,412 @@
+[0.000000] (-) TimerEvent: {}
+[0.000190] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict()}
+[0.000253] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.099425] (-) TimerEvent: {}
+[0.200487] (-) TimerEvent: {}
+[0.208671] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'cmake'}
+[0.209496] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'build'}
+[0.210403] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1771'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3948'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:50348'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1809,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1809'), ('INVOCATION_ID', '5e8931db14b048d3b540f9293caa1380'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:656814c7-67ac-4987-85c1-798dc85a578a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.241788] (c_pkg) StdoutLine: {'line': b'[  6%] Built target c_pkg__cpp\n'}
+[0.242090] (c_pkg) StdoutLine: {'line': b'[  8%] Built target c_pkg__rosidl_generator_c\n'}
+[0.255790] (c_pkg) StdoutLine: {'line': b'[ 15%] Built target c_pkg__rosidl_typesupport_introspection_c\n'}
+[0.256502] (c_pkg) StdoutLine: {'line': b'[ 22%] Built target c_pkg__rosidl_typesupport_c\n'}
+[0.258124] (c_pkg) StdoutLine: {'line': b'[ 35%] Built target c_pkg__rosidl_typesupport_cpp\n'}
+[0.258419] (c_pkg) StdoutLine: {'line': b'[ 35%] Built target c_pkg__rosidl_typesupport_introspection_cpp\n'}
+[0.260217] (c_pkg) StdoutLine: {'line': b'[ 42%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp\n'}
+[0.272626] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg__rosidl_typesupport_fastrtps_c\n'}
+[0.282657] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg\n'}
+[0.293344] (c_pkg) StdoutLine: {'line': b'[ 51%] Built target c_pkg__py\n'}
+[0.298517] (c_pkg) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.o\x1b[0m\n'}
+[0.298822] (c_pkg) StdoutLine: {'line': b'[ 62%] Built target keyboard_control_node\n'}
+[0.300584] (-) TimerEvent: {}
+[0.305454] (c_pkg) StdoutLine: {'line': b'[ 66%] Built target c_pkg__python\n'}
+[0.306593] (c_pkg) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o\x1b[0m\n'}
+[0.319555] (c_pkg) StdoutLine: {'line': b'[ 73%] Built target c_pkg__rosidl_typesupport_c__pyext\n'}
+[0.321408] (c_pkg) StdoutLine: {'line': b'[ 80%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext\n'}
+[0.321657] (c_pkg) StdoutLine: {'line': b'[ 82%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.400755] (-) TimerEvent: {}
+[0.501084] (-) TimerEvent: {}
+[0.601424] (-) TimerEvent: {}
+[0.701779] (-) TimerEvent: {}
+[0.802145] (-) TimerEvent: {}
+[0.902519] (-) TimerEvent: {}
+[1.002869] (-) TimerEvent: {}
+[1.103224] (-) TimerEvent: {}
+[1.203683] (-) TimerEvent: {}
+[1.304015] (-) TimerEvent: {}
+[1.404365] (-) TimerEvent: {}
+[1.504703] (-) TimerEvent: {}
+[1.534029] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:14\x1b[m\x1b[K:\n'}
+[1.534295] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::getch()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.534430] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:240:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.534824] (c_pkg) StderrLine: {'line': b'  240 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.534982] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.535104] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::getche()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.535223] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:244:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.535344] (c_pkg) StderrLine: {'line': b'  244 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.535463] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.535637] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::cputs(const char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.535797] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:299:17:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat not a string literal and no format arguments [\x1b[01;35m\x1b[K-Wformat-security\x1b[m\x1b[K]\n'}
+[1.535921] (c_pkg) StderrLine: {'line': b'  299 |       printf(str\x1b[01;35m\x1b[K)\x1b[m\x1b[K;\n'}
+[1.536062] (c_pkg) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.536199] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kchar* __CONIO_H::getpass(const char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.536336] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:305:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.536454] (c_pkg) StderrLine: {'line': b'  305 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.536572] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.536689] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:303:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kprompt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.536812] (c_pkg) StderrLine: {'line': b'  303 |     char*getpass(\x1b[01;35m\x1b[Kconst char*prompt\x1b[m\x1b[K){\n'}
+[1.536929] (c_pkg) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[1.537056] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint __CONIO_H::gettext(int, int, int, int, void*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.537183] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:309:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[1.537304] (c_pkg) StderrLine: {'line': b'  309 |       \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[1.537420] (c_pkg) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.537709] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kl\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.537865] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(\x1b[01;35m\x1b[Kint l\x1b[m\x1b[K,int t,int r,int b,void*destination){\n'}
+[1.537996] (c_pkg) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.538127] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.538260] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,\x1b[01;35m\x1b[Kint t\x1b[m\x1b[K,int r,int b,void*destination){\n'}
+[1.538443] (c_pkg) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.538577] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kr\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.538711] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,int t,\x1b[01;35m\x1b[Kint r\x1b[m\x1b[K,int b,void*destination){\n'}
+[1.538820] (c_pkg) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.538946] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kb\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.539062] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,int t,int r,\x1b[01;35m\x1b[Kint b\x1b[m\x1b[K,void*destination){\n'}
+[1.539178] (c_pkg) StderrLine: {'line': b'      |                                   \x1b[01;35m\x1b[K~~~~^\x1b[m\x1b[K\n'}
+[1.539292] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:46:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kdestination\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.539407] (c_pkg) StderrLine: {'line': b'  307 |     int gettext(int l,int t,int r,int b,\x1b[01;35m\x1b[Kvoid*destination\x1b[m\x1b[K){\n'}
+[1.539582] (c_pkg) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.543544] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:\x1b[m\x1b[K At global scope:\n'}
+[1.543744] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:104:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmissing initializer for member \xe2\x80\x98\x1b[01m\x1b[Kaxis_state::y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wmissing-field-initializers\x1b[m\x1b[K]\n'}
+[1.543940] (c_pkg) StderrLine: {'line': b'  104 |         struct axis_state axes[3] = {0\x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[1.544060] (c_pkg) StderrLine: {'line': b'      |                                       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.559046] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.561477] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.561623] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.561701] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.561772] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.561838] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.561905] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.561973] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.562039] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.562107] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.562243] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.562321] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Joystick_control::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.562392] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:211:95:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kround(float&, int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.562462] (c_pkg) StderrLine: {'line': b'  211 |                 RCLCPP_INFO(this->get_logger(),"Current commands: (%f,%f,%f)",round(des_velx,2\x1b[01;31m\x1b[K)\x1b[m\x1b[K,round(des_vely,2),round(des_velw,2));\n'}
+[1.562531] (c_pkg) StderrLine: {'line': b'      |                                                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.562606] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/features.h:461\x1b[m\x1b[K,\n'}
+[1.562675] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:39\x1b[m\x1b[K,\n'}
+[1.562743] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:528\x1b[m\x1b[K,\n'}
+[1.562810] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/type_traits:38\x1b[m\x1b[K,\n'}
+[1.562877] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/ratio:38\x1b[m\x1b[K,\n'}
+[1.562942] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/chrono:38\x1b[m\x1b[K,\n'}
+[1.563007] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:1\x1b[m\x1b[K:\n'}
+[1.563073] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kdouble round(double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.563145] (c_pkg) StderrLine: {'line': b'  298 | \x1b[01;36m\x1b[K__MATHCALLX\x1b[m\x1b[K (round,, (_Mdouble_ __x), (__const__));\n'}
+[1.563212] (c_pkg) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.563279] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.563353] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[1.563420] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[1.563528] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[1.563612] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[1.563681] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[1.563747] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.563813] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.563910] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.563971] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.564032] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.564093] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.564152] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.564212] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.564273] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1768:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::round(_Tp)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.564337] (c_pkg) StderrLine: {'line': b' 1768 |     \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(_Tp __x)\n'}
+[1.564397] (c_pkg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.564458] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1768:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.564520] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.564586] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.564647] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.564707] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.564767] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.564835] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.564895] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.564956] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.565017] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.565078] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.565138] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.565199] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:211:95:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.565261] (c_pkg) StderrLine: {'line': b'  211 |                 RCLCPP_INFO(this->get_logger(),"Current commands: (%f,%f,%f)",round(des_velx,2\x1b[01;36m\x1b[K)\x1b[m\x1b[K,round(des_vely,2),round(des_velw,2));\n'}
+[1.565325] (c_pkg) StderrLine: {'line': b'      |                                                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.565385] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[1.565446] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[1.565507] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[1.565569] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[1.565630] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[1.565692] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.565752] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.565813] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.565878] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.565937] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.565997] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.566057] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.566117] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.566178] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1760:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr long double std::round(long double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.566238] (c_pkg) StderrLine: {'line': b' 1760 |   \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(long double __x)\n'}
+[1.566303] (c_pkg) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.566364] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1760:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.566423] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1756:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr float std::round(float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.566484] (c_pkg) StderrLine: {'line': b' 1756 |   \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(float __x)\n'}
+[1.566544] (c_pkg) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.566603] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1756:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.566663] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.566724] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.566784] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.566844] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.566906] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.566966] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.567027] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.567087] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.567147] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.567209] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.567269] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.567330] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:211:113:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kround(float&, int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.567393] (c_pkg) StderrLine: {'line': b'  211 |                 RCLCPP_INFO(this->get_logger(),"Current commands: (%f,%f,%f)",round(des_velx,2),round(des_vely,2\x1b[01;31m\x1b[K)\x1b[m\x1b[K,round(des_velw,2));\n'}
+[1.567453] (c_pkg) StderrLine: {'line': b'      |                                                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.567561] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/features.h:461\x1b[m\x1b[K,\n'}
+[1.567622] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:39\x1b[m\x1b[K,\n'}
+[1.567684] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:528\x1b[m\x1b[K,\n'}
+[1.567744] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/type_traits:38\x1b[m\x1b[K,\n'}
+[1.567810] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/ratio:38\x1b[m\x1b[K,\n'}
+[1.567871] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/chrono:38\x1b[m\x1b[K,\n'}
+[1.567935] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:1\x1b[m\x1b[K:\n'}
+[1.567996] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kdouble round(double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.568057] (c_pkg) StderrLine: {'line': b'  298 | \x1b[01;36m\x1b[K__MATHCALLX\x1b[m\x1b[K (round,, (_Mdouble_ __x), (__const__));\n'}
+[1.568117] (c_pkg) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.568177] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.568238] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[1.568310] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[1.568377] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[1.568439] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[1.568499] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[1.568559] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.568620] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.568681] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.568742] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.568803] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.568865] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.568926] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.568987] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.569048] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1768:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::round(_Tp)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.569114] (c_pkg) StderrLine: {'line': b' 1768 |     \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(_Tp __x)\n'}
+[1.569174] (c_pkg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.569235] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1768:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.569296] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.569358] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.569419] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.569485] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.569545] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.569605] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.569665] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.569725] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.569785] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.569845] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.569906] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.569967] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:211:113:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.570030] (c_pkg) StderrLine: {'line': b'  211 |                 RCLCPP_INFO(this->get_logger(),"Current commands: (%f,%f,%f)",round(des_velx,2),round(des_vely,2\x1b[01;36m\x1b[K)\x1b[m\x1b[K,round(des_velw,2));\n'}
+[1.570092] (c_pkg) StderrLine: {'line': b'      |                                                                                                                 \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.570153] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[1.570218] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[1.570279] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[1.570340] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[1.570401] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[1.570461] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.570522] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.570584] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.570645] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.570706] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.570766] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.570830] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.570890] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.570951] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1760:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr long double std::round(long double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.571018] (c_pkg) StderrLine: {'line': b' 1760 |   \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(long double __x)\n'}
+[1.571079] (c_pkg) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.571140] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1760:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.571202] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1756:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr float std::round(float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.571263] (c_pkg) StderrLine: {'line': b' 1756 |   \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(float __x)\n'}
+[1.571323] (c_pkg) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.571382] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1756:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.571446] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.571841] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.571907] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.571969] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.572031] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.572093] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.572153] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.572214] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.572274] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.572334] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.572396] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.572457] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:211:131:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kround(float&, int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.572522] (c_pkg) StderrLine: {'line': b'  211 |                 RCLCPP_INFO(this->get_logger(),"Current commands: (%f,%f,%f)",round(des_velx,2),round(des_vely,2),round(des_velw,2\x1b[01;31m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.572586] (c_pkg) StderrLine: {'line': b'      |                                                                                                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.572647] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/features.h:461\x1b[m\x1b[K,\n'}
+[1.572708] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:39\x1b[m\x1b[K,\n'}
+[1.572769] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:528\x1b[m\x1b[K,\n'}
+[1.572830] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/type_traits:38\x1b[m\x1b[K,\n'}
+[1.572899] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/ratio:38\x1b[m\x1b[K,\n'}
+[1.572962] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/chrono:38\x1b[m\x1b[K,\n'}
+[1.573023] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:1\x1b[m\x1b[K:\n'}
+[1.573084] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kdouble round(double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.573151] (c_pkg) StderrLine: {'line': b'  298 | \x1b[01;36m\x1b[K__MATHCALLX\x1b[m\x1b[K (round,, (_Mdouble_ __x), (__const__));\n'}
+[1.573212] (c_pkg) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.573272] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.573334] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[1.573395] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[1.573456] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[1.573522] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[1.573584] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[1.573644] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.573709] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.573770] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.573831] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.573891] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.573952] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.574014] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.574078] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.574140] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1768:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::round(_Tp)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.574203] (c_pkg) StderrLine: {'line': b' 1768 |     \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(_Tp __x)\n'}
+[1.574265] (c_pkg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.574324] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1768:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.574385] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.574450] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.574511] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.574592] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.575012] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.575095] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.575164] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.575229] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.575293] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.575356] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.575419] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.575494] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:211:131:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.575567] (c_pkg) StderrLine: {'line': b'  211 |                 RCLCPP_INFO(this->get_logger(),"Current commands: (%f,%f,%f)",round(des_velx,2),round(des_vely,2),round(des_velw,2\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.575629] (c_pkg) StderrLine: {'line': b'      |                                                                                                                                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.575691] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[1.575753] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[1.575814] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[1.575876] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[1.575946] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[1.576009] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.576071] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.576133] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.576194] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.576255] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.576316] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.576377] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.576448] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:4\x1b[m\x1b[K:\n'}
+[1.576511] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1760:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr long double std::round(long double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.576579] (c_pkg) StderrLine: {'line': b' 1760 |   \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(long double __x)\n'}
+[1.576643] (c_pkg) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.576705] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1760:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.576772] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1756:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr float std::round(float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.576835] (c_pkg) StderrLine: {'line': b' 1756 |   \x1b[01;36m\x1b[Kround\x1b[m\x1b[K(float __x)\n'}
+[1.576897] (c_pkg) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.576958] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/cmath:1756:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[1.577020] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.577082] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.577145] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.577206] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.577267] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.577328] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.577389] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.577450] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.577512] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.577574] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.577636] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:4\x1b[m\x1b[K:\n'}
+[1.577699] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Bot_control_driver::apply_commands()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.577763] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:90:78:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktoo many arguments to function \xe2\x80\x98\x1b[01m\x1b[Kdouble round(double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.577826] (c_pkg) StderrLine: {'line': b'   90 |         RCLCPP_INFO(this->get_logger(), "Vx:%f Vy:%f Vw:%f ",round(des_velx,2\x1b[01;31m\x1b[K)\x1b[m\x1b[K,round(des_vely,2),round(des_velw,2));\n'}
+[1.577895] (c_pkg) StderrLine: {'line': b'      |                                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.577958] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/features.h:461\x1b[m\x1b[K,\n'}
+[1.578019] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:39\x1b[m\x1b[K,\n'}
+[1.578081] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:528\x1b[m\x1b[K,\n'}
+[1.578143] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/type_traits:38\x1b[m\x1b[K,\n'}
+[1.578205] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/ratio:38\x1b[m\x1b[K,\n'}
+[1.578266] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/chrono:38\x1b[m\x1b[K,\n'}
+[1.578326] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:1\x1b[m\x1b[K:\n'}
+[1.578386] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[1.578447] (c_pkg) StderrLine: {'line': b'  298 | \x1b[01;36m\x1b[K__MATHCALLX\x1b[m\x1b[K (round,, (_Mdouble_ __x), (__const__));\n'}
+[1.578514] (c_pkg) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.578576] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.578636] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.578697] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.578758] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.578819] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.578880] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.578940] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.579000] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.579060] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.579125] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.579195] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:4\x1b[m\x1b[K:\n'}
+[1.579259] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:90:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktoo many arguments to function \xe2\x80\x98\x1b[01m\x1b[Kdouble round(double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.579321] (c_pkg) StderrLine: {'line': b'   90 |         RCLCPP_INFO(this->get_logger(), "Vx:%f Vy:%f Vw:%f ",round(des_velx,2),round(des_vely,2\x1b[01;31m\x1b[K)\x1b[m\x1b[K,round(des_velw,2));\n'}
+[1.579383] (c_pkg) StderrLine: {'line': b'      |                                                                                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.579444] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/features.h:461\x1b[m\x1b[K,\n'}
+[1.579535] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:39\x1b[m\x1b[K,\n'}
+[1.579596] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:528\x1b[m\x1b[K,\n'}
+[1.579654] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/type_traits:38\x1b[m\x1b[K,\n'}
+[1.579714] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/ratio:38\x1b[m\x1b[K,\n'}
+[1.579774] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/chrono:38\x1b[m\x1b[K,\n'}
+[1.579834] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:1\x1b[m\x1b[K:\n'}
+[1.579895] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[1.579957] (c_pkg) StderrLine: {'line': b'  298 | \x1b[01;36m\x1b[K__MATHCALLX\x1b[m\x1b[K (round,, (_Mdouble_ __x), (__const__));\n'}
+[1.580018] (c_pkg) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.580077] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.580137] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.580196] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.580255] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.580314] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.580373] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.580431] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.580488] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.580546] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.580604] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.580661] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:4\x1b[m\x1b[K:\n'}
+[1.580720] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:90:114:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktoo many arguments to function \xe2\x80\x98\x1b[01m\x1b[Kdouble round(double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.580781] (c_pkg) StderrLine: {'line': b'   90 |         RCLCPP_INFO(this->get_logger(), "Vx:%f Vy:%f Vw:%f ",round(des_velx,2),round(des_vely,2),round(des_velw,2\x1b[01;31m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.580841] (c_pkg) StderrLine: {'line': b'      |                                                                                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.580901] (c_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/features.h:461\x1b[m\x1b[K,\n'}
+[1.580960] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:39\x1b[m\x1b[K,\n'}
+[1.581024] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:528\x1b[m\x1b[K,\n'}
+[1.581088] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/type_traits:38\x1b[m\x1b[K,\n'}
+[1.581146] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/ratio:38\x1b[m\x1b[K,\n'}
+[1.581204] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/chrono:38\x1b[m\x1b[K,\n'}
+[1.581262] (c_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:1\x1b[m\x1b[K:\n'}
+[1.581327] (c_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[1.581387] (c_pkg) StderrLine: {'line': b'  298 | \x1b[01;36m\x1b[K__MATHCALLX\x1b[m\x1b[K (round,, (_Mdouble_ __x), (__const__));\n'}
+[1.581446] (c_pkg) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.604825] (-) TimerEvent: {}
+[1.705110] (-) TimerEvent: {}
+[1.805395] (-) TimerEvent: {}
+[1.905678] (-) TimerEvent: {}
+[2.005962] (-) TimerEvent: {}
+[2.106216] (-) TimerEvent: {}
+[2.206512] (-) TimerEvent: {}
+[2.306819] (-) TimerEvent: {}
+[2.407116] (-) TimerEvent: {}
+[2.421090] (c_pkg) StderrLine: {'line': b'make[2]: *** [CMakeFiles/joystick_control_node.dir/build.make:76: CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.o] Error 1\n'}
+[2.421394] (c_pkg) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:576: CMakeFiles/joystick_control_node.dir/all] Error 2\n'}
+[2.421503] (c_pkg) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[2.507232] (-) TimerEvent: {}
+[2.607568] (-) TimerEvent: {}
+[2.707847] (-) TimerEvent: {}
+[2.808132] (-) TimerEvent: {}
+[2.908406] (-) TimerEvent: {}
+[2.926440] (c_pkg) StderrLine: {'line': b'make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1\n'}
+[2.926743] (c_pkg) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:603: CMakeFiles/bot_control_driver_node.dir/all] Error 2\n'}
+[2.927005] (c_pkg) StderrLine: {'line': b'make: *** [Makefile:146: all] Error 2\n'}
+[2.928750] (c_pkg) CommandEnded: {'returncode': 2}
+[3.008887] (-) TimerEvent: {}
+[3.109314] (-) TimerEvent: {}
+[3.210363] (-) TimerEvent: {}
+[3.268683] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 2}
+[3.279629] (-) EventReactorShutdown: {}

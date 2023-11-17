@@ -32,12 +32,17 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 add_executable(keyboard_control_node src/keyboard_control.cpp src/func.cpp src/kinema.cpp)
 ament_target_dependencies(keyboard_control_node rclcpp std_msgs rosidl_default_generators)
 
-#kbot_control_driver_node
+#joystick_control_driver_node
+add_executable(joystick_control_node src/joystick_control.cpp src/servo3moog.cpp src/func.cpp src/kinema.cpp)
+ament_target_dependencies(joystick_control_node rclcpp std_msgs rosidl_default_generators)
+
+#bot_control_driver_node
 add_executable(bot_control_driver_node src/bot_control_driver.cpp src/servo3moog.cpp src/func.cpp src/kinema.cpp)
 ament_target_dependencies(bot_control_driver_node rclcpp std_msgs rosidl_default_generators)
 
 #link interfaces to keyboard_control_node
 rosidl_target_interfaces(keyboard_control_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_target_interfaces(joystick_control_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(bot_control_driver_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 if(BUILD_TESTING)
@@ -55,6 +60,7 @@ endif()
 install(TARGETS
   keyboard_control_node
   bot_control_driver_node
+  joystick_control_node
   DESTINATION lib/${PROJECT_NAME})
 
 # Install launch files

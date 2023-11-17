@@ -1,0 +1,17 @@
+[  6%] Built target c_pkg__cpp
+[  8%] Built target c_pkg__rosidl_generator_c
+[ 22%] Built target c_pkg__rosidl_typesupport_introspection_c
+[ 22%] Built target c_pkg__rosidl_typesupport_cpp
+[ 28%] Built target c_pkg__rosidl_typesupport_c
+[ 35%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[ 42%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[ 48%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[ 48%] Built target c_pkg
+[ 51%] Built target c_pkg__py
+[ 71%] Built target bot_control_driver_node
+[ 71%] Built target keyboard_control_node
+[ 73%] [32mBuilding CXX object CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.o[0m
+[ 77%] Built target c_pkg__python
+[ 82%] Built target c_pkg__rosidl_typesupport_c__pyext
+[ 91%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext

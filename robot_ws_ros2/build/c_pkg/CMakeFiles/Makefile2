@@ -76,6 +76,7 @@ all: CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/all
 all: CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/all
 all: CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/all
 all: CMakeFiles/keyboard_control_node.dir/all
+all: CMakeFiles/joystick_control_node.dir/all
 all: CMakeFiles/bot_control_driver_node.dir/all
 all: c_pkg__py/all
 .PHONY : all
@@ -101,6 +102,7 @@ clean: CMakeFiles/c_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/clean
 clean: CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/clean
 clean: CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/clean
 clean: CMakeFiles/keyboard_control_node.dir/clean
+clean: CMakeFiles/joystick_control_node.dir/clean
 clean: CMakeFiles/bot_control_driver_node.dir/clean
 clean: c_pkg__py/clean
 .PHONY : clean
@@ -545,7 +547,7 @@ CMakeFiles/keyboard_control_node.dir/all: CMakeFiles/c_pkg.dir/all
 CMakeFiles/keyboard_control_node.dir/all: CMakeFiles/c_pkg__rosidl_typesupport_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CMakeFiles --progress-num=37,38,39,40 "Built target keyboard_control_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CMakeFiles --progress-num=42,43,44,45 "Built target keyboard_control_node"
 .PHONY : CMakeFiles/keyboard_control_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -563,6 +565,33 @@ keyboard_control_node: CMakeFiles/keyboard_control_node.dir/rule
 CMakeFiles/keyboard_control_node.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/clean
 .PHONY : CMakeFiles/keyboard_control_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/joystick_control_node.dir
+
+# All Build rule for target.
+CMakeFiles/joystick_control_node.dir/all: CMakeFiles/c_pkg.dir/all
+CMakeFiles/joystick_control_node.dir/all: CMakeFiles/c_pkg__rosidl_typesupport_cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CMakeFiles --progress-num=37,38,39,40,41 "Built target joystick_control_node"
+.PHONY : CMakeFiles/joystick_control_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/joystick_control_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CMakeFiles 27
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/joystick_control_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/CMakeFiles 0
+.PHONY : CMakeFiles/joystick_control_node.dir/rule
+
+# Convenience name for target.
+joystick_control_node: CMakeFiles/joystick_control_node.dir/rule
+.PHONY : joystick_control_node
+
+# clean rule for target.
+CMakeFiles/joystick_control_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/clean
+.PHONY : CMakeFiles/joystick_control_node.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/bot_control_driver_node.dir

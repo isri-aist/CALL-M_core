@@ -1,0 +1,47 @@
+In file included from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:14[m[K:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getch()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:240:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  240 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getche()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:244:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  244 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::cputs(const char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:299:17:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  299 |       printf(str[01;35m[K)[m[K;
+      |                 [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kchar* __CONIO_H::getpass(const char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:305:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  305 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:303:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprompt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  303 |     char*getpass([01;35m[Kconst char*prompt[m[K){
+      |                  [01;35m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::gettext(int, int, int, int, void*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:309:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  309 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kl[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext([01;35m[Kint l[m[K,int t,int r,int b,void*destination){
+      |                 [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,[01;35m[Kint t[m[K,int r,int b,void*destination){
+      |                       [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kr[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,[01;35m[Kint r[m[K,int b,void*destination){
+      |                             [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kb[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,int r,[01;35m[Kint b[m[K,void*destination){
+      |                                   [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdestination[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,int r,int b,[01;35m[Kvoid*destination[m[K){
+      |                                         [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:[m[K At global scope:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:80:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[Kaxis_state::y[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+   80 |         struct axis_state axes[3] = {0[01;35m[K}[m[K;
+      |                                       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:[m[K In member function ‘[01m[Kvoid Joystick_control::timer_callback()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:140:29:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+  140 |                     [01;35m[Kthis->js==-1[m[K;
+      |                     [01;35m[K~~~~~~~~^~~~[m[K

@@ -380,6 +380,19 @@ keyboard_control_node/fast:
 .PHONY : keyboard_control_node/fast
 
 #=============================================================================
+# Target rules for targets named joystick_control_node
+
+# Build rule for target.
+joystick_control_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 joystick_control_node
+.PHONY : joystick_control_node
+
+# fast build rule for target.
+joystick_control_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/build
+.PHONY : joystick_control_node/fast
+
+#=============================================================================
 # Target rules for targets named bot_control_driver_node
 
 # Build rule for target.
@@ -699,6 +712,7 @@ src/func.o: src/func.cpp.o
 # target to build an object file
 src/func.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/func.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/func.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/func.cpp.o
 .PHONY : src/func.cpp.o
 
@@ -708,6 +722,7 @@ src/func.i: src/func.cpp.i
 # target to preprocess a source file
 src/func.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/func.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/func.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/func.cpp.i
 .PHONY : src/func.cpp.i
 
@@ -717,8 +732,33 @@ src/func.s: src/func.cpp.s
 # target to generate assembly for a file
 src/func.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/func.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/func.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/func.cpp.s
 .PHONY : src/func.cpp.s
+
+src/joystick_control.o: src/joystick_control.cpp.o
+.PHONY : src/joystick_control.o
+
+# target to build an object file
+src/joystick_control.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.o
+.PHONY : src/joystick_control.cpp.o
+
+src/joystick_control.i: src/joystick_control.cpp.i
+.PHONY : src/joystick_control.i
+
+# target to preprocess a source file
+src/joystick_control.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.i
+.PHONY : src/joystick_control.cpp.i
+
+src/joystick_control.s: src/joystick_control.cpp.s
+.PHONY : src/joystick_control.s
+
+# target to generate assembly for a file
+src/joystick_control.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/joystick_control.cpp.s
+.PHONY : src/joystick_control.cpp.s
 
 src/keyboard_control.o: src/keyboard_control.cpp.o
 .PHONY : src/keyboard_control.o
@@ -750,6 +790,7 @@ src/kinema.o: src/kinema.cpp.o
 # target to build an object file
 src/kinema.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/kinema.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/kinema.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/kinema.cpp.o
 .PHONY : src/kinema.cpp.o
 
@@ -759,6 +800,7 @@ src/kinema.i: src/kinema.cpp.i
 # target to preprocess a source file
 src/kinema.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/kinema.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/kinema.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/kinema.cpp.i
 .PHONY : src/kinema.cpp.i
 
@@ -768,6 +810,7 @@ src/kinema.s: src/kinema.cpp.s
 # target to generate assembly for a file
 src/kinema.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyboard_control_node.dir/build.make CMakeFiles/keyboard_control_node.dir/src/kinema.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/kinema.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/kinema.cpp.s
 .PHONY : src/kinema.cpp.s
 
@@ -776,6 +819,7 @@ src/servo3moog.o: src/servo3moog.cpp.o
 
 # target to build an object file
 src/servo3moog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/servo3moog.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/servo3moog.cpp.o
 .PHONY : src/servo3moog.cpp.o
 
@@ -784,6 +828,7 @@ src/servo3moog.i: src/servo3moog.cpp.i
 
 # target to preprocess a source file
 src/servo3moog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/servo3moog.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/servo3moog.cpp.i
 .PHONY : src/servo3moog.cpp.i
 
@@ -792,6 +837,7 @@ src/servo3moog.s: src/servo3moog.cpp.s
 
 # target to generate assembly for a file
 src/servo3moog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joystick_control_node.dir/build.make CMakeFiles/joystick_control_node.dir/src/servo3moog.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bot_control_driver_node.dir/build.make CMakeFiles/bot_control_driver_node.dir/src/servo3moog.cpp.s
 .PHONY : src/servo3moog.cpp.s
 
@@ -825,6 +871,7 @@ help:
 	@echo "... c_pkg__rosidl_typesupport_introspection_c"
 	@echo "... c_pkg__rosidl_typesupport_introspection_c__pyext"
 	@echo "... c_pkg__rosidl_typesupport_introspection_cpp"
+	@echo "... joystick_control_node"
 	@echo "... keyboard_control_node"
 	@echo "... rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.o"
 	@echo "... rosidl_generator_c/c_pkg/msg/detail/state_vector__functions.i"
@@ -865,6 +912,9 @@ help:
 	@echo "... src/func.o"
 	@echo "... src/func.i"
 	@echo "... src/func.s"
+	@echo "... src/joystick_control.o"
+	@echo "... src/joystick_control.i"
+	@echo "... src/joystick_control.s"
 	@echo "... src/keyboard_control.o"
 	@echo "... src/keyboard_control.i"
 	@echo "... src/keyboard_control.s"

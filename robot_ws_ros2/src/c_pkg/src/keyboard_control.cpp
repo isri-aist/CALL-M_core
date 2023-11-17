@@ -58,8 +58,8 @@ class Keyboard_control:public rclcpp::Node
         rclcpp::Publisher<c_pkg::msg::StateVector>::SharedPtr publisher_;
         std::chrono::milliseconds dt = 100ms;
         int key_code = 0;
-        float linear_vel = 0.5;
-        float rotatio_vel = 0.75 * M_PI;
+        float linear_vel = 0.1;
+        float rotatio_vel = 0.1 * M_PI;
         bool auto_mode = false;
         float chrono = 0.0;
         int step = 0;
@@ -69,7 +69,7 @@ class Keyboard_control:public rclcpp::Node
         //Functions
         void show_msg(){
         printf( "\033[%dm\033[2J\033[1;1f",0);
-        printf("CONTROLS:\n\n");
+        printf("KEYBOARD CONTROLS:\n\n");
         printf("  Q  W  E       T\n");
         printf("  A  S  D    F  G  H    SPACE\n\n");
         printf("Current linear speed: %f",this->linear_vel);
@@ -112,8 +112,8 @@ class Keyboard_control:public rclcpp::Node
             float des_velw = 0.0;
 
             //MAIN PROGRAM TO COMPUTE SPEEDS
-            this->linear_vel = constrain (this->linear_vel, -MAX_VX, MAX_VX);
-            this->rotatio_vel = constrain (this->rotatio_vel, -MAX_W, MAX_W);
+            this->linear_vel = constrain (this->linear_vel, 0, MAX_VX);
+            this->rotatio_vel = constrain (this->rotatio_vel, 0, MAX_W);
 
             check_keyboard();
             switch (this->key_code)
@@ -173,7 +173,7 @@ class Keyboard_control:public rclcpp::Node
                 {
                 case 0:
                 des_velx = 0;
-                des_vely = -0.3;
+                des_vely = -0.1;
                 des_velw = 0;
                 this->chrono += this->sec_dt;
                 if(this->chrono > this->distance_t){
@@ -182,7 +182,7 @@ class Keyboard_control:public rclcpp::Node
                 }
                 break;
                 case 1:
-                des_velx = 0.3;
+                des_velx = 0.1;
                 des_vely = 0;
                 des_velw = 0;
                 this->chrono += this->sec_dt;
@@ -193,7 +193,7 @@ class Keyboard_control:public rclcpp::Node
                 break;
                 case 2:
                 des_velx = 0;
-                des_vely = 0.3;
+                des_vely = 0.1;
                 des_velw = 0;
                 this->chrono += this->sec_dt;
                 if(this->chrono > this->distance_t){
@@ -202,7 +202,7 @@ class Keyboard_control:public rclcpp::Node
                 }
                 break;
                 case 3:
-                des_velx = -0.3;
+                des_velx = -0.1;
                 des_vely = 0;
                 des_velw = 0;
                 this->chrono += this->sec_dt;

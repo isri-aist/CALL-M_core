@@ -693,6 +693,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/c_pkg__rosidl_typesupport_introspection_c__pyext.dir/DependInfo.cmake"
   "CMakeFiles/c_pkg__rosidl_typesupport_c__pyext.dir/DependInfo.cmake"
   "CMakeFiles/keyboard_control_node.dir/DependInfo.cmake"
+  "CMakeFiles/joystick_control_node.dir/DependInfo.cmake"
   "CMakeFiles/bot_control_driver_node.dir/DependInfo.cmake"
   "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/c_pkg__py/CMakeFiles/c_pkg__py.dir/DependInfo.cmake"
   )

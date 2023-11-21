@@ -1,0 +1,53 @@
+[0.257s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu -- -j8 -l8
+[0.273s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.276s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.276s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.276s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.276s]   the cmake_policy command to set the policy and suppress this warning.
+[0.277s] 
+[0.277s] Call Stack (most recent call first):
+[0.277s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.277s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.277s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.277s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.278s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.278s]   CMakeLists.txt:19 (find_package)
+[0.278s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.278s] [0m
+[0.305s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.529s] -- Found xacro: 2.0.7 (/opt/ros/foxy/share/xacro/cmake)
+[0.530s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.598s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.601s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.601s] -- Added test 'lint_cmake' to check CMake code style
+[0.603s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.604s] -- Added test 'xmllint' to check XML markup files
+[0.605s] -- Configuring done (0.3s)
+[0.607s] -- Generating done (0.0s)
+[0.608s] -- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu
+[0.758s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu -- -j8 -l8
+[0.780s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu
+[0.784s] -- Install configuration: ""
+[0.784s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src
+[0.784s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description
+[0.785s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description/bot_description.urdf
+[0.785s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/launch
+[0.785s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/launch/display.launch.py
+[0.785s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/rviz
+[0.786s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/rviz/urdf_config.rviz
+[0.786s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/package_run_dependencies/nav2_simu
+[0.786s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/parent_prefix_path/nav2_simu
+[0.786s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/ament_prefix_path.sh
+[0.786s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/ament_prefix_path.dsv
+[0.787s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/path.sh
+[0.787s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/path.dsv
+[0.787s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.bash
+[0.787s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.sh
+[0.787s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.zsh
+[0.788s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.dsv
+[0.788s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.dsv
+[0.789s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/packages/nav2_simu
+[0.789s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/cmake/nav2_simuConfig.cmake
+[0.789s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/cmake/nav2_simuConfig-version.cmake
+[0.789s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.xml
+[0.790s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu

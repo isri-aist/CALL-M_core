@@ -55,6 +55,8 @@
 		<xacro:box_inertia m="15" w="${square1_length}" d="${square1_length}" h="${square1_height}"/>
 	</link>
 
+
+	<!-- Others Robot structures -->
 	<link name="base2_link">
 		<visual>
 		<geometry>
@@ -69,7 +71,7 @@
 			<box size="${square2_length} ${square2_length} ${square2_height*0.5}"/>
 		</geometry>
 		</collision>
-		<xacro:box_inertia m="1" w="${square2_length}" d="${square2_length}" h="${square2_height}"/>
+		<xacro:box_inertia m="10" w="${square2_length}" d="${square2_length}" h="${square2_height}"/>
 	</link>
 	<joint name="$base2_joint" type="fixed">
 		<parent link="base_link"/>
@@ -91,7 +93,7 @@
 			<box size="${square1_length} ${square1_length} ${square3_height}"/>
 		</geometry>
 		</collision>
-		<xacro:box_inertia m="10" w="${square1_length}" d="${square1_length}" h="${square3_height}"/>
+		<xacro:box_inertia m="5" w="${square1_length}" d="${square1_length}" h="${square3_height}"/>
 	</link>
 	<joint name="$base3_joint" type="fixed">
 		<parent link="base_link"/>
@@ -99,11 +101,12 @@
 		<origin xyz="0.0 0.0 ${(square1_height/2)+square2_height+(square3_height/2)}" rpy="0 0 0"/>
 	</joint>
 
-	<!-- Robot Footprint -->
+	<!-- Robot Footprint-->
 	<link name="base_footprint">
 		<xacro:box_inertia m="0" w="0" d="0" h="0"/>
 	</link>
-	<joint name="footprint_joint" type="fixed">
+
+	<joint name="base_joint" type="fixed">
 		<parent link="base_link"/>
 		<child link="base_footprint"/>
 		<origin xyz="0.0 0.0 ${-(wheels_radius+wheels_zoffset+square1_height/2)}" rpy="0 0 0"/>
@@ -142,13 +145,7 @@
 			<color rgba="0.5 0.5 0.5 1.0"/>
 			</material>
 		</visual>
-		<collision>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
-		<geometry>
-			<sphere radius="${wheels_radius}"/>
-		</geometry>
-		</collision>
-		<xacro:sphere_inertia m="0.5" r="${wheels_radius}"/>
+
 		</link>
 		<joint name="${prefix}_joint" type="continuous">
 			<parent link="${prefix}_sup_link"/>
@@ -161,5 +158,74 @@
 	<xacro:wheel prefix="wheel_f" angle="0.0" />
 	<xacro:wheel prefix="wheel_bl" angle="${2*pi/3}" />
 	<xacro:wheel prefix="wheel_br" angle="${-2*pi/3}" />
+
+	<!--2 LIDAR-->
+	<xacro:macro name="lidar" params="prefix x y">
+		<link name="${prefix}_link">
+			<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.125"/>
+			<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+			</inertial>
+
+			<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.0508" length="0.055"/>
+			</geometry>
+			</collision>
+
+			<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.0508" length="0.055"/>
+			</geometry>
+			</visual>
+		</link>
+			
+		<joint name="${prefix}_joint" type="fixed">
+			<parent link="base_link"/>
+			<child link="${prefix}_link"/>
+			<origin xyz="${x} ${y} ${square1_height/2+0.055/2}" rpy="0 0 0"/>
+		</joint>
+			
+		<gazebo reference="${prefix}_link">
+			<sensor name="${prefix}" type="ray">
+			<always_on>true</always_on>
+			<visualize>true</visualize>
+			<update_rate>5</update_rate>
+			<ray>
+				<scan>
+				<horizontal>
+					<samples>360</samples>
+					<resolution>1.000000</resolution>
+					<min_angle>0.000000</min_angle>
+					<max_angle>6.280000</max_angle>
+				</horizontal>
+				</scan>
+				<range>
+				<min>0.120000</min>
+				<max>3.5</max>
+				<resolution>0.015000</resolution>
+				</range>
+				<noise>
+				<type>gaussian</type>
+				<mean>0.0</mean>
+				<stddev>0.01</stddev>
+				</noise>
+			</ray>
+			<plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
+				<ros>
+				<remapping>~/out:=scan</remapping>
+				</ros>
+				<output_type>sensor_msgs/LaserScan</output_type>
+				<frame_name>${prefix}_link</frame_name>
+			</plugin>
+			</sensor>
+		</gazebo>
+	</xacro:macro>
+
+	<xacro:lidar prefix="lidar1" x="${(square1_length/2)-0.0508}" y="${(square1_length/2)-0.0508}" />
+	<xacro:lidar prefix="lidar2" x="${-((square1_length/2)-0.0508)}" y="${-((square1_length/2)-0.0508)}" />
 
 </robot>

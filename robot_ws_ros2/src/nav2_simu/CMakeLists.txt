@@ -20,7 +20,7 @@ find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
 
 install(
-  DIRECTORY src launch rviz
+  DIRECTORY src launch rviz world
   DESTINATION share/${PROJECT_NAME}
 )
 

@@ -12,4 +12,7 @@ https://navigation.ros.org/getting_started/index.html
 ```
 ros2 launch c_pkg bot_teleoperate_launch.py
 ```
+```
+colcon build ; ros2 launch nav2_simu display.launch.py
+```
 

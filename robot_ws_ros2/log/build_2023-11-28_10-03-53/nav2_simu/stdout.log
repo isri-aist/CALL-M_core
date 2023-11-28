@@ -1,0 +1,41 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found xacro: 2.0.7 (/opt/ros/foxy/share/xacro/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu
+-- Install configuration: ""
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description/bot_description.urdf
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description/trash_file.urdf
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/launch
+-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/launch/display.launch.py
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/rviz
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/rviz/urdf_config.rviz
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/config
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/config/nav2_params.yaml
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/config/ekf.yaml
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/world
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/world/my_world.sdf
+-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/package_run_dependencies/nav2_simu
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/parent_prefix_path/nav2_simu
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/ament_prefix_path.sh
+-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/path.sh
+-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/path.dsv
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.bash
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.sh
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.zsh
+-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.dsv
+-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.dsv
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/packages/nav2_simu
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/cmake/nav2_simuConfig.cmake
+-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/cmake/nav2_simuConfig-version.cmake
+-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.xml

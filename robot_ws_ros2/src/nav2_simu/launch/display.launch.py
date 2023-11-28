@@ -9,6 +9,7 @@ def generate_launch_description():
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
     world_path=os.path.join(pkg_share, 'world/my_world.sdf'),
 
+    #node to publish TFs of robot model
     robot_state_publisher_node = launch_ros.actions.Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -18,14 +19,16 @@ def generate_launch_description():
         package='joint_state_publisher',
         executable='joint_state_publisher',
         name='joint_state_publisher',
-        condition=launch.conditions.UnlessCondition(LaunchConfiguration('gui'))
+        #condition=launch.conditions.UnlessCondition(LaunchConfiguration('gui')) #to show and control manually different joints
     )
-    joint_state_publisher_gui_node = launch_ros.actions.Node(
+    #node to show and control manually different joints
+    """joint_state_publisher_gui_node = launch_ros.actions.Node(
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
         condition=launch.conditions.IfCondition(LaunchConfiguration('gui'))
-    )
+    )"""
+    #node to launch Rviz with
     rviz_node = launch_ros.actions.Node(
         package='rviz2',
         executable='rviz2',
@@ -48,8 +51,7 @@ def generate_launch_description():
     )
 
     return launch.LaunchDescription([
-        launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
-                                            description='Flag to enable joint_state_publisher_gui'),
+        #launch.actions.DeclareLaunchArgument(name='gui', default_value='True',description='Flag to enable joint_state_publisher_gui'), #to show and control manually different joints
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,
                                             description='Absolute path to robot urdf file'),
         launch.actions.DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
@@ -67,7 +69,7 @@ def generate_launch_description():
                                             description='Flag to enable use_sim_time'),
 
         joint_state_publisher_node,
-        joint_state_publisher_gui_node,
+        #joint_state_publisher_gui_node, #to show and control manually different joints
         robot_state_publisher_node,
         robot_localization_node,
         spawn_entity,

@@ -1,0 +1,61 @@
+[0.985s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8
+[1.018s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.019s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[1.020s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.021s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.022s]   the cmake_policy command to set the policy and suppress this warning.
+[1.022s] 
+[1.023s] Call Stack (most recent call first):
+[1.023s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[1.023s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[1.024s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[1.024s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[1.024s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[1.024s]   CMakeLists.txt:19 (find_package)
+[1.024s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.024s] [0m
+[1.051s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.304s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.342s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.346s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.482s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.529s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.531s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.670s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.818s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.872s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.874s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.874s] -- Configured cppcheck include dirs: 
+[1.875s] -- Configured cppcheck exclude dirs and/or files: 
+[1.875s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.875s] -- Configured cpplint exclude dirs and/or files: 
+[1.875s] -- Added test 'lint_cmake' to check CMake code style
+[1.876s] -- Added test 'uncrustify' to check C / C++ code style
+[1.876s] -- Configured uncrustify additional arguments: 
+[1.877s] -- Added test 'xmllint' to check XML markup files
+[1.877s] -- Configuring done (0.9s)
+[1.888s] -- Generating done (0.0s)
+[1.889s] -- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger
+[1.920s] [ 50%] [32m[1mLinking CXX executable laser_scan_merger_node[0m
+[2.187s] [100%] Built target laser_scan_merger_node
+[2.457s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8
+[2.955s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger
+[2.957s] -- Install configuration: ""
+[2.957s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib/laser_scan_merger/laser_scan_merger_node
+[2.959s] -- Set runtime path of "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib/laser_scan_merger/laser_scan_merger_node" to ""
+[2.959s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/ament_index/resource_index/package_run_dependencies/laser_scan_merger
+[2.960s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/ament_index/resource_index/parent_prefix_path/laser_scan_merger
+[2.960s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/environment/ament_prefix_path.sh
+[2.960s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/environment/ament_prefix_path.dsv
+[2.960s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/environment/path.sh
+[2.960s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/environment/path.dsv
+[2.961s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/local_setup.bash
+[2.961s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/local_setup.sh
+[2.961s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/local_setup.zsh
+[2.961s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/local_setup.dsv
+[2.961s] -- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.dsv
+[2.961s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/ament_index/resource_index/packages/laser_scan_merger
+[2.961s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/cmake/laser_scan_mergerConfig.cmake
+[2.961s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/cmake/laser_scan_mergerConfig-version.cmake
+[2.961s] -- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.xml
+[2.963s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger

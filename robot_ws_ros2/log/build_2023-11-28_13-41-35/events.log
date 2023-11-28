@@ -1,0 +1,818 @@
+[0.000000] (-) TimerEvent: {}
+[0.000568] (c_pkg) JobQueued: {'identifier': 'c_pkg', 'dependencies': OrderedDict()}
+[0.000617] (nav2_simu) JobQueued: {'identifier': 'nav2_simu', 'dependencies': OrderedDict()}
+[0.000639] (ros2_laser_scan_merger) JobQueued: {'identifier': 'ros2_laser_scan_merger', 'dependencies': OrderedDict()}
+[0.000658] (c_pkg) JobStarted: {'identifier': 'c_pkg'}
+[0.099522] (-) TimerEvent: {}
+[0.200191] (-) TimerEvent: {}
+[0.249554] (nav2_simu) JobStarted: {'identifier': 'nav2_simu'}
+[0.301081] (-) TimerEvent: {}
+[0.401531] (-) TimerEvent: {}
+[0.491067] (ros2_laser_scan_merger) JobStarted: {'identifier': 'ros2_laser_scan_merger'}
+[0.501797] (-) TimerEvent: {}
+[0.602369] (-) TimerEvent: {}
+[0.703802] (-) TimerEvent: {}
+[0.733133] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'cmake'}
+[0.734250] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'build'}
+[0.735030] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1770'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '48268'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:42747'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/foxy/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1808,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '93988abe815a4a2b815fa48307162c8c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:eb42cbff-9c7c-4e76-9a7a-e0aac0a35671'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy')]), 'shell': False}
+[0.740589] (nav2_simu) JobProgress: {'identifier': 'nav2_simu', 'progress': 'cmake'}
+[0.741404] (nav2_simu) JobProgress: {'identifier': 'nav2_simu', 'progress': 'build'}
+[0.741755] (nav2_simu) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1770'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '48268'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:42747'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/foxy/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1808,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '93988abe815a4a2b815fa48307162c8c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:eb42cbff-9c7c-4e76-9a7a-e0aac0a35671'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy')]), 'shell': False}
+[0.751141] (ros2_laser_scan_merger) JobProgress: {'identifier': 'ros2_laser_scan_merger', 'progress': 'cmake'}
+[0.752294] (ros2_laser_scan_merger) JobProgress: {'identifier': 'ros2_laser_scan_merger', 'progress': 'build'}
+[0.753019] (ros2_laser_scan_merger) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger', '--', '-j8', '-l8'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1770'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '48268'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:42747'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/foxy/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1808,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '93988abe815a4a2b815fa48307162c8c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:eb42cbff-9c7c-4e76-9a7a-e0aac0a35671'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy')]), 'shell': False}
+[0.765820] (nav2_simu) CommandEnded: {'returncode': 0}
+[0.770536] (c_pkg) StdoutLine: {'line': b'[  6%] Built target c_pkg__cpp\n'}
+[0.770983] (c_pkg) StdoutLine: {'line': b'[  8%] Built target c_pkg__rosidl_generator_c\n'}
+[0.778609] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.781685] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[0.782024] (ros2_laser_scan_merger) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.782191] (ros2_laser_scan_merger) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.782335] (ros2_laser_scan_merger) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.782695] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[0.782885] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.783037] (ros2_laser_scan_merger) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[0.783173] (ros2_laser_scan_merger) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[0.783332] (ros2_laser_scan_merger) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.783488] (ros2_laser_scan_merger) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.783657] (ros2_laser_scan_merger) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.783814] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:19 (find_package)\n'}
+[0.783967] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.784299] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[0.785710] (c_pkg) StdoutLine: {'line': b'[ 22%] Built target c_pkg__rosidl_typesupport_introspection_c\n'}
+[0.786040] (c_pkg) StdoutLine: {'line': b'[ 22%] Built target c_pkg__rosidl_typesupport_cpp\n'}
+[0.786242] (c_pkg) StdoutLine: {'line': b'[ 28%] Built target c_pkg__rosidl_typesupport_c\n'}
+[0.787461] (c_pkg) StdoutLine: {'line': b'[ 35%] Built target c_pkg__rosidl_typesupport_introspection_cpp\n'}
+[0.789429] (c_pkg) StdoutLine: {'line': b'[ 42%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp\n'}
+[0.792092] (nav2_simu) JobProgress: {'identifier': 'nav2_simu', 'progress': 'install'}
+[0.797047] (nav2_simu) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1770'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '48268'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:42747'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/foxy/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1808,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '93988abe815a4a2b815fa48307162c8c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:eb42cbff-9c7c-4e76-9a7a-e0aac0a35671'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy')]), 'shell': False}
+[0.802484] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg__rosidl_typesupport_fastrtps_c\n'}
+[0.803312] (nav2_simu) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.803607] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src\n'}
+[0.803705] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description\n'}
+[0.803787] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description/bot_description.urdf\n'}
+[0.803860] (-) TimerEvent: {}
+[0.804085] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/src/description/trash_file.urdf\n'}
+[0.804290] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/launch\n'}
+[0.804370] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/launch/display.launch.py\n'}
+[0.804446] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/rviz\n'}
+[0.804518] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/rviz/urdf_config.rviz\n'}
+[0.804920] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/config\n'}
+[0.805127] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/config/nav2_params.yaml\n'}
+[0.805259] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/config/ekf.yaml\n'}
+[0.805385] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/world\n'}
+[0.805511] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/world/my_world.sdf\n'}
+[0.805634] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/package_run_dependencies/nav2_simu\n'}
+[0.805762] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/parent_prefix_path/nav2_simu\n'}
+[0.805911] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/ament_prefix_path.sh\n'}
+[0.806180] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/ament_prefix_path.dsv\n'}
+[0.806301] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/path.sh\n'}
+[0.806418] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/environment/path.dsv\n'}
+[0.806559] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.bash\n'}
+[0.806677] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.sh\n'}
+[0.806793] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.zsh\n'}
+[0.806909] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/local_setup.dsv\n'}
+[0.807025] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.dsv\n'}
+[0.807140] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/ament_index/resource_index/packages/nav2_simu\n'}
+[0.807257] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/cmake/nav2_simuConfig.cmake\n'}
+[0.807372] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/cmake/nav2_simuConfig-version.cmake\n'}
+[0.807693] (nav2_simu) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.xml\n'}
+[0.808449] (nav2_simu) CommandEnded: {'returncode': 0}
+[0.814308] (c_pkg) StdoutLine: {'line': b'[ 48%] Built target c_pkg\n'}
+[0.815598] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.829261] (c_pkg) StdoutLine: {'line': b'[ 51%] Built target c_pkg__py\n'}
+[0.835260] (c_pkg) StdoutLine: {'line': b'[ 62%] Built target bot_control_driver_node\n'}
+[0.837563] (c_pkg) StdoutLine: {'line': b'[ 71%] Built target keyboard_control_node\n'}
+[0.838018] (c_pkg) StdoutLine: {'line': b'[ 82%] Built target joystick_control_node\n'}
+[0.844299] (c_pkg) StdoutLine: {'line': b'[ 86%] Built target c_pkg__python\n'}
+[0.858922] (c_pkg) StdoutLine: {'line': b'[ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.860040] (c_pkg) StdoutLine: {'line': b'[ 95%] Built target c_pkg__rosidl_typesupport_c__pyext\n'}
+[0.860779] (c_pkg) StdoutLine: {'line': b'[100%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext\n'}
+[0.904031] (-) TimerEvent: {}
+[0.990112] (c_pkg) CommandEnded: {'returncode': 0}
+[1.004185] (-) TimerEvent: {}
+[1.043794] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.079632] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.082967] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.104436] (-) TimerEvent: {}
+[1.205316] (-) TimerEvent: {}
+[1.214130] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.228443] (nav2_simu) JobEnded: {'identifier': 'nav2_simu', 'rc': 0}
+[1.231674] (c_pkg) JobProgress: {'identifier': 'c_pkg', 'progress': 'install'}
+[1.231794] (c_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1770'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '48268'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:42747'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/foxy/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1808,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '93988abe815a4a2b815fa48307162c8c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:eb42cbff-9c7c-4e76-9a7a-e0aac0a35671'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy')]), 'shell': False}
+[1.236586] (c_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.237215] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/rosidl_interfaces/c_pkg\n'}
+[1.237309] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[1.237389] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[1.237463] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.237564] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[1.237812] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.h\n'}
+[1.237901] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.c\n'}
+[1.238016] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.h\n'}
+[1.238204] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__functions.h\n'}
+[1.238316] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.h\n'}
+[1.238429] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.sh\n'}
+[1.238495] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/library_path.dsv\n'}
+[1.238596] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_generator_c.so\n'}
+[1.238684] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[1.238820] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[1.238893] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[1.238964] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_c.h\n'}
+[1.239035] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.239107] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_c.so\n'}
+[1.239179] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[1.239328] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[1.239402] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.239558] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[1.239631] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/dds_fastrtps\n'}
+[1.239703] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.239801] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.239869] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[1.239994] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[1.240080] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[1.240147] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_c.h\n'}
+[1.240218] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.c\n'}
+[1.240288] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.240358] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_c.so\n'}
+[1.240428] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_c.so\n'}
+[1.240544] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[1.240704] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[1.240777] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.240848] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/state_vector.hpp\n'}
+[1.240919] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[1.241026] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__traits.hpp\n'}
+[1.241118] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__builder.hpp\n'}
+[1.241187] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.hpp\n'}
+[1.241254] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__struct.hpp\n'}
+[1.241325] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg\n'}
+[1.241444] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg\n'}
+[1.241512] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail\n'}
+[1.241578] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__type_support.cpp\n'}
+[1.241644] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/include/c_pkg/msg/detail/state_vector__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.241723] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_introspection_cpp.so\n'}
+[1.241791] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__rosidl_typesupport_cpp.so\n'}
+[1.241857] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.sh\n'}
+[1.241923] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/pythonpath.dsv\n'}
+[1.241988] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/__init__.py\n'}
+[1.266544] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.268045] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.276923] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg\n'}
+[1.277310] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/__init__.py\n'}
+[1.277575] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector.py\n'}
+[1.277670] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/msg/_state_vector_s.c\n'}
+[1.277740] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.277943] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.278386] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages/c_pkg/c_pkg_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.278881] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/libc_pkg__python.so\n'}
+[1.279122] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.idl\n'}
+[1.279358] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/msg/StateVector.msg\n'}
+[1.279620] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/keyboard_control_node\n'}
+[1.279971] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/bot_control_driver_node\n'}
+[1.280495] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/c_pkg/joystick_control_node\n'}
+[1.280817] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/launch\n'}
+[1.281040] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/launch/bot_teleoperate_launch.py\n'}
+[1.281257] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/package_run_dependencies/c_pkg\n'}
+[1.281453] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/parent_prefix_path/c_pkg\n'}
+[1.281584] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.sh\n'}
+[1.281715] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/ament_prefix_path.dsv\n'}
+[1.281859] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.sh\n'}
+[1.282033] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/environment/path.dsv\n'}
+[1.282180] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.bash\n'}
+[1.282313] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.sh\n'}
+[1.282459] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.zsh\n'}
+[1.282622] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/local_setup.dsv\n'}
+[1.282787] (c_pkg) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv\n'}
+[1.282972] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/ament_index/resource_index/packages/c_pkg\n'}
+[1.283084] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport.cmake\n'}
+[1.283196] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.283315] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.283428] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.283539] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport.cmake\n'}
+[1.283650] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.283777] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_generator_cppExport.cmake\n'}
+[1.284132] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.284387] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.284677] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport.cmake\n'}
+[1.284911] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.285140] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake-extras.cmake\n'}
+[1.285261] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.285548] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.286075] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.286151] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.286219] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.286297] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.286363] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig.cmake\n'}
+[1.286428] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/cmake/c_pkgConfig-version.cmake\n'}
+[1.286504] (c_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.xml\n'}
+[1.286616] (c_pkg) CommandEnded: {'returncode': 0}
+[1.306072] (-) TimerEvent: {}
+[1.407396] (-) TimerEvent: {}
+[1.413179] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[1.507664] (-) TimerEvent: {}
+[1.522378] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)\n'}
+[1.607838] (-) TimerEvent: {}
+[1.698091] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)\n'}
+[1.703965] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)\n'}
+[1.707936] (-) TimerEvent: {}
+[1.810349] (-) TimerEvent: {}
+[1.911563] (-) TimerEvent: {}
+[1.919127] (c_pkg) JobEnded: {'identifier': 'c_pkg', 'rc': 0}
+[2.011685] (-) TimerEvent: {}
+[2.073458] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system \n'}
+[2.080467] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:152 (find_package):\n'}
+[2.080757] (ros2_laser_scan_merger) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[2.080873] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[2.081002] (ros2_laser_scan_merger) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[2.081066] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.081127] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMake variable EIGEN_ROOT is set to:\n'}
+[2.081187] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.081247] (ros2_laser_scan_merger) StderrLine: {'line': b'    /usr/include/eigen3\n'}
+[2.081308] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.081367] (ros2_laser_scan_merger) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[2.081428] (ros2_laser_scan_merger) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[2.081487] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.081567] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:316 (find_eigen)\n'}
+[2.081644] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:551 (find_external_library)\n'}
+[2.081704] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.081763] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.081822] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.085646] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.3.7)\n'}
+[2.093746] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found Boost: /usr/include (found suitable version "1.71.0", minimum required is "1.55.0") found components: system filesystem date_time iostreams regex \n'}
+[2.094816] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):\n'}
+[2.094917] (ros2_laser_scan_merger) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[2.094986] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[2.095049] (ros2_laser_scan_merger) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[2.095117] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.095178] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMake variable FLANN_ROOT is set to:\n'}
+[2.095237] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.095295] (ros2_laser_scan_merger) StderrLine: {'line': b'    /usr\n'}
+[2.095353] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.095410] (ros2_laser_scan_merger) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[2.095470] (ros2_laser_scan_merger) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[2.095529] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.095587] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:263 (find_package)\n'}
+[2.095645] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:318 (find_flann)\n'}
+[2.095708] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:551 (find_external_library)\n'}
+[2.095766] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.095823] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.095881] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.111793] (-) TimerEvent: {}
+[2.151926] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- The imported target "vtkParseOGLExt" references the file\n'}
+[2.152137] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/bin/vtkParseOGLExt-7.1"\n'}
+[2.152209] (ros2_laser_scan_merger) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[2.152318] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[2.152463] (ros2_laser_scan_merger) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[2.152548] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[2.152794] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[2.152902] (ros2_laser_scan_merger) StdoutLine: {'line': b'but not all the files it references.\n'}
+[2.153005] (ros2_laser_scan_merger) StdoutLine: {'line': b'\n'}
+[2.153108] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- The imported target "vtkRenderingPythonTkWidgets" references the file\n'}
+[2.153212] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"\n'}
+[2.153314] (ros2_laser_scan_merger) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[2.153417] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[2.153520] (ros2_laser_scan_merger) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[2.153623] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[2.153725] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[2.153827] (ros2_laser_scan_merger) StdoutLine: {'line': b'but not all the files it references.\n'}
+[2.153929] (ros2_laser_scan_merger) StdoutLine: {'line': b'\n'}
+[2.154051] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- The imported target "vtk" references the file\n'}
+[2.154157] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/bin/vtk"\n'}
+[2.154262] (ros2_laser_scan_merger) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[2.154368] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[2.154473] (ros2_laser_scan_merger) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[2.154580] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[2.154769] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[2.154909] (ros2_laser_scan_merger) StdoutLine: {'line': b'but not all the files it references.\n'}
+[2.155028] (ros2_laser_scan_merger) StdoutLine: {'line': b'\n'}
+[2.155135] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- The imported target "pvtk" references the file\n'}
+[2.155292] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/bin/pvtk"\n'}
+[2.155421] (ros2_laser_scan_merger) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[2.155523] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[2.155626] (ros2_laser_scan_merger) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[2.155737] (ros2_laser_scan_merger) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[2.155839] (ros2_laser_scan_merger) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[2.155940] (ros2_laser_scan_merger) StdoutLine: {'line': b'but not all the files it references.\n'}
+[2.156078] (ros2_laser_scan_merger) StdoutLine: {'line': b'\n'}
+[2.170783] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.170935] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[2.171004] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[2.171067] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.171128] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.171187] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.171245] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[2.171304] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[2.171362] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[2.171421] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[2.171485] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.171545] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.171604] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.171982] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[2.177789] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.177927] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[2.177995] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[2.178096] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.178156] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.178224] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.178285] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[2.178344] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[2.178402] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[2.178460] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[2.178524] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.178584] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.178644] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.179006] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)\n'}
+[2.179329] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[2.179666] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to png will be disabled\x1b[0m\n'}
+[2.189026] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.189299] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (libusb-1.0)\n'}
+[2.189390] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.189457] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.189520] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.189580] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.189640] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:291 (find_package_handle_standard_args)\n'}
+[2.189700] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:338 (find_libusb)\n'}
+[2.189759] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[2.189818] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.189885] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.189945] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.190004] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to libusb-1.0 will be disabled\x1b[0m\n'}
+[2.194623] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.194745] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[2.194813] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[2.194876] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.194937] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.194997] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.195056] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[2.195115] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[2.195193] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[2.195265] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[2.195324] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.195383] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.195441] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.195829] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[2.201468] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.201597] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[2.201666] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[2.201739] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.201800] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.201860] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.201919] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[2.201977] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[2.202036] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[2.202095] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[2.202153] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.202211] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.202270] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.202578] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)\n'}
+[2.211891] (-) TimerEvent: {}
+[2.214337] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:165 (find_package):\n'}
+[2.214635] (ros2_laser_scan_merger) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[2.214850] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[2.214972] (ros2_laser_scan_merger) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[2.215092] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.215210] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMake variable QHULL_ROOT is set to:\n'}
+[2.215328] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.215444] (ros2_laser_scan_merger) StderrLine: {'line': b'    /usr\n'}
+[2.215603] (ros2_laser_scan_merger) StderrLine: {'line': b'\n'}
+[2.215716] (ros2_laser_scan_merger) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[2.215821] (ros2_laser_scan_merger) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[2.215928] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.216035] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:320 (find_qhull)\n'}
+[2.216103] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[2.216167] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.216230] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.216293] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.216356] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)\n'}
+[2.222123] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.222287] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[2.222364] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[2.222431] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.222504] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.222580] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.222640] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[2.222706] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[2.222767] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[2.222826] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[2.222889] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.222949] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.223010] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.223445] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[2.235034] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[2.235450] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.235695] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_COMMON)\n'}
+[2.235985] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.236171] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.236440] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.236635] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.236918] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.237099] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.237329] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.237602] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.237757] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[2.237944] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.238279] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_KDTREE)\n'}
+[2.238489] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.238739] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.238884] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.239225] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.239406] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.239698] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.239835] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.240034] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.240261] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[2.240401] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.240547] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_OCTREE)\n'}
+[2.240860] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.241106] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.241357] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.241702] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.241835] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.241969] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.242169] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.242380] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.242516] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[2.242689] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.242909] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_SEARCH)\n'}
+[2.243060] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.243244] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.243547] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.243816] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.244011] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.244270] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.244492] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.244727] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.244970] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[2.245280] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.245483] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.245653] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_SAMPLE_CONSENSUS) does not match the name of the calling package\n'}
+[2.245867] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[2.246014] (ros2_laser_scan_merger) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[2.246164] (ros2_laser_scan_merger) StderrLine: {'line': b'  pattern.\n'}
+[2.246356] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.246558] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.246730] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.246961] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.247113] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.247260] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[2.247414] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.247572] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.247780] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_FILTERS) does not match the name of the calling package (PCL).  This\n'}
+[2.247996] (ros2_laser_scan_merger) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[2.248169] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.248451] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.248738] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.248976] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.249171] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.249310] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.249515] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[2.249715] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.249882] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_2D)\n'}
+[2.250051] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.250150] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.250253] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.250351] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.250438] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[2.250573] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.250693] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.250761] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.250825] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[2.250894] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.250958] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.251021] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_GEOMETRY) does not match the name of the calling package (PCL).  This\n'}
+[2.251102] (ros2_laser_scan_merger) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[2.251212] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.251310] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.251373] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[2.251463] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.251569] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.251642] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.251704] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[2.251769] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.251863] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_IO)\n'}
+[2.252026] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.252173] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.252273] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.252426] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.252580] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.252748] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.252858] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.252922] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.252985] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[2.253054] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.253136] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.253204] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_FEATURES) does not match the name of the calling package (PCL).  This\n'}
+[2.253369] (ros2_laser_scan_merger) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[2.253433] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.253497] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.253562] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.253626] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.253689] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.253752] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.253815] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[2.253881] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.253944] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_ML)\n'}
+[2.254006] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.254068] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.254131] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.254194] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.254256] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.254319] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.254381] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.254471] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.254681] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[2.254760] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.254837] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.254903] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_SEGMENTATION) does not match the name of the calling package (PCL).\n'}
+[2.254967] (ros2_laser_scan_merger) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[2.255031] (ros2_laser_scan_merger) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.255094] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.255157] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.255219] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.255282] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.255344] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.255407] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[2.255471] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.255535] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.255597] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_VISUALIZATION) does not match the name of the calling package (PCL).\n'}
+[2.255661] (ros2_laser_scan_merger) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[2.255729] (ros2_laser_scan_merger) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.255791] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.255852] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.255915] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.256023] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.256141] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.256311] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[2.256410] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.256551] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.256630] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_SURFACE) does not match the name of the calling package (PCL).  This\n'}
+[2.256734] (ros2_laser_scan_merger) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[2.256814] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.256902] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.257003] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.257203] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.257282] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.257350] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.257415] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[2.257482] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.257552] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.257614] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_REGISTRATION) does not match the name of the calling package (PCL).\n'}
+[2.257677] (ros2_laser_scan_merger) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[2.257738] (ros2_laser_scan_merger) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.257800] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.257862] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.257924] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.257985] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.258046] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.258107] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[2.258171] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.258272] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.258488] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_KEYPOINTS) does not match the name of the calling package (PCL).  This\n'}
+[2.258568] (ros2_laser_scan_merger) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[2.258635] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.258699] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.258762] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.258825] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.258886] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.258949] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.259012] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[2.259077] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.259139] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.259200] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_TRACKING) does not match the name of the calling package (PCL).  This\n'}
+[2.259263] (ros2_laser_scan_merger) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[2.259326] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.259388] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.259488] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.259550] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.259645] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.259707] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.259767] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[2.259832] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.259895] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.259993] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_RECOGNITION) does not match the name of the calling package (PCL).\n'}
+[2.260077] (ros2_laser_scan_merger) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[2.260139] (ros2_laser_scan_merger) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.260202] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.260263] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.260325] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.260385] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.260446] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.260507] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[2.260572] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.260633] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_STEREO)\n'}
+[2.260694] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.260755] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.260817] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.260879] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.260940] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.261000] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.261061] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.261121] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.261181] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[2.261244] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.261313] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_APPS)\n'}
+[2.261383] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.261444] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.261506] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.261568] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.261628] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.261689] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.261750] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.261811] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.261872] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[2.261935] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.261998] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.262067] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_IN_HAND_SCANNER) does not match the name of the calling package (PCL).\n'}
+[2.262130] (ros2_laser_scan_merger) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[2.262191] (ros2_laser_scan_merger) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.262252] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.262313] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[2.262373] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.262435] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.262496] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.262557] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[2.262621] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.262682] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.262743] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_POINT_CLOUD_EDITOR) does not match the name of the calling package\n'}
+[2.262803] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[2.262865] (ros2_laser_scan_merger) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[2.262926] (ros2_laser_scan_merger) StderrLine: {'line': b'  pattern.\n'}
+[2.262986] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.263048] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[2.263110] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.263172] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.263234] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.263296] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[2.263360] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.263421] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[2.263482] (ros2_laser_scan_merger) StderrLine: {'line': b'  (PCL_OUTOFCORE) does not match the name of the calling package (PCL).  This\n'}
+[2.263542] (ros2_laser_scan_merger) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[2.263603] (ros2_laser_scan_merger) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.263666] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.263727] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.263789] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.263852] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.263914] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.264012] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[2.264107] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[2.264170] (ros2_laser_scan_merger) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_PEOPLE)\n'}
+[2.264237] (ros2_laser_scan_merger) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[2.264300] (ros2_laser_scan_merger) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[2.264363] (ros2_laser_scan_merger) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[2.264425] (ros2_laser_scan_merger) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.264486] (ros2_laser_scan_merger) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[2.264549] (ros2_laser_scan_merger) StderrLine: {'line': b'  CMakeLists.txt:29 (find_package)\n'}
+[2.264610] (ros2_laser_scan_merger) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.264670] (ros2_laser_scan_merger) StderrLine: {'line': b'\x1b[0m\n'}
+[2.291037] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[2.312052] (-) TimerEvent: {}
+[2.358205] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.361880] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.362538] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/ros2_laser_scan_merger/include\n'}
+[2.362656] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.366193] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.366339] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.366967] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.367998] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.368717] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[2.371847] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.371970] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.372586] (ros2_laser_scan_merger) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.373373] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Configuring done (1.6s)\n'}
+[2.398009] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.400625] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger\n'}
+[2.412132] (-) TimerEvent: {}
+[2.450209] (ros2_laser_scan_merger) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ros2_laser_scan_merger.dir/src/main.cpp.o\x1b[0m\n'}
+[2.512253] (-) TimerEvent: {}
+[2.612620] (-) TimerEvent: {}
+[2.712948] (-) TimerEvent: {}
+[2.813265] (-) TimerEvent: {}
+[2.913580] (-) TimerEvent: {}
+[3.013879] (-) TimerEvent: {}
+[3.114237] (-) TimerEvent: {}
+[3.214606] (-) TimerEvent: {}
+[3.314941] (-) TimerEvent: {}
+[3.415321] (-) TimerEvent: {}
+[3.515635] (-) TimerEvent: {}
+[3.615975] (-) TimerEvent: {}
+[3.716308] (-) TimerEvent: {}
+[3.816676] (-) TimerEvent: {}
+[3.916960] (-) TimerEvent: {}
+[4.017265] (-) TimerEvent: {}
+[4.117550] (-) TimerEvent: {}
+[4.217840] (-) TimerEvent: {}
+[4.318157] (-) TimerEvent: {}
+[4.418555] (-) TimerEvent: {}
+[4.518912] (-) TimerEvent: {}
+[4.619203] (-) TimerEvent: {}
+[4.719512] (-) TimerEvent: {}
+[4.819811] (-) TimerEvent: {}
+[4.920098] (-) TimerEvent: {}
+[5.020412] (-) TimerEvent: {}
+[5.120708] (-) TimerEvent: {}
+[5.221009] (-) TimerEvent: {}
+[5.321315] (-) TimerEvent: {}
+[5.421606] (-) TimerEvent: {}
+[5.521898] (-) TimerEvent: {}
+[5.622182] (-) TimerEvent: {}
+[5.722475] (-) TimerEvent: {}
+[5.822768] (-) TimerEvent: {}
+[5.923112] (-) TimerEvent: {}
+[6.023403] (-) TimerEvent: {}
+[6.123701] (-) TimerEvent: {}
+[6.223995] (-) TimerEvent: {}
+[6.324310] (-) TimerEvent: {}
+[6.424600] (-) TimerEvent: {}
+[6.524865] (-) TimerEvent: {}
+[6.625141] (-) TimerEvent: {}
+[6.725418] (-) TimerEvent: {}
+[6.825772] (-) TimerEvent: {}
+[6.926090] (-) TimerEvent: {}
+[7.026483] (-) TimerEvent: {}
+[7.127002] (-) TimerEvent: {}
+[7.227365] (-) TimerEvent: {}
+[7.327660] (-) TimerEvent: {}
+[7.427971] (-) TimerEvent: {}
+[7.528303] (-) TimerEvent: {}
+[7.628604] (-) TimerEvent: {}
+[7.728896] (-) TimerEvent: {}
+[7.829229] (-) TimerEvent: {}
+[7.929517] (-) TimerEvent: {}
+[8.029808] (-) TimerEvent: {}
+[8.130095] (-) TimerEvent: {}
+[8.230398] (-) TimerEvent: {}
+[8.330705] (-) TimerEvent: {}
+[8.431013] (-) TimerEvent: {}
+[8.531320] (-) TimerEvent: {}
+[8.631627] (-) TimerEvent: {}
+[8.731974] (-) TimerEvent: {}
+[8.832351] (-) TimerEvent: {}
+[8.932653] (-) TimerEvent: {}
+[9.033015] (-) TimerEvent: {}
+[9.133321] (-) TimerEvent: {}
+[9.233634] (-) TimerEvent: {}
+[9.333985] (-) TimerEvent: {}
+[9.434394] (-) TimerEvent: {}
+[9.534715] (-) TimerEvent: {}
+[9.635039] (-) TimerEvent: {}
+[9.735333] (-) TimerEvent: {}
+[9.835635] (-) TimerEvent: {}
+[9.935936] (-) TimerEvent: {}
+[10.036283] (-) TimerEvent: {}
+[10.136564] (-) TimerEvent: {}
+[10.236848] (-) TimerEvent: {}
+[10.337151] (-) TimerEvent: {}
+[10.437433] (-) TimerEvent: {}
+[10.537744] (-) TimerEvent: {}
+[10.638045] (-) TimerEvent: {}
+[10.738327] (-) TimerEvent: {}
+[10.838593] (-) TimerEvent: {}
+[10.938896] (-) TimerEvent: {}
+[11.039180] (-) TimerEvent: {}
+[11.139461] (-) TimerEvent: {}
+[11.239751] (-) TimerEvent: {}
+[11.340040] (-) TimerEvent: {}
+[11.440310] (-) TimerEvent: {}
+[11.540608] (-) TimerEvent: {}
+[11.640890] (-) TimerEvent: {}
+[11.741180] (-) TimerEvent: {}
+[11.841476] (-) TimerEvent: {}
+[11.941748] (-) TimerEvent: {}
+[12.042044] (-) TimerEvent: {}
+[12.103370] (ros2_laser_scan_merger) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ros2_laser_scan_merger\x1b[0m\n'}
+[12.142173] (-) TimerEvent: {}
+[12.242461] (-) TimerEvent: {}
+[12.342764] (-) TimerEvent: {}
+[12.442920] (ros2_laser_scan_merger) StdoutLine: {'line': b'[100%] Built target ros2_laser_scan_merger\n'}
+[12.443077] (-) TimerEvent: {}
+[12.448390] (ros2_laser_scan_merger) CommandEnded: {'returncode': 0}
+[12.469480] (ros2_laser_scan_merger) JobProgress: {'identifier': 'ros2_laser_scan_merger', 'progress': 'install'}
+[12.470161] (ros2_laser_scan_merger) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger'], 'cwd': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jrlintern'), ('LC_TIME', 'ja_JP.UTF-8'), ('SSH_AGENT_PID', '1770'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib:'), ('HOME', '/home/jrlintern'), ('OLDPWD', '/home/jrlintern'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '48268'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jrlintern'), ('JOURNAL_STREAM', '8:42747'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jrlintern'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/foxy/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/bin:/home/jrlintern/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jrlintern-XPS-15-9560:@/tmp/.ICE-unix/1808,unix/jrlintern-XPS-15-9560:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '93988abe815a4a2b815fa48307162c8c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ROS_PARALLEL_JOBS', '-j8 -l8'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:eb42cbff-9c7c-4e76-9a7a-e0aac0a35671'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages:'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy')]), 'shell': False}
+[12.476137] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.476573] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/launch\n'}
+[12.476772] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/launch/merge_2_scan.launch.py\n'}
+[12.476935] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/launch/visualize_merge_2_scan.launch.py\n'}
+[12.477079] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/rviz\n'}
+[12.477183] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/rviz/ros2_laser_scan_merge.rviz\n'}
+[12.477306] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib/ros2_laser_scan_merger/ros2_laser_scan_merger\n'}
+[12.479861] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Set runtime path of "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib/ros2_laser_scan_merger/ros2_laser_scan_merger" to ""\n'}
+[12.480099] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ament_index/resource_index/package_run_dependencies/ros2_laser_scan_merger\n'}
+[12.480331] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ament_index/resource_index/parent_prefix_path/ros2_laser_scan_merger\n'}
+[12.480502] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/environment/ament_prefix_path.sh\n'}
+[12.480683] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/environment/ament_prefix_path.dsv\n'}
+[12.480844] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/environment/path.sh\n'}
+[12.481010] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/environment/path.dsv\n'}
+[12.481183] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/local_setup.bash\n'}
+[12.481330] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/local_setup.sh\n'}
+[12.481476] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/local_setup.zsh\n'}
+[12.481628] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/local_setup.dsv\n'}
+[12.481774] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.dsv\n'}
+[12.481915] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ament_index/resource_index/packages/ros2_laser_scan_merger\n'}
+[12.482048] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/cmake/ros2_laser_scan_mergerConfig.cmake\n'}
+[12.482193] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/cmake/ros2_laser_scan_mergerConfig-version.cmake\n'}
+[12.482301] (ros2_laser_scan_merger) StdoutLine: {'line': b'-- Installing: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.xml\n'}
+[12.483630] (ros2_laser_scan_merger) CommandEnded: {'returncode': 0}
+[12.543565] (-) TimerEvent: {}
+[12.644216] (-) TimerEvent: {}
+[12.744887] (-) TimerEvent: {}
+[12.840646] (ros2_laser_scan_merger) JobEnded: {'identifier': 'ros2_laser_scan_merger', 'rc': 0}
+[12.841898] (-) EventReactorShutdown: {}

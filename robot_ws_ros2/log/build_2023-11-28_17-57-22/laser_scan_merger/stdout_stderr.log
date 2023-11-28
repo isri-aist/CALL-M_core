@@ -1,0 +1,38 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o[0m
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:[m[K In constructor ‘[01m[KLaserScanFusionNode::LaserScanFusionNode()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:38:62:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Ktf2_ros::Buffer::Buffer()[m[K’
+   38 | _node"), tf_listener_(tf_buffer_[01;31m[K)[m[K {
+      |                                 [01;31m[K^[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/tf2_ros/transform_listener.h:41[m[K,
+                 from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:3[m[K:
+[01m[K/opt/ros/foxy/include/tf2_ros/buffer.h:71:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktf2_ros::Buffer::Buffer(rclcpp::Clock::SharedPtr, tf2::Duration)[m[K’
+   71 |     TF2_ROS_PUBLIC [01;36m[KBuffer[m[K(rclcpp::Clock::SharedPtr clock, tf2::Duration cache_time = tf2::Duration(tf2::BUFFER_CORE_DEFAULT_CACHE_TIME));
+      |                    [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/foxy/include/tf2_ros/buffer.h:71:20:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:[m[K In member function ‘[01m[Kvoid LaserScanFusionNode::fuseAndPublish()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:75:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg::LaserScan[m[K’ {aka ‘[01m[Ksensor_msgs::msg::LaserScan_<std::allocator<void> >[m[K’}
+   75 | rm(sensor_msgs::msg::LaserScan::[01;31m[Kpose[m[K, lidar2_pose_in_lidar1_frame, transform);
+      |                                 [01;31m[K^~~~[m[K
+
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:[m[K In member function ‘[01m[Ksensor_msgs::msg::LaserScan LaserScanFusionNode::fuseScans(const SharedPtr&, const SharedPtr&, const PoseStamped&)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:120:80:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransform[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::transform[m[K’?
+  120 | n_lidar1_frame, point_in_lidar2_frame, [01;31m[Ktransform[m[K);
+      |                                        [01;31m[K^~~~~~~~~[m[K
+      |                                        [32m[Kstd::transform[m[K
+In file included from [01m[K/usr/include/c++/9/algorithm:62[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_algo.h:4369:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::transform[m[K’ declared here
+ 4369 |     [01;36m[Ktransform[m[K(_InputIterator1 __first1, _InputIterator1 __last1,
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:91:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klidar2_pose_in_lidar1_frame[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   91 | [01;35m[Keometry_msgs::msg::PoseStamped& lidar2_pose_in_lidar1_frame[m[K) {
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+make[2]: *** [CMakeFiles/laser_scan_merger_node.dir/build.make:76: CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/laser_scan_merger_node.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

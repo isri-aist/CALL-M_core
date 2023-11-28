@@ -1,0 +1,420 @@
+[2.666s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.666s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fd6b81a3130>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fd6b81a3130>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fd6b7e03790>)
+[2.781s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.781s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.781s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.781s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.781s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.781s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.782s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2'
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.782s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.795s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.796s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.796s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.796s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.796s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.796s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.796s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.796s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.797s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extensions ['ignore', 'ignore_ament_install']
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extension 'ignore'
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extension 'ignore_ament_install'
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extensions ['colcon_pkg']
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extension 'colcon_pkg'
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extensions ['colcon_meta']
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extension 'colcon_meta'
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extensions ['ros']
+[2.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/c_pkg) by extension 'ros'
+[2.800s] DEBUG:colcon.colcon_core.package_identification:Package 'src/c_pkg' with type 'ros.ament_cmake' and name 'c_pkg'
+[2.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extensions ['ignore', 'ignore_ament_install']
+[2.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extension 'ignore'
+[2.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extension 'ignore_ament_install'
+[2.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extensions ['colcon_pkg']
+[2.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extension 'colcon_pkg'
+[2.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extensions ['colcon_meta']
+[2.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extension 'colcon_meta'
+[2.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extensions ['ros']
+[2.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_scan_merger) by extension 'ros'
+[2.802s] DEBUG:colcon.colcon_core.package_identification:Package 'src/laser_scan_merger' with type 'ros.ament_cmake' and name 'laser_scan_merger'
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extensions ['ignore', 'ignore_ament_install']
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extension 'ignore'
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extension 'ignore_ament_install'
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extensions ['colcon_pkg']
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extension 'colcon_pkg'
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extensions ['colcon_meta']
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extension 'colcon_meta'
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extensions ['ros']
+[2.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav2_simu) by extension 'ros'
+[2.803s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nav2_simu' with type 'ros.ament_cmake' and name 'nav2_simu'
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore'
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore_ament_install'
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_pkg']
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_pkg'
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_meta']
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_meta'
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ros']
+[2.803s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ros'
+[2.804s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pointcloud_to_laserscan' with type 'ros.ament_cmake' and name 'pointcloud_to_laserscan'
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extensions ['ignore', 'ignore_ament_install']
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extension 'ignore'
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extension 'ignore_ament_install'
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extensions ['colcon_pkg']
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extension 'colcon_pkg'
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extensions ['colcon_meta']
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extension 'colcon_meta'
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extensions ['ros']
+[2.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_merger) by extension 'ros'
+[2.806s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_laser_scan_merger' with type 'ros.ament_cmake' and name 'ros2_laser_scan_merger'
+[2.806s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.806s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.806s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.806s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.806s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.048s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[3.048s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[3.145s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install
+[3.188s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install
+[3.233s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 306 installed packages in /opt/ros/foxy
+[3.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'cmake_args' from command line to 'None'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'cmake_target' from command line to 'None'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[3.391s] Level 5:colcon.colcon_core.verb:set package 'c_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.391s] DEBUG:colcon.colcon_core.verb:Building package 'c_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg', 'merge_install': False, 'path': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg', 'symlink_install': False, 'test_result_base': None}
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'cmake_args' from command line to 'None'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'cmake_target' from command line to 'None'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'cmake_clean_cache' from command line to 'False'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'cmake_clean_first' from command line to 'False'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'cmake_force_configure' from command line to 'False'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'ament_cmake_args' from command line to 'None'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'catkin_cmake_args' from command line to 'None'
+[3.434s] Level 5:colcon.colcon_core.verb:set package 'laser_scan_merger' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.435s] DEBUG:colcon.colcon_core.verb:Building package 'laser_scan_merger' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger', 'merge_install': False, 'path': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger', 'symlink_install': False, 'test_result_base': None}
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'cmake_args' from command line to 'None'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'cmake_target' from command line to 'None'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'cmake_clean_cache' from command line to 'False'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'cmake_clean_first' from command line to 'False'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'cmake_force_configure' from command line to 'False'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'ament_cmake_args' from command line to 'None'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'catkin_cmake_args' from command line to 'None'
+[3.478s] Level 5:colcon.colcon_core.verb:set package 'nav2_simu' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.478s] DEBUG:colcon.colcon_core.verb:Building package 'nav2_simu' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu', 'merge_install': False, 'path': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nav2_simu', 'symlink_install': False, 'test_result_base': None}
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_args' from command line to 'None'
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target' from command line to 'None'
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_cache' from command line to 'False'
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_first' from command line to 'False'
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_force_configure' from command line to 'False'
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'ament_cmake_args' from command line to 'None'
+[3.520s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_cmake_args' from command line to 'None'
+[3.521s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.521s] DEBUG:colcon.colcon_core.verb:Building package 'pointcloud_to_laserscan' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan', 'merge_install': False, 'path': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/pointcloud_to_laserscan', 'symlink_install': False, 'test_result_base': None}
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'cmake_args' from command line to 'None'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'cmake_target' from command line to 'None'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'cmake_clean_cache' from command line to 'False'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'cmake_clean_first' from command line to 'False'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'cmake_force_configure' from command line to 'False'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'ament_cmake_args' from command line to 'None'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'catkin_cmake_args' from command line to 'None'
+[3.574s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_merger' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.574s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_laser_scan_merger' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger', 'merge_install': False, 'path': '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/ros2_laser_scan_merger', 'symlink_install': False, 'test_result_base': None}
+[3.616s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.660s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.660s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg' with build type 'ament_cmake'
+[3.660s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg'
+[3.710s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.710s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.710s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.908s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger' with build type 'ament_cmake'
+[3.908s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger'
+[3.956s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.956s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.145s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nav2_simu' with build type 'ament_cmake'
+[4.146s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nav2_simu'
+[4.196s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.196s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.380s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/pointcloud_to_laserscan' with build type 'ament_cmake'
+[4.381s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/pointcloud_to_laserscan'
+[4.429s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.429s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.626s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/ros2_laser_scan_merger' with build type 'ament_cmake'
+[4.627s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/ros2_laser_scan_merger'
+[4.680s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.680s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[4.911s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8
+[4.920s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu -- -j8 -l8
+[4.929s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan -- -j8 -l8
+[4.936s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger -- -j8 -l8
+[4.944s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu -- -j8 -l8
+[4.993s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu
+[5.006s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav2_simu)
+[5.009s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan -- -j8 -l8
+[5.011s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nav2_simu
+[5.086s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu' for CMake module files
+[5.086s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu' for CMake config files
+[5.086s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav2_simu', 'cmake_prefix_path')
+[5.134s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/hook/cmake_prefix_path.ps1'
+[5.135s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/hook/cmake_prefix_path.dsv'
+[5.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/hook/cmake_prefix_path.sh'
+[5.136s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/bin'
+[5.136s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/lib/pkgconfig/nav2_simu.pc'
+[5.137s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/lib/python3.8/site-packages'
+[5.137s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/bin'
+[5.187s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.ps1'
+[5.188s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.dsv'
+[5.188s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.sh'
+[5.189s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.bash'
+[5.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.zsh'
+[5.190s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/colcon-core/packages/nav2_simu)
+[5.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan
+[5.202s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[5.218s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger -- -j8 -l8
+[5.284s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav2_simu)
+[5.335s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu' for CMake module files
+[5.335s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu' for CMake config files
+[5.336s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav2_simu', 'cmake_prefix_path')
+[5.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/hook/cmake_prefix_path.ps1'
+[5.385s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/hook/cmake_prefix_path.dsv'
+[5.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/hook/cmake_prefix_path.sh'
+[5.386s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/bin'
+[5.386s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/lib/pkgconfig/nav2_simu.pc'
+[5.386s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/lib/python3.8/site-packages'
+[5.386s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/bin'
+[5.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.ps1'
+[5.436s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.dsv'
+[5.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.sh'
+[5.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.bash'
+[5.438s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/nav2_simu/package.zsh'
+[5.438s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu/share/colcon-core/packages/nav2_simu)
+[5.439s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[5.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/pointcloud_to_laserscan
+[5.492s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan' for CMake module files
+[5.493s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan' for CMake config files
+[5.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[5.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[5.544s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[5.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[5.545s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/lib'
+[5.545s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[5.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[5.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[5.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[5.594s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/bin'
+[5.594s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[5.594s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/lib/python3.8/site-packages'
+[5.595s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/bin'
+[5.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[5.644s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[5.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[5.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[5.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[5.646s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[5.652s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[5.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger
+[5.665s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_laser_scan_merger)
+[5.686s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/ros2_laser_scan_merger
+[5.738s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger' for CMake module files
+[5.739s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger' for CMake config files
+[5.739s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_laser_scan_merger', 'cmake_prefix_path')
+[5.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/hook/cmake_prefix_path.ps1'
+[5.791s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/hook/cmake_prefix_path.dsv'
+[5.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/hook/cmake_prefix_path.sh'
+[5.792s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib'
+[5.793s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/bin'
+[5.793s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib/pkgconfig/ros2_laser_scan_merger.pc'
+[5.793s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib/python3.8/site-packages'
+[5.793s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/bin'
+[5.844s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.ps1'
+[5.844s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.dsv'
+[5.845s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.sh'
+[5.845s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.bash'
+[5.846s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.zsh'
+[5.846s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/colcon-core/packages/ros2_laser_scan_merger)
+[5.901s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[5.951s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan' for CMake module files
+[5.951s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan' for CMake config files
+[5.952s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[6.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[6.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[6.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[6.016s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/lib'
+[6.016s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[6.064s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[6.064s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[6.065s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[6.065s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/bin'
+[6.065s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[6.065s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/lib/python3.8/site-packages'
+[6.065s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/bin'
+[6.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[6.114s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[6.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[6.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[6.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[6.116s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[6.117s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(c_pkg)
+[6.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg
+[6.167s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg' for CMake module files
+[6.168s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg' for CMake config files
+[6.168s] Level 1:colcon.colcon_core.shell:create_environment_hook('c_pkg', 'cmake_prefix_path')
+[6.217s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/cmake_prefix_path.ps1'
+[6.217s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/cmake_prefix_path.dsv'
+[6.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/cmake_prefix_path.sh'
+[6.219s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib'
+[6.219s] Level 1:colcon.colcon_core.shell:create_environment_hook('c_pkg', 'ld_library_path_lib')
+[6.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/ld_library_path_lib.ps1'
+[6.274s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/ld_library_path_lib.dsv'
+[6.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/ld_library_path_lib.sh'
+[6.274s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/bin'
+[6.275s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/pkgconfig/c_pkg.pc'
+[6.275s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages'
+[6.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('c_pkg', 'pythonpath')
+[6.328s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/pythonpath.ps1'
+[6.328s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/pythonpath.dsv'
+[6.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/pythonpath.sh'
+[6.329s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/bin'
+[6.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.ps1'
+[6.378s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv'
+[6.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.sh'
+[6.379s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.bash'
+[6.379s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.zsh'
+[6.379s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/colcon-core/packages/c_pkg)
+[6.438s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_laser_scan_merger)
+[6.488s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger' for CMake module files
+[6.489s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger' for CMake config files
+[6.489s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_laser_scan_merger', 'cmake_prefix_path')
+[6.538s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/hook/cmake_prefix_path.ps1'
+[6.538s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/hook/cmake_prefix_path.dsv'
+[6.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/hook/cmake_prefix_path.sh'
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib'
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/bin'
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib/pkgconfig/ros2_laser_scan_merger.pc'
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/lib/python3.8/site-packages'
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/bin'
+[6.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.ps1'
+[6.590s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.dsv'
+[6.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.sh'
+[6.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.bash'
+[6.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/ros2_laser_scan_merger/package.zsh'
+[6.591s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/ros2_laser_scan_merger/share/colcon-core/packages/ros2_laser_scan_merger)
+[6.645s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(c_pkg)
+[6.693s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg' for CMake module files
+[6.694s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg' for CMake config files
+[6.694s] Level 1:colcon.colcon_core.shell:create_environment_hook('c_pkg', 'cmake_prefix_path')
+[6.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/cmake_prefix_path.ps1'
+[6.747s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/cmake_prefix_path.dsv'
+[6.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/cmake_prefix_path.sh'
+[6.747s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib'
+[6.748s] Level 1:colcon.colcon_core.shell:create_environment_hook('c_pkg', 'ld_library_path_lib')
+[6.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/ld_library_path_lib.ps1'
+[6.796s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/ld_library_path_lib.dsv'
+[6.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/ld_library_path_lib.sh'
+[6.797s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/bin'
+[6.797s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/pkgconfig/c_pkg.pc'
+[6.797s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages'
+[6.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('c_pkg', 'pythonpath')
+[6.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/pythonpath.ps1'
+[6.846s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/pythonpath.dsv'
+[6.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/hook/pythonpath.sh'
+[6.847s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/bin'
+[6.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.ps1'
+[6.895s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.dsv'
+[6.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.sh'
+[6.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.bash'
+[6.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/c_pkg/package.zsh'
+[6.897s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/share/colcon-core/packages/c_pkg)
+[9.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8
+[10.008s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger
+[10.017s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(laser_scan_merger)
+[10.018s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger
+[10.065s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger' for CMake module files
+[10.065s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger' for CMake config files
+[10.065s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_scan_merger', 'cmake_prefix_path')
+[10.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/hook/cmake_prefix_path.ps1'
+[10.111s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/hook/cmake_prefix_path.dsv'
+[10.111s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/hook/cmake_prefix_path.sh'
+[10.112s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib'
+[10.112s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/bin'
+[10.112s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib/pkgconfig/laser_scan_merger.pc'
+[10.112s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib/python3.8/site-packages'
+[10.112s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/bin'
+[10.159s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.ps1'
+[10.159s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.dsv'
+[10.160s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.sh'
+[10.160s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.bash'
+[10.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.zsh'
+[10.161s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/colcon-core/packages/laser_scan_merger)
+[10.228s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(laser_scan_merger)
+[10.273s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger' for CMake module files
+[10.273s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger' for CMake config files
+[10.274s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_scan_merger', 'cmake_prefix_path')
+[10.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/hook/cmake_prefix_path.ps1'
+[10.319s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/hook/cmake_prefix_path.dsv'
+[10.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/hook/cmake_prefix_path.sh'
+[10.320s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib'
+[10.320s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/bin'
+[10.320s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib/pkgconfig/laser_scan_merger.pc'
+[10.320s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/lib/python3.8/site-packages'
+[10.321s] Level 1:colcon.colcon_core.environment:checking '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/bin'
+[10.366s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.ps1'
+[10.367s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.dsv'
+[10.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.sh'
+[10.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.bash'
+[10.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/laser_scan_merger/package.zsh'
+[10.368s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger/share/colcon-core/packages/laser_scan_merger)
+[10.369s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.369s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.369s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.369s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.424s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.424s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.424s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.439s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.514s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/local_setup.ps1'
+[10.515s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/_local_setup_util_ps1.py'
+[10.517s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/setup.ps1'
+[10.569s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/local_setup.sh'
+[10.570s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/_local_setup_util_sh.py'
+[10.570s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/setup.sh'
+[10.621s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/local_setup.bash'
+[10.622s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/setup.bash'
+[10.670s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/local_setup.zsh'
+[10.671s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/setup.zsh'

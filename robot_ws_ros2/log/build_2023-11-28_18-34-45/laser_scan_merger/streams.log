@@ -1,0 +1,51 @@
+[0.967s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8
+[0.992s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.993s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.993s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.993s]   the cmake_policy command to set the policy and suppress this warning.
+[0.993s] 
+[0.993s] Call Stack (most recent call first):
+[0.993s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.993s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.994s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.994s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.994s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.994s]   CMakeLists.txt:19 (find_package)
+[0.994s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.994s] [0m
+[0.995s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.031s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.291s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.331s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.335s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.468s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.517s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.520s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.655s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.772s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[2.106s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[2.110s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.112s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[2.140s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.208s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.210s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.212s] -- Configured cppcheck include dirs: 
+[2.213s] -- Configured cppcheck exclude dirs and/or files: 
+[2.214s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.215s] -- Configured cpplint exclude dirs and/or files: 
+[2.216s] -- Added test 'lint_cmake' to check CMake code style
+[2.217s] -- Added test 'uncrustify' to check C / C++ code style
+[2.217s] -- Configured uncrustify additional arguments: 
+[2.218s] -- Added test 'xmllint' to check XML markup files
+[2.218s] -- Configuring done (1.2s)
+[2.269s] -- Generating done (0.0s)
+[2.271s] -- Build files have been written to: /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger
+[2.305s] [ 50%] [32mBuilding CXX object CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o[0m
+[9.592s] [100%] [32m[1mLinking CXX executable laser_scan_merger_node[0m
+[10.144s] /usr/bin/ld: CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o: in function `LaserScanFusionNode::scan2Callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)':
+[10.144s] laser_scan_merger.cpp:(.text._ZN19LaserScanFusionNode13scan2CallbackESt10shared_ptrIN11sensor_msgs3msg10LaserScan_ISaIvEEEE[_ZN19LaserScanFusionNode13scan2CallbackESt10shared_ptrIN11sensor_msgs3msg10LaserScan_ISaIvEEEE]+0xbb): undefined reference to `void tf2::doTransform<sensor_msgs::msg::LaserScan_<std::allocator<void> > >(sensor_msgs::msg::LaserScan_<std::allocator<void> > const&, sensor_msgs::msg::LaserScan_<std::allocator<void> >&, geometry_msgs::msg::TransformStamped_<std::allocator<void> > const&)'
+[10.145s] collect2: error: ld returned 1 exit status
+[10.145s] make[2]: *** [CMakeFiles/laser_scan_merger_node.dir/build.make:407: laser_scan_merger_node] Error 1
+[10.146s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/laser_scan_merger_node.dir/all] Error 2
+[10.146s] make: *** [Makefile:146: all] Error 2
+[10.149s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8

@@ -40,7 +40,7 @@ ament_target_dependencies(joystick_control_node rclcpp std_msgs rosidl_default_g
 add_executable(bot_control_driver_node src/bot_control_driver.cpp src/servo3moog.cpp src/func.cpp src/kinema.cpp)
 ament_target_dependencies(bot_control_driver_node rclcpp std_msgs rosidl_default_generators)
 
-#link interfaces to keyboard_control_node
+#link interfaces to nodes
 rosidl_target_interfaces(keyboard_control_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(joystick_control_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(bot_control_driver_node ${PROJECT_NAME} "rosidl_typesupport_cpp")

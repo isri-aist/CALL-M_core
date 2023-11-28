@@ -1,0 +1,20 @@
+[1.332s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[1.370s] [  2%] Built target c_pkg__cpp
+[1.372s] [  8%] Built target c_pkg__rosidl_generator_c
+[1.388s] [ 15%] Built target c_pkg__rosidl_typesupport_cpp
+[1.392s] [ 22%] Built target c_pkg__rosidl_typesupport_fastrtps_cpp
+[1.397s] [ 28%] Built target c_pkg__rosidl_typesupport_introspection_cpp
+[1.405s] [ 42%] Built target c_pkg__rosidl_typesupport_c
+[1.406s] [ 42%] Built target c_pkg__rosidl_typesupport_introspection_c
+[1.416s] [ 48%] Built target c_pkg__rosidl_typesupport_fastrtps_c
+[1.433s] [ 48%] Built target c_pkg
+[1.450s] [ 51%] Built target c_pkg__py
+[1.458s] [ 60%] Built target keyboard_control_node
+[1.462s] [ 71%] Built target bot_control_driver_node
+[1.463s] [ 82%] Built target joystick_control_node
+[1.466s] [ 86%] Built target c_pkg__python
+[1.483s] [ 91%] Built target c_pkg__rosidl_typesupport_fastrtps_c__pyext
+[1.484s] [ 95%] Built target c_pkg__rosidl_typesupport_introspection_c__pyext
+[1.484s] [100%] Built target c_pkg__rosidl_typesupport_c__pyext
+[1.631s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg -- -j8 -l8
+[2.255s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg

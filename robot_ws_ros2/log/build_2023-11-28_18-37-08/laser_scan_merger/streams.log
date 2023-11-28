@@ -1,0 +1,69 @@
+[1.215s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger': /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8
+[1.236s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.242s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[1.242s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.243s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.243s]   the cmake_policy command to set the policy and suppress this warning.
+[1.243s] 
+[1.244s] Call Stack (most recent call first):
+[1.245s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[1.245s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[1.246s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[1.246s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[1.246s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[1.246s]   CMakeLists.txt:19 (find_package)
+[1.247s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.247s] [0m
+[1.281s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.542s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.577s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.580s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.858s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.987s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.988s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.219s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.437s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[3.112s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[3.133s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[3.202s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.323s] Error parsing '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/package.xml':
+[3.457s] Traceback (most recent call last):
+[3.457s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+[3.457s]     root = dom.parseString(data)
+[3.457s]   File "/usr/lib/python3.8/xml/dom/minidom.py", line 1969, in parseString
+[3.458s]     return expatbuilder.parseString(string)
+[3.458s]   File "/usr/lib/python3.8/xml/dom/expatbuilder.py", line 925, in parseString
+[3.459s]     return builder.parseString(string)
+[3.459s]   File "/usr/lib/python3.8/xml/dom/expatbuilder.py", line 223, in parseString
+[3.459s]     parser.Parse(string, True)
+[3.460s] xml.parsers.expat.ExpatError: mismatched tag: line 24, column 2
+[3.460s] 
+[3.460s] During handling of the above exception, another exception occurred:
+[3.460s] 
+[3.460s] Traceback (most recent call last):
+[3.461s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 143, in <module>
+[3.461s]     main()
+[3.461s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 52, in main
+[3.461s]     raise e
+[3.461s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 48, in main
+[3.462s]     package = parse_package_string(
+[3.463s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+[3.463s]     raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+[3.464s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/package.xml':
+[3.466s] The manifest contains invalid XML:
+[3.466s] mismatched tag: line 24, column 2
+[3.489s] -- Configuring incomplete, errors occurred!
+[3.491s] [31mCMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:94 (message):
+[3.493s]   execute_process(/usr/bin/python3
+[3.494s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[3.494s]   /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/package.xml
+[3.495s]   /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger/ament_cmake_core/package.cmake)
+[3.495s]   returned error code 1
+[3.495s] Call Stack (most recent call first):
+[3.496s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[3.496s]   /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[3.496s]   CMakeLists.txt:48 (ament_lint_auto_find_test_dependencies)
+[3.497s] 
+[3.497s] [0m
+[3.497s] make: *** [Makefile:267: cmake_check_build_system] Error 1
+[4.019s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger' returned '2': /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8

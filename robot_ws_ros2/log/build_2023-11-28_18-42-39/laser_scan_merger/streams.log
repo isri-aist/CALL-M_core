@@ -1,0 +1,10 @@
+[0.968s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8
+[1.028s] [ 50%] [32mBuilding CXX object CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o[0m
+[8.480s] [100%] [32m[1mLinking CXX executable laser_scan_merger_node[0m
+[9.018s] /usr/bin/ld: CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o: in function `LaserScanFusionNode::scan2Callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)':
+[9.018s] laser_scan_merger.cpp:(.text._ZN19LaserScanFusionNode13scan2CallbackESt10shared_ptrIN11sensor_msgs3msg10LaserScan_ISaIvEEEE[_ZN19LaserScanFusionNode13scan2CallbackESt10shared_ptrIN11sensor_msgs3msg10LaserScan_ISaIvEEEE]+0xb2): undefined reference to `void tf2::doTransform<std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > > >(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > > const&, std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >&, geometry_msgs::msg::TransformStamped_<std::allocator<void> > const&)'
+[9.018s] collect2: error: ld returned 1 exit status
+[9.019s] make[2]: *** [CMakeFiles/laser_scan_merger_node.dir/build.make:411: laser_scan_merger_node] Error 1
+[9.019s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/laser_scan_merger_node.dir/all] Error 2
+[9.020s] make: *** [Makefile:146: all] Error 2
+[9.022s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger -- -j8 -l8

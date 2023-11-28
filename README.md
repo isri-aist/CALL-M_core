@@ -1,12 +1,51 @@
 # CNRS_AIST_Mobile_Shopping_Robot
 
 ## Dependancies: 
-- xterm (to open several terminal automaticcally with ros2 launch files)
+### xterm (to open several terminal automaticcally with ros2 launch files)
 ```
 sudo apt install xterm
 ```
-- navigation2 (ROS Framework for robot navigation)
+
+### navigation2 (ROS Framework for robot navigation)
 https://navigation.ros.org/getting_started/index.html
+
+### Laser Scan merger Package
+The package ros2_laser_scan_merger allow to merge LIDAR data in one scan message.
+https://github.com/mich1342/ros2_laser_scan_merger
+
+It depend on:
+https://github.com/ros-perception/pointcloud_to_laserscan
+
+This packages have been cloned in ros_workspace/src.
+
+!!! Need to clone foxy branches if using Foxy !!!
+```
+git clone --branch foxy https://github.com/mich1342/ros2_laser_scan_merger.git
+```
+```
+git clone --branch foxy https://github.com/ros-perception/pointcloud_to_laserscan.git
+```
+
+Install:
+```
+colcon build && source install/setup.bash
+```
+
+#### Edit behavior of scan merger
+```
+ros2_laser_scan_merger/launch/merge_2_scan.launch
+```
+
+#### Launch Scan merger
+To launch without visualizer:
+```
+ros2 launch ros2_laser_scan_merger merge_2_scan.launch.py
+```
+
+To launch with visualizer (RVIZ2):
+```
+ros2 launch ros2_laser_scan_merger visualize_merge_2_scan.launch.py
+```
 
 ## Launch project
 For teleoperate real robot:
@@ -28,5 +67,3 @@ ros2 launch nav2_bringup navigation_launch.py params_file:=<full/path/to/config/
 ```
 ros2 launch nav2_bringup navigation_launch.py params_file:=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nav2_simu/config/nav2_params.yaml
 ```
-
-

@@ -55,4 +55,13 @@ install(TARGETS
   laser_scan_merger_node
   DESTINATION lib/${PROJECT_NAME})
 
+install(DIRECTORY
+launch
+DESTINATION share/${PROJECT_NAME}
+)
+install(DIRECTORY
+  config
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ament_package()

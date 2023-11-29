@@ -1,7 +1,0 @@
-[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/ros2_laser_scan_merger/src/main.cpp:13:10:[m[K [01;31m[Kfatal error: [m[Ktf2_geometry_msgs/tf2_geometry_msgs.hpp: No such file or directory
-   13 | #include [01;31m[K<tf2_geometry_msgs/tf2_geometry_msgs.hpp>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/ros2_laser_scan_merger.dir/build.make:76: CMakeFiles/ros2_laser_scan_merger.dir/src/main.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ros2_laser_scan_merger.dir/all] Error 2
-make: *** [Makefile:146: all] Error 2

@@ -33,18 +33,18 @@ colcon build && source install/setup.bash
 
 #### Edit behavior of scan merger
 ```
-ros2_laser_scan_merger/launch/merge_2_scan.launch
+laser_scan_merger/config/params.yaml
 ```
 
 #### Launch Scan merger
-To launch without visualizer:
+To launch with yaml parameters:
 ```
-ros2 launch ros2_laser_scan_merger merge_2_scan.launch.py
+ros2 launch laser_scan_merger launch.py
 ```
 
-To launch with visualizer (RVIZ2):
+To launch with default parameters:
 ```
-ros2 launch ros2_laser_scan_merger visualize_merge_2_scan.launch.py
+ros2 run laser_scan_merger laser_scan_merger_node
 ```
 
 ## Launch project
@@ -52,9 +52,11 @@ For teleoperate real robot:
 ```
 ros2 launch c_pkg bot_teleoperate_launch.py
 ```
-For Nav2 simulation launch:
+For Nav2 simulation launch + scan merger:
 ```
 colcon build ; ros2 launch nav2_simu display.launch.py
+```
+
 ```
 to publish map=>odom TF needed by Nav2 plugin:
 ```

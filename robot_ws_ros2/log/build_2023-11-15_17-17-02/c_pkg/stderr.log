@@ -1,7 +1,0 @@
-[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:[m[K In constructor ‘[01m[KBot_control_driver::Bot_control_driver()[m[K’:
-[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/bot_control_driver.cpp:17:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krotor_rad_p_sec[m[K’ was not declared in this scope
-   17 |         [01;31m[Krotor_rad_p_sec[m[K[0] = 0.0;
-      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
-make[2]: *** [CMakeFiles/bot_control_driver_node.dir/build.make:76: CMakeFiles/bot_control_driver_node.dir/src/bot_control_driver.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:574: CMakeFiles/bot_control_driver_node.dir/all] Error 2
-make: *** [Makefile:146: all] Error 2

@@ -1,0 +1,10 @@
+laser_scan_merger_node:
+  ros__parameters:
+    lidar1_start_angle : 4.71238898 #270 deg
+    lidar1_end_angle : 3.141592654 #180 deg
+    lidar2_start_angle : 1.570796327 #90 deg
+    lidar2_end_angle : 6.283185307 #360 deg
+    topic_lid1 : "lidar1_scan"
+    topic_lid2 : "lidar2_scan"
+    topic_out : "scan"
+    new_frame : "base2_link"

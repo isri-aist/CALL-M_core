@@ -1,4 +1,0 @@
-[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:[m[K In member function ‘[01m[Kvoid LaserScanFusionNode::scan2Callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:87:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
-   87 |         for (int i = 0; [01;35m[Ki < msg->ranges.size()[m[K; ++i) { //transform
-      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K

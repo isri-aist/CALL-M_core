@@ -68,10 +68,14 @@ def generate_launch_description():
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
 
+        launch.actions.ExecuteProcess(
+            cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x10','-e', 'ros2', 'launch', 'laser_scan_merger', 'launch.py'],
+            output='screen',
+        ),
         joint_state_publisher_node,
         #joint_state_publisher_gui_node, #to show and control manually different joints
         robot_state_publisher_node,
         robot_localization_node,
         spawn_entity,
-        rviz_node
+        rviz_node,
     ])

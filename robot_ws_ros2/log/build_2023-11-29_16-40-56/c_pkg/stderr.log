@@ -1,0 +1,247 @@
+[33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:19 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:
+  Syntax Warning in cmake code at column 27
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:4:
+  Syntax Warning in cmake code at column 38
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:
+  Syntax Warning in cmake code at column 34
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:6:
+  Syntax Warning in cmake code at column 45
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:
+  Syntax Warning in cmake code at column 51
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/ament_cmake_core/package.cmake:8:
+  Syntax Warning in cmake code at column 62
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:99 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:[m[K In function ‘[01m[Kint serial_receive(char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:108:12:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K-Wtype-limits[m[K]
+  108 |       if([01;35m[Kc > 0x80[m[K) {
+      |          [01;35m[K~~^~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:95:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klen[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   95 |   int [01;35m[Klen[m[K=0;
+      |       [01;35m[K^~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:[m[K In function ‘[01m[Kvoid servoPos_loop(float)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:211:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcur_angarm[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  211 | void servoPos_loop ([01;35m[Kfloat cur_angarm[m[K) {
+      |                     [01;35m[K~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:[m[K In function ‘[01m[Kint serial_receive(char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:108:12:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K-Wtype-limits[m[K]
+  108 |       if([01;35m[Kc > 0x80[m[K) {
+      |          [01;35m[K~~^~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:95:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klen[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   95 |   int [01;35m[Klen[m[K=0;
+      |       [01;35m[K^~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:[m[K In function ‘[01m[Kvoid servoPos_loop(float)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:211:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcur_angarm[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  211 | void servoPos_loop ([01;35m[Kfloat cur_angarm[m[K) {
+      |                     [01;35m[K~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:[m[K In function ‘[01m[Kfloat servo3motor_loop(float*, float*, float*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:250:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktoobigacc[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  250 |   int [01;35m[Ktoobigacc[m[K = 0, moving_flag = 0;
+      |       [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:244:82:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreal_motor_rpm[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  244 | float servo3motor_loop(float *rotor_rad_per_sec, float *target_motor_rpm, [01;35m[Kfloat *real_motor_rpm[m[K) {
+      |                                                                           [01;35m[K~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:[m[K In function ‘[01m[Kfloat servo3motor_loop(float*, float*, float*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:250:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktoobigacc[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  250 |   int [01;35m[Ktoobigacc[m[K = 0, moving_flag = 0;
+      |       [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/servo3moog.cpp:244:82:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreal_motor_rpm[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  244 | float servo3motor_loop(float *rotor_rad_per_sec, float *target_motor_rpm, [01;35m[Kfloat *real_motor_rpm[m[K) {
+      |                                                                           [01;35m[K~~~~~~~^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:13[m[K:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getch()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:240:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  240 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getche()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:244:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  244 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::cputs(const char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:299:17:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  299 |       printf(str[01;35m[K)[m[K;
+      |                 [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kchar* __CONIO_H::getpass(const char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:305:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  305 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:303:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprompt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  303 |     char*getpass([01;35m[Kconst char*prompt[m[K){
+      |                  [01;35m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::gettext(int, int, int, int, void*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:309:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  309 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kl[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext([01;35m[Kint l[m[K,int t,int r,int b,void*destination){
+      |                 [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,[01;35m[Kint t[m[K,int r,int b,void*destination){
+      |                       [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kr[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,[01;35m[Kint r[m[K,int b,void*destination){
+      |                             [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kb[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,int r,[01;35m[Kint b[m[K,void*destination){
+      |                                   [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdestination[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,int r,int b,[01;35m[Kvoid*destination[m[K){
+      |                                         [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:[m[K In function ‘[01m[Kvoid flush_input_buffer()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/keyboard_control.cpp:37:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kc[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   37 |         char [01;35m[Kc[m[K = _getche();
+      |              [01;35m[K^[m[K
+In file included from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:14[m[K:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getch()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:240:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  240 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::getche()[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:244:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  244 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::cputs(const char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:299:17:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  299 |       printf(str[01;35m[K)[m[K;
+      |                 [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kchar* __CONIO_H::getpass(const char*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:305:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  305 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:303:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprompt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  303 |     char*getpass([01;35m[Kconst char*prompt[m[K){
+      |                  [01;35m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:[m[K In member function ‘[01m[Kint __CONIO_H::gettext(int, int, int, int, void*)[m[K’:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:309:7:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  309 |       [01;35m[K}[m[K
+      |       [01;35m[K^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kl[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext([01;35m[Kint l[m[K,int t,int r,int b,void*destination){
+      |                 [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kt[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,[01;35m[Kint t[m[K,int r,int b,void*destination){
+      |                       [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kr[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,[01;35m[Kint r[m[K,int b,void*destination){
+      |                             [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kb[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,int r,[01;35m[Kint b[m[K,void*destination){
+      |                                   [01;35m[K~~~~^[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/conio.h:307:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdestination[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 |     int gettext(int l,int t,int r,int b,[01;35m[Kvoid*destination[m[K){
+      |                                         [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:[m[K At global scope:
+[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/c_pkg/src/joystick_control.cpp:105:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[Kaxis_state::y[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+  105 |         struct axis_state axes[3] = {0[01;35m[K}[m[K;
+      |                                       [01;35m[K^[m[K

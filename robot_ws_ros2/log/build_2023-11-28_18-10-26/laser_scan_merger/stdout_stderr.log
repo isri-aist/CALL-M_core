@@ -1,9 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o[0m
-In file included from [01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:4[m[K:
-[01m[K/opt/ros/foxy/include/tf2_sensor_msgs/tf2_sensor_msgs.h:37:10:[m[K [01;31m[Kfatal error: [m[KEigen/Eigen: No such file or directory
-   37 | #include [01;31m[K<Eigen/Eigen>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/laser_scan_merger_node.dir/build.make:76: CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/laser_scan_merger_node.dir/all] Error 2
-make: *** [Makefile:146: all] Error 2

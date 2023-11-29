@@ -1,6 +1,0 @@
-/usr/bin/ld: CMakeFiles/laser_scan_merger_node.dir/src/laser_scan_merger.cpp.o: in function `LaserScanFusionNode::scan2Callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)':
-laser_scan_merger.cpp:(.text._ZN19LaserScanFusionNode13scan2CallbackESt10shared_ptrIN11sensor_msgs3msg10LaserScan_ISaIvEEEE[_ZN19LaserScanFusionNode13scan2CallbackESt10shared_ptrIN11sensor_msgs3msg10LaserScan_ISaIvEEEE]+0xbb): undefined reference to `void tf2::doTransform<sensor_msgs::msg::LaserScan_<std::allocator<void> > >(sensor_msgs::msg::LaserScan_<std::allocator<void> > const&, sensor_msgs::msg::LaserScan_<std::allocator<void> >&, geometry_msgs::msg::TransformStamped_<std::allocator<void> > const&)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/laser_scan_merger_node.dir/build.make:192: laser_scan_merger_node] Error 1
-make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/laser_scan_merger_node.dir/all] Error 2
-make: *** [Makefile:146: all] Error 2

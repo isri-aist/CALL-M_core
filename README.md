@@ -92,4 +92,3 @@ https://www.stereolabs.com/docs/ros2/
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy
 
-

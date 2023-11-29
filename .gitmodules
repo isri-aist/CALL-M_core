@@ -1,0 +1,6 @@
+[submodule "robot_ws_ros2/src/nmea_msgs"]
+	path = robot_ws_ros2/src/nmea_msgs
+	url = https://github.com/ros-drivers/nmea_msgs.git
+[submodule "robot_ws_ros2/src/zed-ros2-wrapper"]
+	path = robot_ws_ros2/src/zed-ros2-wrapper
+	url = https://github.com/stereolabs/zed-ros2-wrapper.git

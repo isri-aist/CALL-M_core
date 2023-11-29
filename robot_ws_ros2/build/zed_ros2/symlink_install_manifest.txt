@@ -1,0 +1,15 @@
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/ament_index/resource_index/package_run_dependencies/zed_ros2
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/ament_index/resource_index/parent_prefix_path/zed_ros2
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.sh
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.dsv
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/environment/path.sh
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/environment/path.dsv
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/local_setup.bash
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/local_setup.sh
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/local_setup.zsh
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/local_setup.dsv
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/package.dsv
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/ament_index/resource_index/packages/zed_ros2
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config.cmake
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config-version.cmake
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_ros2/share/zed_ros2/package.xml

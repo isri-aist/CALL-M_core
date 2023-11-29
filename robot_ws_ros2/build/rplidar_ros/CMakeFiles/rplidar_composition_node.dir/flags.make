@@ -6,5 +6,5 @@ CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAU
 
 CXX_INCLUDES = -I/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/rplidar_ros/./sdk/include -I/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/rplidar_ros/./sdk/src -I/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/rplidar_ros/include -isystem /opt/ros/foxy/include
 
-CXX_FLAGS = -std=gnu++17 -fPIC -Wall -Wextra -pedantic
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -pedantic
 

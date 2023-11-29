@@ -779,7 +779,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ament_cmake_core/laser_scan_mergerConfig.cmake"
   "ament_cmake_core/stamps/nameConfig-version.cmake.in.stamp"
   "ament_cmake_core/laser_scan_mergerConfig-version.cmake"
-  "ament_cmake_symlink_install_targets_0_.cmake"
+  "ament_cmake_symlink_install_targets_0_Release.cmake"
   "ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/laser_scan_merger"
   "ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/laser_scan_merger"
   "ament_cmake_index/share/ament_index/resource_index/packages/laser_scan_merger"

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/rplidar_ros/rplidar_composition" "TARGETS" "rplidar_composition" "DESTINATION" "lib/rplidar_ros")

@@ -1,0 +1,91 @@
+[0.235s] Invoking command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/zed_components': AMENT_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/rplidar_ros:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy LD_LIBRARY_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces/lib:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/rplidar_ros/lib:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib PYTHONPATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages /usr/bin/cmake /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/zed-ros2-wrapper/zed_components -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_components
+[0.285s] -- The C compiler identification is GNU 9.4.0
+[0.343s] -- The CXX compiler identification is GNU 9.4.0
+[0.362s] -- Detecting C compiler ABI info
+[0.430s] -- Detecting C compiler ABI info - done
+[0.442s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.442s] -- Detecting C compile features
+[0.442s] -- Detecting C compile features - done
+[0.455s] -- Detecting CXX compiler ABI info
+[0.536s] -- Detecting CXX compiler ABI info - done
+[0.547s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.548s] -- Detecting CXX compile features
+[0.548s] -- Detecting CXX compile features - done
+[0.554s] -- Looking for sgemm_
+[0.614s] -- Looking for sgemm_ - not found
+[0.615s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.681s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.681s] -- Looking for pthread_create in pthreads
+[0.732s] -- Looking for pthread_create in pthreads - not found
+[0.732s] -- Looking for pthread_create in pthread
+[0.796s] -- Looking for pthread_create in pthread - found
+[0.797s] -- Found Threads: TRUE  
+[0.853s] -- Looking for sgemm_
+[0.946s] -- Looking for sgemm_ - found
+[0.947s] -- Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  
+[0.947s] [33mCMake Warning (dev) at /usr/local/zed/zed-config.cmake:72 (find_package):
+[0.948s]   Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+[0.948s]   --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+[0.948s]   set the policy and suppress this warning.
+[0.948s] 
+[0.948s] Call Stack (most recent call first):
+[0.948s]   CMakeLists.txt:81 (find_package)
+[0.948s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.948s] [0m
+[0.974s] -- Found CUDA: /usr/local/cuda (found suitable version "12.3", minimum required is "12") 
+[1.193s] [33mCMake Warning (dev) at CMakeLists.txt:88 (find_package):
+[1.193s]   Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+[1.193s]   --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+[1.194s]   set the policy and suppress this warning.
+[1.194s] 
+[1.194s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.194s] [0m
+[1.212s] -- Found CUDA: /usr/local/cuda (found version "12.3") 
+[1.219s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[1.232s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[1.232s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.232s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.232s]   the cmake_policy command to set the policy and suppress this warning.
+[1.232s] 
+[1.232s] Call Stack (most recent call first):
+[1.232s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[1.232s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[1.232s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[1.232s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[1.232s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[1.232s]   /opt/ros/foxy/share/ament_cmake_auto/cmake/ament_cmake_auto-extras.cmake:17 (find_package)
+[1.233s]   /opt/ros/foxy/share/ament_cmake_auto/cmake/ament_cmake_autoConfig.cmake:41 (include)
+[1.233s]   CMakeLists.txt:115 (find_package)
+[1.233s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.233s] [0m
+[1.257s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.258s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.441s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.551s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.559s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.647s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.677s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.757s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.061s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.062s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.906s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.910s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[3.333s] [31mCMake Error at CMakeLists.txt:129 (find_package):
+[3.333s]   By not providing "Findnmea_msgs.cmake" in CMAKE_MODULE_PATH this project
+[3.333s]   has asked CMake to find a package configuration file provided by
+[3.333s]   "nmea_msgs", but CMake did not find one.
+[3.333s] 
+[3.333s]   Could not find a package configuration file provided by "nmea_msgs" with
+[3.333s]   any of the following names:
+[3.333s] 
+[3.333s]     nmea_msgsConfig.cmake
+[3.334s]     nmea_msgs-config.cmake
+[3.334s] 
+[3.334s]   Add the installation prefix of "nmea_msgs" to CMAKE_PREFIX_PATH or set
+[3.334s]   "nmea_msgs_DIR" to a directory containing one of the above files.  If
+[3.334s]   "nmea_msgs" provides a separate development package or SDK, be sure it has
+[3.334s]   been installed.
+[3.334s] 
+[3.334s] [0m
+[3.334s] -- Configuring incomplete, errors occurred!
+[3.344s] Invoked command in '/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/zed_components' returned '1': AMENT_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/rplidar_ros:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/nav2_simu:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/laser_scan_merger:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Nav2_ROS2_pkg_tutorial/install/sam_bot_description:/opt/ros/foxy LD_LIBRARY_PATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces/lib:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/rplidar_ros/lib:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib PYTHONPATH=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_interfaces/lib/python3.8/site-packages:/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/c_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib/python3.8/dist-packages /usr/bin/cmake /home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/zed-ros2-wrapper/zed_components -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/install/zed_components

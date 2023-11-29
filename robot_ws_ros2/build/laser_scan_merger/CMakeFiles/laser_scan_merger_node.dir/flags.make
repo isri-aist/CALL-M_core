@@ -6,5 +6,5 @@ CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAU
 
 CXX_INCLUDES = -isystem /opt/ros/foxy/include -isystem /usr/include/eigen3
 
-CXX_FLAGS = -std=gnu++14 -Wall -Wextra -Wpedantic
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14 -Wall -Wextra -Wpedantic
 

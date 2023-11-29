@@ -6,5 +6,5 @@ C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"c_pkg\" -Dc_pk
 
 C_INCLUDES = -I/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_generator_c -I/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_typesupport_introspection_c -isystem /opt/ros/foxy/include
 
-C_FLAGS = -std=gnu11 -fPIC -Wall
+C_FLAGS = -O3 -DNDEBUG -std=gnu11 -fPIC -Wall
 

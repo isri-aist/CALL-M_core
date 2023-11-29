@@ -1,0 +1,14 @@
+{
+  "package_name": "nmea_msgs",
+  "non_idl_tuples": [
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Sentence.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Gpgga.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Gpgsa.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Gpgst.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Gpgsv.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/GpgsvSatellite.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Gprmc.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Gpvtg.msg",
+    "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nmea_msgs:msg/Gpzda.msg"
+  ]
+}

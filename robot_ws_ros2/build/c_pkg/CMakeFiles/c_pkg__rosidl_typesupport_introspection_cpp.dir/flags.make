@@ -6,5 +6,5 @@ CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"c_pkg\" -Dc_
 
 CXX_INCLUDES = -I/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_generator_cpp -isystem /opt/ros/foxy/include
 
-CXX_FLAGS = -std=gnu++14 -fPIC -Wall
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14 -fPIC -Wall
 

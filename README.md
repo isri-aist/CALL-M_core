@@ -57,7 +57,7 @@ For Nav2 simulation launch + scan merger:
 colcon build ; ros2 launch nav2_simu display.launch.py
 ```
 
-```
+
 to publish map=>odom TF needed by Nav2 plugin:
 ```
 ros2 launch slam_toolbox online_async_launch.py
@@ -69,3 +69,7 @@ ros2 launch nav2_bringup navigation_launch.py params_file:=<full/path/to/config/
 ```
 ros2 launch nav2_bringup navigation_launch.py params_file:=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nav2_simu/config/nav2_params.yaml
 ```
+
+## Hardware Camera
+https://www.stereolabs.com/docs/ros2/
+

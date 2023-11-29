@@ -1,16 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from c_pkg/msg/StateVector.msg
-// generated code does not contain a copyright notice
-
-
-module c_pkg {
-  module msg {
-    struct StateVector {
-      double vx;
-
-      double vy;
-
-      double w;
-    };
-  };
-};
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_adapter/c_pkg/msg/StateVector.idl

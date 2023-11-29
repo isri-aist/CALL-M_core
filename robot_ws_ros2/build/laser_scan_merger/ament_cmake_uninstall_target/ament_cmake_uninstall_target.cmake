@@ -55,3 +55,6 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
+
+# uninstall files installed using the symlink install functions
+include("/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/laser_scan_merger/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

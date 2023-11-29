@@ -70,6 +70,8 @@ ros2 launch nav2_bringup navigation_launch.py params_file:=<full/path/to/config/
 ros2 launch nav2_bringup navigation_launch.py params_file:=/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nav2_simu/config/nav2_params.yaml
 ```
 
-## Hardware Camera
+## Hardware Camera Zed M
 https://www.stereolabs.com/docs/ros2/
 
+## Hardware Rp_lidar
+https://index.ros.org/p/rplidar_ros/#foxy

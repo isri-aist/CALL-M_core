@@ -1,4 +1,1 @@
-# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
-
-set(c_pkg_IDL_FILES "msg/StateVector.idl")
-set(c_pkg_INTERFACE_FILES "msg/StateVector.msg")
+/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/c_pkg/rosidl_cmake/rosidl_cmake-extras.cmake

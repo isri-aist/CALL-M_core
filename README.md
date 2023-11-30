@@ -1,5 +1,21 @@
 # CNRS_AIST_Mobile_Shopping_Robot
 
+## Set_up
+### to execute ros2 workspaces:
+(directories with src folder and no CmakeList)
+```
+colcon build
+```
+### to execute Cmake projects:
+(directories with src folder and CmakeList)
+```
+mkdir build
+cd build
+cmake ..
+make
+./<executable>
+```
+
 ## Dependancies: 
 ### xterm (to open several terminal automaticcally with ros2 launch files)
 ```

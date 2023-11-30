@@ -1,3 +1,0 @@
-/home/jrlintern/workspace_mcrtc/ips_joystick_control/build/CMakeFiles/test.dir
-/home/jrlintern/workspace_mcrtc/ips_joystick_control/build/CMakeFiles/edit_cache.dir
-/home/jrlintern/workspace_mcrtc/ips_joystick_control/build/CMakeFiles/rebuild_cache.dir

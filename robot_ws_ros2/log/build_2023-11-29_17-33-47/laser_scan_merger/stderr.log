@@ -1,5 +1,0 @@
-[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:[m[K In member function ‘[01m[Ksensor_msgs::msg::LaserScan LaserScanFusionNode::fuseScans(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr, sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/laser_scan_merger/src/laser_scan_merger.cpp:241:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscan2[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-  241 | [01;35m[Ks::msg::LaserScan::SharedPtr scan2[m[K) {
-      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
-

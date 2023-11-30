@@ -1,9 +1,0 @@
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Sentence.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgga.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgsa.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgst.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgsv.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/GpgsvSatellite.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gprmc.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpvtg.idl
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpzda.idl

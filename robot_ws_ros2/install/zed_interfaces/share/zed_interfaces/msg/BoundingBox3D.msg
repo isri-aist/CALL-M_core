@@ -1,1 +1,0 @@
-/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/zed-ros2-wrapper/zed-ros2-interfaces/msg/BoundingBox3D.msg

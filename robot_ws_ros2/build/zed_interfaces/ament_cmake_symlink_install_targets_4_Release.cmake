@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jrlintern/Desktop/CNRS_AIST_Work/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/build/zed_interfaces/rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "zed_interfaces__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/zed_interfaces")

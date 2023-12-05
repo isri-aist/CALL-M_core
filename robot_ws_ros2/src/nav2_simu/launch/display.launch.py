@@ -50,6 +50,26 @@ def generate_launch_description():
        parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
 
+    # Manually add the equivalent code from your original .launch file
+    #not working when added to lauch
+    """param_loader = launch_ros.actions.Node(
+        package='rosparam',
+        executable='rosparam',
+        output='screen',
+        parameters=[{'file': os.path.join(pkg_share, 'config/simubot_control.yaml'), 'command': 'load'}]
+    )
+
+    controller_spawner = launch_ros.actions.Node(
+        package='controller_manager',
+        executable='spawner',
+        name='controller_spawner',
+        respawn=False,
+        output='screen',
+        namespace='/simubot',
+        arguments=['joint_state_controller', 'wheel_f_position_controller']
+    )"""
+
+
     return launch.LaunchDescription([
         #launch.actions.DeclareLaunchArgument(name='gui', default_value='True',description='Flag to enable joint_state_publisher_gui'), #to show and control manually different joints
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,

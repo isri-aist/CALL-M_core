@@ -115,6 +115,8 @@
 
 	  <!-- 3 Wheels and there support to simulate sphere joint -->
 	<xacro:macro name="wheel" params="prefix angle type">
+
+		<!--wheel support-->
 		<link name="${prefix}_sup_link">
 		<visual>
 			<geometry>
@@ -138,6 +140,8 @@
 			<axis xyz="0 0 1"/>
 
 		</joint>
+
+		<!--wheel-->
 		<link name="${prefix}_link">
 		<visual>
 			<geometry>
@@ -172,11 +176,43 @@
 			<origin xyz="0.0 0.0 ${-wheels_radius-wheels_zoffset/2}" rpy="0 0 0"/>
 			<axis xyz="0 1 0"/>
 		</joint>
+
+		<!--Transmission objects for gazebo control-->
+		<transmission name="${prefix}_tran">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${prefix}_joint">
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="${prefix}_actuator">
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${prefix}_sup_tran">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${prefix}_sup_joint">
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="${prefix}_sup_actuator">
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+		</transmission>
+
 	</xacro:macro>
 
+	<!--If names are changes, change also in config/simubot_control.yaml-->
 	<xacro:wheel prefix="wheel_f" angle="0.0" type="sphere" />
 	<xacro:wheel prefix="wheel_bl" angle="${2*pi/3}" type="sphere" />
 	<xacro:wheel prefix="wheel_br" angle="${-2*pi/3}" type="sphere" />
+
+	<!--Gazebo plugin to read all transmission tags-->
+	<gazebo>
+	<plugin name="gazebo_ros_control" filename="libgazebo_ros2_control.so">
+		<robotNamespace>/simubot</robotNamespace>
+	</plugin>
+	</gazebo>
 
 	<!--2 LIDAR-->
 	<xacro:macro name="lidar" params="prefix x y">

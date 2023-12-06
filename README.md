@@ -16,10 +16,16 @@ make
 ./<executable>
 ```
 
-## Dependancies: 
-### xterm (to open several terminal automaticcally with ros2 launch files)
+## Dependancies (project tested on ros foxy): 
 ```
 sudo apt install xterm
+```
+(xterm  = to open several terminal automaticcally with ros2 launch files)
+
+For simulation (simulation.launch.py):
+```
+sudo apt install ros-foxy-gazebo-ros-pkgs
+sudo apt install ros-foxy-gazebo-ros2-control
 ```
 
 ### navigation2 (ROS Framework for robot navigation)

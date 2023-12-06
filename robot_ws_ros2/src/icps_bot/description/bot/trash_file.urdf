@@ -1,0 +1,53 @@
+<!-- 
+This file is not used. It contains pieces of codes that could be useful in the future or that have been deleted.
+Can be used as a backup for pieces of code.
+-->
+
+<!-- Robot Support, to be deleted want controlling -->
+<link name="base_sup_link">
+    <visual>
+    <geometry>
+        <cylinder radius="${wheels_radius}" length="${wheels_radius+wheels_zoffset+0.1}"/>
+    </geometry>
+    <material name="Cyan">
+        <color rgba="0 1.0 1.0 1.0"/>
+    </material>
+    </visual>
+    <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+        <cylinder radius="${wheels_radius}" length="${wheels_radius*2}"/>
+    </geometry>
+    </collision>
+    <xacro:cylinder_inertia m="20" r="${wheels_radius}" h="${wheels_radius+wheels_zoffset+0.1}"/>
+</link>
+<joint name="$base_sup_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_sup_link"/>
+    <origin xyz="0.0 0.0 ${-((wheels_radius+wheels_zoffset+0.1)/2+(square1_height/2))}" rpy="0 0 0"/>
+</joint>
+
+<!-- Robot Support, to be deleted want controlling -->
+    <!--Transmission objects for gazebo control-->
+    <transmission name="${prefix}_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="${prefix}_joint">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="${prefix}_actuator">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="${prefix}_sup_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="${prefix}_sup_joint">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="${prefix}_sup_actuator">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+

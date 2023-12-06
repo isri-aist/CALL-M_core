@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<robot name="bot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<!-- THIS FILE NEED TO BE INCLUDED IN 'bot_description.urdf.xacro' -->
+
+	<!--2 CAMERA-->
+	<!--camera object front-->
+	<link name="camf_link">
+		<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<box size="0.015 0.130 0.022"/>
+		</geometry>
+		</visual>
+
+		<collision>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<box size="0.015 0.130 0.022"/>
+		</geometry>
+		</collision>
+
+		<inertial>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<mass value="0.035"/>
+		<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+		</inertial>
+	</link>
+
+	<joint name="camf_joint" type="fixed">
+		<parent link="base3_link"/>
+		<child link="camf_link"/>
+		<origin xyz="${(square1_length/2)+0.015/2} 0.0 ${(square2_height/2)-0.03-0.022/2}" rpy="0.0 0.0 0.0"/>
+	</joint>
+
+	<!--depth camera front-->
+	<link name="camf_depth_frame"/>
+
+	<joint name="camf_depth_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+		<parent link="camf_link"/>
+		<child link="camf_depth_frame"/>
+	</joint>
+
+	<gazebo reference="camf_link">
+		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
+    	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
+        <material>Gazebo/Orange</material>
+		<sensor type="depth" name="camf">
+		<update_rate>30.0</update_rate>
+		<camera name="camf_cam">
+			<horizontal_fov>1.6</horizontal_fov>
+			<image>
+			<width>800</width>
+			<height>800</height>
+			<format>R8G8B8</format>
+			</image>
+			<clip>
+			<near>0.02</near>
+			<far>3</far>
+			</clip>
+			<noise>
+			<type>gaussian</type>
+			<mean>0.0</mean>
+			<stddev>0.007</stddev>
+			</noise>
+		</camera>
+		<plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+			<baseline>0.2</baseline>
+			<alwaysOn>true</alwaysOn>
+			<updateRate>0.0</updateRate>
+			<frame_name>camf_depth_frame</frame_name>
+			<pointCloudCutoff>0.5</pointCloudCutoff>
+			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+			<distortionK1>0</distortionK1>
+			<distortionK2>0</distortionK2>
+			<distortionK3>0</distortionK3>
+			<distortionT1>0</distortionT1>
+			<distortionT2>0</distortionT2>
+			<CxPrime>0</CxPrime>
+			<Cx>0</Cx>
+			<Cy>0</Cy>
+			<focalLength>0</focalLength>
+			<hackBaseline>0</hackBaseline>
+		</plugin>
+		</sensor>
+	</gazebo>
+
+	<!--camera object back-->
+	<link name="camb_link">
+		<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<box size="0.015 0.130 0.022"/>
+		</geometry>
+		</visual>
+
+		<collision>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<box size="0.015 0.130 0.022"/>
+		</geometry>
+		</collision>
+
+		<inertial>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<mass value="0.035"/>
+		<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+		</inertial>
+	</link>
+
+	<joint name="camb_joint" type="fixed">
+		<parent link="base3_link"/>
+		<child link="camb_link"/>
+		<origin xyz="${-((square1_length/2)+0.015/2)} 0.0 ${(square2_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${pi}"/>
+	</joint>
+
+	<!--depth camera back-->
+	<link name="camb_depth_frame"/>
+
+	<joint name="camb_depth_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+		<parent link="camb_link"/>
+		<child link="camb_depth_frame"/>
+	</joint>
+
+	<gazebo reference="camb_link">
+		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
+    	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
+        <material>Gazebo/Orange</material>
+		<sensor type="depth" name="camb">
+		<update_rate>30.0</update_rate>
+		<camera name="camb_cam">
+			<horizontal_fov>1.6</horizontal_fov>
+			<image>
+			<width>800</width>
+			<height>800</height>
+			<format>R8G8B8</format>
+			</image>
+			<clip>
+			<near>0.02</near>
+			<far>3</far>
+			</clip>
+			<noise>
+			<type>gaussian</type>
+			<mean>0.0</mean>
+			<stddev>0.007</stddev>
+			</noise>
+		</camera>
+		<plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+			<baseline>0.2</baseline>
+			<alwaysOn>true</alwaysOn>
+			<updateRate>0.0</updateRate>
+			<frame_name>camb_depth_frame</frame_name>
+			<pointCloudCutoff>0.5</pointCloudCutoff>
+			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+			<distortionK1>0</distortionK1>
+			<distortionK2>0</distortionK2>
+			<distortionK3>0</distortionK3>
+			<distortionT1>0</distortionT1>
+			<distortionT2>0</distortionT2>
+			<CxPrime>0</CxPrime>
+			<Cx>0</Cx>
+			<Cy>0</Cy>
+			<focalLength>0</focalLength>
+			<hackBaseline>0</hackBaseline>
+		</plugin>
+		</sensor>
+	</gazebo>
+
+	<!--2 IMU in each camera-->
+	<link name="imu_link">
+		<visual>
+		<geometry>
+			<box size="0.01 0.01 0.01"/>
+		</geometry>
+		</visual>
+		
+		<collision>
+		<geometry>
+			<box size="0.01 0.01 0.01"/>
+		</geometry>
+		</collision>
+		
+		<xacro:box_inertia m="0.01" w="0.01" d="0.01" h="0.01"/>
+	</link>
+
+	<joint name="imu_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="imu_link"/>
+		<origin xyz="0 0 0.0"/>
+	</joint>
+		
+	<gazebo reference="imu_link">
+		
+		<sensor name="imu_sensor" type="imu">
+		<plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+			<ros>
+			<namespace>/imu</namespace>
+			<remapping>~/out:=data</remapping>
+			</ros>
+			<initial_orientation_as_reference>false</initial_orientation_as_reference>
+		</plugin>
+		<always_on>true</always_on>
+		<update_rate>100</update_rate>
+		<visualize>true</visualize>
+		<imu>
+			<angular_velocity>
+			<x>
+				<noise type="gaussian">
+				<mean>0.0</mean>
+				<stddev>2e-4</stddev>
+				<bias_mean>0.0000075</bias_mean>
+				<bias_stddev>0.0000008</bias_stddev>
+				</noise>
+			</x>
+			<y>
+				<noise type="gaussian">
+				<mean>0.0</mean>
+				<stddev>2e-4</stddev>
+				<bias_mean>0.0000075</bias_mean>
+				<bias_stddev>0.0000008</bias_stddev>
+				</noise>
+			</y>
+			<z>
+				<noise type="gaussian">
+				<mean>0.0</mean>
+				<stddev>2e-4</stddev>
+				<bias_mean>0.0000075</bias_mean>
+				<bias_stddev>0.0000008</bias_stddev>
+				</noise>
+			</z>
+			</angular_velocity>
+			<linear_acceleration>
+			<x>
+				<noise type="gaussian">
+				<mean>0.0</mean>
+				<stddev>1.7e-2</stddev>
+				<bias_mean>0.1</bias_mean>
+				<bias_stddev>0.001</bias_stddev>
+				</noise>
+			</x>
+			<y>
+				<noise type="gaussian">
+				<mean>0.0</mean>
+				<stddev>1.7e-2</stddev>
+				<bias_mean>0.1</bias_mean>
+				<bias_stddev>0.001</bias_stddev>
+				</noise>
+			</y>
+			<z>
+				<noise type="gaussian">
+				<mean>0.0</mean>
+				<stddev>1.7e-2</stddev>
+				<bias_mean>0.1</bias_mean>
+				<bias_stddev>0.001</bias_stddev>
+				</noise>
+			</z>
+			</linear_acceleration>
+		</imu>
+		</sensor>
+	</gazebo>
+
+</robot>

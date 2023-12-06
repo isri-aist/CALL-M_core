@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(nav2_simu)
+project(icps_bot)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -20,7 +20,7 @@ find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
 
 install(
-  DIRECTORY src launch rviz config world
+  DIRECTORY src launch description config
   DESTINATION share/${PROJECT_NAME}
 )
 

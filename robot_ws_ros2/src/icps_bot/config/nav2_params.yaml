@@ -1,4 +1,4 @@
-amcl: #to get position from an existing map, in our case, we will generate a map with SLAM during running
+amcl:
   ros__parameters:
     alpha1: 0.2
     alpha2: 0.2

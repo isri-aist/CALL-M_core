@@ -17,13 +17,30 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(trajectory_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(xacro REQUIRED)
 
+# Add executable
+add_executable(simu_bot_driver_node src/simu_bot_driver.cpp)
+ament_target_dependencies(simu_bot_driver_node rclcpp trajectory_msgs geometry_msgs)
+
+add_executable(command_master_node src/command_master.cpp)
+ament_target_dependencies(command_master_node rclcpp geometry_msgs)
+
+# Install directories
 install(
   DIRECTORY src launch description config
   DESTINATION share/${PROJECT_NAME}
 )
 
+# Install executable
+install(TARGETS
+  simu_bot_driver_node
+  command_master_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

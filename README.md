@@ -19,6 +19,12 @@ sudo apt install ros-foxy-xacro
 ### navigation2 (ROS Framework for robot navigation)
 https://navigation.ros.org/getting_started/index.html
 
+### Zed mini packages
+Nvidia package (+ drivers):
+https://developer.nvidia.com/cuda-downloads
+ZED SDK:
+https://www.stereolabs.com/developers/release
+
 ### If you want to use the simulation (simulation.launch.py):
 ```
 sudo apt install ros-foxy-gazebo-ros-pkgs

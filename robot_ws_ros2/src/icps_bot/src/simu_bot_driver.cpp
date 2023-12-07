@@ -2,10 +2,33 @@
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 
+#include <math.h>
+
+double pi = 3.14159265359;
+
 bool is_same(geometry_msgs::msg::Twist prev_msg,geometry_msgs::msg::Twist new_msg){
     bool result = prev_msg.linear.x == new_msg.linear.x && prev_msg.linear.y == new_msg.linear.y && prev_msg.angular.z == new_msg.angular.z;
     return result;
 }
+
+double alpha(double a, double w ,double vx, double vy ,bool linear,double k){
+    if(!linear){
+      if (w != 0){
+        return (abs(w)/w)*(a+pi/2); //just rotation speed wanted
+      }
+      else{
+        return 0.0; //nothing wanted
+      }
+      
+    }
+    else{
+      //RCLCPP_INFO(this->get_logger(),"k*w*(a+pi/2) = %f", k*w*(a+pi/2));
+      //RCLCPP_INFO(this->get_logger(),"atan2(vy,vx) = %f", atan2(vy,vx));
+      //RCLCPP_INFO(this->get_logger(),"final = %f", (k*w*(a+pi/2)+atan2(vy,vx)));
+      return (k*w*(a+pi/2)+atan2(vy,vx)); //linear + rotation movement wanted
+    }
+}
+
 
 class SimuBotDriver : public rclcpp::Node {
 public:
@@ -31,9 +54,45 @@ private:
     trajectory_msgs::msg::JointTrajectoryPoint point;
     //convert linear and angular command into ones adapted to robot
     point.positions = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-    //cmd_vel.linear.x
-    //cmd_vel.linear.y
-    //cmd_vel.angular.z
+
+    //datas
+    double a1 = 0;
+    double a2 = 2*pi/3;
+    double a3 = 4*pi/3;
+    double r = 0.05;
+    double triangle_lenght = 0.32;
+    double R = sqrt(((3*(pow(triangle_lenght,4)))/16)+(pow(triangle_lenght,2))/4);
+    double k = 0.1;
+
+    //commands
+    double vx = cmd_vel.linear.x;
+    double vy = cmd_vel.linear.y;
+    double w = cmd_vel.angular.z;
+    bool linear = sqrt((pow(vx,2)) + (pow(vy,2))) != 0;
+
+    //compute
+    RCLCPP_INFO(this->get_logger(),"w = %f", w);
+    RCLCPP_INFO(this->get_logger(),"k = %f", k);
+    RCLCPP_INFO(this->get_logger(),"a1 = %f", a1);
+    RCLCPP_INFO(this->get_logger(),"(a1+pi/2) = %f", (a1+pi/2));
+    RCLCPP_INFO(this->get_logger(),"k*w*(a1+pi/2) = %f", k*w*(a1+pi/2));
+    double alpha1 = alpha(a1,w,vx,vy ,linear,k);
+    double alpha2 = alpha(a2,w,vx,vy ,linear,k);
+    double alpha3 = alpha(a3,w,vx,vy ,linear,k);
+
+    double V = 0;
+    if (linear){
+      V = sqrt((pow(vx,2)) + (pow(vy,2)));
+    }
+    else{
+      V = R*abs(w);
+    }
+
+    double w2 = V/r;
+
+    point.positions = {alpha1, alpha2, alpha3, w2, w2, w2};
+
+    //ADD SPEED CONTROLER FOR w2 + do documentation
 
     message->points.push_back(point);
 

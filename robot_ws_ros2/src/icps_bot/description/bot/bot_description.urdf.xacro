@@ -2,6 +2,7 @@
 <robot name="bot" xmlns:xacro="http://ros.org/wiki/xacro">
 
 	<!-- Define robot constants -->
+	<!-- Id changed, check also 'simu_bot_driver.cpp' -->
 	<xacro:property name="square1_length" value="0.48"/>
 	<xacro:property name="square1_height" value="0.03"/> 
 	<xacro:property name="square2_length" value="0.27"/>

@@ -1,0 +1,10 @@
+https://www.intel.co.jp/content/www/jp/ja/products/sku/233101/intel-nuc-13-pro-kit-nuc13anki7/specifications.html
+
+user: JRL User
+psw: jrluser
+Device name: gomE01c
+
+
+Install WI-FI driver:
+https://community.intel.com/t5/Intel-NUCs/Intel-NUC-13-Ubuntu-server-22-04-2-Wifi-interface-not-detected/m-p/1504493
+

@@ -31,9 +31,9 @@ private:
     trajectory_msgs::msg::JointTrajectoryPoint point;
     //convert linear and angular command into ones adapted to robot
     point.positions = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-    cmd_vel.linear.x
-    cmd_vel.linear.y
-    cmd_vel.angular.z
+    //cmd_vel.linear.x
+    //cmd_vel.linear.y
+    //cmd_vel.angular.z
 
     message->points.push_back(point);
 

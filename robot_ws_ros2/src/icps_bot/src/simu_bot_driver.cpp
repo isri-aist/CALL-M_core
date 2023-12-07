@@ -3,6 +3,7 @@
 #include "geometry_msgs/msg/twist.hpp"
 
 #include <math.h>
+#include <cmath>
 
 double pi = 3.14159265359;
 
@@ -29,6 +30,10 @@ double alpha(double a, double w ,double vx, double vy ,bool linear,double k){
     }
 }
 
+double euler(double var, double speed, double dt){
+  double result = std::fmod(var + speed * dt, 2.0 * pi);
+  return result;
+}
 
 class SimuBotDriver : public rclcpp::Node {
 public:
@@ -37,7 +42,7 @@ public:
     subscriber_cmd = create_subscription<geometry_msgs::msg::Twist>("/cmd_vel_apply", 10, std::bind(&SimuBotDriver::twistCallback, this, std::placeholders::_1));
 
 
-    timer_ = create_wall_timer(std::chrono::milliseconds(100), std::bind(&SimuBotDriver::publishJointTrajectory, this));
+    timer_ = create_wall_timer(std::chrono::milliseconds(10), std::bind(&SimuBotDriver::publishJointTrajectory, this));
 
   }
 
@@ -71,11 +76,6 @@ private:
     bool linear = sqrt((pow(vx,2)) + (pow(vy,2))) != 0;
 
     //compute
-    RCLCPP_INFO(this->get_logger(),"w = %f", w);
-    RCLCPP_INFO(this->get_logger(),"k = %f", k);
-    RCLCPP_INFO(this->get_logger(),"a1 = %f", a1);
-    RCLCPP_INFO(this->get_logger(),"(a1+pi/2) = %f", (a1+pi/2));
-    RCLCPP_INFO(this->get_logger(),"k*w*(a1+pi/2) = %f", k*w*(a1+pi/2));
     double alpha1 = alpha(a1,w,vx,vy ,linear,k);
     double alpha2 = alpha(a2,w,vx,vy ,linear,k);
     double alpha3 = alpha(a3,w,vx,vy ,linear,k);
@@ -90,9 +90,14 @@ private:
 
     double w2 = V/r;
 
-    point.positions = {alpha1, alpha2, alpha3, w2, w2, w2};
+    //simulate speed with positions evolution for sphere wheels, EULER Integration
+    double dt = (this->now() - last_time).seconds();
+    last_pos1 = euler(last_pos1,w2,dt);
+    last_pos2 = euler(last_pos2,w2,dt);
+    last_pos3 = euler(last_pos3,w2,dt);
+    last_time = this->now();
 
-    //ADD SPEED CONTROLER FOR w2 + do documentation
+    point.positions = {alpha1, alpha2, alpha3, last_pos1, last_pos2, last_pos3};
 
     message->points.push_back(point);
 
@@ -103,6 +108,10 @@ private:
   rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr publisher_cmd;
   rclcpp::TimerBase::SharedPtr timer_;
   geometry_msgs::msg::Twist cmd_vel;
+  double last_pos1 = 0;
+  double last_pos2 = 0;
+  double last_pos3 = 0;
+  rclcpp::Time last_time = this->now();
 
 };
 

@@ -1,4 +1,6 @@
 # CNRS_AIST_Mobile_Shopping_Robot
+https://github.com/Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
+git@github.com:Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
 
 ## Set_up
 ### to execute ros2 workspaces:

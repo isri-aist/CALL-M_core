@@ -16,6 +16,16 @@ sudo apt install xterm
 sudo apt install ros-foxy-xacro
 ```
 
+###  robot localization package
+```
+sudo apt install ros-foxy-robot-localization
+```
+
+###  SLAM package
+```
+sudo apt  install ros-foxy-slam-toolbox
+```
+
 ### navigation2 (ROS Framework for robot navigation)
 https://navigation.ros.org/getting_started/index.html
 

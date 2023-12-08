@@ -35,6 +35,7 @@ https://developer.nvidia.com/cuda-downloads
 ZED SDK:
 https://www.stereolabs.com/developers/release
 
+
 ### If you want to use the simulation (simulation.launch.py):
 ```
 sudo apt install ros-foxy-gazebo-ros-pkgs

@@ -2,7 +2,7 @@
 #include <memory>
 
 #include "rclcpp/rclcpp.hpp"
-#include "c_pkg/msg/state_vector.hpp"
+#include "geometry_msgs/msg/twist.hpp"
 
 #include <stdio.h>
 #include <math.h>
@@ -12,8 +12,6 @@
 #include <termios.h>
 #include <linux/joystick.h>
 #include "conio.h"
-#include "func.h"
-#include "kinema.h"
 
 using namespace std;
 using namespace std::chrono_literals;
@@ -80,13 +78,35 @@ size_t get_axis_state(struct js_event *event, struct axis_state axes[3])
     return axis;
 }
 
+double constrain(double value, double min, double MAX)
+{
+    if (MAX >= value && value >= min) {
+	return value;
+    } else if (value > MAX) {
+	return MAX;
+    } else if (value < min) {
+	return min;
+    }
+    return min;
+}
+
+int sign(double val){
+    if (val>=0){
+        return 1;
+    }
+    else{
+        return -1;
+    }
+}
+
+
 class Joystick_control:public rclcpp::Node
 {
     public:
         Joystick_control():Node("joystick_control_node")
         {
             //create pubisher that will publish message of type [vx,vy,w]
-            publisher_ = this->create_publisher<c_pkg::msg::StateVector>("joystick_bot_command", 10);
+            publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop_joy", 10);
             //create timer that will call repetitively the function timer_callback
             timer_ = this->create_wall_timer(dt, std::bind(&Joystick_control::timer_callback, this));
             RCLCPP_INFO(this->get_logger(),"joystick_control_node started...");
@@ -97,7 +117,7 @@ class Joystick_control:public rclcpp::Node
     private:
         //global variables    
         rclcpp::TimerBase::SharedPtr timer_;
-        rclcpp::Publisher<c_pkg::msg::StateVector>::SharedPtr publisher_;
+        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
         std::chrono::milliseconds dt = 10ms;
 
         int js;
@@ -105,13 +125,19 @@ class Joystick_control:public rclcpp::Node
         struct axis_state axes[3] = {0};
         size_t axis;
 
-        float linear_vel = 0.1;
-        float rotatio_vel = 0.1 * M_PI;
-        float lin_incr = 0.1;
-        float rot_incr = 0.1* M_PI;
+        double linear_vel = 0.1;
+        double rotatio_vel = 0.1;
+        double lin_incr = 0.1;
+        double rot_incr = 0.1;
+        double max_lin_sp = 1; //we are working with values between -1 and 1 = percentage
+        double max_rot_sp = 1; //we are working with values between -1 and 1 = percentage
+        double max_joystick_value = 32767.0; //maximal value send by the joystick's pads
+        double des_velx = 0.0;
+        double des_vely = 0.0;
+        double des_velw = 0.0;
 
         //Functions
-        void show_msg(float des_velx,float des_vely,float des_velw){
+        void show_msg(double des_velx,double des_vely,double des_velw){
             if(this->js != -1){
                 printf( "\033[%dm\033[2J\033[1;1f",0);
                 printf("JOYSTICK CONTROLS:\n\n");
@@ -122,14 +148,15 @@ class Joystick_control:public rclcpp::Node
                 printf("  <     >                    3     0\n");
                 printf("     v                          1\n\n");
                 printf("        Left Pad     Right Pad\n\n");
-                printf("Current max linear speed: %f",this->linear_vel);
-                printf("\nCurrent max rotationnal speed: %f",this->rotatio_vel);
+                printf("Current max linear speed : %.2f%",(this->linear_vel)*100);
+                printf("\nCurrent max rotationnal speed: %.2f%",(this->rotatio_vel)*100);
                 printf("\n\nLeft Pad: Linear movements\n");
                 printf("Right Pad: Rotation\n");
                 printf("6/8: Set linear speed\n");
                 printf("7/9: Set rotational speed\n");
                 printf("\nChange the joystick mode if not corresponding.\n\n");
                 printf("Current commands: (%.2f,%.2f,%.2f)\n",des_velx,des_vely,des_velw);
+                printf("Total linear speed command: %.2f%\n",sqrt(pow(des_velx,2)+pow(des_vely,2))*100);
                 if(this->event.type == JS_EVENT_BUTTON){
                     printf("Button %u %s\n", this->event.number, this->event.value ? "pressed" : "released");
                 }
@@ -146,15 +173,15 @@ class Joystick_control:public rclcpp::Node
 
         void timer_callback()
         {   
-            auto commands=c_pkg::msg::StateVector();
+            geometry_msgs::msg::Twist commands;
 
-            float des_velx = 0.0;
-            float des_vely = 0.0;
-            float des_velw = 0.0;
+            //double des_velx = 0.0;
+            //double des_vely = 0.0;
+            //double des_velw = 0.0;
 
             //MAIN PROGRAM TO COMPUTE SPEEDS
-            this->linear_vel = constrain (this->linear_vel, 0, MAX_VX);
-            this->rotatio_vel = constrain (this->rotatio_vel, 0, MAX_W);
+            this->linear_vel = constrain (this->linear_vel, 0, max_lin_sp);
+            this->rotatio_vel = constrain (this->rotatio_vel, 0, max_rot_sp);
 
             if(this->js == -1) //if no joystick is connected, we try to connect one
             {
@@ -191,11 +218,11 @@ class Joystick_control:public rclcpp::Node
                                 switch (axis)
                                 {
                                 case 0:
-                                    des_velx = ((axes[axis].x)/32767.0)*linear_vel;
-                                    des_vely = ((axes[axis].y)/32767.0)*linear_vel;
+                                    des_velx = ((axes[axis].x)/32767.0); //percentage
+                                    des_vely = ((axes[axis].y)/32767.0); //percentage
                                     break;
                                 case 1:
-                                    des_velw = -((axes[axis].y)/32767.0)*rotatio_vel;
+                                    des_velw = -((axes[axis].y)/32767.0); //percentage
                                     break;                                
                                 default:
                                     break;
@@ -214,19 +241,38 @@ class Joystick_control:public rclcpp::Node
                 }
             }
             
-        
-            des_velx = constrain(des_velx, -MAX_VX, MAX_VX);
-            des_vely = constrain (des_vely, -MAX_VY, MAX_VY);
-            des_velw = constrain (des_velw, -MAX_W, MAX_W);
+            //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
+            if (des_vely!=0 && des_velx!=0){
+                double a = abs(des_velx/des_vely);
+                double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
+                double new_vx = abs(des_velx)*linear_vel;
+                double new_vy = abs(des_vely)*linear_vel;
+                double new_L = sqrt(pow(new_vx,2.0)+pow(new_vy,2.0));
+                double max_vy = abs(des_vely/des_velx);
+                double max_new_vy = abs(new_vy*linear_vel/new_vx);
+                double max_L = sqrt(1+pow(max_vy,2));
+                double max_new_L = sqrt(pow(linear_vel,2)+pow(max_new_vy,2));
+                double map_L= linear_vel*new_L/max_new_L;
+                
+                des_vely = sign(des_vely)*map_L/sqrt(1+pow(a,2));
+                des_velx = sign(des_velx)*a*abs(des_vely);
+            }
+            else{
+                des_velx =des_velx*this->linear_vel;
+                des_vely =des_vely*this->linear_vel;
+            }
+
+            //rotation speed have direct bounds
+            des_velw = des_velw*this->rotatio_vel; //naturally bounds because rotatio_vel is bound and des_velw is a percentage of it
 
             show_msg(des_velx,des_vely,des_velw);
             
             //END OF MAIN CODE
 
             //filling StateVector Message
-            commands.vx = des_velx;
-            commands.vy = des_vely;
-            commands.w = des_velw;
+            commands.linear.x = des_velx;
+            commands.linear.y = des_vely;
+            commands.angular.z = des_velw;
 
             //publish commands
             publisher_->publish(commands);

@@ -10,6 +10,3 @@
 [submodule "robot_ws_ros2/src/laser_scan_merger"]
 	path = robot_ws_ros2/src/laser_scan_merger
 	url = https://github.com/Noceo200/laser_scan_merger.git
-[submodule "robot_ws_ros2/src/geographic_info"]
-	path = robot_ws_ros2/src/geographic_info
-	url = https://github.com/ros-geographic-info/geographic_info.git

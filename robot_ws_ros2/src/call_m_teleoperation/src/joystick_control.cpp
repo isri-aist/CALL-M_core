@@ -148,8 +148,8 @@ class Joystick_control:public rclcpp::Node
                 printf("  <     >                    3     0\n");
                 printf("     v                          1\n\n");
                 printf("        Left Pad     Right Pad\n\n");
-                printf("Current max linear speed : %.2f%",(this->linear_vel)*100);
-                printf("\nCurrent max rotationnal speed: %.2f%",(this->rotatio_vel)*100);
+                printf("Current max linear speed : %.2f%.",(this->linear_vel/max_lin_sp)*100);
+                printf("\nCurrent max rotationnal speed: %.2f%.",(this->rotatio_vel/max_rot_sp)*100);
                 printf("\n\nLeft Pad: Linear movements\n");
                 printf("Right Pad: Rotation\n");
                 printf("6/8: Set linear speed\n");
@@ -180,8 +180,6 @@ class Joystick_control:public rclcpp::Node
             //double des_velw = 0.0;
 
             //MAIN PROGRAM TO COMPUTE SPEEDS
-            this->linear_vel = constrain (this->linear_vel, 0, max_lin_sp);
-            this->rotatio_vel = constrain (this->rotatio_vel, 0, max_rot_sp);
 
             if(this->js == -1) //if no joystick is connected, we try to connect one
             {
@@ -264,15 +262,29 @@ class Joystick_control:public rclcpp::Node
 
             //rotation speed have direct bounds
             des_velw = des_velw*this->rotatio_vel; //naturally bounds because rotatio_vel is bound and des_velw is a percentage of it
-
-            show_msg(des_velx,des_vely,des_velw);
             
             //END OF MAIN CODE
 
+            this->linear_vel = constrain (this->linear_vel, 0, max_lin_sp);
+            this->rotatio_vel = constrain (this->rotatio_vel, 0, max_rot_sp);
+
             //filling StateVector Message
-            commands.linear.x = des_velx;
-            commands.linear.y = des_vely;
-            commands.angular.z = des_velw;
+            if (this->linear_vel > 0){
+                commands.linear.x = des_velx;
+                commands.linear.y = des_vely;
+            }
+            else{
+                commands.linear.x = 0.0;
+                commands.linear.y = 0.0;
+            }
+            if (this->rotatio_vel > 0){
+                commands.angular.z = des_velw;
+            }
+            else{
+                commands.angular.z = 0.0;
+            }
+
+            show_msg(commands.linear.x,commands.linear.y,commands.angular.z);
 
             //publish commands
             publisher_->publish(commands);

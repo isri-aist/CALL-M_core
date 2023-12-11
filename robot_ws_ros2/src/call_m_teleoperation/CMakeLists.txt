@@ -20,9 +20,12 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
-# Add executable
+# Add executables
 add_executable(joystick_control_node src/joystick_control.cpp)
 ament_target_dependencies(joystick_control_node rclcpp geometry_msgs)
+
+add_executable(keyboard_control_node src/keyboard_control.cpp)
+ament_target_dependencies(keyboard_control_node rclcpp geometry_msgs)
 
 # Install directories
 install(
@@ -33,6 +36,7 @@ install(
 # Install executable
 install(TARGETS
   joystick_control_node
+  keyboard_control_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

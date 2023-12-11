@@ -102,5 +102,10 @@ ros2 run laser_scan_merger laser_scan_merger_node
 ## Hardware Camera Zed M
 https://www.stereolabs.com/docs/ros2/
 
+Having a nvidia card installed is mandatory to use CUDA:
+```
+nvidia-smi
+```
+
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy

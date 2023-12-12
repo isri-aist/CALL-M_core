@@ -18,6 +18,22 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+add_executable(bot_control_driver_node src/bot_control_driver.cpp src/servo3moog.cpp src/func.cpp src/kinema.cpp)
+ament_target_dependencies(bot_control_driver_node rclcpp geometry_msgs)
+
+# Install directories
+install(
+  DIRECTORY src launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# Install executable
+install(TARGETS
+  bot_control_driver_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

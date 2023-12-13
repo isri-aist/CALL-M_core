@@ -1,0 +1,24 @@
+import launch
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+
+    # Command to launch xterm and execute ROS 2 launch commands
+    #cmd = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x20', '-e', 'ros2', 'launch']
+    cmd = ['ros2', 'launch']
+
+    # Construct the absolute paths to your launch files
+    display_launch = ['call_m_monitor', 'display.launch.py']
+    teleop_launch =  ['call_m_teleoperation', 'teleop.launch.py']
+
+    return LaunchDescription([
+        launch.actions.ExecuteProcess(
+            cmd=cmd + display_launch,
+            output='screen',
+        ),
+        launch.actions.ExecuteProcess(
+            cmd=cmd + teleop_launch,
+            output='screen',
+        ),
+    ])

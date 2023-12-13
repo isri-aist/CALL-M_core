@@ -35,10 +35,6 @@ https://developer.nvidia.com/cuda-downloads
 ZED SDK:
 https://www.stereolabs.com/developers/release
 
-### Keyboard library for .py launches files
-```
-pip install keyboard
-```
 
 ### If you want to use the simulation (simulation.launch.py):
 ```
@@ -113,3 +109,42 @@ nvidia-smi
 
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy
+```
+ros2 run rplidar_ros rplidar_composition --ros-args -p "serial_port:=/dev/ttyUSB0" -p serial_baudrate:=115200 -p "frame_id:=lidar1_link" -p inverted:=false -p angle_compensate:=true -p "topic_name:=lidar1_scan"
+```
+
+### to identify lidars:
+See plugs/Unplugs logs
+```
+dmesg | grep tty
+```
+
+See IDs of connected devices
+```
+ls /dev/serial/by-id/
+```
+
+See Current used USB port
+```
+ls /dev/ttyUSB*
+```
+
+### Parameters
+http://wiki.ros.org/rplidar
+
+```c++
+  channel_type_ = this->declare_parameter("channel_type", "serial");
+  tcp_ip_ = this->declare_parameter("tcp_ip", "192.168.0.7");
+  tcp_port_ = this->declare_parameter("tcp_port", 20108);
+  serial_port_ = this->declare_parameter("serial_port", "/dev/ttyUSB0");
+  serial_baudrate_ = this->declare_parameter("serial_baudrate", 115200);
+  frame_id_ = this->declare_parameter("frame_id", std::string("laser_frame"));
+  inverted_ = this->declare_parameter("inverted", false);
+  angle_compensate_ = this->declare_parameter("angle_compensate", false);
+  flip_x_axis_ = this->declare_parameter("flip_x_axis", false);
+  scan_mode_ = this->declare_parameter("scan_mode", std::string());
+  topic_name_ = this->declare_parameter("topic_name", std::string("scan"));
+  auto_standby_ = this->declare_parameter("auto_standby", false);
+```
+
+

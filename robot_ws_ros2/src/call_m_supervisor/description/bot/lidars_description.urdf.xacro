@@ -4,7 +4,7 @@
 	<!-- THIS FILE NEED TO BE INCLUDED IN 'bot_description.urdf.xacro' -->
 
 	<!--2 LIDAR-->
-	<xacro:macro name="lidar" params="prefix x y">
+	<xacro:macro name="lidar" params="prefix x y alpha">
 		<link name="${prefix}_link">
 			<inertial>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -30,7 +30,7 @@
 		<joint name="${prefix}_joint" type="fixed">
 			<parent link="base_link"/>
 			<child link="${prefix}_link"/>
-			<origin xyz="${x} ${y} ${square1_height/2+0.1/2}" rpy="0 0 0"/>
+			<origin xyz="${x} ${y} ${square1_height/2+0.1/2}" rpy="0 0 ${alpha}"/>
 		</joint>
 			
 		<gazebo reference="${prefix}_link">
@@ -73,7 +73,7 @@
 		</gazebo>
 	</xacro:macro>
 
-	<xacro:lidar prefix="lidar1" x="${(square1_length/2)-0.0508}" y="${(square1_length/2)-0.0508}" />
-	<xacro:lidar prefix="lidar2" x="${-((square1_length/2)-0.0508)}" y="${-((square1_length/2)-0.0508)}" />
+	<xacro:lidar prefix="lidar1" x="${(square1_length/2)-0.0508}" y="${(square1_length/2)-0.0508}" alpha="${-3*pi/4}" />
+	<xacro:lidar prefix="lidar2" x="${-((square1_length/2)-0.0508)}" y="${-((square1_length/2)-0.0508)}" alpha="${pi/4}" />
 
 </robot>

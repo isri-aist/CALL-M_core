@@ -5,7 +5,7 @@
 
 	<!--2 CAMERA-->
 	<!--camera object front-->
-	<link name="camf_link">
+	<link name="cam1_link">
 		<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
@@ -27,28 +27,28 @@
 		</inertial>
 	</link>
 
-	<joint name="camf_joint" type="fixed">
+	<joint name="cam1_joint" type="fixed">
 		<parent link="base3_link"/>
-		<child link="camf_link"/>
-		<origin xyz="${(square1_length/2)+0.015/2} 0.0 ${(square2_height/2)-0.03-0.022/2}" rpy="0.0 0.0 0.0"/>
+		<child link="cam1_link"/>
+		<origin xyz="0.0 ${(square1_length/2)+0.015/2} ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${pi/2}"/>
 	</joint>
 
 	<!--depth camera front-->
-	<link name="camf_depth_frame"/>
+	<link name="cam1_depth_frame"/>
 
-	<joint name="camf_depth_joint" type="fixed">
+	<joint name="cam1_depth_joint" type="fixed">
 		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
-		<parent link="camf_link"/>
-		<child link="camf_depth_frame"/>
+		<parent link="cam1_link"/>
+		<child link="cam1_depth_frame"/>
 	</joint>
 
-	<gazebo reference="camf_link">
+	<gazebo reference="cam1_link">
 		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
-		<sensor type="depth" name="camf">
+		<sensor type="depth" name="cam1">
 		<update_rate>30.0</update_rate>
-		<camera name="camf_cam">
+		<camera name="cam1_cam">
 			<horizontal_fov>1.6</horizontal_fov>
 			<image>
 			<width>800</width>
@@ -69,7 +69,7 @@
 			<baseline>0.2</baseline>
 			<alwaysOn>true</alwaysOn>
 			<updateRate>0.0</updateRate>
-			<frame_name>camf_depth_frame</frame_name>
+			<frame_name>cam1_depth_frame</frame_name>
 			<pointCloudCutoff>0.5</pointCloudCutoff>
 			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
 			<distortionK1>0</distortionK1>
@@ -87,7 +87,7 @@
 	</gazebo>
 
 	<!--camera object back-->
-	<link name="camb_link">
+	<link name="cam2_link">
 		<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
@@ -109,28 +109,28 @@
 		</inertial>
 	</link>
 
-	<joint name="camb_joint" type="fixed">
+	<joint name="cam2_joint" type="fixed">
 		<parent link="base3_link"/>
-		<child link="camb_link"/>
-		<origin xyz="${-((square1_length/2)+0.015/2)} 0.0 ${(square2_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${pi}"/>
+		<child link="cam2_link"/>
+		<origin xyz="0.0 ${-((square1_length/2)+0.015/2)} ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${-pi/2}"/>
 	</joint>
 
 	<!--depth camera back-->
-	<link name="camb_depth_frame"/>
+	<link name="cam2_depth_frame"/>
 
-	<joint name="camb_depth_joint" type="fixed">
+	<joint name="cam2_depth_joint" type="fixed">
 		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
-		<parent link="camb_link"/>
-		<child link="camb_depth_frame"/>
+		<parent link="cam2_link"/>
+		<child link="cam2_depth_frame"/>
 	</joint>
 
-	<gazebo reference="camb_link">
+	<gazebo reference="cam2_link">
 		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
-		<sensor type="depth" name="camb">
+		<sensor type="depth" name="cam2">
 		<update_rate>30.0</update_rate>
-		<camera name="camb_cam">
+		<camera name="cam2_cam">
 			<horizontal_fov>1.6</horizontal_fov>
 			<image>
 			<width>800</width>
@@ -151,7 +151,7 @@
 			<baseline>0.2</baseline>
 			<alwaysOn>true</alwaysOn>
 			<updateRate>0.0</updateRate>
-			<frame_name>camb_depth_frame</frame_name>
+			<frame_name>cam2_depth_frame</frame_name>
 			<pointCloudCutoff>0.5</pointCloudCutoff>
 			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
 			<distortionK1>0</distortionK1>

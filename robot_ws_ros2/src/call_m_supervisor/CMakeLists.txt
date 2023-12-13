@@ -18,6 +18,23 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(xacro REQUIRED)
+
+add_executable(command_master_node src/command_master.cpp)
+ament_target_dependencies(command_master_node rclcpp geometry_msgs)
+
+# Install directories
+install(
+  DIRECTORY src launch description config
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# Install executable
+install(TARGETS
+  command_master_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

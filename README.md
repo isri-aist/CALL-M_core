@@ -35,6 +35,10 @@ https://developer.nvidia.com/cuda-downloads
 ZED SDK:
 https://www.stereolabs.com/developers/release
 
+### Keyboard library for .py launches files
+```
+pip install keyboard
+```
 
 ### If you want to use the simulation (simulation.launch.py):
 ```

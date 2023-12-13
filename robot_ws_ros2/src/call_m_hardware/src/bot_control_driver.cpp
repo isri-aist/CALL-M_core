@@ -39,19 +39,19 @@ class Bot_control_driver : public rclcpp::Node
             this->vx = msg->linear.x;
             this->vy = msg->linear.y;
             this->w = msg->angular.z;
-            apply_commands();
+            apply_commands(true);
         }
     }
 
     void timeout_secu(){
-        callback_active += 1;
+        callback_active ++;
         if(callback_active >= iteration_to_reset){
-            apply_commands();
+            apply_commands(false);
             callback_active = 0;//just to avoid to hit int values limit on computer, we restart the count so the bot is reset continiously each amount of time
         }
     }
 
-    void apply_commands()
+    void apply_commands(bool armed)
     {
         float des_velx = 0.0;
         float des_vely = 0.0;
@@ -62,7 +62,7 @@ class Bot_control_driver : public rclcpp::Node
 
         bool apply_cmd = callback_active < iteration_to_reset;
 
-        if(apply_cmd)
+        if(apply_cmd && armed)
         {
             des_velx = this->vx;
             des_vely = this->vy;
@@ -70,7 +70,7 @@ class Bot_control_driver : public rclcpp::Node
             RCLCPP_INFO(this->get_logger(), "Command applied");
         }
         
-        if(callback_active >= iteration_to_reset){
+        if(!armed){
             RCLCPP_INFO(this->get_logger(), "Unarmed, Waiting commands...");
         }
 
@@ -88,8 +88,8 @@ class Bot_control_driver : public rclcpp::Node
     float rotor_rad_p_sec[3] = {0.0, 0.0, 0.0}; // rev. per sec
     float vx = 0;
     float vy = 0;
+    int iteration_to_reset = 200;
     float w = 0;
-    int iteration_to_reset = 500;
     int callback_active = 0;
     float rotor_rad_per_sec_gain = 1.0;
     float target_motor_rpm[6];

@@ -6,16 +6,33 @@ def generate_launch_description():
 
     lid1_node = Node(
         name='rplidar_composition',
+        namespace='lidar2',
         package='rplidar_ros',
         executable='rplidar_composition',
         output='screen',
         parameters=[{
-            'serial_port': '/dev/ttyUSB0',
+            'serial_port': '/dev/ttyUSB2',
             'serial_baudrate': 115200,  # A1 / A2
             'frame_id': 'laser1_link',
             'inverted': False,
             'angle_compensate': True,
-            'topic_name':'lidar1_scan',
+            'topic_name':'scan',
+        }],
+    )
+
+    lid2_node = Node(
+        name='rplidar_composition',
+        namespace='lidar1',
+        package='rplidar_ros',
+        executable='rplidar_composition',
+        output='screen',
+        parameters=[{
+            'serial_port': '/dev/ttyUSB1',
+            'serial_baudrate': 115200,  # A1 / A2
+            'frame_id': 'laser2_link',
+            'inverted': False,
+            'angle_compensate': True,
+            'topic_name':'scan',
         }],
     )
 
@@ -25,4 +42,5 @@ def generate_launch_description():
             output='screen',
         ),
         lid1_node,
+        #lid2_node,
     ])

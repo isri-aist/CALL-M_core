@@ -42,5 +42,5 @@ def generate_launch_description():
             output='screen',
         ),
         lid1_node,
-        #lid2_node,
+        lid2_node,
     ])

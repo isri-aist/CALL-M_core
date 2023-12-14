@@ -109,6 +109,8 @@ nvidia-smi
 
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy
+https://rplidar.readthedocs.io/en/latest/
+http://wiki.ros.org/rplidar
 ```
 ros2 run rplidar_ros rplidar_composition --ros-args -p "serial_port:=/dev/ttyUSB0" -p serial_baudrate:=115200 -p "frame_id:=lidar1_link" -p inverted:=false -p angle_compensate:=true -p "topic_name:=lidar1_scan"
 ```
@@ -130,7 +132,6 @@ ls /dev/ttyUSB*
 ```
 
 ### Parameters
-http://wiki.ros.org/rplidar
 
 ```c++
   channel_type_ = this->declare_parameter("channel_type", "serial");

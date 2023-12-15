@@ -9,6 +9,18 @@
 
 using std::placeholders::_1;
 
+double constrain(double value, double min, double MAX)
+{
+    if (MAX >= value && value >= min) {
+	return value;
+    } else if (value > MAX) {
+	return MAX;
+    } else if (value < min) {
+	return min;
+    }
+    return min;
+}
+
 class Bot_control_driver : public rclcpp::Node
 {
   public:
@@ -62,14 +74,20 @@ class Bot_control_driver : public rclcpp::Node
 
         bool apply_cmd = callback_active < iteration_to_reset;
 
+        //received commands should be percentage (0->1)
         if(apply_cmd && armed)
         {
-            des_velx = this->vx;
-            des_vely = this->vy;
-            des_velw = this->w;
+            des_velx = this->vx*MAX_VX;
+            des_vely = this->vy*MAX_VY;
+            des_velw = this->w*MAX_W;
             RCLCPP_INFO(this->get_logger(), "Command applied");
         }
         
+        //security
+        des_velx = constrain(des_velx, -MAX_VX, MAX_VX);
+        des_vely = constrain(des_vely, -MAX_VY, MAX_VY);
+        des_velw = constrain(des_velw, -MAX_W, MAX_W);
+
         if(!armed){
             RCLCPP_INFO(this->get_logger(), "Unarmed, Waiting commands...");
         }
@@ -88,7 +106,7 @@ class Bot_control_driver : public rclcpp::Node
     float rotor_rad_p_sec[3] = {0.0, 0.0, 0.0}; // rev. per sec
     float vx = 0;
     float vy = 0;
-    int iteration_to_reset = 200;
+    int iteration_to_reset = 100;
     float w = 0;
     int callback_active = 0;
     float rotor_rad_per_sec_gain = 1.0;

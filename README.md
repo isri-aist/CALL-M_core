@@ -107,6 +107,19 @@ Having a nvidia card installed is mandatory to use CUDA:
 nvidia-smi
 ```
 
+Launch a camera:
+```
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:=<camera model> camera_name:=<namespace> serial_number:=<serial_number>
+```
+
+Parameters/config:
+https://www.stereolabs.com/docs/ros2/zed-node#configuration-parameters
+
+Serial numbers:
+camera1:
+camera2:
+cameratest:
+
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy
 

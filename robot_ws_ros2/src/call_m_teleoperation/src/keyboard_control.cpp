@@ -232,7 +232,9 @@ class Keyboard_control:public rclcpp::Node
             //END OF MAIN
             this->linear_vel = constrain (this->linear_vel, 0, max_lin_sp);
             this->rotatio_vel = constrain (this->rotatio_vel, 0, max_rot_sp);
-            show_msg();
+            if(!auto_mode){
+                show_msg();
+            }
 
             //filling StateVector Message
             if (this->linear_vel > 0){

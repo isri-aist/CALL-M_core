@@ -41,6 +41,14 @@ def generate_launch_description():
             cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node'],
             output='screen',
         ),
-        lid1_node,
-        lid2_node,
+        launch.actions.ExecuteProcess(
+            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam1','serial_number:='],
+            output='screen',
+        ),
+        launch.actions.ExecuteProcess(
+            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam2','serial_number:='],
+            output='screen',
+        ),
+        #lid1_node,
+        #lid2_node,
     ])

@@ -38,21 +38,16 @@ def generate_launch_description():
     )
 
     
-    #joint states published by Gazebo for the simulation
-    joint_state_publisher_node = Node(
-        package='joint_state_publisher',
-        executable='joint_state_publisher',
-        name='joint_state_publisher',
-    )
+    #joint states published by Gazebo for the simulation and by Hardware launch if hardware
 
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',description='Flag to enable use_sim_time'),
         # Execute laser_scan_merger launch file without xterm
+        # Execute slam_toolbox launch file without xterm
         launch.actions.ExecuteProcess(
             cmd=['ros2', 'launch', 'laser_scan_merger', 'launch.py'],
             output='screen',
         ),
-        # Execute slam_toolbox launch file without xterm
         launch.actions.ExecuteProcess(
             cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py'],
             output='screen',
@@ -60,5 +55,4 @@ def generate_launch_description():
         command_master_node,
         robot_localization_node,
         node_robot_state_publisher,
-        joint_state_publisher_node,
     ])

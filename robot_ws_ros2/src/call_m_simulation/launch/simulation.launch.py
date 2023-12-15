@@ -13,7 +13,7 @@ def generate_launch_description():
 
 
     """
-    #joint states published by Gazebo for the simulation
+    #joint states published by Gazebo for the simulation, see in URDF files
     joint_state_publisher_node = Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',

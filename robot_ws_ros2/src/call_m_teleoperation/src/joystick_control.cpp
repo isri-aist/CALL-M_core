@@ -183,6 +183,9 @@ class Joystick_control:public rclcpp::Node
 
             if(this->js == -1) //if no joystick is connected, we try to connect one
             {
+                des_velx = 0.0;
+                des_vely = 0.0;
+                des_velw = 0.0;
                 setup_js();
             }
             else//otherwise we can start to use it

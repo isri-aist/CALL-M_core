@@ -56,7 +56,7 @@ def generate_launch_description():
             cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam2','serial_number:='],
             output='screen',
         ),
-        #lid1_node,
-        #lid2_node,
+        lid1_node,
+        lid2_node,
         joint_state_publisher_node,
     ])

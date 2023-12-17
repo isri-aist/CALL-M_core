@@ -11,6 +11,12 @@
 
   <depend>rclcpp</depend>
 
+  <exec_depend>call_m_hardware</exec_depend>
+  <exec_depend>call_m_monitor</exec_depend>
+  <exec_depend>call_m_simulation</exec_depend>
+  <exec_depend>call_m_nav2</exec_depend>
+  <exec_depend>call_m_supervisor</exec_depend>
+  <exec_depend>call_m_teleoperation</exec_depend>
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 

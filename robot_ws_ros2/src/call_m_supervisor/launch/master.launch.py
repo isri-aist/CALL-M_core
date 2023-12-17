@@ -42,11 +42,11 @@ def generate_launch_description():
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',description='Flag to enable use_sim_time'),
         # Execute laser_scan_merger launch file without xterm
-        # Execute slam_toolbox launch file without xterm
         launch.actions.ExecuteProcess(
             cmd=['ros2', 'launch', 'laser_scan_merger', 'launch.py'],
             output='screen',
-        ),
+         ),
+        # Execute slam_toolbox launch file without xterm
         launch.actions.ExecuteProcess(
             cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py'],
             output='screen',

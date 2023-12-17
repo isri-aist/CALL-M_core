@@ -36,7 +36,6 @@ def generate_launch_description():
         parameters=[{'robot_description': robot_description_raw,
         'use_sim_time': True}] # add other parameters here if required
     )
-
     
     #joint states published by Gazebo for the simulation and by Hardware launch if hardware
 

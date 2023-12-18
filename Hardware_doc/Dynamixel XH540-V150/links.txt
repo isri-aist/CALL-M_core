@@ -1,0 +1,8 @@
+ros SDK:
+http://wiki.ros.org/dynamixel_sdk
+Manual:
+https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/download/#repository
+!!!Use foxy-devel branch!!!
+
+Hardware doc:
+https://e-shop.robotis.co.jp/product.php?id=268

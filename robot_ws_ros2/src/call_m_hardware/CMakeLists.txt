@@ -19,9 +19,14 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(dynamixel_sdk_custom_interfaces REQUIRED)
+find_package(dynamixel_sdk REQUIRED)
 
 add_executable(bot_control_driver_node src/bot_control_driver.cpp src/servo3moog.cpp src/func.cpp src/kinema.cpp)
 ament_target_dependencies(bot_control_driver_node rclcpp geometry_msgs)
+
+add_executable(camera_control_driver_node src/camera_control_driver.cpp)
+ament_target_dependencies(camera_control_driver_node rclcpp dynamixel_sdk_custom_interfaces dynamixel_sdk)
 
 # Install directories
 install(
@@ -32,6 +37,7 @@ install(
 # Install executable
 install(TARGETS
   bot_control_driver_node
+  camera_control_driver_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

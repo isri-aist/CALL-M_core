@@ -122,6 +122,26 @@ camera1: 15255448
 camera2: 15267217
 cameratest: 13024367
 
+## Hardware Servomotor Cameras, Dynamixel XH540-V150
+https://www.youtube.com/watch?v=E8XPqDjof4U
+
+Node to control and read
+```
+ros2 run dynamixel_sdk_examples read_write_node 
+```
+
+Write:
+```
+ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/msg/SetPosition "{id: 1, position: 2000}"
+```
+
+Read:
+```
+ros2 service call /get_position dynamixel_sdk_custom_interfaces/srv/GetPosition "id: 1"
+```
+
+positions = 1000 to 2000 in our case
+
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy
 

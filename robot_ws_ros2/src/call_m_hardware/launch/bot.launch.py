@@ -18,10 +18,12 @@ def find_port_by_device_id(device_id):
 def generate_launch_description():
 
     #IDs obtain with 'ls /dev/serial/by-id/' on ubuntu
-    lid1_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0'
-    lid2_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0002-if00-port0'    
+    lid1_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0003-if00-port0'
+    lid2_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0002-if00-port0' 
+    cameras_id = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0'
     port_lid_1=find_port_by_device_id(lid1_ID)
     port_lid_2=find_port_by_device_id(lid2_ID)
+    port_cameras=find_port_by_device_id(cameras_id)
 
     lid1_node = Node(
         name='rplidar_composition',
@@ -55,6 +57,16 @@ def generate_launch_description():
         }],
     )
 
+    camera_control_driver_node = Node(
+        name='camera_control_driver_node',
+        package='call_m_hardware',
+        executable='camera_control_driver_node',
+        output='screen',
+        parameters=[{
+            'device_name': port_cameras,
+        }],
+    )
+
     #joint states published by Gazebo for the simulation, but with hardware we need to publish them for RVIZ
     joint_state_publisher_node = Node(
         package='joint_state_publisher',
@@ -63,6 +75,10 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        lid1_node,
+        lid2_node,
+        joint_state_publisher_node,
+        camera_control_driver_node,
         launch.actions.ExecuteProcess(
             cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node'],
             output='screen',
@@ -75,7 +91,4 @@ def generate_launch_description():
             cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam2','serial_number:=15267217'],
             output='screen',
         ),
-        lid1_node,
-        lid2_node,
-        joint_state_publisher_node,
     ])

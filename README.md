@@ -107,6 +107,8 @@ Having a nvidia card installed is mandatory to use CUDA:
 nvidia-smi
 ```
 
+!!!Cable are not reversible for the Zedm, Arrows need to be on optical side!!!
+
 Launch a camera:
 ```
 ros2 launch zed_wrapper zed_camera.launch.py camera_model:=<camera model> camera_name:=<namespace> serial_number:=<serial_number>
@@ -116,9 +118,9 @@ Parameters/config:
 https://www.stereolabs.com/docs/ros2/zed-node#configuration-parameters
 
 Serial numbers:
-camera1:
-camera2:
-cameratest:
+camera1: 15255448
+camera2: 15267217
+cameratest: 13024367
 
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy
@@ -128,7 +130,7 @@ https://index.ros.org/p/rplidar_ros/#foxy
 ```
 ros2 run rplidar_ros rplidar_composition --ros-args -p "serial_port:=/dev/ttyUSB0" -p serial_baudrate:=115200 -p "frame_id:=lidar1_link" -p inverted:=false -p angle_compensate:=true -p "topic_name:=lidar1_scan"
 ```
-
+/dev/ttyUSB2
 ### to identify lidars:
 See plugs/Unplugs logs
 ```

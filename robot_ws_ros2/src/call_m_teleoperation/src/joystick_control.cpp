@@ -252,30 +252,35 @@ class Joystick_control:public rclcpp::Node
                             break;
                         case JS_EVENT_AXIS:
                             this->axis = get_axis_state(&this->event, this->axes);
-                            if (this->axis < 3)
-                                switch (axis)
-                                {
-                                case 0:
-                                    des_velx = ((axes[axis].x)/32767.0); //percentage
-                                    des_vely = ((axes[axis].y)/32767.0); //percentage
-                                    break;
-                                case 1:
-                                    des_velw = -((axes[axis].y)/32767.0); //percentage
-                                    break;                                
-                                default:
-                                    break;
-                                }
                             break;
                         default:
                             /* Ignore init events. */
                             break;
                     }
-                    
+                    if (this->axis < 3){
+                        double new_val_x = ((axes[axis].x)/32767.0); //percentage
+                        double new_val_y = ((axes[axis].y)/32767.0); //percentage
+                        switch (this->axis)
+                        {
+                        case 0:
+                            if(des_velx!=new_val_x){des_velx=new_val_x;} 
+                            if(des_vely!=new_val_y){des_vely=new_val_y;} 
+                            break;
+                        case 1:
+                            if(des_velw!=-new_val_y){des_velw=-new_val_y;} 
+                            break;                                
+                        default:
+                            break;
+                        }
+                    }
                     fflush(stdout);
                 }
                 else{
                     close(this->js);
                     this->js = -1;
+                    des_velx = 0.0;
+                    des_vely = 0.0;
+                    des_velw = 0.0;
                 }
             }
             
@@ -327,6 +332,7 @@ class Joystick_control:public rclcpp::Node
             show_msg(commands.linear.x,commands.linear.y,commands.angular.z);
 
             //publish commands
+            //RCLCPP_INFO(this->get_logger(),"publishing...");
             publisher_->publish(commands);
         }
 
@@ -334,7 +340,7 @@ class Joystick_control:public rclcpp::Node
         {
             const char *device;
             device = "/dev/input/js0";
-            this->js = open(device, O_RDONLY); // js=-1 means that could not open joystick
+            this->js = open(device, O_RDONLY | O_NONBLOCK); // js=-1 means that could not open joystick
         }
 
         void publish_cam_cmd()

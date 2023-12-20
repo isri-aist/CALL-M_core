@@ -60,6 +60,7 @@ private:
     //MAIN CODE to get commands from joystick
     if(!is_same(twist_teleop_joy,*msg)){twist_teleop_joy= *msg;}
     teleop_joy_active=0;
+    //RCLCPP_INFO(this->get_logger(),"command_joystick_received...");
   }
   
   void twistCallback_nav(const geometry_msgs::msg::Twist::SharedPtr msg)
@@ -78,17 +79,27 @@ private:
     if(teleop_joy_active >= iteration_to_reset){init_twist(twist_teleop_joy);}
     if(nav_active >= iteration_to_reset){init_twist(twist_nav);}
 
-    teleop_key_active ++;
+    teleop_key_active ++; //to avoid int memory limit
     teleop_joy_active ++;
     nav_active ++;
 
     //choice of linear commands to apply
-    if(is_command(twist_teleop_key)){selected_twist=twist_teleop_key;}
-    else if(is_command(twist_teleop_joy)){selected_twist=twist_teleop_joy;}
-    else if(is_command(twist_nav)){selected_twist=twist_nav;}
+    if(is_command(twist_teleop_key)){
+      selected_twist=twist_teleop_key;
+      //RCLCPP_INFO(this->get_logger(),"Keyboard controlling...");
+      }
+    else if(is_command(twist_teleop_joy)){
+      selected_twist=twist_teleop_joy;
+      //RCLCPP_INFO(this->get_logger(),"Joystick controlling...");
+      }
+    else if(is_command(twist_nav)){
+      selected_twist=twist_nav;
+      //RCLCPP_INFO(this->get_logger(),"Nav2 controlling...");
+      }
     else{
-        init_twist(selected_twist);
-    }
+      init_twist(selected_twist);
+      //RCLCPP_INFO(this->get_logger(),"Waiting commands...");
+      }
 
     // Publish the selected twist message
     pub_command->publish(selected_twist);

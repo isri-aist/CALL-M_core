@@ -19,13 +19,14 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(dynamixel_sdk_custom_interfaces REQUIRED)
 
 # Add executables
 add_executable(joystick_control_node src/joystick_control.cpp)
-ament_target_dependencies(joystick_control_node rclcpp geometry_msgs)
+ament_target_dependencies(joystick_control_node rclcpp geometry_msgs dynamixel_sdk_custom_interfaces)
 
 add_executable(keyboard_control_node src/keyboard_control.cpp)
-ament_target_dependencies(keyboard_control_node rclcpp geometry_msgs)
+ament_target_dependencies(keyboard_control_node rclcpp geometry_msgs dynamixel_sdk_custom_interfaces)
 
 # Install directories
 install(

@@ -3,6 +3,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 
 #include <stdio.h>
 #include <math.h>
@@ -55,7 +56,9 @@ class Keyboard_control:public rclcpp::Node
         Keyboard_control():Node("keyboard_control_node")
         {
             //create pubisher that will publish message of type [vx,vy,w]
-            publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop_key", 10);
+            publisher_motor = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop_key", 10);
+            //publisher for camera servos
+            publisher_servo_cam = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", 10);
             //create timer that will call repetitively the function timer_callback
             timer_ = this->create_wall_timer(dt, std::bind(&Keyboard_control::timer_callback, this));
             RCLCPP_INFO(this->get_logger(),"\nkeyboard_control_node started...");
@@ -65,7 +68,9 @@ class Keyboard_control:public rclcpp::Node
     private:
         //global variables    
         rclcpp::TimerBase::SharedPtr timer_;
-        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_motor;
+        rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_servo_cam;
+        dynamixel_sdk_custom_interfaces::msg::SetPosition servo_cam_msg;
         std::chrono::milliseconds dt = 100ms;
         int key_code = 0;
         float linear_vel = 0.1;
@@ -79,13 +84,18 @@ class Keyboard_control:public rclcpp::Node
         int step = 0;
         float sec_dt = 0.1; //loop dt in seconds
         float distance_t = 20*sec_dt;
+        int servo_cam1_id=2;
+        int servo_cam2_id=3;
+        int servo_cam1_pos = 2000; //1000 to 3000 (1000 = looking down)
+        int servo_cam2_pos = 2000;
+        int servo_cam_incr = 200;
 
         //Functions
         void show_msg(){
         printf( "\033[%dm\033[2J\033[1;1f",0);
         printf("KEYBOARD CONTROLS:\n\n");
-        printf("  Q  W  E       T\n");
-        printf("  A  S  D    F  G  H    SPACE\n\n");
+        printf("  Q  W  E       T                U  I\n");
+        printf("  A  S  D    F  G  H    SPACE    J  K\n\n");
         printf("Current max linear speed : %.2f  %",(this->linear_vel/max_lin_sp)*100);
         printf("\nCurrent max rotationnal speed: %.2f %",(this->rotatio_vel/max_rot_sp)*100);
         printf("\n\nQ/E: Rotation\n");
@@ -94,6 +104,8 @@ class Keyboard_control:public rclcpp::Node
         printf("T/G: Set linear speed\n");
         printf("F/H: Set rotational speed\n");
         printf("SPACE: Switch to auto mode\n");
+        printf("U/J: Front Camera angle\n");
+        printf("I/K: Back Camera angle\n");
         printf("\nKeyboard controls will overwrite any joysticks ones.\n");
         }
 
@@ -170,6 +182,30 @@ class Keyboard_control:public rclcpp::Node
                 //show_msg();
                 //printf("\b");
                 break;
+            case 117: //U
+                servo_cam1_pos = constrain(servo_cam1_pos-servo_cam_incr,1000,3000);
+                servo_cam_msg.id = servo_cam1_id;
+                servo_cam_msg.position = servo_cam1_pos;
+                publish_cam_cmd();
+                break;
+            case 106: //J
+                servo_cam1_pos = constrain(servo_cam1_pos+servo_cam_incr,1000,3000);
+                servo_cam_msg.id = servo_cam1_id;
+                servo_cam_msg.position = servo_cam1_pos;
+                publish_cam_cmd();
+                break;
+            case 105: //I
+                servo_cam2_pos = constrain(servo_cam2_pos-servo_cam_incr,1000,3000);
+                servo_cam_msg.id = servo_cam2_id;
+                servo_cam_msg.position = servo_cam2_pos;
+                publish_cam_cmd();
+                break;
+            case 107: //K
+                servo_cam2_pos = constrain(servo_cam2_pos+servo_cam_incr,1000,3000);
+                servo_cam_msg.id = servo_cam2_id;
+                servo_cam_msg.position = servo_cam2_pos;
+                publish_cam_cmd();
+                break;
             default:
                 des_velx = 0;
                 des_vely = 0;
@@ -232,9 +268,9 @@ class Keyboard_control:public rclcpp::Node
             //END OF MAIN
             this->linear_vel = constrain (this->linear_vel, 0, max_lin_sp);
             this->rotatio_vel = constrain (this->rotatio_vel, 0, max_rot_sp);
-            if(!auto_mode){
+            /*if(!auto_mode){
                 show_msg();
-            }
+            }*/
 
             //filling StateVector Message
             if (this->linear_vel > 0){
@@ -253,7 +289,13 @@ class Keyboard_control:public rclcpp::Node
             }
 
             //publish commands
-            publisher_->publish(commands);
+            publisher_motor->publish(commands);
+        }
+
+        void publish_cam_cmd()
+        {
+            //printf("Publish: id: %d, pos: %d",servo_cam_msg.id,servo_cam_msg.position);
+            publisher_servo_cam->publish(servo_cam_msg);
         }
 
 };

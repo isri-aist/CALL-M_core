@@ -58,6 +58,16 @@ public:
     const auto QOS_RKL10V =
         rclcpp::QoS(rclcpp::KeepLast(qos_depth)).reliable().durability_volatile();
 
+    //Initialise positions
+    int id1 = 2;
+    int id2 = 3; 
+    int init_pos = 2000;
+    uint8_t dxl_error_init= 0;
+    uint32_t goal_position = (unsigned int)init_pos;  // Convert int32 -> uint32
+    packetHandler->write4ByteTxRx(portHandler, (uint8_t)id1, ADDR_GOAL_POSITION, goal_position, &dxl_error_init);
+    dxl_error_init= 0;
+    packetHandler->write4ByteTxRx(portHandler, (uint8_t)id2, ADDR_GOAL_POSITION, goal_position, &dxl_error_init);
+
     set_position_subscriber_ =
         this->create_subscription<dynamixel_sdk_custom_interfaces::msg::SetPosition>(
             "set_position", QOS_RKL10V,

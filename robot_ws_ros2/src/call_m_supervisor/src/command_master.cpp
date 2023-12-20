@@ -108,7 +108,7 @@ private:
   int teleop_key_active = 0;
   int teleop_joy_active = 0;
   int nav_active = 0;
-  int iteration_to_reset = 100; //1s if publisher frequence is 10ms
+  int iteration_to_reset = 100; //= 1 sec if publisher frequence is 10ms
 
   rclcpp::TimerBase::SharedPtr timer_;
 };

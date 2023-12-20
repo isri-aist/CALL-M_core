@@ -127,6 +127,7 @@ class Joystick_control:public rclcpp::Node
         struct js_event event;
         struct axis_state axes[3] = {0};
         size_t axis;
+        int version;
 
         double linear_vel = 0.1;
         double rotatio_vel = 0.1;
@@ -149,7 +150,7 @@ class Joystick_control:public rclcpp::Node
 
         //Functions
         void show_msg(double des_velx,double des_vely,double des_velw){
-            if(this->js != -1){
+            if(ioctl(this->js, JSIOCGVERSION, &version) >= 0){
                 printf( "\033[%dm\033[2J\033[1;1f",0);
                 printf("JOYSTICK CONTROLS:\n\n");
                 printf("   --7--                      --9--\n\n");
@@ -188,23 +189,22 @@ class Joystick_control:public rclcpp::Node
         {   
             geometry_msgs::msg::Twist commands;
 
-            //double des_velx = 0.0;
-            //double des_vely = 0.0;
-            //double des_velw = 0.0;
-
             //MAIN PROGRAM TO COMPUTE SPEEDS
 
-            if(this->js == -1) //if no joystick is connected, we try to connect one
+            if(ioctl(this->js, JSIOCGVERSION, &version) < 0) //if no joystick is connected, we try to connect one
             {
+                //RCLCPP_INFO(this->get_logger(),"RESET...");
                 des_velx = 0.0;
                 des_vely = 0.0;
                 des_velw = 0.0;
                 setup_js();
             }
             else//otherwise we can start to use it
-            {
-                if (read_event(this->js, &(this->event)) == 0)
+            {   
+                //RCLCPP_INFO(this->get_logger(),"Connected...%d",version);
+                if (read_event(this->js, &(this->event)) == 0) //check if there is an event
                 {
+                    //RCLCPP_INFO(this->get_logger(),"event...");
                     switch (this->event.type)
                     {
                         case JS_EVENT_BUTTON:
@@ -263,51 +263,49 @@ class Joystick_control:public rclcpp::Node
                         switch (this->axis)
                         {
                         case 0:
-                            if(des_velx!=new_val_x){des_velx=new_val_x;} 
-                            if(des_vely!=new_val_y){des_vely=new_val_y;} 
+                            if(des_velx!=new_val_x || des_vely!=new_val_y){
+                                des_velx=new_val_x;
+                                des_vely=new_val_y;
+                                //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
+                                if (des_vely!=0 && des_velx!=0){
+                                    double a = abs(des_velx/des_vely);
+                                    double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
+                                    double new_vx = abs(des_velx)*linear_vel;
+                                    double new_vy = abs(des_vely)*linear_vel;
+                                    double new_L = sqrt(pow(new_vx,2.0)+pow(new_vy,2.0));
+                                    double max_vy = abs(des_vely/des_velx);
+                                    double max_new_vy = abs(new_vy*linear_vel/new_vx);
+                                    double max_L = sqrt(1+pow(max_vy,2));
+                                    double max_new_L = sqrt(pow(linear_vel,2)+pow(max_new_vy,2));
+                                    double map_L= linear_vel*new_L/max_new_L;
+                                    
+                                    des_vely = sign(des_vely)*map_L/sqrt(1+pow(a,2));
+                                    des_velx = sign(des_velx)*a*abs(des_vely);
+                                }
+                                else{
+                                    des_velx =des_velx*this->linear_vel;
+                                    des_vely =des_vely*this->linear_vel;
+                                }
+                            }
                             break;
                         case 1:
-                            if(des_velw!=-new_val_y){des_velw=-new_val_y;} 
+                            if(des_velw!=-new_val_y){
+                                des_velw=-new_val_y;
+                                //rotation speed have direct bounds
+                                des_velw = des_velw*this->rotatio_vel; //naturally bounds because rotatio_vel is bound and des_velw is a percentage of it 
+                            } 
                             break;                                
                         default:
                             break;
                         }
                     }
+                    
                     fflush(stdout);
                 }
-                else{
-                    close(this->js);
-                    this->js = -1;
-                    des_velx = 0.0;
-                    des_vely = 0.0;
-                    des_velw = 0.0;
-                }
             }
             
-            //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
-            if (des_vely!=0 && des_velx!=0){
-                double a = abs(des_velx/des_vely);
-                double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
-                double new_vx = abs(des_velx)*linear_vel;
-                double new_vy = abs(des_vely)*linear_vel;
-                double new_L = sqrt(pow(new_vx,2.0)+pow(new_vy,2.0));
-                double max_vy = abs(des_vely/des_velx);
-                double max_new_vy = abs(new_vy*linear_vel/new_vx);
-                double max_L = sqrt(1+pow(max_vy,2));
-                double max_new_L = sqrt(pow(linear_vel,2)+pow(max_new_vy,2));
-                double map_L= linear_vel*new_L/max_new_L;
-                
-                des_vely = sign(des_vely)*map_L/sqrt(1+pow(a,2));
-                des_velx = sign(des_velx)*a*abs(des_vely);
-            }
-            else{
-                des_velx =des_velx*this->linear_vel;
-                des_vely =des_vely*this->linear_vel;
-            }
+            //RCLCPP_INFO(this->get_logger(),"vx,vy,w:2 (%.2f,%.2f,%.2f)",des_velx,des_vely,des_velw);
 
-            //rotation speed have direct bounds
-            des_velw = des_velw*this->rotatio_vel; //naturally bounds because rotatio_vel is bound and des_velw is a percentage of it
-            
             //END OF MAIN CODE
 
             this->linear_vel = constrain (this->linear_vel, 0, max_lin_sp);
@@ -332,7 +330,6 @@ class Joystick_control:public rclcpp::Node
             show_msg(commands.linear.x,commands.linear.y,commands.angular.z);
 
             //publish commands
-            //RCLCPP_INFO(this->get_logger(),"publishing...");
             publisher_->publish(commands);
         }
 

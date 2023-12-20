@@ -13,8 +13,6 @@
 #include "servo3moog.h"
 #include "func.h"
 
-const char *SEREAL_PORT = "/dev/ttyUSB0";
-
 //#define BAUDRATE B115200
 #define BAUDRATE B9600
 
@@ -35,15 +33,9 @@ int fd;
 int open_serial(const char *port) {
   fd = open(port, O_RDWR |O_NONBLOCK);
   if(fd < 0){
-    fd = open("/dev/ttyUSB1", O_RDWR |O_NONBLOCK);
-    if(fd < 0){
-      fd = open("/dev/ttyUSB2", O_RDWR |O_NONBLOCK);
-      if(fd < 0){
-      //printf("servo3motor: serial can't open '%s'\n", port); //PERSO MODIF
-      printf("servo3motor: serial can't open, errno: %d : '%s'\n", errno,strerror(errno)); //PERSO MODIF (Error codes: https://man7.org/linux/man-pages/man2/fcntl.2.html)
-      return -1;
-      }
-    }
+    //printf("servo3motor: serial can't open '%s'\n", port); //PERSO MODIF
+    printf("servo3motor: serial can't open port named: %s\nErrno: %d : '%s'\n", port, errno,strerror(errno)); //PERSO MODIF (Error codes: https://man7.org/linux/man-pages/man2/fcntl.2.html)
+    return -1;
   }
   printf("servo3motor: serial opened:%s %d\n",port, fd);
   return fd;
@@ -199,13 +191,16 @@ void wake_up_motors () {
   wake_moog ();
 }
 
-void servomotor_setup() {
+int servomotor_setup(const char *SEREAL_PORT) {
   printf("servomotor_setup...\n");
   fd = open_serial(SEREAL_PORT);
-  set_baudrate (B9600);
-  wake_up_motors ();
-  inv_max_rad_per_sec = 1.0 / MAX_RAD_PER_SEC;
-  printf("servomotor_setup...DONE\n");
+  if(fd>=0){
+    set_baudrate (B9600);
+    wake_up_motors ();
+    inv_max_rad_per_sec = 1.0 / MAX_RAD_PER_SEC;
+    printf("servomotor_setup...DONE\n");
+  }
+  return fd;
 }
 
 void servoPos_loop (float cur_angarm) {

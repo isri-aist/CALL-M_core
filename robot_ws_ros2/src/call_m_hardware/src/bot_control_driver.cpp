@@ -1,5 +1,6 @@
 #include <chrono>
 #include <memory>
+#include<unistd.h>
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
@@ -26,11 +27,17 @@ class Bot_control_driver : public rclcpp::Node
   public:
     Bot_control_driver(): Node("bot_control_driver_node")
     {
-        RCLCPP_INFO(this->get_logger(), "Sarted, connecting motor...");
-        servomotor_setup();
+        initialize_params();
+        refresh_params();
+        RCLCPP_INFO(this->get_logger(), "Sarted, connecting to motors...");
         rotor_rad_p_sec[0] = 0.0;
         rotor_rad_p_sec[1] = 0.0;
         rotor_rad_p_sec[2] = 0.0;
+        while(servomotor_setup(device_name.c_str()) <0){
+            //RCLCPP_ERROR(this->get_logger(), "Port tested: "+device_name);
+            RCLCPP_ERROR(this->get_logger(), "Please plug servomotors and restart..");
+            sleep(1);
+        }
         RCLCPP_INFO(this->get_logger(), "Set up finished.");
         subscription= this->create_subscription<geometry_msgs::msg::Twist>("cmd_vel_apply", 10, std::bind(&Bot_control_driver::topic_callback, this, _1));
         timer_ = create_wall_timer(std::chrono::milliseconds(10), std::bind(&Bot_control_driver::timeout_secu, this));
@@ -101,6 +108,14 @@ class Bot_control_driver : public rclcpp::Node
         this->rotor_rad_per_sec_gain = servo3motor_loop (this->rotor_rad_p_sec, this->target_motor_rpm, this->real_motor_rpm);
     }
 
+    void initialize_params(){
+      this->declare_parameter("device_name"); 
+    }
+
+    void refresh_params(){
+        this->get_parameter_or<std::string>("device_name",device_name,"/dev/ttyUSB0");
+    }
+
     //global variables
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr subscription; 
     float rotor_rad_p_sec[3] = {0.0, 0.0, 0.0}; // rev. per sec
@@ -113,6 +128,8 @@ class Bot_control_driver : public rclcpp::Node
     float target_motor_rpm[6];
     float real_motor_rpm[6];
     rclcpp::TimerBase::SharedPtr timer_;
+    std::string device_name;
+
 };
 
 int main(int argc, char * argv[])

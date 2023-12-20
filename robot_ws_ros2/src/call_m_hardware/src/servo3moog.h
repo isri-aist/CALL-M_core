@@ -15,7 +15,7 @@ int serial_receive (char *reply);
 void wake_moog ();
 long moog_rpm2vt (float velocity_in_rpm);
 
-void servomotor_setup();
+int servomotor_setup(const char *SEREAL_PORT);
 void servoPos_loop (float cur_angarm);
 float minimum_rad_per_sec (int motor);
 float limit_rpm (float *motor_rpm);

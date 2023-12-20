@@ -128,6 +128,8 @@ https://www.youtube.com/watch?v=E8XPqDjof4U
 Node to control and read
 ```
 ros2 run dynamixel_sdk_examples read_write_node 
+or 
+ros2 run call_m_hardware camera_control_driver_node
 ```
 
 Write:
@@ -140,7 +142,7 @@ Read:
 ros2 service call /get_position dynamixel_sdk_custom_interfaces/srv/GetPosition "id: 1"
 ```
 
-positions = 1000 to 2000 in our case
+positions = 1000 to 3000 in our case
 
 ## Hardware Rp_lidar
 https://index.ros.org/p/rplidar_ros/#foxy
@@ -150,7 +152,7 @@ https://index.ros.org/p/rplidar_ros/#foxy
 ```
 ros2 run rplidar_ros rplidar_composition --ros-args -p "serial_port:=/dev/ttyUSB0" -p serial_baudrate:=115200 -p "frame_id:=lidar1_link" -p inverted:=false -p angle_compensate:=true -p "topic_name:=lidar1_scan"
 ```
-/dev/ttyUSB2
+
 ### to identify lidars:
 See plugs/Unplugs logs
 ```

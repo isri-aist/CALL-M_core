@@ -126,7 +126,7 @@ public:
   }
 
   void initialize_params(){
-      this->declare_parameter("port"); 
+      this->declare_parameter("device_name"); 
   }
 
   void refresh_params(){

@@ -3,6 +3,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 
 #include <stdio.h>
 #include <math.h>
@@ -107,6 +108,8 @@ class Joystick_control:public rclcpp::Node
         {
             //create pubisher that will publish message of type [vx,vy,w]
             publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop_joy", 10);
+            //publisher for camera servos
+            publisher_servo_cam = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", 10);
             //create timer that will call repetitively the function timer_callback
             timer_ = this->create_wall_timer(dt, std::bind(&Joystick_control::timer_callback, this));
             RCLCPP_INFO(this->get_logger(),"joystick_control_node started...");
@@ -136,6 +139,14 @@ class Joystick_control:public rclcpp::Node
         double des_vely = 0.0;
         double des_velw = 0.0;
 
+        rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_servo_cam;
+        dynamixel_sdk_custom_interfaces::msg::SetPosition servo_cam_msg;
+        int servo_cam1_id=2;
+        int servo_cam2_id=3;
+        int servo_cam1_pos = 2000; //1000 to 3000 (1000 = looking down)
+        int servo_cam2_pos = 2000;
+        int servo_cam_incr = 100;
+
         //Functions
         void show_msg(double des_velx,double des_vely,double des_velw){
             if(this->js != -1){
@@ -154,6 +165,8 @@ class Joystick_control:public rclcpp::Node
                 printf("Right Pad: Rotation\n");
                 printf("6/8: Set linear speed\n");
                 printf("7/9: Set rotational speed\n");
+                printf("2/0: Front Camera angle\n");
+                printf("3/1: Back Camera angle\n");
                 printf("\nChange the joystick mode if not corresponding.\n\n");
                 printf("Current commands: (%.2f,%.2f,%.2f)\n",des_velx,des_vely,des_velw);
                 printf("Total linear speed command: %.2f%\n",sqrt(pow(des_velx,2)+pow(des_vely,2))*100);
@@ -208,7 +221,31 @@ class Joystick_control:public rclcpp::Node
                                 break;
                             case 9:
                                 if(this->event.value){this->rotatio_vel+=this->rot_incr;} 
-                                break;                                                                                            
+                                break;  
+                            case 2:
+                                servo_cam1_pos = constrain(servo_cam1_pos-servo_cam_incr,1000,3000);
+                                servo_cam_msg.id = servo_cam1_id;
+                                servo_cam_msg.position = servo_cam1_pos;
+                                publish_cam_cmd();
+                                break;    
+                            case 0:
+                                servo_cam1_pos = constrain(servo_cam1_pos+servo_cam_incr,1000,3000);
+                                servo_cam_msg.id = servo_cam1_id;
+                                servo_cam_msg.position = servo_cam1_pos;
+                                publish_cam_cmd();
+                                break;  
+                            case 3:
+                                servo_cam2_pos = constrain(servo_cam2_pos-servo_cam_incr,1000,3000);
+                                servo_cam_msg.id = servo_cam2_id;
+                                servo_cam_msg.position = servo_cam2_pos;
+                                publish_cam_cmd();
+                                break;  
+                            case 1:
+                                servo_cam2_pos = constrain(servo_cam2_pos+servo_cam_incr,1000,3000);
+                                servo_cam_msg.id = servo_cam2_id;
+                                servo_cam_msg.position = servo_cam2_pos;
+                                publish_cam_cmd();
+                                break;                                                                                        
                             default:
                                 break;
                             }
@@ -298,6 +335,12 @@ class Joystick_control:public rclcpp::Node
             const char *device;
             device = "/dev/input/js0";
             this->js = open(device, O_RDONLY); // js=-1 means that could not open joystick
+        }
+
+        void publish_cam_cmd()
+        {
+            //printf("Publish: id: %d, pos: %d",servo_cam_msg.id,servo_cam_msg.position);
+            publisher_servo_cam->publish(servo_cam_msg);
         }
 
 };

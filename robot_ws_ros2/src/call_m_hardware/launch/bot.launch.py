@@ -5,21 +5,26 @@ import os
 
 def find_port_by_device_id(device_id):
     serial_by_id_dir = '/dev/serial/by-id/'
-    for entry in os.listdir(serial_by_id_dir):
-        print("Devices: ",entry)
-        entry_path = os.path.join(serial_by_id_dir, entry)
-        if os.path.islink(entry_path):
-            link_target = os.path.realpath(entry_path)
-            if device_id == entry:
-                print("Port: ",link_target)
-                return link_target
-    return 'None'
+    try:
+        for entry in os.listdir(serial_by_id_dir):
+            print("Devices: ",entry)
+            entry_path = os.path.join(serial_by_id_dir, entry)
+            if os.path.islink(entry_path):
+                link_target = os.path.realpath(entry_path)
+                if device_id == entry:
+                    print("Port: ",link_target)
+                    return link_target
+        print("No device found for: ",device_id)
+        return 'None'
+    except:
+        print("Error, no devices connected?")
+        return 'None'
 
 def generate_launch_description():
 
     #IDs obtain with 'ls /dev/serial/by-id/' on ubuntu
-    lid1_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0003-if00-port0'
-    lid2_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0002-if00-port0' 
+    lid1_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0011-if00-port0'
+    lid2_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0012-if00-port0' 
     cameras_id = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0'
     port_lid_1=find_port_by_device_id(lid1_ID)
     port_lid_2=find_port_by_device_id(lid2_ID)
@@ -78,7 +83,7 @@ def generate_launch_description():
         lid1_node,
         lid2_node,
         joint_state_publisher_node,
-        camera_control_driver_node,
+        #camera_control_driver_node,
         launch.actions.ExecuteProcess(
             cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node'],
             output='screen',

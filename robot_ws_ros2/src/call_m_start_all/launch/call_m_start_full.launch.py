@@ -14,6 +14,7 @@ def generate_launch_description():
     display_launch = ['call_m_monitor', 'display.launch.py']
     teleop_launch =  ['call_m_teleoperation', 'teleop.launch.py']
 
+
     return LaunchDescription([
         launch.actions.ExecuteProcess(
             cmd=cmd + master_launch,

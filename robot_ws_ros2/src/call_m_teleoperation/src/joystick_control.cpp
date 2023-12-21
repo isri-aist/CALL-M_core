@@ -259,23 +259,23 @@ class Joystick_control:public rclcpp::Node
                     }
                     if (this->axis < 3){
                         double new_val_x = ((axes[axis].x)/32767.0); //percentage
-                        double new_val_y = ((axes[axis].y)/32767.0); //percentage
+                        double new_val_y = ((axes[axis].y)/32767.0); //percentage (variable used for linear and rotation speeds)
                         switch (this->axis)
                         {
                         case 0:
                             if(des_velx!=new_val_x || des_vely!=new_val_y){
                                 des_velx=new_val_x;
-                                des_vely=new_val_y;
+                                des_vely=-new_val_y;
                                 //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
                                 if (des_vely!=0 && des_velx!=0){
                                     double a = abs(des_velx/des_vely);
-                                    double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
+                                    //double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
                                     double new_vx = abs(des_velx)*linear_vel;
                                     double new_vy = abs(des_vely)*linear_vel;
                                     double new_L = sqrt(pow(new_vx,2.0)+pow(new_vy,2.0));
                                     double max_vy = abs(des_vely/des_velx);
                                     double max_new_vy = abs(new_vy*linear_vel/new_vx);
-                                    double max_L = sqrt(1+pow(max_vy,2));
+                                    //double max_L = sqrt(1+pow(max_vy,2));
                                     double max_new_L = sqrt(pow(linear_vel,2)+pow(max_new_vy,2));
                                     double map_L= linear_vel*new_L/max_new_L;
                                     

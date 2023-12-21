@@ -1,6 +1,7 @@
 #include <chrono>
 #include <memory>
 #include<unistd.h>
+#include<math.h>
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
@@ -20,6 +21,15 @@ double constrain(double value, double min, double MAX)
 	return min;
     }
     return min;
+}
+
+void rotate_vect(double &vx, double &vy, double alpha){
+    double temp_vx = vx;
+    double temp_vy = vy;
+    vx = cos(alpha)*temp_vx+sin(alpha)*temp_vy;
+    vy = -sin(alpha)*temp_vx+cos(alpha)*temp_vy;
+    //RCLCPP_INFO(this->get_logger(),"temp: vx=%.2f, vy = %.2f",temp_vx,temp_vy);
+    //RCLCPP_INFO(this->get_logger(),"set: vx=%.2f, vy = %.2f",vx,vy);
 }
 
 class Bot_control_driver : public rclcpp::Node
@@ -101,8 +111,16 @@ class Bot_control_driver : public rclcpp::Node
 
         RCLCPP_INFO(this->get_logger(), "Vx:%.2f Vy:%.2f Vw:%.2f ",des_velx,des_vely,des_velw);
 
+        //we rotate the speed vector to match wanted frame for the robot
+        double new_des_velx = -des_velx; //we flip x axis
+        double new_des_vely = des_vely;
+        double alpha = -M_PI/6;//5*M_PI/6;
+        rotate_vect(new_des_velx, new_des_vely, alpha);
+
+        //RCLCPP_INFO(this->get_logger(), "Vx:%.2f Vy:%.2f Vw:%.2f ",new_des_velx,new_des_vely,des_velw);
+
         // convert vehicle vel. -> rotor vel.
-        vel2rotor (this->rotor_rad_p_sec, des_velx, des_vely, des_velw);
+        vel2rotor(this->rotor_rad_p_sec, new_des_velx, new_des_vely, des_velw);
 
         // move motor
         this->rotor_rad_per_sec_gain = servo3motor_loop (this->rotor_rad_p_sec, this->target_motor_rpm, this->real_motor_rpm);

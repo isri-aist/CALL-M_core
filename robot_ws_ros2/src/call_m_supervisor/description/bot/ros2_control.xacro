@@ -13,6 +13,36 @@
                 <param name="max">100</param>
             </command_interface>
         </joint>
+        <joint name="wheel_2_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_3_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_1_sup_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_2_sup_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_3_sup_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
     </ros2_control>
     
     <!--we set up gazebo tag to indicate that we use ros2 control, a controller manager is integrated in it, so we need to indicate wich controller to use in yaml file-->

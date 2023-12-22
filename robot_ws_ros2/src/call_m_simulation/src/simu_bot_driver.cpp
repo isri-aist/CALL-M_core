@@ -1,21 +1,24 @@
 #include "rclcpp/rclcpp.hpp"
-#include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "std_msgs/msg/float64_multi_array.hpp"
 
 #include <math.h>
 #include <cmath>
-
-double pi = 3.14159265359;
 
 bool is_same(geometry_msgs::msg::Twist prev_msg,geometry_msgs::msg::Twist new_msg){
     bool result = prev_msg.linear.x == new_msg.linear.x && prev_msg.linear.y == new_msg.linear.y && prev_msg.angular.z == new_msg.angular.z;
     return result;
 }
 
+double val_sign(double val){
+  if(val<0.0){return -1.0;}
+  else if(val>=0.0){return 1.0;}
+}
+
 double alpha(double a, double w ,double vx, double vy ,bool linear,double k){
     if(!linear){
       if (w != 0){
-        return (abs(w)/w)*(a+pi/2); //just rotation speed wanted
+        return a+val_sign(w)*M_PI/2; //just rotation speed wanted
       }
       else{
         return 0.0; //nothing wanted
@@ -23,59 +26,64 @@ double alpha(double a, double w ,double vx, double vy ,bool linear,double k){
       
     }
     else{
-      //RCLCPP_INFO(this->get_logger(),"k*w*(a+pi/2) = %f", k*w*(a+pi/2));
+      //RCLCPP_INFO(this->get_logger(),"k*w*(a+M_PI/2) = %f", k*w*(a+M_PI/2));
       //RCLCPP_INFO(this->get_logger(),"atan2(vy,vx) = %f", atan2(vy,vx));
-      //RCLCPP_INFO(this->get_logger(),"final = %f", (k*w*(a+pi/2)+atan2(vy,vx)));
-      return (k*w*(a+pi/2)+atan2(vy,vx)); //linear + rotation movement wanted
+      //RCLCPP_INFO(this->get_logger(),"final = %f", (k*w*(a+M_PI/2)+atan2(vy,vx)));
+      return (k*abs(w)*(a+val_sign(w)*M_PI/2)+atan2(vy,vx)); //linear + rotation movement wanted
     }
-}
-
-double euler(double var, double speed, double dt){
-  double result = std::fmod(var + speed * dt, 2.0 * pi);
-  return result;
 }
 
 class SimuBotDriver : public rclcpp::Node {
 public:
   SimuBotDriver() : Node("simu_bot_driver_node") {
-    publisher_cmd = create_publisher<trajectory_msgs::msg::JointTrajectory>("/set_joint_trajectory", 10);
+    publisher_cmd_wheels = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_cont/commands", 10);
+    publisher_cmd_wheels_sup = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_sup_cont/commands", 10);
     subscriber_cmd = create_subscription<geometry_msgs::msg::Twist>("/cmd_vel_apply", 10, std::bind(&SimuBotDriver::twistCallback, this, std::placeholders::_1));
 
+    cmd_vel.linear.x = 0.0;
+    cmd_vel.linear.y = 0.0;
+    cmd_vel.linear.z = 0.0;
+    cmd_vel.angular.x = 0.0;
+    cmd_vel.angular.y = 0.0;
+    cmd_vel.angular.z = 0.0;
 
-    timer_ = create_wall_timer(std::chrono::milliseconds(10), std::bind(&SimuBotDriver::publishJointTrajectory, this));
+    timer_ = create_wall_timer(std::chrono::milliseconds(10), std::bind(&SimuBotDriver::publish_cmds, this));
 
   }
 
 private:
   void twistCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
   {
-    if(!is_same(cmd_vel,*msg)){cmd_vel = *msg;}
+    //RCLCPP_INFO(this->get_logger(),"\nticked...");
+    if(!is_same(cmd_vel,*msg)){
+      cmd_vel = *msg;
+      //RCLCPP_INFO(this->get_logger(),"\nCMD = %.2f,%.2f,%.2f",cmd_vel.linear.x,cmd_vel.linear.y,cmd_vel.angular.z);
+      }
   }
 
-  void publishJointTrajectory() {
-    auto message = std::make_unique<trajectory_msgs::msg::JointTrajectory>();
-    message->header.frame_id = "base_link";
-    message->joint_names = {"wheel_f_sup_joint", "wheel_bl_sup_joint", "wheel_br_sup_joint", "wheel_f_joint", "wheel_bl_joint", "wheel_br_joint"};
-    trajectory_msgs::msg::JointTrajectoryPoint point;
+  void publish_cmds(){
+    // Create a messages
+    auto msg_wheels = std_msgs::msg::Float64MultiArray();
+    auto msg_wheels_sup = std_msgs::msg::Float64MultiArray();
+
     //convert linear and angular command into ones adapted to robot
-    point.positions = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
 
     //datas
-    double a1 = 0;
-    double a2 = 2*pi/3;
-    double a3 = 4*pi/3;
+    double a1 = (4*M_PI/3)-M_PI/2; //wheel and support 1 position
+    double a2 = -M_PI/2;
+    double a3 = (2*M_PI/3)-M_PI/2;
     double r = 0.05;
     double triangle_lenght = 0.32;
     double R = sqrt(((3*(pow(triangle_lenght,4)))/16)+(pow(triangle_lenght,2))/4);
-    double k = 0.1;
+    double k = 0.07;
 
     //commands
-    double vx = cmd_vel.linear.x;
-    double vy = cmd_vel.linear.y;
-    double w = cmd_vel.angular.z;
+    double vx = cmd_vel.linear.x*MAX_VX;
+    double vy = cmd_vel.linear.y*MAX_VY;
+    double w = cmd_vel.angular.z*MAX_W;
     bool linear = sqrt((pow(vx,2)) + (pow(vy,2))) != 0;
 
-    //compute
+    //compute angles wanted
     double alpha1 = alpha(a1,w,vx,vy ,linear,k);
     double alpha2 = alpha(a2,w,vx,vy ,linear,k);
     double alpha3 = alpha(a3,w,vx,vy ,linear,k);
@@ -88,30 +96,27 @@ private:
       V = R*abs(w);
     }
 
-    double w2 = V/r;
+    double w2 = V/r; //rotation speed wanted
 
-    //simulate speed with positions evolution for sphere wheels, EULER Integration
-    double dt = (this->now() - last_time).seconds();
-    last_pos1 = euler(last_pos1,w2,dt);
-    last_pos2 = euler(last_pos2,w2,dt);
-    last_pos3 = euler(last_pos3,w2,dt);
-    last_time = this->now();
+    // Set the data values
+    msg_wheels.data = {w2, w2, w2}; 
+    msg_wheels_sup.data = {alpha1, alpha2, alpha3};
 
-    point.positions = {alpha1, alpha2, alpha3, last_pos1, last_pos2, last_pos3};
+    //RCLCPP_INFO(this->get_logger(),"\nspeeds = %.2f,%.2f,%.2f\nangles = %.2f,%.2f,%.2f", msg_wheels.data[0],msg_wheels.data[1],msg_wheels.data[2],msg_wheels_sup.data[0],msg_wheels_sup.data[1],msg_wheels_sup.data[2]);
 
-    message->points.push_back(point);
-
-    publisher_cmd->publish(std::move(message));
+    // Publish the messages
+    publisher_cmd_wheels->publish(msg_wheels);
+    publisher_cmd_wheels_sup->publish(msg_wheels_sup);
   }
 
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr subscriber_cmd; 
-  rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr publisher_cmd;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_cmd_wheels;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_cmd_wheels_sup;
   rclcpp::TimerBase::SharedPtr timer_;
   geometry_msgs::msg::Twist cmd_vel;
-  double last_pos1 = 0;
-  double last_pos2 = 0;
-  double last_pos3 = 0;
-  rclcpp::Time last_time = this->now();
+  float MAX_VX = 1.0;
+  float MAX_VY = 1.0;
+  float MAX_W = 1.5 * M_PI;
 
 };
 

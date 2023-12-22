@@ -7,10 +7,23 @@ controller_manager:
     #name and type of our first controller (custom names)
     wheels_cont:
       type: velocity_controllers/JointGroupVelocityController
+
+    wheels_sup_cont:
+      type: position_controllers/JointGroupPositionController
     
 
 #we define our controllers
-wheels_cont: #controller that rotate all the wheels at a given speeds, need to publish input on topic: "~/commands" [std_msgs::msg::Float64MultiArray]
+wheels_cont: #controller that rotate all the wheels at a given speeds, need to publish input on topic: "wheels_cont/commands" [std_msgs::msg::Float64MultiArray]
     ros__parameters:
       joints:
         - wheel_1_joint
+        - wheel_2_joint
+        - wheel_3_joint
+
+wheels_sup_cont: #controller that rotate wheels support: "wheels_sup_cont/commands" [std_msgs::msg::Float64MultiArray]
+    ros__parameters:
+      joints:
+        - wheel_1_sup_joint
+        - wheel_2_sup_joint
+        - wheel_3_sup_joint
+

@@ -25,6 +25,23 @@ def generate_launch_description():
                                 '-entity', 'call_m_bot'],
                     output='screen')
 
+    #ros_control controllers, defined in controllers.yaml in call_m_supervisor package
+    node_controller_wheels = launch.actions.ExecuteProcess(
+        cmd=['ros2', 'run', 'controller_manager', 'spawner.py', 'wheels_cont'],
+        output='screen',
+    )
+
+    node_controller_wheels_sup = launch.actions.ExecuteProcess(
+        cmd=['ros2', 'run', 'controller_manager', 'spawner.py', 'wheels_sup_cont'],
+        output='screen',
+    )
+
+    #simulated bot driver
+    node_simu_bot_driver = launch.actions.ExecuteProcess(
+        cmd=['ros2', 'run', 'call_m_simulation', 'simu_bot_driver_node'],
+        output='screen',
+    )
+
     # Run the node
     return LaunchDescription([
         #launch Gazebo
@@ -40,7 +57,10 @@ def generate_launch_description():
         #launch joint publisher
         #joint_state_publisher_node,
         #Load bot in the simulation
-        spawn_entity
+        spawn_entity,
+        node_controller_wheels,
+        node_controller_wheels_sup,
+        node_simu_bot_driver
     ])
 
 

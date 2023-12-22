@@ -1,0 +1,16 @@
+ #We set up the controller manager with the list of controllers to use
+controller_manager:
+  ros__parameters:
+    update_rate: 100 #Hz
+    use_sim_time: true
+
+    #name and type of our first controller (custom names)
+    wheels_cont:
+      type: velocity_controllers/JointGroupVelocityController
+    
+
+#we define our controllers
+wheels_cont: #controller that rotate all the wheels at a given speeds, need to publish input on topic: "~/commands" [std_msgs::msg::Float64MultiArray]
+    ros__parameters:
+      joints:
+        - wheel_1_joint

@@ -38,6 +38,8 @@ https://www.stereolabs.com/developers/release
 
 ### If you want to use the simulation (simulation.launch.py):
 ```
+sudo apt install ros-foxy-ros2-control
+sudo apt install ros-foxy-ros2-controllers
 sudo apt install ros-foxy-gazebo-ros-pkgs
 sudo apt install ros-foxy-gazebo-ros2-control
 ```

@@ -215,18 +215,10 @@
 	<xacro:wheel prefix="wheel_3" angle="${(2*pi/3)-pi/2}" type="sphere" />
 	<xacro:wheel prefix="wheel_1" angle="${(-2*pi/3)-pi/2}" type="sphere" />
 
-	<!--Gazebo plugin to read all transmission tags-->
-	<!--
-	<gazebo>
-	<plugin name="gazebo_ros_control" filename="libgazebo_ros2_control.so">
-		<robotNamespace>/simubot</robotNamespace>
-	</plugin>
-	</gazebo>
-	-->
-
 	<xacro:include filename="lidars_description.urdf.xacro"/>
 	<xacro:include filename="camera_imu_description.urdf.xacro"/>
 	<xacro:include filename="gazebo_template.urdf.xacro"/>
+	<xacro:include filename="ros2_control.xacro"/>
 
 	<!--Keep this at the end, Used as debug, whrn changing the color we can know if the model loaded by gazebo is really this one 
 	or a previous working version.if the color of base2_link match the color specified on Gazebo, then everything worked correctly-->

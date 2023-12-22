@@ -30,7 +30,7 @@
 	<joint name="cam1_joint" type="fixed">
 		<parent link="base3_link"/>
 		<child link="cam1_link"/>
-		<origin xyz="0.0 ${(square1_length/2)+0.015/2} ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${pi/2}"/>
+		<origin xyz="${(square1_length/2)+0.015/2} 0.0 ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 0.0"/>
 	</joint>
 
 	<!--depth camera front-->
@@ -66,6 +66,15 @@
 			</noise>
 		</camera>
 		<plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+			<!--/cam1/zed_node/rgb/image_rect_color-->
+		    <ros>
+                <namespace>cam1</namespace>
+                <remapping>cam1/image_raw:=zed_node/rgb/image_rect_color</remapping>
+                <remapping>cam1/depth/image_raw:=depth/image_rect_raw</remapping>
+                <remapping>cam1/camera_info:=camera_info</remapping>
+                <remapping>cam1/depth/camera_info:=depth/camera_info</remapping>
+                <remapping>cam1/points:=depth/points</remapping>
+            </ros>
 			<baseline>0.2</baseline>
 			<alwaysOn>true</alwaysOn>
 			<updateRate>0.0</updateRate>
@@ -112,7 +121,7 @@
 	<joint name="cam2_joint" type="fixed">
 		<parent link="base3_link"/>
 		<child link="cam2_link"/>
-		<origin xyz="0.0 ${-((square1_length/2)+0.015/2)} ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${-pi/2}"/>
+		<origin xyz="${-((square1_length/2)+0.015/2)} 0.0 ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${pi}"/>
 	</joint>
 
 	<!--depth camera back-->
@@ -148,6 +157,14 @@
 			</noise>
 		</camera>
 		<plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+			<ros>
+                <namespace>cam2</namespace>
+                <remapping>cam2/image_raw:=zed_node/rgb/image_rect_color</remapping>
+                <remapping>cam2/depth/image_raw:=depth/image_rect_raw</remapping>
+                <remapping>cam2/camera_info:=camera_info</remapping>
+                <remapping>cam2/depth/camera_info:=depth/camera_info</remapping>
+                <remapping>cam2/points:=depth/points</remapping>
+            </ros>
 			<baseline>0.2</baseline>
 			<alwaysOn>true</alwaysOn>
 			<updateRate>0.0</updateRate>

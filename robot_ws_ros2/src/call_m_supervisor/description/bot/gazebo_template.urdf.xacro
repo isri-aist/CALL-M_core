@@ -9,12 +9,12 @@
         <plugin name="gazebo_ros_joint_state_publisher"
             filename="libgazebo_ros_joint_state_publisher.so">
             <update_rate>20</update_rate>
-            <joint_name>wheel_f_sup_joint</joint_name>
-            <joint_name>wheel_bl_sup_joint</joint_name>
-            <joint_name>wheel_br_sup_joint</joint_name>
-            <joint_name>wheel_f_joint</joint_name>
-            <joint_name>wheel_bl_joint</joint_name>
-            <joint_name>wheel_br_joint</joint_name>
+            <joint_name>wheel_2_sup_joint</joint_name>
+            <joint_name>wheel_3_sup_joint</joint_name>
+            <joint_name>wheel_1_sup_joint</joint_name>
+            <joint_name>wheel_2_joint</joint_name>
+            <joint_name>wheel_3_joint</joint_name>
+            <joint_name>wheel_1_joint</joint_name>
         </plugin>
     </gazebo>
 
@@ -23,7 +23,7 @@
     <!-- You'll probably want to add damping to the joints to stop them it flopping around. 
             e.g. <dynamics damping="10.0" friction="10.0"/> -->
     <!-- Here's an example message to publish to test it:
-    ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory  '{header: {frame_id: base_link}, joint_names: [wheel_f_sup_joint,wheel_bl_sup_joint,wheel_br_sup_joint,wheel_f_joint,wheel_bl_joint,wheel_br_joint], points: [  {positions: {0.8,0.6,0.8,0.6,0.8,0.6}} ]}'
+    ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory  '{header: {frame_id: base_link}, joint_names: [wheel_2_sup_joint,wheel_3_sup_joint,wheel_1_sup_joint,wheel_2_joint,wheel_3_joint,wheel_1_joint], points: [  {positions: {0.8,0.6,0.8,0.6,0.8,0.6}} ]}'
      -->
     <gazebo>
         <plugin name="gazebo_ros_joint_pose_trajectory"

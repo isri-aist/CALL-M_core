@@ -140,16 +140,16 @@ class Keyboard_control:public rclcpp::Node
             switch (this->key_code)
             {
             case 119: //W
-                des_vely = this->linear_vel;
+                des_velx = this->linear_vel;
                 break;
             case 97: //A
-                des_velx = -this->linear_vel;
+                des_vely = this->linear_vel;
                 break;
             case 115: //S
-                des_vely = -this->linear_vel;
+                des_velx = -this->linear_vel;
                 break;
             case 100: //D
-                des_velx = this->linear_vel;
+                des_vely = -this->linear_vel;
                 break;
             case 113: //Q
                 des_velw = this->rotatio_vel;

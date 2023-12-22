@@ -233,7 +233,7 @@ class Joystick_control:public rclcpp::Node
                                 servo_cam_msg.id = servo_cam1_id;
                                 servo_cam_msg.position = servo_cam1_pos;
                                 publish_cam_cmd();
-                                break;  
+                                break; 
                             case 3:
                                 servo_cam2_pos = constrain(servo_cam2_pos-servo_cam_incr,1000,3000);
                                 servo_cam_msg.id = servo_cam2_id;
@@ -264,8 +264,8 @@ class Joystick_control:public rclcpp::Node
                         {
                         case 0:
                             if(des_velx!=new_val_x || des_vely!=new_val_y){
-                                des_velx=new_val_x;
-                                des_vely=-new_val_y;
+                                des_velx=-new_val_y;
+                                des_vely=-new_val_x;
                                 //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
                                 if (des_vely!=0 && des_velx!=0){
                                     double a = abs(des_velx/des_vely);

@@ -36,6 +36,11 @@ def generate_launch_description():
         output='screen',
     )
 
+    node_controller_cams = launch.actions.ExecuteProcess(
+        cmd=['ros2', 'run', 'controller_manager', 'spawner.py', 'cams_cont'],
+        output='screen',
+    )
+
     #simulated bot driver
     node_simu_bot_driver = launch.actions.ExecuteProcess(
         #cmd=['ros2', 'run', 'call_m_simulation', 'simu_bot_driver_node'],
@@ -61,7 +66,8 @@ def generate_launch_description():
         spawn_entity,
         node_controller_wheels,
         node_controller_wheels_sup,
-        node_simu_bot_driver
+        node_controller_cams,
+        node_simu_bot_driver,
     ])
 
 

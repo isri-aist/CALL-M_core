@@ -10,6 +10,9 @@ controller_manager:
 
     wheels_sup_cont:
       type: position_controllers/JointGroupPositionController
+
+    cams_cont:
+      type: position_controllers/JointGroupPositionController
     
 
 #we define our controllers
@@ -27,3 +30,8 @@ wheels_sup_cont: #controller that rotate wheels support: "wheels_sup_cont/comman
         - wheel_2_sup_joint
         - wheel_3_sup_joint
 
+cams_cont: #controller that rotate cameras: "cams_cont/commands" [std_msgs::msg::Float64MultiArray]
+    ros__parameters:
+      joints:
+        - cam1_joint
+        - cam2_joint

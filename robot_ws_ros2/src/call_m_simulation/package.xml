@@ -12,6 +12,8 @@
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
+  <depend>dynamixel_sdk_custom_interfaces</depend>
+  <depend>dynamixel_sdk</depend>
 
   <exec_depend>gazebo_ros</exec_depend>
   <test_depend>ament_lint_auto</test_depend>

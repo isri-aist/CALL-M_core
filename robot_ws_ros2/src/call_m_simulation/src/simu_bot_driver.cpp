@@ -1,6 +1,9 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
+#include "dynamixel_sdk/dynamixel_sdk.h"
+#include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
+#include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 
 #include <math.h>
 #include <cmath>
@@ -51,7 +54,9 @@ public:
   SimuBotDriver() : Node("simu_bot_driver_node") {
     publisher_cmd_wheels = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_cont/commands", 10);
     publisher_cmd_wheels_sup = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_sup_cont/commands", 10);
+    publisher_cmd_cams = create_publisher<std_msgs::msg::Float64MultiArray>("/cams_cont/commands", 10);
     subscriber_cmd = create_subscription<geometry_msgs::msg::Twist>("/cmd_vel_apply", 10, std::bind(&SimuBotDriver::twistCallback, this, std::placeholders::_1));
+    subscriber_cams_cmd = create_subscription<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", 10, std::bind(&SimuBotDriver::cams_callback, this, std::placeholders::_1));
 
     cmd_vel.linear.x = 0.0;
     cmd_vel.linear.y = 0.0;
@@ -152,9 +157,35 @@ private:
     publisher_cmd_wheels_sup->publish(msg_wheels_sup);
   }
 
+  void cams_callback(const dynamixel_sdk_custom_interfaces::msg::SetPosition::SharedPtr msg){
+    //msg->position //Between 1000 and 3000, 3000 = angle of pi/2 and 1000 = angle of -pi/2
+    //msg->id //id = 2 : camera1 and id = 3 : camera2
+    bool changed = false;
+    if(msg->id == 2){
+      changed = msg->position != cam1_angle;
+      cam1_angle = ((msg->position-1000)*M_PI/2000)-M_PI/2;
+    }
+    else if(msg->id == 3){
+      changed = msg->position != cam2_angle;
+      cam2_angle = ((msg->position-1000)*M_PI/2000)-M_PI/2;;
+    }
+    if(changed){
+      publish_cmds_cams();
+    }
+  }
+
+  void publish_cmds_cams(){
+    auto msg_cams = std_msgs::msg::Float64MultiArray();
+    msg_cams.data = {cam1_angle, cam2_angle};
+    publisher_cmd_cams->publish(msg_cams);
+  }
+
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr subscriber_cmd; 
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_cmd_wheels;
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_cmd_wheels_sup;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_cmd_cams;
+  rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr subscriber_cams_cmd;
+
   rclcpp::TimerBase::SharedPtr timer_;
   geometry_msgs::msg::Twist cmd_vel;
   float MAX_VX = 1.5; //m.s-1
@@ -166,6 +197,8 @@ private:
   double MAX_DX= 1*MAX_VX; //should be >0 m.s-2  Deceleration
   double MAX_DY= 1*MAX_VY; //should be >0 m.s-2
   double MAX_DW= 1*MAX_W; //should be >0 rad.s-2
+  double cam1_angle = 0.0;
+  double cam2_angle = 0.0;
   rclcpp::Clock::SharedPtr clock;
   rclcpp::Time t0;
   rclcpp::Time tf;

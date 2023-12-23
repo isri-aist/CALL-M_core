@@ -20,10 +20,12 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(dynamixel_sdk_custom_interfaces REQUIRED)
+find_package(dynamixel_sdk REQUIRED)
 
 # Add executable
 add_executable(simu_bot_driver_node src/simu_bot_driver.cpp)
-ament_target_dependencies(simu_bot_driver_node rclcpp std_msgs geometry_msgs)
+ament_target_dependencies(simu_bot_driver_node rclcpp std_msgs geometry_msgs dynamixel_sdk dynamixel_sdk_custom_interfaces)
 
 # Install directories
 install(

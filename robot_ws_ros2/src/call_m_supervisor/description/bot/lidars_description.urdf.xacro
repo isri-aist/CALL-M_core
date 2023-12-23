@@ -41,7 +41,7 @@
 			<!--<pose>0 0 0.0225 0 0 0</pose> (seems to be ignored)-->
 			<always_on>true</always_on>
 			<visualize>true</visualize>
-			<update_rate>5</update_rate>
+			<update_rate>100</update_rate>
 			<ray>
 				<scan>
 				<horizontal>

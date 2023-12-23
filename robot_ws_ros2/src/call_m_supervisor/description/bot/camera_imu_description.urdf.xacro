@@ -27,10 +27,11 @@
 		</inertial>
 	</link>
 
-	<joint name="cam1_joint" type="fixed">
+	<joint name="cam1_joint" type="continuous">
 		<parent link="base3_link"/>
 		<child link="cam1_link"/>
 		<origin xyz="${(square1_length/2)+0.015/2} 0.0 ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 0.0"/>
+		<axis xyz="0 1 0"/>
 	</joint>
 
 	<!--depth camera front-->
@@ -47,7 +48,7 @@
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
 		<sensor type="depth" name="cam1">
-		<update_rate>30.0</update_rate>
+		<update_rate>100</update_rate>
 		<camera name="cam1_cam">
 			<horizontal_fov>1.6</horizontal_fov>
 			<image>
@@ -118,10 +119,11 @@
 		</inertial>
 	</link>
 
-	<joint name="cam2_joint" type="fixed">
+	<joint name="cam2_joint" type="continuous">
 		<parent link="base3_link"/>
 		<child link="cam2_link"/>
 		<origin xyz="${-((square1_length/2)+0.015/2)} 0.0 ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${pi}"/>
+		<axis xyz="0 1 0"/>
 	</joint>
 
 	<!--depth camera back-->
@@ -138,7 +140,7 @@
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
 		<sensor type="depth" name="cam2">
-		<update_rate>30.0</update_rate>
+		<update_rate>100</update_rate>
 		<camera name="cam2_cam">
 			<horizontal_fov>1.6</horizontal_fov>
 			<image>

@@ -38,7 +38,8 @@ def generate_launch_description():
 
     #simulated bot driver
     node_simu_bot_driver = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'run', 'call_m_simulation', 'simu_bot_driver_node'],
+        #cmd=['ros2', 'run', 'call_m_simulation', 'simu_bot_driver_node'],
+        cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_simulation', 'simu_bot_driver_node'],
         output='screen',
     )
 

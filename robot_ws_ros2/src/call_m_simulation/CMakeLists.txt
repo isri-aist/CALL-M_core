@@ -29,7 +29,7 @@ ament_target_dependencies(simu_bot_driver_node rclcpp std_msgs geometry_msgs dyn
 
 # Install directories
 install(
-  DIRECTORY src launch description
+  DIRECTORY src launch description config
   DESTINATION share/${PROJECT_NAME}
 )
 

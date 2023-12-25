@@ -110,6 +110,22 @@
 		<origin xyz="0.0 0.0 ${(square1_height/2)+square2_height+(square3_height/2)}" rpy="0 0 0"/>
 	</joint>
 
+	<link name="base4_link">
+		<visual>
+		<geometry>
+			<box size="${square1_length/4} ${square1_length/30} ${0.04}"/>
+		</geometry>
+		<material name="Green">
+			<color rgba="1.0 0.0 1.0 1.0"/>
+		</material>
+		</visual>
+	</link>
+	<joint name="base4_joint" type="fixed">
+		<parent link="base3_link"/>
+		<child link="base4_link"/>
+		<origin xyz="${square1_length/2-square1_length/4} 0.0 ${(square3_height/2)+0.02}" rpy="0 0 0"/>
+	</joint>
+
 	<!-- Robot Footprint-->
 	<link name="base_footprint">
 		<xacro:box_inertia m="0" w="0" d="0" h="0"/>
@@ -195,6 +211,10 @@
 	<xacro:include filename="camera_imu_description.urdf.xacro"/>
 	<xacro:include filename="gazebo_template.urdf.xacro"/>
 	<xacro:include filename="ros2_control.xacro"/>
+
+	<gazebo reference="base4_link">
+		<material>Gazebo/Purple</material>
+	</gazebo>
 
 	<!--Keep this at the end, Used as debug, whrn changing the color we can know if the model loaded by gazebo is really this one 
 	or a previous working version.if the color of base2_link match the color specified on Gazebo, then everything worked correctly-->

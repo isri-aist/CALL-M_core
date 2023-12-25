@@ -1,5 +1,4 @@
 import launch
-from launch.substitutions import LaunchConfiguration
 import launch_ros
 import os
 import xacro
@@ -8,14 +7,6 @@ from launch_ros.actions import Node
 def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_supervisor').find('call_m_supervisor') 
     bot_model_subpath = 'description/bot/bot_description.urdf.xacro'
-
-    robot_localization_node = launch_ros.actions.Node(
-       package='robot_localization',
-       executable='ekf_node',
-       name='ekf_filter_node',
-       output='screen',
-       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
-    )
 
     command_master_node = launch_ros.actions.Node(
        package='call_m_supervisor',
@@ -56,6 +47,5 @@ def generate_launch_description():
         scan_merger_node,
         slam_node,
         command_master_node,
-        robot_localization_node,
         node_robot_state_publisher,
     ])

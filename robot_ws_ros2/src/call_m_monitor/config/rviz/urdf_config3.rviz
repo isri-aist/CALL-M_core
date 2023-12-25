@@ -60,6 +60,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        base4_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         base_footprint:
           Alpha: 1
           Show Axes: false
@@ -102,32 +107,32 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        wheel_bl_link:
+        wheel_1_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wheel_bl_sup_link:
+        wheel_1_sup_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wheel_br_link:
+        wheel_2_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wheel_br_sup_link:
+        wheel_2_sup_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wheel_f_link:
+        wheel_3_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wheel_f_sup_link:
+        wheel_3_sup_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -146,45 +151,19 @@ Visualization Manager:
           Value: true
         base3_link:
           Value: true
+        base4_link:
+          Value: true
         base_footprint:
           Value: true
         base_link:
           Value: true
-        cam1_camera_center:
-          Value: true
-        cam1_camera_link:
-          Value: true
         cam1_depth_frame:
-          Value: true
-        cam1_imu_link:
-          Value: true
-        cam1_left_camera_frame:
-          Value: true
-        cam1_left_camera_optical_frame:
           Value: true
         cam1_link:
           Value: true
-        cam1_right_camera_frame:
-          Value: true
-        cam1_right_camera_optical_frame:
-          Value: true
-        cam2_camera_center:
-          Value: true
-        cam2_camera_link:
-          Value: true
         cam2_depth_frame:
           Value: true
-        cam2_imu_link:
-          Value: true
-        cam2_left_camera_frame:
-          Value: true
-        cam2_left_camera_optical_frame:
-          Value: true
         cam2_link:
-          Value: true
-        cam2_right_camera_frame:
-          Value: true
-        cam2_right_camera_optical_frame:
           Value: true
         imu_link:
           Value: true
@@ -196,17 +175,17 @@ Visualization Manager:
           Value: true
         odom:
           Value: true
-        wheel_bl_link:
+        wheel_1_link:
           Value: true
-        wheel_bl_sup_link:
+        wheel_1_sup_link:
           Value: true
-        wheel_br_link:
+        wheel_2_link:
           Value: true
-        wheel_br_sup_link:
+        wheel_2_sup_link:
           Value: true
-        wheel_f_link:
+        wheel_3_link:
           Value: true
-        wheel_f_sup_link:
+        wheel_3_sup_link:
           Value: true
       Marker Scale: 0.30000001192092896
       Name: TF
@@ -218,6 +197,8 @@ Visualization Manager:
           base2_link:
             {}
           base3_link:
+            base4_link:
+              {}
             cam1_link:
               cam1_depth_frame:
                 {}
@@ -232,15 +213,18 @@ Visualization Manager:
             {}
           lidar2_link:
             {}
-          wheel_bl_sup_link:
-            wheel_bl_link:
+          wheel_1_sup_link:
+            wheel_1_link:
               {}
-          wheel_br_sup_link:
-            wheel_br_link:
+          wheel_2_sup_link:
+            wheel_2_link:
               {}
-          wheel_f_sup_link:
-            wheel_f_link:
+          wheel_3_sup_link:
+            wheel_3_link:
               {}
+        map:
+          odom:
+            {}
       Update Interval: 0
       Value: true
     - Alpha: 0.699999988079071
@@ -411,7 +395,7 @@ Visualization Manager:
       Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.70358419418335
+      Yaw: 3.1435837745666504
     Saved: ~
 Window Geometry:
   Camera1:

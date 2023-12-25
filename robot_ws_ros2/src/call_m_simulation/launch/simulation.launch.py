@@ -1,7 +1,9 @@
 import os
 from ament_index_python.packages import get_package_share_directory
+import launch_ros
 from launch import LaunchDescription
 import launch
+from launch.substitutions import LaunchConfiguration
 
 from launch_ros.actions import Node
 
@@ -10,6 +12,7 @@ def generate_launch_description():
     # Specify the name of the package and path to xacro file within the package
     pkg_name = 'call_m_simulation'
     world_model_subpath = 'description/world/simple_world.sdf'
+    pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_simulation').find('call_m_simulation')
 
 
     """
@@ -19,6 +22,14 @@ def generate_launch_description():
         executable='joint_state_publisher',
         name='joint_state_publisher',
     )"""
+
+    robot_localization_node = launch_ros.actions.Node(
+       package='robot_localization',
+       executable='ekf_node',
+       name='ekf_filter_node',
+       output='screen',
+       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
 
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                     arguments=['-topic', 'robot_description',
@@ -64,6 +75,7 @@ def generate_launch_description():
         #joint_state_publisher_node,
         #Load bot in the simulation
         spawn_entity,
+        robot_localization_node,
         node_controller_wheels,
         node_controller_wheels_sup,
         node_controller_cams,

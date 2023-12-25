@@ -208,7 +208,8 @@
 	<xacro:wheel prefix="wheel_1" angle="${(-2*pi/3)-pi/2}" type="sphere" />
 
 	<xacro:include filename="lidars_description.urdf.xacro"/>
-	<xacro:include filename="camera_imu_description.urdf.xacro"/>
+	<xacro:include filename="cameras_description.urdf.xacro"/>
+	<xacro:include filename="imu_description.urdf.xacro"/>
 	<xacro:include filename="gazebo_template.urdf.xacro"/>
 	<xacro:include filename="ros2_control.xacro"/>
 

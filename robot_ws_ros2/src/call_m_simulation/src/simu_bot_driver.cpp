@@ -48,32 +48,6 @@ double error_cmd(double prev_val,double wanted_val, double max_acc, double max_d
   return error;
 }
 
-double alpha(double a, double w ,double vx, double vy ,bool linear,double k){
-  double angle;
-    if(!linear){
-      if (w != 0){
-        angle= a+val_sign(w)*M_PI/2; //just rotation speed wanted
-      }
-      else{
-      angle = 0.0; //nothing wanted
-      }
-      
-    }
-    else{
-      //RCLCPP_INFO(this->get_logger(),"a = %f",to_angle(a));
-      double rot_part = a+val_sign(w)*M_PI/2; //wanted vector for rotation part
-      //RCLCPP_INFO(this->get_logger(),"target_vect = %f",to_angle(rot_part));
-      double lin_part = atan2(vy,vx); //wanted vector for linear part
-      //RCLCPP_INFO(this->get_logger(),"current_vect = %f",to_angle(lin_part));
-      double error = sawtooth(rot_part-lin_part); //angle correction needed to pass from linear to rotation mouvement
-      //RCLCPP_INFO(this->get_logger(),"error = %f",to_angle(error));
-
-      angle = lin_part + k*abs(w)*error; //we apply the rotation part proportinonnaly to w command
-      //RCLCPP_INFO(this->get_logger(),"final = %f",to_angle(angle));
-    }
-    return angle;
-}
-
 class SimuBotDriver : public rclcpp::Node {
 public:
   SimuBotDriver() : Node("simu_bot_driver_node") {
@@ -100,6 +74,35 @@ public:
   }
 
 private:
+  double alpha(double a, double w ,double vx, double vy ,bool linear,double k){
+    double angle;
+      if(!linear){
+        if (w != 0){
+          angle= a+val_sign(w)*M_PI/2; //just rotation speed wanted
+        }
+        else{
+        angle = 0.0; //nothing wanted
+        }
+        
+      }
+      else{
+        //RCLCPP_INFO(this->get_logger(),"a = %f",to_angle(a));
+        double rot_part = a+val_sign(w)*M_PI/2; //wanted vector for rotation part
+        //RCLCPP_INFO(this->get_logger(),"target_vect = %f",to_angle(rot_part));
+        double lin_part = atan2(vy,vx); //wanted vector for linear part
+        //RCLCPP_INFO(this->get_logger(),"current_vect = %f",to_angle(lin_part));
+        double error1 = sawtooth(rot_part-lin_part); //angle correction needed to pass from linear to rotation mouvement
+        //same rotation speed in each direction management
+        double error2 = sawtooth(rot_part+M_PI-lin_part);
+        double error = val_sign(error1)*std::min(abs(error1),abs(error2)); //we keep the smallest error for the amplitude
+
+        //RCLCPP_INFO(this->get_logger(),"error = %f",to_angle(error));
+
+        angle = lin_part + k*abs(w)*error; //we apply the rotation part proportinonnaly to w command
+        //RCLCPP_INFO(this->get_logger(),"final = %f",to_angle(angle));
+      }
+      return angle;
+  }
 
   void twistCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
   {

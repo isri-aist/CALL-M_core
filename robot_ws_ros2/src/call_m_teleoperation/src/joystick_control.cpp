@@ -136,6 +136,9 @@ class Joystick_control:public rclcpp::Node
         double max_lin_sp = 1; //we are working with values between -1 and 1 = percentage
         double max_rot_sp = 1; //we are working with values between -1 and 1 = percentage
         double max_joystick_value = 32767.0; //maximal value send by the joystick's pads
+        double joy_axe0_x = 0.0;
+        double joy_axe0_y = 0.0;
+        double joy_axe1_y = 0.0;
         double des_velx = 0.0;
         double des_vely = 0.0;
         double des_velw = 0.0;
@@ -182,6 +185,42 @@ class Joystick_control:public rclcpp::Node
                 printf("\033[%dm\033[2J\033[1;1f",0);
                 printf("Waiting for joystick...");
             }
+
+        }
+
+        void refresh_speeds(){
+            //linear speeds
+            if(des_velx!=-joy_axe0_y || des_vely!=-joy_axe0_x){
+                des_velx=-joy_axe0_y;
+                des_vely=-joy_axe0_x;
+                //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
+                if (des_vely!=0 && des_velx!=0){
+                    double a = abs(des_velx/des_vely);
+                    //double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
+                    double new_vx = abs(des_velx)*linear_vel;
+                    double new_vy = abs(des_vely)*linear_vel;
+                    double new_L = sqrt(pow(new_vx,2.0)+pow(new_vy,2.0));
+                    //double max_vy = abs(des_vely/des_velx);
+                    double max_new_vy = abs(new_vy*linear_vel/new_vx);
+                    //double max_L = sqrt(1+pow(max_vy,2));
+                    double max_new_L = sqrt(pow(linear_vel,2)+pow(max_new_vy,2));
+                    double map_L= linear_vel*new_L/max_new_L;
+                    
+                    des_vely = sign(des_vely)*map_L/sqrt(1+pow(a,2));
+                    des_velx = sign(des_velx)*a*abs(des_vely);
+                }
+                else{
+                    des_velx =des_velx*this->linear_vel;
+                    des_vely =des_vely*this->linear_vel;
+                }
+            }
+
+            //rotation speed
+            if(des_velw!=-joy_axe1_y){
+                des_velw=-joy_axe1_y;
+                //rotation speed have direct bounds
+                des_velw = des_velw*this->rotatio_vel; //naturally bounds because rotatio_vel is bound and des_velw is a percentage of it 
+            } 
 
         }
 
@@ -258,48 +297,20 @@ class Joystick_control:public rclcpp::Node
                             break;
                     }
                     if (this->axis < 3){
-                        double new_val_x = ((axes[axis].x)/32767.0); //percentage
-                        double new_val_y = ((axes[axis].y)/32767.0); //percentage (variable used for linear and rotation speeds)
                         switch (this->axis)
                         {
                         case 0:
-                            if(des_velx!=new_val_x || des_vely!=new_val_y){
-                                des_velx=-new_val_y;
-                                des_vely=-new_val_x;
-                                //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
-                                if (des_vely!=0 && des_velx!=0){
-                                    double a = abs(des_velx/des_vely);
-                                    //double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
-                                    double new_vx = abs(des_velx)*linear_vel;
-                                    double new_vy = abs(des_vely)*linear_vel;
-                                    double new_L = sqrt(pow(new_vx,2.0)+pow(new_vy,2.0));
-                                    double max_vy = abs(des_vely/des_velx);
-                                    double max_new_vy = abs(new_vy*linear_vel/new_vx);
-                                    //double max_L = sqrt(1+pow(max_vy,2));
-                                    double max_new_L = sqrt(pow(linear_vel,2)+pow(max_new_vy,2));
-                                    double map_L= linear_vel*new_L/max_new_L;
-                                    
-                                    des_vely = sign(des_vely)*map_L/sqrt(1+pow(a,2));
-                                    des_velx = sign(des_velx)*a*abs(des_vely);
-                                }
-                                else{
-                                    des_velx =des_velx*this->linear_vel;
-                                    des_vely =des_vely*this->linear_vel;
-                                }
-                            }
+                            joy_axe0_x = ((axes[axis].x)/32767.0); //percentage
+                            joy_axe0_y = ((axes[axis].y)/32767.0); //percentage
                             break;
                         case 1:
-                            if(des_velw!=-new_val_y){
-                                des_velw=-new_val_y;
-                                //rotation speed have direct bounds
-                                des_velw = des_velw*this->rotatio_vel; //naturally bounds because rotatio_vel is bound and des_velw is a percentage of it 
-                            } 
+                            joy_axe1_y = ((axes[axis].y)/32767.0);
                             break;                                
                         default:
                             break;
                         }
                     }
-                    
+                    refresh_speeds(); //we update sent speeds
                     fflush(stdout);
                 }
             }

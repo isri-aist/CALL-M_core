@@ -3,6 +3,7 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "gazebo_msgs/msg/model_states.hpp"
 #include "nav_msgs/msg/odometry.hpp"
+#include "rosgraph_msgs/msg/clock.hpp"  // Add the clock message
 
 class SimuOdometry : public rclcpp::Node
 {
@@ -12,6 +13,10 @@ public:
   {
     // Subscribe to the model_states topic
     subscription_ = this->create_subscription<gazebo_msgs::msg::ModelStates>("gazebo/model_states", 10, std::bind(&SimuOdometry::TopicCallback, this, std::placeholders::_1));
+
+    // Subscribe to the clock topic
+    clock_subscription_ = this->create_subscription<rosgraph_msgs::msg::Clock>("/clock", 10, std::bind(&SimuOdometry::ClockCallback, this, std::placeholders::_1));
+
     // Initialize publisher
     odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom_simu", 10);
   }
@@ -28,23 +33,22 @@ private:
       geometry_msgs::msg::Pose pose = msg->pose[index];
       geometry_msgs::msg::Twist twist = msg->twist[index];
 
-      //Print or process the extracted data as needed
-      //RCLCPP_INFO(this->get_logger(), "call_m_bot Pose: (%f, %f, %f)", pose.position.x, pose.position.y, pose.position.z);
-      //RCLCPP_INFO(this->get_logger(), "call_m_bot Twist: (%f, %f, %f)", twist.linear.x, twist.linear.y, twist.angular.z);
-      
-      //Speeds are in world frame, so we can not use them for ekf filter, we need them in robot's frame
-      //so we use positions directly instead
-
-      // Publish Odometry message
-      publishOdometry(pose, twist);
+      // Publish Odometry message with the received timestamp
+      publishOdometry(pose, twist, current_timestamp_);
     }
   }
 
-  void publishOdometry(const geometry_msgs::msg::Pose &pose, const geometry_msgs::msg::Twist &twist)
+  void ClockCallback(const rosgraph_msgs::msg::Clock::SharedPtr msg)
+  {
+    // Update the current timestamp when the clock message is received
+    current_timestamp_ = msg->clock;
+  }
+
+  void publishOdometry(const geometry_msgs::msg::Pose &pose, const geometry_msgs::msg::Twist &twist, const builtin_interfaces::msg::Time &timestamp)
   {
     // Create and populate the Odometry message
     auto odometry_msg = nav_msgs::msg::Odometry();
-    odometry_msg.header.stamp = this->now();
+    odometry_msg.header.stamp = timestamp;
     odometry_msg.header.frame_id = "odom";
     odometry_msg.child_frame_id = "base_link";
 
@@ -57,7 +61,9 @@ private:
   }
 
   rclcpp::Subscription<gazebo_msgs::msg::ModelStates>::SharedPtr subscription_;
+  rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr clock_subscription_;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odometry_publisher_;
+  builtin_interfaces::msg::Time current_timestamp_;
 };
 
 int main(int argc, char **argv)

@@ -28,6 +28,7 @@ def generate_launch_description():
        name='ekf_filter_node',
        output='screen',
        parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+       #parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}, {'debug': True}, {'debug_out_file': os.path.join(pkg_share, 'config/ekf_debug.txt')}]
     )
 
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
@@ -80,7 +81,7 @@ def generate_launch_description():
         #Load bot in the simulation
         spawn_entity,
         node_simu_odometry,
-        #robot_localization_node,
+        robot_localization_node,
         node_controller_wheels,
         node_controller_wheels_sup,
         node_controller_cams,

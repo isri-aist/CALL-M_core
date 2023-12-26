@@ -2,6 +2,9 @@ import launch
 from launch import LaunchDescription
 from launch_ros.actions import Node
 import os
+import launch_ros
+from launch.substitutions import LaunchConfiguration
+
 
 def find_port_by_device_id(device_id):
     serial_by_id_dir = '/dev/serial/by-id/'
@@ -21,6 +24,7 @@ def find_port_by_device_id(device_id):
         return 'None'
 
 def generate_launch_description():
+    pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_hardware').find('call_m_hardware')
 
     #IDs obtain with 'ls /dev/serial/by-id/' on ubuntu
     servo_motors_ID= 'usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0'
@@ -84,6 +88,14 @@ def generate_launch_description():
         name='joint_state_publisher',
     )
 
+    robot_localization_node = launch_ros.actions.Node(
+       package='robot_localization',
+       executable='ekf_node',
+       name='ekf_filter_node',
+       output='screen',
+       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
+
     #bot_driver
     bot_control_driver = launch.actions.ExecuteProcess(
             cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node','--ros-args','-p', 'device_name:='+port_servo_motors_ID],
@@ -109,4 +121,5 @@ def generate_launch_description():
         camera_1,
         camera_2,
         joint_state_publisher_node,
+        robot_localization_node,
     ])

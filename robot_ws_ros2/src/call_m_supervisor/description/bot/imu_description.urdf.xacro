@@ -65,6 +65,7 @@
             </z>
         </angular_velocity>
         <linear_acceleration>
+        <!--If values are noisy: https://answers.gazebosim.org//question/810/is-it-possible-to-reduce-inertial-sensor-noise-by-adjusting-gazebo-parameters/-->
             <x>
             <noise type="gaussian">
                 <mean>0.0</mean>

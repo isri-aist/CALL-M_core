@@ -39,6 +39,12 @@ def generate_launch_description():
         cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py'],
         output='screen',
     )
+
+    #execute localisation estimation with rf2o_laser_odometry (publish odom used by ekf filter then)
+    lidar_localiz_node = launch.actions.ExecuteProcess(
+        cmd=['ros2', 'launch', 'rf2o_laser_odometry', 'rf2o_laser_odometry.launch.py'],
+    )
+
     
     #joint states published by Gazebo for the simulation and by Hardware launch if hardware
 
@@ -48,4 +54,5 @@ def generate_launch_description():
         slam_node,
         command_master_node,
         node_robot_state_publisher,
+        lidar_localiz_node,
     ])

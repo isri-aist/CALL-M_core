@@ -184,6 +184,7 @@ private:
     // Publish the messages
     publisher_cmd_wheels->publish(msg_wheels);
     publisher_cmd_wheels_sup->publish(msg_wheels_sup);
+
   }
 
   void cams_callback(const dynamixel_sdk_custom_interfaces::msg::SetPosition::SharedPtr msg){

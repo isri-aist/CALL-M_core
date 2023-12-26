@@ -36,9 +36,6 @@ def generate_launch_description():
     port_cameras_servos=find_port_by_device_id(cameras_servos_id)
     port_servo_motors_ID=find_port_by_device_id(servo_motors_ID)
 
-    print("PORT BOT DRIVER: ",port_servo_motors_ID)
-    print("BOT PARAMETER: ",'device_name:='+port_servo_motors_ID)
-
     lid1_node = Node(
         name='rplidar_composition',
         namespace='lidar1',
@@ -93,7 +90,7 @@ def generate_launch_description():
        executable='ekf_node',
        name='ekf_filter_node',
        output='screen',
-       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+       parameters=[os.path.join(pkg_share, 'config/ekf.yaml')]
     )
 
     #bot_driver

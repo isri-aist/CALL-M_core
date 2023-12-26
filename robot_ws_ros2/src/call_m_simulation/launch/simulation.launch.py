@@ -14,7 +14,6 @@ def generate_launch_description():
     world_model_subpath = 'description/world/simple_world.sdf'
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_simulation').find('call_m_simulation')
 
-
     """
     #joint states published by Gazebo for the simulation, see in URDF files
     joint_state_publisher_node = Node(
@@ -59,6 +58,11 @@ def generate_launch_description():
         output='screen',
     )
 
+    node_simu_odometry = launch.actions.ExecuteProcess(
+        cmd=['ros2', 'run', 'call_m_simulation', 'simu_odometry_node'],
+        output='screen',
+    )
+
     # Run the node
     return LaunchDescription([
         #launch Gazebo
@@ -75,7 +79,8 @@ def generate_launch_description():
         #joint_state_publisher_node,
         #Load bot in the simulation
         spawn_entity,
-        robot_localization_node,
+        node_simu_odometry,
+        #robot_localization_node,
         node_controller_wheels,
         node_controller_wheels_sup,
         node_controller_cams,

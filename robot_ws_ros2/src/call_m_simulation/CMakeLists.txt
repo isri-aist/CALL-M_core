@@ -22,10 +22,15 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(dynamixel_sdk_custom_interfaces REQUIRED)
 find_package(dynamixel_sdk REQUIRED)
+find_package(gazebo_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 
 # Add executable
 add_executable(simu_bot_driver_node src/simu_bot_driver.cpp)
 ament_target_dependencies(simu_bot_driver_node rclcpp std_msgs geometry_msgs dynamixel_sdk dynamixel_sdk_custom_interfaces)
+
+add_executable(simu_odometry_node src/simu_odometry.cpp)
+ament_target_dependencies(simu_odometry_node rclcpp geometry_msgs gazebo_msgs nav_msgs)
 
 # Install directories
 install(
@@ -36,6 +41,7 @@ install(
 # Install executable
 install(TARGETS
   simu_bot_driver_node
+  simu_odometry_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

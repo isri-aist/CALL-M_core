@@ -12,6 +12,7 @@ def generate_launch_description():
     # Specify the name of the package and path to xacro file within the package
     pkg_name = 'call_m_simulation'
     world_model_subpath = 'description/world/simple_world.sdf'
+    #world_model_subpath = 'description/world/workshop_example.world'
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_simulation').find('call_m_simulation')
 
     """

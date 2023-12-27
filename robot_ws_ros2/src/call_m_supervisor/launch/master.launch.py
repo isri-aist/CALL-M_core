@@ -36,7 +36,7 @@ def generate_launch_description():
     
     # Execute slam_toolbox launch file without xterm (TBM)
     slam_node = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py'],
+        cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py', 'params_file:='+os.path.join(pkg_share, 'config/mapper_params_online_async.yaml')],
         output='screen',
     )
 

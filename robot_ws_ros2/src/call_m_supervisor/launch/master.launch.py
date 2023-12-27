@@ -25,7 +25,7 @@ def generate_launch_description():
         executable='robot_state_publisher',
         output='screen',
         parameters=[{'robot_description': robot_description_raw,
-        'use_sim_time': True}] # add other parameters here if required (TBM)
+        'use_sim_time': True}] # add other parameters here if required
     )
 
     # Execute laser_scan_merger launch file without xterm
@@ -34,9 +34,9 @@ def generate_launch_description():
         output='screen',
         )
     
-    # Execute slam_toolbox launch file without xterm (TBM)
+    # Execute slam_toolbox launch file without xterm
     slam_node = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py', 'params_file:='+os.path.join(pkg_share, 'config/mapper_params_online_async.yaml')],
+        cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py', 'params_file:='+os.path.join(pkg_share, 'config/mapper_params_online_async.yaml'), 'use_sim_time:=true'],
         output='screen',
     )
 

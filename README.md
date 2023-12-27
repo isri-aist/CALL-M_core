@@ -46,12 +46,12 @@ sudo apt install ros-foxy-gazebo-ros2-control
 
 ## Set_up
 ### to execute ros2 workspaces:
-(directories with src folder and no CmakeList)
+(directories with src folder and no CmakeList, 'robot_ws_ros2')
 ```
-colcon build
+colcon build --symlink-install
 ```
 ### to execute Cmake projects:
-(directories with src folder and CmakeList)
+(directories with src folder and CmakeList like 'Tests_programs')
 ```
 mkdir build
 cd build
@@ -60,27 +60,75 @@ make
 ./<executable>
 ```
 
-
 ## Launch project
-For teleoperate real robot:
+### Ready to flight:
+
+Parameters:
+* nav:(string): 
+	- "none":(default): Do not use Nav2.
+	- "on_fly": Use Nav2 without known map. Allow to navigate on a map generated with SLAM on fly.
+	- "localize": Use Nav2 with a known map. Classic navigation with moving obstacles detection.
+
+#### Simulation
 ```
-ros2 launch c_pkg bot_teleoperate_launch.py
-```
-For Nav2 simulation launch + scan merger:
-```
-colcon build ; ros2 launch nav2_simu display.launch.py
+ros2 launch call_m_start_all call_m_simu_start_full.launch.py
 ```
 
-to publish map=>odom TF needed by Nav2 plugin:
+#### Real Robot, Hardware
 ```
-ros2 launch slam_toolbox online_async_launch.py
+ros2 launch call_m_start_all call_m_start_full.launch.py
 ```
-to publish costmaps and footprints needed for all other Nav2 plugins, and also launch all Nav2 plugins configured in nav2_params.yaml:
+
+#### Real Robot, Hardware, (Remote control)
+Servor (on robot)
 ```
-ros2 launch nav2_bringup navigation_launch.py params_file:=<full/path/to/config/nav2_params.yaml>
+ros2 launch call_m_start_all call_m_start_servor.launch.py
 ```
+
+Client (remote computer)
 ```
-ros2 launch nav2_bringup navigation_launch.py params_file:=/home/jrlintern/Desktop/work/CNRS_AIST_Work_All/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/nav2_simu/config/nav2_params.yaml
+ros2 launch call_m_start_all call_m_start_client.launch.py
+```
+
+### Launch packages independantly (Useful for debug and testing):
+
+These packages should be launch in the order they are presented below to avoid unwanted behavior.
+
+#### Supervisor: (slam, state_publisher, commands master)
+```
+ros2 launch call_m_supervisor master.launch.py
+```
+
+#### Teleoperation: (Keyboard and joystick commands)
+```
+ros2 launch call_m_teleoperation teleop.launch.py
+```
+
+#### Simulation or Hardware (not both)
+Hardware: (All hardware related nodes, joints publisher, localization node)
+```
+ros2 launch call_m_hardware bot.launch.py
+```
+
+Simulation: (Simulated robot and environnement, joints publisher, localization node)
+```
+ros2 launch call_m_simulation simulation.launch.py
+```
+
+#### Visualization: (Rviz)
+```
+ros2 launch call_m_monitor display.launch.py
+```
+
+#### Navigation: (Nav2)
+Navigate and generate map on fly:
+```
+ros2 launch call_m_nav2 navigation_launch.py
+```
+
+Navigate with known map:
+```
+ros2 launch call_m_nav2 localization_launch.py
 ```
 
 ## Configurations

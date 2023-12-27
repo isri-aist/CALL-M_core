@@ -64,10 +64,13 @@ make
 ### Ready to flight:
 
 Parameters:
-* nav:(string): 
+* nav_type:(string): 
 	- "none":(default): Do not use Nav2.
 	- "on_fly": Use Nav2 without known map. Allow to navigate on a map generated with SLAM on fly.
 	- "localize": Use Nav2 with a known map. Classic navigation with moving obstacles detection.
+* nav_mode:(string):
+	- "diff": The robot will navigate like a differential robot
+	- "omni": The robot will navigate like an holonomic robot
 
 #### Simulation
 ```

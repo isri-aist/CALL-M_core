@@ -13,6 +13,7 @@ def generate_launch_description():
     simu_launch = ['call_m_simulation', 'simulation.launch.py']
     display_launch = ['call_m_monitor', 'display.launch.py']
     teleop_launch =  ['call_m_teleoperation', 'teleop.launch.py']
+    nav2_launch = ['call_m_nav2', 'navigation_launch.py', 'use_sim_time:=true']
 
     return LaunchDescription([
         launch.actions.ExecuteProcess(
@@ -29,6 +30,10 @@ def generate_launch_description():
         ),
         launch.actions.ExecuteProcess(
             cmd=cmd + teleop_launch,
+            output='screen',
+        ),
+        launch.actions.ExecuteProcess(
+            cmd=cmd + nav2_launch,
             output='screen',
         ),
     ])

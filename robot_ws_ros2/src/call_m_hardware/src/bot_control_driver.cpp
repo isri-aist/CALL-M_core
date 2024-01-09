@@ -114,7 +114,7 @@ class Bot_control_driver : public rclcpp::Node
         //we rotate the speed vector to match wanted frame for the robot
         double new_des_velx = -des_velx; //we flip x axis
         double new_des_vely = des_vely;
-        double alpha = 2*M_PI/3;//-M_PI/6;//5*M_PI/6;
+        double alpha = M_PI/3;//5*M_PI/6;
         rotate_vect(new_des_velx, new_des_vely, alpha);
 
         //RCLCPP_INFO(this->get_logger(), "Vx:%.2f Vy:%.2f Vw:%.2f ",new_des_velx,new_des_vely,des_velw);

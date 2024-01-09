@@ -100,14 +100,22 @@ def generate_launch_description():
         )
     
     #cameras
-    config_cam1_file = os.path.join(pkg_share, 'config/cam1_zedm.yaml')
-    """camera_1 = launch.actions.ExecuteProcess(
+    """
+    camera_1 = launch.actions.ExecuteProcess(
             #cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam1','serial_number:=15255448'],
             cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','ros_params_override_path:='+config_cam1_file],
             output='screen',
-        )"""
+        )
+        
+        
+    camera_2 = launch.actions.ExecuteProcess(
+            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam2','serial_number:=15267217'],
+            output='screen',
+        )
+    """
     
-    # ZED Wrapper node
+    # ZED Wrapper nodes
+    config_cam1_file = os.path.join(pkg_share, 'config/cam1_zedm.yaml')
     camera_1 = Node(
         package='zed_wrapper',
         namespace='cam1',
@@ -123,18 +131,29 @@ def generate_launch_description():
         ]
     )
 
-    camera_2 = launch.actions.ExecuteProcess(
-            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam2','serial_number:=15267217'],
-            output='screen',
-        )
+    config_cam2_file = os.path.join(pkg_share, 'config/cam2_zedm.yaml')
+    camera_2 = Node(
+        package='zed_wrapper',
+        namespace='cam2',
+        executable='zed_wrapper',
+        name='zed_node',
+        output='screen',
+        # prefix=['xterm -e valgrind --tools=callgrind'],
+        # prefix=['xterm -e gdb -ex run --args'],
+        #prefix=['gdbserver localhost:3000'],
+        parameters=[
+            # YAML files
+            config_cam2_file,
+        ]
+    )
 
     return LaunchDescription([
-        #lid1_node,
-        #lid2_node,
-        #camera_control_driver_node,
-        #bot_control_driver,
+        lid1_node,
+        lid2_node,
+        camera_control_driver_node,
+        bot_control_driver,
         camera_1,
-        #camera_2,
+        camera_2,
         joint_state_publisher_node,
         robot_localization_node,
     ])

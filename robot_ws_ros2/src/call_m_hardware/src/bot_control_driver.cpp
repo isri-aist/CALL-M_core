@@ -32,6 +32,23 @@ void rotate_vect(double &vx, double &vy, double alpha){
     //RCLCPP_INFO(this->get_logger(),"set: vx=%.2f, vy = %.2f",vx,vy);
 }
 
+double val_sign(double val){
+    if(val<0.0){return -1.0;}
+    else{return 1.0;}
+}
+
+double error_cmd(double prev_val,double wanted_val, double max_acc, double max_dcc,double dt){
+    double error = wanted_val-prev_val;
+    bool acceleration = (val_sign(wanted_val)==val_sign(prev_val) && abs(wanted_val)>abs(prev_val));
+    if(acceleration){
+        error = val_sign(error)*std::min(abs(error),dt*max_acc);
+    }
+    else{
+        error = val_sign(error)*std::min(abs(error),dt*max_dcc);
+    }
+    return error;
+}
+
 class Bot_control_driver : public rclcpp::Node
 {
   public:
@@ -54,6 +71,14 @@ class Bot_control_driver : public rclcpp::Node
         RCLCPP_INFO(this->get_logger(), "\033[%dm\033[2J\033[1;1f",0);
         RCLCPP_INFO(this->get_logger(), "ROBOT DRIVER:");
         RCLCPP_INFO(this->get_logger(), "Waiting commands...");
+        
+        clock = this->get_clock();
+        t0 = clock->now();
+
+        // Register the shutdown callback
+        /*rclcpp::on_shutdown([this]() {
+            customShutdownHandler();
+        });*/
     }
 
   private:
@@ -62,14 +87,11 @@ class Bot_control_driver : public rclcpp::Node
     {
         callback_active = 0; //update the security variable
         //MAIN CODE to get commands
-        if(msg->linear.x != this->vx || msg->linear.y != this->vy || msg->angular.z != this->w)
-        {
-            //RCLCPP_INFO(this->get_logger(), "Keyboard new commands: vx:'%f' vy:'%f' w:'%f' ", msg->vx, msg->vy, msg->w);
-            this->vx = msg->linear.x;
-            this->vy = msg->linear.y;
-            this->w = msg->angular.z;
-            apply_commands(true);
-        }
+        //RCLCPP_INFO(this->get_logger(), "new commands: vx:'%f' vy:'%f' w:'%f' ", msg->vx, msg->vy, msg->w);
+        this->vx = msg->linear.x;
+        this->vy = msg->linear.y;
+        this->w = msg->angular.z;
+        apply_commands(true);
     }
 
     void timeout_secu(){
@@ -109,7 +131,7 @@ class Bot_control_driver : public rclcpp::Node
             RCLCPP_INFO(this->get_logger(), "Unarmed, Waiting commands...");
         }
 
-        RCLCPP_INFO(this->get_logger(), "Vx:%.2f Vy:%.2f Vw:%.2f ",des_velx,des_vely,des_velw);
+        RCLCPP_INFO(this->get_logger(), "Goal: Vx:%.2f Vy:%.2f Vw:%.2f ",des_velx,des_vely,des_velw);
 
         //we rotate the speed vector to match wanted frame for the robot
         double new_des_velx = -des_velx; //we flip x axis
@@ -118,12 +140,45 @@ class Bot_control_driver : public rclcpp::Node
         rotate_vect(new_des_velx, new_des_vely, alpha);
 
         //RCLCPP_INFO(this->get_logger(), "Vx:%.2f Vy:%.2f Vw:%.2f ",new_des_velx,new_des_vely,des_velw);
+        
+        ///////////////////////////
+        //Accelerations mangement//
+        ///////////////////////////
+        double wanted_vals[3] = {new_des_velx, new_des_vely, des_velw};
+        tf = clock->now();
+        double dt = (tf-t0).seconds();
+        t0 = clock->now();
+        double errors_vals[3];
+
+        //max acc and decc are converted to percentage equivalence
+        errors_vals[0] = error_cmd(former_vals[0],wanted_vals[0],MAX_AX/MAX_VX,MAX_DX/MAX_VX,dt);
+        errors_vals[1] = error_cmd(former_vals[1],wanted_vals[1],MAX_AY/MAX_VY,MAX_DY/MAX_VY,dt);
+        errors_vals[2] = error_cmd(former_vals[2],wanted_vals[2],MAX_AW/MAX_W,MAX_DW/MAX_W,dt);
+
+        //RCLCPP_INFO(this->get_logger(), "dt: %.2f ",dt);
+        //RCLCPP_INFO(this->get_logger(), "errors_vals: Vx:%.2f Vy:%.2f Vw:%.2f ",errors_vals[0], errors_vals[1], errors_vals[2]);
+
+        //////////////////
+        //Apply commands//
+        //////////////////
+        
+        new_des_velx = former_vals[0]+errors_vals[0];
+        new_des_vely = former_vals[1]+errors_vals[1];
+        des_velw = former_vals[2]+errors_vals[2];
 
         // convert vehicle vel. -> rotor vel.
-        vel2rotor(this->rotor_rad_p_sec, new_des_velx, new_des_vely, des_velw);
-
-        // move motor
-        this->rotor_rad_per_sec_gain = servo3motor_loop (this->rotor_rad_p_sec, this->target_motor_rpm, this->real_motor_rpm);
+        if(former_vals[0] != new_des_velx || former_vals[1] != new_des_vely || former_vals[2] != des_velw){
+            RCLCPP_INFO(this->get_logger(), "Actual(bot frame): Vx:%.2f Vy:%.2f Vw:%.2f ",new_des_velx, new_des_vely, des_velw);
+            vel2rotor(this->rotor_rad_p_sec, new_des_velx, new_des_vely, des_velw);
+            // move motor
+            this->rotor_rad_per_sec_gain = servo3motor_loop (this->rotor_rad_p_sec, this->target_motor_rpm, this->real_motor_rpm);
+            former_vals[0] = new_des_velx;
+            former_vals[1] = new_des_vely;
+            former_vals[2] = des_velw;
+        }
+        else{
+            RCLCPP_INFO(this->get_logger(), "Done.");
+        }
     }
 
     void initialize_params(){
@@ -133,6 +188,7 @@ class Bot_control_driver : public rclcpp::Node
     void refresh_params(){
         this->get_parameter_or<std::string>("device_name",device_name,"/dev/ttyUSB0");
     }
+
 
     //global variables
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr subscription; 
@@ -147,6 +203,17 @@ class Bot_control_driver : public rclcpp::Node
     float real_motor_rpm[6];
     rclcpp::TimerBase::SharedPtr timer_;
     std::string device_name;
+
+    double former_vals[3] = {0.0, 0.0, 0.0};
+    double MAX_AX= 0.3*MAX_VX; //should be >0 m.s-2 Acceleration
+    double MAX_AY= 0.3*MAX_VY; //should be >0 m.s-2
+    double MAX_AW= 0.5*MAX_W; //should be >0 rad.s-2
+    double MAX_DX= 1*MAX_VX; //should be >0 m.s-2  Deceleration
+    double MAX_DY= 1*MAX_VY; //should be >0 m.s-2
+    double MAX_DW= 1*MAX_W; //should be >0 rad.s-2
+    rclcpp::Clock::SharedPtr clock;
+    rclcpp::Time t0;
+    rclcpp::Time tf;
 
 };
 

@@ -345,3 +345,56 @@ ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory  '{h
 		</imu>
 		</sensor>
 	</gazebo>
+
+
+
+			<!-- Camera Center -->
+		<link name="${name}_camera_center">
+		<visual>
+			<origin xyz="${screw_offset_x} 0 ${screw_offset_z}" rpy="0 0 0"/>
+			<geometry>
+			<mesh filename="package://zed_interfaces/meshes/${model}.stl" />
+			</geometry>
+			<material name="${model}_mat" />
+		</visual>
+		<collision>
+			<geometry>
+			<mesh filename="package://zed_interfaces/meshes/${model}.stl" />
+			</geometry>
+		</collision>
+		</link>
+		<joint name="${name}_camera_center_joint" type="fixed">
+		<parent link="${name}_link"/>
+		<child link="${name}_camera_center"/>
+		<origin xyz="0 0 ${height/2}" rpy="0 ${bottom_slope} 0" />
+		</joint>
+
+		<!-- Left Camera -->
+		<link name="${name}_left_camera_frame" />
+		<joint name="${name}_left_camera_joint" type="fixed">
+		<parent link="${name}_camera_center"/>
+		<child link="${name}_left_camera_frame"/>
+		<origin xyz="${optical_offset_x} ${baseline/2} 0" rpy="0 0 0" />
+		</joint>
+
+		<link name="${name}_left_camera_optical_frame"/>
+		<joint name="${name}_left_camera_optical_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+		<parent link="${name}_left_camera_frame"/>
+		<child link="${name}_left_camera_optical_frame"/>
+		</joint>
+
+		<!-- Right Camera -->
+		<link name="${name}_right_camera_frame" />
+		<joint name="${name}_right_camera_joint" type="fixed">
+		<parent link="${name}_camera_center"/>
+		<child link="${name}_right_camera_frame"/>
+		<origin xyz="${optical_offset_x} -${baseline/2} 0" rpy="0 0 0" />
+		</joint>
+
+		<link name="${name}_right_camera_optical_frame"/>
+		<joint name="${name}_right_camera_optical_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+		<parent link="${name}_right_camera_frame"/>
+		<child link="${name}_right_camera_optical_frame"/>
+		</joint>

@@ -209,7 +209,7 @@
 
 	<xacro:include filename="lidars_description.urdf.xacro"/>
 	<xacro:include filename="cameras_description.urdf.xacro"/>
-	<!--The simulated IMU seems to be noisy too much even with no noise set, so we don't use it-->
+	<!--The simulated IMU seems to be noisy too much even with no noise set, so we don't use it for linear movement-->
 	<xacro:include filename="imu_description.urdf.xacro"/>
 	<xacro:include filename="gazebo_template.urdf.xacro"/>
 	<xacro:include filename="ros2_control.xacro"/>

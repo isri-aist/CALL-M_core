@@ -10,7 +10,7 @@ ekf_filter_node:
 # set to true, no 3D information will be used in your state estimate. Use this if you are operating in a planar
 # environment and want to ignore the effect of small variations in the ground plane that might otherwise be detected
 # by, for example, an IMU. Defaults to false if unspecified.
-        two_d_mode: true
+        two_d_mode: false
 
 # Whether to publish the acceleration state. Defaults to false if unspecified.
         publish_acceleration: true
@@ -33,9 +33,16 @@ ekf_filter_node:
         world_frame: odom           # Defaults to the value of odom_frame if unspecified
         
         #x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az
-        odom0: /odom_rf2o
-        odom0_config: [false, false, false,
-                      false,  false,  false,
-                      true, true, false,
+        #pose0: /cam1/zed_node/pose
+        #pose0_config: [true,  true,  false,
+        #              false, false, true,
+        #               false, false, false,
+        #               false, false, false,
+        #               false, false, false]
+
+        odom0: /cam1/zed_node/odom
+        odom0_config: [true, true, false,
+                      false,  false,  true,
+                      false, false, false,
                       false, false, false,
                       false, false, false]

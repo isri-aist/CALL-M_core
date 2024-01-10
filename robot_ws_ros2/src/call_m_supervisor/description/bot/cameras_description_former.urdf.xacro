@@ -3,128 +3,52 @@
 
 	<!-- THIS FILE NEED TO BE INCLUDED IN 'bot_description.urdf.xacro' -->
 
-	<!-- Copied from:  zed_wrapper/urdf/zed_macro.urdf.xacro-->
-
-	<xacro:include filename="$(find zed_wrapper)/urdf/include/materials.urdf.xacro" />
-	<xacro:property name="M_PI"     value="3.1415926535897931" />
-
 	<!--
-		Parameters:
-		- name: the camera's name.  should match the parameter sent to the launch file for this camera
-		- model: the tye of camera, one of zed, zedm, zed2, zed2i
+		////////////////////////
+		//////2 CAMERAS////////
+		///////////////////////
 	-->
-	<xacro:macro name="zed_camera" params="name=zed model=zed x=0.0 y=0.0 z=0.0 rot_z=0.0">
 
-		<xacro:property name="baseline" value="0.06" />
-		<xacro:property name="height" value="0.0265" />
-		<xacro:property name="bottom_slope" value="0.0" /> 
-		<xacro:property name="screw_offset_x" value="0.0" />
-		<xacro:property name="screw_offset_z" value="0.0" />
-		<xacro:property name="optical_offset_x" value="0.0" />
-
-		<!-- Camera mounting point (the threaded screw hole in the bottom) -->
-		<link name="${name}_camera_link">
-			<visual>
-			<origin xyz="0 0 0" rpy="0 0 0"/>
-			<geometry>
-				<box size="0.0151 0.131 0.023"/>
-			</geometry>
-			</visual>
-
-			<inertial>
-			<origin xyz="0 0 0" rpy="0 0 0"/>
-			<mass value="0.035"/>
-			<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
-			</inertial>
-		</link>
-
-		<joint name="${name}_joint" type="continuous">
-			<parent link="base3_link"/>
-			<child link="${name}_camera_link"/>
-			<origin xyz="${x} ${y} ${z}" rpy="0.0 0.0 ${rot_z}"/>
-			<axis xyz="0 1 0"/>
-		</joint>
-		
-		<!-- Camera Center -->
-		<link name="${name}_camera_center">
+	<!--CAMERA 1 : FRONT-->
+	<link name="cam1_link">
 		<visual>
-			<origin xyz="${screw_offset_x} 0 ${screw_offset_z}" rpy="0 0 0"/>
-			<geometry>
-			<!--<mesh filename="package://zed_interfaces/meshes/${model}.stl" />-->
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
 			<box size="0.015 0.130 0.022"/>
-			</geometry>
-			<material name="${model}_mat" />
+		</geometry>
 		</visual>
+
 		<collision>
-			<geometry>
-			<!--<mesh filename="package://zed_interfaces/meshes/${model}.stl" />-->
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
 			<box size="0.015 0.130 0.022"/>
-			</geometry>
+		</geometry>
 		</collision>
-		</link>
-		<joint name="${name}_camera_center_joint" type="fixed">
-		<parent link="${name}_camera_link"/>
-		<child link="${name}_camera_center"/>
-		<origin xyz="0 0 0" rpy="0 ${bottom_slope} 0" />
-		</joint>
 
-		<!-- Left Camera -->
-		<link name="${name}_left_camera_frame" />
-		<joint name="${name}_left_camera_joint" type="fixed">
-		<parent link="${name}_camera_center"/>
-		<child link="${name}_left_camera_frame"/>
-		<origin xyz="${optical_offset_x} ${baseline/2} 0" rpy="0 0 0" />
-		</joint>
+		<inertial>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<mass value="0.035"/>
+		<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+		</inertial>
+	</link>
 
-		<link name="${name}_left_camera_optical_frame"/>
-		<joint name="${name}_left_camera_optical_joint" type="fixed">
-		<origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
-		<parent link="${name}_left_camera_frame"/>
-		<child link="${name}_left_camera_optical_frame"/>
-		</joint>
+	<joint name="cam1_joint" type="continuous">
+		<parent link="base3_link"/>
+		<child link="cam1_link"/>
+		<origin xyz="${(square1_length/2)+0.015/2} 0.0 ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 0.0"/>
+		<axis xyz="0 1 0"/>
+	</joint>
 
-		<!-- Right Camera -->
-		<link name="${name}_right_camera_frame" />
-		<joint name="${name}_right_camera_joint" type="fixed">
-		<parent link="${name}_camera_center"/>
-		<child link="${name}_right_camera_frame"/>
-		<origin xyz="${optical_offset_x} -${baseline/2} 0" rpy="0 0 0" />
-		</joint>
-
-		<link name="${name}_right_camera_optical_frame"/>
-		<joint name="${name}_right_camera_optical_joint" type="fixed">
-		<origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
-		<parent link="${name}_right_camera_frame"/>
-		<child link="${name}_right_camera_optical_frame"/>
-		</joint>
-
-		<!-- IMU -->
-		<!--
-		<link name="${name}_imu_link"/>
-		<joint name="${name}_imu_link_joint" type="fixed">
-		<origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
-		<parent link="${name}_camera_center"/>
-		<child link="${name}_imu_link"/>
-		</joint>
-		-->
-
-	</xacro:macro>
-
-	<xacro:zed_camera name="cam1" model="zedm" x="${(square1_length/2)+0.015/2}" y="0.0" z="${(square3_height/2)-0.03-0.022/2}" rot_z="0.0"/>
-	<xacro:zed_camera name="cam2" model="zedm" x="${-((square1_length/2)+0.015/2)}" y="0.0" z="${(square3_height/2)-0.03-0.022/2}" rot_z="${M_PI}"/>
-
-	<!-- DEPTH sensors, not working in xacro-->
-
-	<!--CAMERA1 FRONT-->
+	<!--depth sensor-->
 	<link name="cam1_depth_frame"/>
 
 	<joint name="cam1_depth_joint" type="fixed">
 		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
-		<parent link="cam1_camera_link"/>
+		<parent link="cam1_link"/>
 		<child link="cam1_depth_frame"/>
 	</joint>
 
-	<gazebo reference="cam1_camera_link">
+	<gazebo reference="cam1_link">
 		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
@@ -177,16 +101,47 @@
 		</sensor>
 	</gazebo>
 
-	<!--CAMERA2 BACK-->
+
+	<!--CAMERA 2 : BACK-->
+	<link name="cam2_link">
+		<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<box size="0.015 0.130 0.022"/>
+		</geometry>
+		</visual>
+
+		<collision>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<box size="0.015 0.130 0.022"/>
+		</geometry>
+		</collision>
+
+		<inertial>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<mass value="0.035"/>
+		<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+		</inertial>
+	</link>
+
+	<joint name="cam2_joint" type="continuous">
+		<parent link="base3_link"/>
+		<child link="cam2_link"/>
+		<origin xyz="${-((square1_length/2)+0.015/2)} 0.0 ${(square3_height/2)-0.03-0.022/2}" rpy="0.0 0.0 ${pi}"/>
+		<axis xyz="0 1 0"/>
+	</joint>
+
+	<!--depth sensor-->
 	<link name="cam2_depth_frame"/>
 
 	<joint name="cam2_depth_joint" type="fixed">
 		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
-		<parent link="cam2_camera_link"/>
+		<parent link="cam2_link"/>
 		<child link="cam2_depth_frame"/>
 	</joint>
 
-	<gazebo reference="cam2_camera_link">
+	<gazebo reference="cam2_link">
 		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>

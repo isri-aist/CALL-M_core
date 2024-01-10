@@ -90,7 +90,8 @@ def generate_launch_description():
        executable='ekf_node',
        name='ekf_filter_node',
        output='screen',
-       parameters=[os.path.join(pkg_share, 'config/ekf.yaml')]
+       #parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}, {'debug': True}, {'debug_out_file': os.path.join(pkg_share, 'config/ekf_debug.txt')}]
     )
 
     #bot_driver
@@ -102,18 +103,17 @@ def generate_launch_description():
     #cameras
     """
     camera_1 = launch.actions.ExecuteProcess(
-            #cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam1','serial_number:=15255448'],
-            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','ros_params_override_path:='+config_cam1_file],
+            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam1','serial_number:=15255448','use_sim_time:=true'],
             output='screen',
         )
         
-        
+    
     camera_2 = launch.actions.ExecuteProcess(
-            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam2','serial_number:=15267217'],
+            cmd=['ros2', 'launch', 'zed_wrapper', 'zed_camera.launch.py','camera_model:=zedm','camera_name:=cam2','serial_number:=15267217','use_sim_time:=true'],
             output='screen',
         )
     """
-    
+
     # ZED Wrapper nodes
     config_cam1_file = os.path.join(pkg_share, 'config/cam1_zedm.yaml')
     camera_1 = Node(
@@ -156,7 +156,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        clock_node,
+        launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='False',description='Flag to enable use_sim_time'),
         lid1_node,
         lid2_node,
         camera_control_driver_node,
@@ -165,4 +165,5 @@ def generate_launch_description():
         camera_2,
         joint_state_publisher_node,
         robot_localization_node,
+        clock_node,
     ])

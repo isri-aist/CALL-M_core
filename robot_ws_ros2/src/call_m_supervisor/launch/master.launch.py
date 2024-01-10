@@ -25,7 +25,7 @@ def generate_launch_description():
         executable='robot_state_publisher',
         output='screen',
         parameters=[{'robot_description': robot_description_raw,
-        'use_sim_time': False}] # add other parameters here if required
+        'use_sim_time': True}] # add other parameters here if required
     )
 
     # Execute laser_scan_merger launch file without xterm
@@ -36,7 +36,7 @@ def generate_launch_description():
     
     # Execute slam_toolbox launch file without xterm
     slam_node = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py', 'params_file:='+os.path.join(pkg_share, 'config/mapper_params_online_async.yaml'), 'use_sim_time:=false'],
+        cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py', 'params_file:='+os.path.join(pkg_share, 'config/mapper_params_online_async.yaml'), 'use_sim_time:=true'],
         output='screen',
     )
 
@@ -44,7 +44,7 @@ def generate_launch_description():
     #joint states published by Gazebo for the simulation and by Hardware launch if hardware
 
     return launch.LaunchDescription([
-        launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='False',description='Flag to enable use_sim_time'),
+        launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',description='Flag to enable use_sim_time'),
         scan_merger_node,
         slam_node,
         command_master_node,

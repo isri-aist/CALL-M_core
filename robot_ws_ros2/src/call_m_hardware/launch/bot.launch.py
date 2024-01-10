@@ -147,7 +147,16 @@ def generate_launch_description():
         ]
     )
 
+    #clock node to manage time
+    clock_node = Node(
+        name='simulated_clock_publisher_node',
+        package='call_m_hardware',
+        executable='simulated_clock_publisher_node',
+        output='screen',
+    )
+
     return LaunchDescription([
+        clock_node,
         lid1_node,
         lid2_node,
         camera_control_driver_node,

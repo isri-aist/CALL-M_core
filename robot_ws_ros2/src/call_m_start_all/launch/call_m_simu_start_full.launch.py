@@ -9,7 +9,7 @@ def generate_launch_description():
     cmd = ['ros2', 'launch']
 
     # Construct the absolute paths to your launch files
-    master_launch =  ['call_m_supervisor', 'master.launch.py']
+    master_launch =  ['call_m_supervisor', 'master.launch.py','use_sim_time:=true']
     simu_launch = ['call_m_simulation', 'simulation.launch.py']
     display_launch = ['call_m_monitor', 'display.launch.py']
     teleop_launch =  ['call_m_teleoperation', 'teleop.launch.py']

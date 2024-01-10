@@ -90,8 +90,8 @@ def generate_launch_description():
        executable='ekf_node',
        name='ekf_filter_node',
        output='screen',
-       #parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
-       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}, {'debug': True}, {'debug_out_file': os.path.join(pkg_share, 'config/ekf_debug.txt')}]
+       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+       #parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}, {'debug': True}, {'debug_out_file': os.path.join(pkg_share, 'config/ekf_debug.txt')}]
     )
 
     #bot_driver
@@ -147,14 +147,6 @@ def generate_launch_description():
         ]
     )
 
-    #clock node to manage time
-    clock_node = Node(
-        name='simulated_clock_publisher_node',
-        package='call_m_hardware',
-        executable='simulated_clock_publisher_node',
-        output='screen',
-    )
-
     return LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='False',description='Flag to enable use_sim_time'),
         lid1_node,
@@ -165,5 +157,4 @@ def generate_launch_description():
         camera_2,
         joint_state_publisher_node,
         robot_localization_node,
-        clock_node,
     ])

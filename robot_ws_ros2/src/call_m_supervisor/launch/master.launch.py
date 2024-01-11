@@ -77,11 +77,13 @@ def generate_launch_description():
         ],
     )"""
 
+    #SLAM IS NOW LAUNCHED IN CALL_M_START_ALL PACKAGES
+
     #this version don't change use_sim_time dynamically
-    slam_node = launch.actions.ExecuteProcess(
+    """slam_node = launch.actions.ExecuteProcess(
         cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py', 'params_file:='+os.path.join(pkg_share, 'config/mapper_params_online_async.yaml'), 'use_sim_time:=false'],
         output='screen',
-    )
+    )"""
 
 
     #joint states published by Gazebo for the simulation and by Hardware launch if hardware

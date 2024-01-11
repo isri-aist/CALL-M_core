@@ -83,7 +83,7 @@ class Keyboard_control:public rclcpp::Node
         float chrono = 0.0;
         int step = 0;
         float sec_dt = 0.1; //loop dt in seconds
-        float distance_t = 20*sec_dt;
+        float distance_t = 1*sec_dt;
         int servo_cam1_id=2;
         int servo_cam2_id=3;
         int servo_cam1_pos = 2000; //1000 to 3000 (1000 = looking down)
@@ -218,8 +218,8 @@ class Keyboard_control:public rclcpp::Node
                 {
                 case 0:
                 des_velx = 0;
-                des_vely = -0.1;
-                des_velw = 0;
+                des_vely = 0;
+                des_velw = 0.05;
                 this->chrono += this->sec_dt;
                 if(this->chrono > this->distance_t){
                     this->chrono = 0;
@@ -227,9 +227,9 @@ class Keyboard_control:public rclcpp::Node
                 }
                 break;
                 case 1:
-                des_velx = 0.1;
+                des_velx = 0;
                 des_vely = 0;
-                des_velw = 0;
+                des_velw = -0.05;
                 this->chrono += this->sec_dt;
                 if(this->chrono > this->distance_t){
                     this->chrono = 0;
@@ -238,8 +238,8 @@ class Keyboard_control:public rclcpp::Node
                 break;
                 case 2:
                 des_velx = 0;
-                des_vely = 0.1;
-                des_velw = 0;
+                des_vely = 0;
+                des_velw = 0.05;
                 this->chrono += this->sec_dt;
                 if(this->chrono > this->distance_t){
                     this->chrono = 0;
@@ -247,9 +247,9 @@ class Keyboard_control:public rclcpp::Node
                 }
                 break;
                 case 3:
-                des_velx = -0.1;
+                des_velx = 0;
                 des_vely = 0;
-                des_velw = 0;
+                des_velw = -0.05;
                 this->chrono += this->sec_dt;
                 if(this->chrono > this->distance_t){
                     this->chrono = 0;

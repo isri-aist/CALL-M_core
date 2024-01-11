@@ -55,4 +55,10 @@ ekf_filter_node:
                       false, false, false,
                       false, false, false,
                       false, false, false]
-
+                      
+        odom1: odom_simu
+        odom1_config: [false, false, false,
+                      false,  false,  false,
+                      true, true, false,
+                      false, false, true,
+                      false, false, false]

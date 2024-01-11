@@ -15,11 +15,6 @@ def generate_launch_description():
     teleop_launch =  ['call_m_teleoperation', 'teleop.launch.py']
     nav2_launch = ['call_m_nav2', 'navigation_launch.py', 'use_sim_time:=false']
 
-    """launch.actions.ExecuteProcess(
-        cmd=cmd + nav2_launch,
-        output='screen',
-    ),"""
-
     return LaunchDescription([
         launch.actions.ExecuteProcess(
             cmd=cmd + master_launch,
@@ -35,6 +30,10 @@ def generate_launch_description():
         ),
         launch.actions.ExecuteProcess(
             cmd=cmd + teleop_launch,
+            output='screen',
+        ),
+        launch.actions.ExecuteProcess(
+            cmd=cmd + nav2_launch,
             output='screen',
         ),
     ])

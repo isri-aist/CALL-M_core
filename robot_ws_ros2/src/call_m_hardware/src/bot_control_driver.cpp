@@ -5,6 +5,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 
 #include "servo3moog.h"
 #include "kinema.h"
@@ -79,6 +80,9 @@ class Bot_control_driver : public rclcpp::Node
         /*rclcpp::on_shutdown([this]() {
             customShutdownHandler();
         });*/
+
+        // Initialize publisher for odometry feedback
+        odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom_simu", 10);
     }
 
   private:
@@ -166,6 +170,12 @@ class Bot_control_driver : public rclcpp::Node
         new_des_vely = former_vals[1]+errors_vals[1];
         des_velw = former_vals[2]+errors_vals[2];
 
+        //we publish odometry feedback, but we need to have them in global frame again
+        double global_vx = new_des_velx;
+        double global_vy = new_des_vely;
+        rotate_vect(global_vx, global_vy, -alpha); //we unrotate
+        publishOdometry(-global_vx, global_vy, des_velw); //we unflip and publish
+ 
         // convert vehicle vel. -> rotor vel.
         if(former_vals[0] != new_des_velx || former_vals[1] != new_des_vely || former_vals[2] != des_velw){
             RCLCPP_INFO(this->get_logger(), "Actual(bot frame): Vx:%.2f Vy:%.2f Vw:%.2f ",new_des_velx, new_des_vely, des_velw);
@@ -187,6 +197,38 @@ class Bot_control_driver : public rclcpp::Node
 
     void refresh_params(){
         this->get_parameter_or<std::string>("device_name",device_name,"/dev/ttyUSB0");
+    }
+
+    void publishOdometry(double vx, double vy, double w)
+    {
+        // populate the Odometry message
+        estimated_odom.header.stamp = clock->now();
+        estimated_odom.header.frame_id = "odom";
+        estimated_odom.child_frame_id = "base_link";
+
+        // Set twist (linear and angular velocities)
+        double kx = 1.0;
+        double ky = 1.0;
+        double kw = 0.86;
+        estimated_odom.twist.twist.linear.x = vx*kx;
+        estimated_odom.twist.twist.linear.y = vy*ky;
+        estimated_odom.twist.twist.angular.z = w*kw;
+
+        // Set pose information
+        // no pose information needed, so we don't update
+
+        // Set the covariance matrix values
+        // Assuming we want to set the same covariance for all elements
+        double covariance_value = 0.0;
+        for (size_t i = 0; i < 36; ++i) {
+            estimated_odom.pose.covariance[i] = covariance_value;
+            estimated_odom.twist.covariance[i] = covariance_value;
+        }
+
+        RCLCPP_INFO(this->get_logger(), "Actual(world): Vx:%.2f Vy:%.2f Vw:%.2f ",estimated_odom.twist.twist.linear.x,estimated_odom.twist.twist.linear.y,estimated_odom.twist.twist.angular.z);
+
+        // Publish the Odometry message
+        odometry_publisher_->publish(estimated_odom);
     }
 
 
@@ -214,6 +256,9 @@ class Bot_control_driver : public rclcpp::Node
     rclcpp::Clock::SharedPtr clock;
     rclcpp::Time t0;
     rclcpp::Time tf;
+
+    rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odometry_publisher_;
+    nav_msgs::msg::Odometry estimated_odom;
 
 };
 

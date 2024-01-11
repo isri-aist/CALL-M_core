@@ -155,9 +155,13 @@ class Bot_control_driver : public rclcpp::Node
         double errors_vals[3];
 
         //max acc and decc are converted to percentage equivalence
-        errors_vals[0] = error_cmd(former_vals[0],wanted_vals[0],MAX_AX/MAX_VX,MAX_DX/MAX_VX,dt);
+        /*errors_vals[0] = error_cmd(former_vals[0],wanted_vals[0],MAX_AX/MAX_VX,MAX_DX/MAX_VX,dt);
         errors_vals[1] = error_cmd(former_vals[1],wanted_vals[1],MAX_AY/MAX_VY,MAX_DY/MAX_VY,dt);
-        errors_vals[2] = error_cmd(former_vals[2],wanted_vals[2],MAX_AW/MAX_W,MAX_DW/MAX_W,dt);
+        errors_vals[2] = error_cmd(former_vals[2],wanted_vals[2],MAX_AW/MAX_W,MAX_DW/MAX_W,dt);*/
+
+        errors_vals[0] = error_cmd(former_vals[0],wanted_vals[0],MAX_AX,MAX_DX,dt);
+        errors_vals[1] = error_cmd(former_vals[1],wanted_vals[1],MAX_AY,MAX_DY,dt);
+        errors_vals[2] = error_cmd(former_vals[2],wanted_vals[2],MAX_AW,MAX_DW,dt);
 
         //RCLCPP_INFO(this->get_logger(), "dt: %.2f ",dt);
         //RCLCPP_INFO(this->get_logger(), "errors_vals: Vx:%.2f Vy:%.2f Vw:%.2f ",errors_vals[0], errors_vals[1], errors_vals[2]);
@@ -249,7 +253,7 @@ class Bot_control_driver : public rclcpp::Node
     double former_vals[3] = {0.0, 0.0, 0.0};
     double MAX_AX= 0.3*MAX_VX; //should be >0 m.s-2 Acceleration
     double MAX_AY= 0.3*MAX_VY; //should be >0 m.s-2
-    double MAX_AW= 0.5*MAX_W; //should be >0 rad.s-2
+    double MAX_AW= 0.3*MAX_W; //should be >0 rad.s-2
     double MAX_DX= 1*MAX_VX; //should be >0 m.s-2  Deceleration
     double MAX_DY= 1*MAX_VY; //should be >0 m.s-2
     double MAX_DW= 1*MAX_W; //should be >0 rad.s-2

@@ -91,5 +91,5 @@ def generate_launch_description():
         scan_merger_node,
         command_master_node,
         node_robot_state_publisher,
-        slam_node,
+        #slam_node,
     ])

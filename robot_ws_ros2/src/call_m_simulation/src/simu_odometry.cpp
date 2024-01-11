@@ -56,6 +56,12 @@ private:
     odometry_msg.pose.pose = pose;
     odometry_msg.twist.twist = twist;
 
+    double covariance_value = 0.0;
+    for (size_t i = 0; i < 36; ++i) {
+        odometry_msg.pose.covariance[i] = covariance_value;
+        odometry_msg.twist.covariance[i] = covariance_value;
+    }
+
     // Publish the Odometry message
     odometry_publisher_->publish(odometry_msg);
   }

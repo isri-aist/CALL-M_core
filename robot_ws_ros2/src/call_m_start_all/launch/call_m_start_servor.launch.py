@@ -14,10 +14,10 @@ def generate_launch_description():
     """
     PARAMETERS
     """
-    nav_type = "on_fly" #'none', 'on_fly' or 'localize'
+    nav_type = "localize" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_diff.yaml') #'diff' or 'omni', path to config file
-    map_loc = os.path.join(dir_nav2, 'maps', 'JRL_lab1.yaml') #path to the map if using localization
+    map_loc = os.path.join(dir_nav2, 'maps', 'jrl-3301.yaml') #path to the map if using localization
     slam_param = os.path.join(dir_slam, 'config/mapper_params_online_async.yaml') #path to params for slam
 
     """

@@ -12,11 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-"""
-THIS FILE IS COPIED FROM: /opt/ros/foxy/share/nav2_bringup/launch
-"""
-
 import os
 
 from ament_index_python.packages import get_package_share_directory
@@ -70,7 +65,6 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             'map',
-            #default_value=os.path.join(bringup_dir, 'maps', 'JRL_lab1.yaml'),
             default_value=os.path.join(bringup_dir, 'maps', 'map_test.yaml'),
             description='Full path to map yaml file to load'),
 
@@ -84,7 +78,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             'params_file',
-            default_value=os.path.join(bringup_dir, 'config', 'nav2_params_diff.yaml'),
+            default_value=os.path.join(bringup_dir, 'config', 'nav2_params.yaml'),
             description='Full path to the ROS2 parameters file to use'),
 
         Node(

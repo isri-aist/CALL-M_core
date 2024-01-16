@@ -21,7 +21,7 @@ find_package(rclcpp REQUIRED)
 
 # Install directories
 install(
-  DIRECTORY src launch config maps
+  DIRECTORY src launch config maps behavior_trees
   DESTINATION share/${PROJECT_NAME}
 )
 

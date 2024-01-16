@@ -17,6 +17,7 @@ def generate_launch_description():
     nav_type = "none" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_diff.yaml') #'diff' or 'omni', path to config file
+    nav_tree = os.path.join(dir_nav2, 'behavior_trees', 'navigate_w_replanning_and_recovery.xml') #behavior tree to use for navigation
     map_loc = os.path.join(dir_nav2, 'maps', 'ikeuchi_gate_3f.yaml') #path to the map if using localization
     slam_param = os.path.join(dir_slam, 'config/mapper_params_online_async.yaml') #path to params for slam
 
@@ -34,9 +35,9 @@ def generate_launch_description():
     hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_hardware', 'bot.launch.py'], output='screen')
     display_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_monitor', 'display.launch.py'], output='screen')
     teleop_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_teleoperation', 'teleop.launch.py'], output='screen')
-    nav2_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'navigation_launch.py','params_file:='+nav_mode] + suffix, output='screen')
-    nav2_launch_loc1 = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'localization_launch.py','map:='+map_loc,'params_file:='+nav_mode] + suffix, output='screen')
-    nav2_launch_loc2 = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'navigation_launch.py','params_file:='+nav_mode,'map_subscribe_transient_local:=true'] + suffix, output='screen')
+    nav2_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'navigation_launch.py','params_file:='+nav_mode, 'default_bt_xml_filename:='+nav_tree] + suffix, output='screen')
+    nav2_launch_loc1 = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'localization_launch.py','map:='+map_loc,'params_file:='+nav_mode, 'default_bt_xml_filename:='+nav_tree] + suffix, output='screen')
+    nav2_launch_loc2 = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'navigation_launch.py','params_file:='+nav_mode,'map_subscribe_transient_local:=true', 'default_bt_xml_filename:='+nav_tree] + suffix, output='screen')
 
     if nav_type == "on_fly":
         return LaunchDescription([master_launch,slam_launch,hardware_launch,display_launch,teleop_launch,nav2_launch])

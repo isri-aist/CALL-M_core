@@ -14,7 +14,7 @@ def generate_launch_description():
     """
     PARAMETERS
     """
-    nav_type = "localize" #'none', 'on_fly' or 'localize'
+    nav_type = "none" #'none', 'on_fly' or 'localize'
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_omni.yaml') #'diff' or 'omni', path to config file
     nav_tree = os.path.join(dir_nav2, 'behavior_trees', 'navigate_w_replanning_and_recovery.xml') #behavior tree to use for navigation
     map_loc = os.path.join(dir_nav2, 'maps', 'fujyfhtf.yaml') #path to the map if using localization

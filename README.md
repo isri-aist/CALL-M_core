@@ -35,6 +35,10 @@ https://developer.nvidia.com/cuda-downloads
 ZED SDK:
 https://www.stereolabs.com/developers/release
 
+### Joint State Publisher
+```
+sudo apt install ros-foxy-joint-state-publisher
+```
 
 ### If you want to use the simulation (simulation.launch.py):
 ```

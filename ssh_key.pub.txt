@@ -1,1 +1,0 @@
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ5XjYemh6Pb0zzaer4GV8oMFQ1pgM8LlkiE0cS4aENr onoel2050@gmail.com

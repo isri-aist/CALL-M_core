@@ -106,10 +106,13 @@ class Joystick_control:public rclcpp::Node
     public:
         Joystick_control():Node("joystick_control_node")
         {
+
+            auto default_qos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
+
             //create pubisher that will publish message of type [vx,vy,w]
-            publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop_joy", 10);
+            publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop_joy", default_qos);
             //publisher for camera servos
-            publisher_servo_cam = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", 10);
+            publisher_servo_cam = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", default_qos);
             //create timer that will call repetitively the function timer_callback
             timer_ = this->create_wall_timer(dt, std::bind(&Joystick_control::timer_callback, this));
             RCLCPP_INFO(this->get_logger(),"joystick_control_node started...");

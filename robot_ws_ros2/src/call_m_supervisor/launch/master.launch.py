@@ -53,37 +53,6 @@ def generate_launch_description():
             'sim_time': LaunchConfiguration('use_sim_time'),
         }]
     )
-    
-    # Execute slam_toolbox launch file without xterm
-    # Print the actual value during runtime
-    #print_value_function = launch.actions.OpaqueFunction(function=lambda context: print(f"JJJJJJ::: use_sim_time = {context.launch_configurations['use_sim_time']}"))
-    # Store the value of use_sim_time in the list during runtime
-    """value_sim = []
-
-    def store_value(context):
-        value_sim.append(context.launch_configurations['use_sim_time'])
-
-    store_value_function = launch.actions.OpaqueFunction(function=store_value)
-    """
-    #this version doesn't use the custom configuration file
-    """slam_node = Node(
-        package='slam_toolbox',
-        executable='async_slam_toolbox_node',
-        name='async_slam_toolbox_node',
-        output='screen',
-        parameters=[
-            os.path.join(pkg_share, 'config/mapper_params_online_async.yaml'),
-            {'use_sim_time': LaunchConfiguration('use_sim_time'),}
-        ],
-    )"""
-
-    #SLAM IS NOW LAUNCHED IN CALL_M_START_ALL PACKAGES
-
-    #this version don't change use_sim_time dynamically
-    """slam_node = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'launch', 'slam_toolbox', 'online_async_launch.py', 'params_file:='+os.path.join(pkg_share, 'config/mapper_params_online_async.yaml'), 'use_sim_time:=false'],
-        output='screen',
-    )"""
 
 
     #joint states published by Gazebo for the simulation and by Hardware launch if hardware
@@ -93,5 +62,4 @@ def generate_launch_description():
         scan_merger_node,
         command_master_node,
         node_robot_state_publisher,
-        #slam_node,
     ])

@@ -136,11 +136,11 @@ public:
   }
 
   void initialize_params(){
-      this->declare_parameter("device_name"); 
+      this->declare_parameter("device_name","/dev/ttyUSB0"); 
   }
 
   void refresh_params(){
-      this->get_parameter_or<std::string>("device_name",device_name,"/dev/ttyUSB0");
+      this->device_name=get_parameter("device_name").as_string();
   }
 
   rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr set_position_subscriber_;

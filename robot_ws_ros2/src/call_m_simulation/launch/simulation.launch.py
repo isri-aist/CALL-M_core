@@ -28,8 +28,8 @@ def generate_launch_description():
        executable='ekf_node',
        name='ekf_filter_node',
        output='screen',
-       #parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
-       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}, {'debug': True}, {'debug_out_file': os.path.join(pkg_share, 'config/ekf_debug.txt')}]
+       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+       #parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}, {'debug': True}, {'debug_out_file': os.path.join(pkg_share, 'config/ekf_debug.txt')}]
     )
 
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
@@ -39,17 +39,17 @@ def generate_launch_description():
 
     #ros_control controllers, defined in controllers.yaml in call_m_supervisor package
     node_controller_wheels = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'run', 'controller_manager', 'spawner.py', 'wheels_cont'],
+        cmd=['ros2', 'run', 'controller_manager', 'spawner', 'wheels_cont'],
         output='screen',
     )
 
     node_controller_wheels_sup = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'run', 'controller_manager', 'spawner.py', 'wheels_sup_cont'],
+        cmd=['ros2', 'run', 'controller_manager', 'spawner', 'wheels_sup_cont'],
         output='screen',
     )
 
     node_controller_cams = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'run', 'controller_manager', 'spawner.py', 'cams_cont'],
+        cmd=['ros2', 'run', 'controller_manager', 'spawner', 'cams_cont'],
         output='screen',
     )
 
@@ -77,8 +77,6 @@ def generate_launch_description():
                     os.path.join(get_package_share_directory(pkg_name),world_model_subpath),
                 ],
                 output='screen'),launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',description='Flag to enable use_sim_time'),
-        #launch joint publisher
-        #joint_state_publisher_node,
         #Load bot in the simulation
         spawn_entity,
         node_simu_odometry,

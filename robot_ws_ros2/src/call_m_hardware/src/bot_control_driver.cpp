@@ -67,7 +67,8 @@ class Bot_control_driver : public rclcpp::Node
             sleep(1);
         }
         RCLCPP_INFO(this->get_logger(), "Set up finished.");
-        subscription= this->create_subscription<geometry_msgs::msg::Twist>("cmd_vel_apply", 10, std::bind(&Bot_control_driver::topic_callback, this, _1));
+        auto sensor_qos = rclcpp::QoS(rclcpp::SensorDataQoS());
+        subscription= this->create_subscription<geometry_msgs::msg::Twist>("cmd_vel_apply", sensor_qos, std::bind(&Bot_control_driver::topic_callback, this, _1));
         timer_ = create_wall_timer(std::chrono::milliseconds(10), std::bind(&Bot_control_driver::timeout_secu, this));
         RCLCPP_INFO(this->get_logger(), "\033[%dm\033[2J\033[1;1f",0);
         RCLCPP_INFO(this->get_logger(), "ROBOT DRIVER:");
@@ -196,11 +197,11 @@ class Bot_control_driver : public rclcpp::Node
     }
 
     void initialize_params(){
-      this->declare_parameter("device_name"); 
+      this->declare_parameter("device_name","/dev/ttyUSB0"); 
     }
 
     void refresh_params(){
-        this->get_parameter_or<std::string>("device_name",device_name,"/dev/ttyUSB0");
+        this->device_name = get_parameter("device_name").as_string();
     }
 
     void publishOdometry(double vx, double vy, double w)

@@ -51,11 +51,14 @@ double error_cmd(double prev_val,double wanted_val, double max_acc, double max_d
 class SimuBotDriver : public rclcpp::Node {
 public:
   SimuBotDriver() : Node("simu_bot_driver_node") {
-    publisher_cmd_wheels = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_cont/commands", 10);
-    publisher_cmd_wheels_sup = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_sup_cont/commands", 10);
-    publisher_cmd_cams = create_publisher<std_msgs::msg::Float64MultiArray>("/cams_cont/commands", 10);
-    subscriber_cmd = create_subscription<geometry_msgs::msg::Twist>("/cmd_vel_apply", 10, std::bind(&SimuBotDriver::twistCallback, this, std::placeholders::_1));
-    subscriber_cams_cmd = create_subscription<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", 10, std::bind(&SimuBotDriver::cams_callback, this, std::placeholders::_1));
+    auto default_qos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
+    auto sensor_qos = rclcpp::QoS(rclcpp::SensorDataQoS());
+
+    publisher_cmd_wheels = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_cont/commands", default_qos);
+    publisher_cmd_wheels_sup = create_publisher<std_msgs::msg::Float64MultiArray>("/wheels_sup_cont/commands", default_qos);
+    publisher_cmd_cams = create_publisher<std_msgs::msg::Float64MultiArray>("/cams_cont/commands", default_qos);
+    subscriber_cmd = create_subscription<geometry_msgs::msg::Twist>("/cmd_vel_apply", sensor_qos, std::bind(&SimuBotDriver::twistCallback, this, std::placeholders::_1));
+    subscriber_cams_cmd = create_subscription<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", sensor_qos, std::bind(&SimuBotDriver::cams_callback, this, std::placeholders::_1));
 
     cmd_vel.linear.x = 0.0;
     cmd_vel.linear.y = 0.0;

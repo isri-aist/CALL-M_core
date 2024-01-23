@@ -26,17 +26,20 @@ public:
   CommandMasterNode() : Node("command_master_node")
   {
     // Initialize subscribers
+    auto default_qos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
+    auto sensor_qos = rclcpp::QoS(rclcpp::SensorDataQoS());
+
     sub_teleop_key = create_subscription<geometry_msgs::msg::Twist>(
-      "cmd_vel_teleop_key", 10, std::bind(&CommandMasterNode::twistCallback_key, this, std::placeholders::_1));
+      "cmd_vel_teleop_key", sensor_qos, std::bind(&CommandMasterNode::twistCallback_key, this, std::placeholders::_1));
 
     sub_teleop_joy = create_subscription<geometry_msgs::msg::Twist>(
-      "cmd_vel_teleop_joy", 10, std::bind(&CommandMasterNode::twistCallback_joy, this, std::placeholders::_1));
+      "cmd_vel_teleop_joy", sensor_qos, std::bind(&CommandMasterNode::twistCallback_joy, this, std::placeholders::_1));
 
     sub_nav = create_subscription<geometry_msgs::msg::Twist>(
-      "cmd_vel_nav", 10, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
+      "cmd_vel_nav", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
 
     // Initialize publisher
-    pub_command = create_publisher<geometry_msgs::msg::Twist>("cmd_vel_apply", 10);
+    pub_command = create_publisher<geometry_msgs::msg::Twist>("cmd_vel_apply", default_qos); //QOS to reliable
 
     // Initialize variables to store received twist messages
     init_twist(twist_teleop_key);

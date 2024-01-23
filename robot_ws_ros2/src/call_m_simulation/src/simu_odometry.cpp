@@ -11,14 +11,17 @@ public:
   SimuOdometry()
     : Node("simu_odometry_node")
   {
+    auto default_qos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
+    auto sensor_qos = rclcpp::QoS(rclcpp::SensorDataQoS());
+
     // Subscribe to the model_states topic
-    subscription_ = this->create_subscription<gazebo_msgs::msg::ModelStates>("gazebo/model_states", 10, std::bind(&SimuOdometry::TopicCallback, this, std::placeholders::_1));
+    subscription_ = this->create_subscription<gazebo_msgs::msg::ModelStates>("gazebo/model_states", sensor_qos, std::bind(&SimuOdometry::TopicCallback, this, std::placeholders::_1));
 
     // Subscribe to the clock topic
-    clock_subscription_ = this->create_subscription<rosgraph_msgs::msg::Clock>("/clock", 10, std::bind(&SimuOdometry::ClockCallback, this, std::placeholders::_1));
+    clock_subscription_ = this->create_subscription<rosgraph_msgs::msg::Clock>("/clock", sensor_qos, std::bind(&SimuOdometry::ClockCallback, this, std::placeholders::_1));
 
     // Initialize publisher
-    odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom_simu", 10);
+    odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom_simu", default_qos);
   }
 
 private:

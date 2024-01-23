@@ -20,9 +20,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(xacro REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 add_executable(command_master_node src/command_master.cpp)
-ament_target_dependencies(command_master_node rclcpp geometry_msgs)
+ament_target_dependencies(command_master_node rclcpp geometry_msgs sensor_msgs)
 
 # Install directories
 install(

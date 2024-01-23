@@ -1,5 +1,76 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "sensor_msgs/msg/laser_scan.hpp"
+#include <cmath>
+
+double clamp_angle(double angle){
+  //put angle between 0 and 2pi
+  angle = std::fmod(angle, 2 * M_PI);
+  if (angle < 0) {
+      angle += 2 * M_PI;
+  }
+  return angle;
+}
+
+int angle_to_index(double alpha, int resolution){
+    //return index of angle alpha, in a table with 'resolution' values placed from 0 to 360 angles.
+    // Normalize the angle to the range [0, 2*M_PI)
+    alpha = clamp_angle(alpha);
+    // Calculate the index
+    return static_cast<int>(round((alpha * resolution) / (2 * M_PI)));
+}
+
+double index_to_angle(int ind, int resolution){
+    return (ind*(2*M_PI))/resolution;
+}
+
+std::vector<double> subpoints(sensor_msgs::msg::LaserScan data,int i,int y){
+  std::vector<double> tempo = {};
+  for (int ind = i; ind <= y; ++ind){
+    tempo.push_back(data.ranges[ind]);
+  }
+  return tempo;
+}
+
+std::vector<double> get_points(sensor_msgs::msg::LaserScan data,double start_angle,double end_angle,double r1,double r2,double field_of_view){
+  std::vector<double> points = {};
+  int resolution = data.ranges.size();
+  double start_ind = angle_to_index(start_angle,resolution);
+  double end_ind = angle_to_index(end_angle,resolution);
+  if(start_ind > end_ind){
+    std::vector<double> tempo = subpoints(data,start_ind,resolution-1);
+    points.insert(points.end(),tempo.begin(),tempo.end());
+    tempo = subpoints(data,0,end_ind);
+    points.insert(points.end(),tempo.begin(),tempo.end());
+  }
+  else{
+    std::vector<double> tempo = subpoints(data,start_ind,end_ind);
+    points.insert(points.end(),tempo.begin(),tempo.end());
+  }
+  //filter points and throwing those that are not in the rectangle
+  int reso2 = resolution*(resolution/points.size()); //because alpha local should not have values from 0 to 2pi
+  for (int ind = 0; ind < points.size(); ++ind){
+    double alpha_local = index_to_angle(ind,reso2);
+    double di = points[ind];
+    double li = r2; //limit of rectangle area
+    if(alpha_local != M_PI/2 - field_of_view/2){
+      li = std::min(r2,r1/abs(cos(alpha_local+field_of_view/2)));
+    }
+    if(di > li){
+      points[ind] = INFINITY;
+    }
+  }
+  return points;
+}
+
+bool proximity(sensor_msgs::msg::LaserScan data, double distance){
+  for (int ind = 0; ind < data.ranges.size(); ++ind){
+    if(data.ranges[ind] < distance){
+      return true;
+    }
+  }
+  return false;
+}
 
 bool is_command(geometry_msgs::msg::Twist msg){
     bool result = msg.linear.x != 0 || msg.linear.y != 0 || msg.angular.z != 0;
@@ -37,6 +108,8 @@ public:
 
     sub_nav = create_subscription<geometry_msgs::msg::Twist>(
       "cmd_vel_nav", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
+
+    sub_scan = this->create_subscription<sensor_msgs::msg::LaserScan>("scan", sensor_qos, std::bind(&CommandMasterNode::scanCallback, this, std::placeholders::_1));
 
     // Initialize publisher
     pub_command = create_publisher<geometry_msgs::msg::Twist>("cmd_vel_apply", default_qos); //QOS to reliable
@@ -105,20 +178,63 @@ private:
       }
 
     // Publish the selected twist message
-    pub_command->publish(selected_twist);
+    pub_command->publish(clamp_cmd(selected_twist));
+  }
+
+  geometry_msgs::msg::Twist clamp_cmd(geometry_msgs::msg::Twist twist){
+    geometry_msgs::msg::Twist new_twist = twist;
+    
+    if (scan_data_ != nullptr){
+      r_secu_2 = std::max(sqrt(pow(new_twist.linear.x,2)+pow(new_twist.linear.y,2))*r_secu_2_max,r_secu_2_min);
+      //cmd direction from 0 to 2pi
+      double cmd_angle = atan2(new_twist.linear.y,new_twist.linear.x) + angle_offset;
+      //area limit
+      double cmd_angle_start = clamp_angle(cmd_angle-field_of_view/2);
+      double cmd_angle_end = clamp_angle(cmd_angle+field_of_view/2);
+      //all points in the rectangular area in front of the direction
+      std::vector<double> points = get_points(*scan_data_,cmd_angle_start,cmd_angle_end,r_secu_1,r_secu_2,field_of_view);
+      //nearest obstacle
+      double dmin = *min_element(points.begin(),points.end());
+      //percentage of speed autorized
+      double clamp = std::max(0.0,std::min(1.0,(dmin-r_secu_1)/(r_secu_2-r_secu_1)));
+      //clamp speeds
+      new_twist.linear.y = clamp*new_twist.linear.y;
+      new_twist.linear.x = clamp*new_twist.linear.x;
+
+      //rotation speed clamp
+      if (proximity(*scan_data_,r_secu_1)){
+        new_twist.angular.z = 0.0;
+      }
+    }
+
+    return new_twist;
+  }
+
+  void scanCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg) {
+    scan_data_ = msg;
   }
 
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_teleop_key; 
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_teleop_joy;
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_nav;
+  rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr sub_scan;
 
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_command;
 
   geometry_msgs::msg::Twist twist_teleop_key;
   geometry_msgs::msg::Twist twist_teleop_joy;
   geometry_msgs::msg::Twist twist_nav;
+  sensor_msgs::msg::LaserScan::SharedPtr scan_data_ = nullptr;
 
-// Flags to indicate if new messages have been received on each topic, if no message have been received for an amount of time, we reset the command.
+  //scan security parameters
+  double r_secu_1 = 0.34; //define rectangle area width and distance limit to put speed to 0
+  double r_secu_2_min = 0.6; //define rectangle area lenght and distance limit to start decrease the speed
+  double r_secu_2_max = 1.6;
+  double r_secu_2 = 0.6;
+  double angle_offset = M_PI; //offset of angle between commands vector and lidars datas
+  double field_of_view = M_PI/2; //should be in ]0,pi]
+
+  // Flags to indicate if new messages have been received on each topic, if no message have been received for an amount of time, we reset the command.
   int teleop_key_active = 0;
   int teleop_joy_active = 0;
   int nav_active = 0;

@@ -32,36 +32,6 @@ std::vector<double> subpoints(sensor_msgs::msg::LaserScan data,int i,int y){
   return tempo;
 }
 
-std::vector<double> get_points(sensor_msgs::msg::LaserScan data,double start_angle,double end_angle,double r1,double r2,double field_of_view){
-  std::vector<double> points = {};
-  int resolution = data.ranges.size();
-  double start_ind = angle_to_index(start_angle,resolution);
-  double end_ind = angle_to_index(end_angle,resolution);
-  if(start_ind > end_ind){
-    std::vector<double> tempo = subpoints(data,start_ind,resolution-1);
-    points.insert(points.end(),tempo.begin(),tempo.end());
-    tempo = subpoints(data,0,end_ind);
-    points.insert(points.end(),tempo.begin(),tempo.end());
-  }
-  else{
-    std::vector<double> tempo = subpoints(data,start_ind,end_ind);
-    points.insert(points.end(),tempo.begin(),tempo.end());
-  }
-  //filter points and throwing those that are not in the rectangle
-  int reso2 = resolution*(resolution/points.size()); //because alpha local should not have values from 0 to 2pi
-  for (int ind = 0; ind < points.size(); ++ind){
-    double alpha_local = index_to_angle(ind,reso2);
-    double di = points[ind];
-    double li = r2; //limit of rectangle area
-    if(alpha_local != M_PI/2 - field_of_view/2){
-      li = std::min(r2,r1/abs(cos(alpha_local+field_of_view/2)));
-    }
-    if(di > li){
-      points[ind] = INFINITY;
-    }
-  }
-  return points;
-}
 
 bool proximity(sensor_msgs::msg::LaserScan data, double distance){
   for (int ind = 0; ind < data.ranges.size(); ++ind){
@@ -181,28 +151,113 @@ private:
     pub_command->publish(clamp_cmd(selected_twist));
   }
 
+  double get_points(sensor_msgs::msg::LaserScan data,double start_angle,double end_angle,double r1,double r2,double field_of_view){
+    //DEBUG START
+    double li_deb = 0.0;
+    double di_deb = 9999.0;
+    int ind_deb = 0;
+    double alpha_deb = 0.0;
+    double point_deb = 0.0;
+    int count_deb = 0;
+    //DEBUG END
+    double di_min = INFINITY;
+    
+    std::vector<double> points = {};
+    int resolution = data.ranges.size();
+    double start_ind = angle_to_index(start_angle,resolution);
+    double end_ind = angle_to_index(end_angle,resolution);
+    //RCLCPP_INFO(this->get_logger(), "cmd_index_start: %f",start_ind);
+    //RCLCPP_INFO(this->get_logger(), "cmd_index_end: %f",end_ind);
+    if(start_ind > end_ind){
+      std::vector<double> tempo = subpoints(data,0,end_ind);
+      points.insert(points.begin(),tempo.begin(),tempo.end());
+      std::vector<double> tempo2 = subpoints(data,start_ind,resolution-1);
+      points.insert(points.begin(),tempo2.begin(),tempo2.end());
+    }
+    else{
+      std::vector<double> tempo = subpoints(data,start_ind,end_ind);
+      points.insert(points.begin(),tempo.begin(),tempo.end());
+    }
+    //filter points and throwing those that are not in the rectangle
+    int reso2 = resolution*(float(resolution)/float(points.size())); //because alpha local should not have values from 0 to 2pi
+    //RCLCPP_INFO(this->get_logger(), "reso2: %f",float(resolution)/float(points.size()));
+    //RCLCPP_INFO(this->get_logger(), "reso2: %d",reso2);
+    for (int ind = 0; ind < points.size(); ++ind){
+      double alpha_local = index_to_angle(ind,reso2);
+      //RCLCPP_INFO(this->get_logger(), "alpha_local: %f",alpha_local);
+      double di = points[ind];
+      double li = r2; //limit of rectangle area
+      if(alpha_local != M_PI/2 - field_of_view/2){
+        li = std::min(sqrt(pow(r1,2)+pow(r2,2)),r1/abs(cos(alpha_local+field_of_view/2)));
+      }
+      if(di > li){
+        points[ind] = INFINITY;
+      }
+
+      if(points[ind] < di_min){
+        di_min = points[ind];
+      }
+
+      //DEBUG START
+      if(di <= di_deb){
+        li_deb = li;
+        di_deb = di;
+        ind_deb = ind;
+        alpha_deb = alpha_local;
+        point_deb = points[ind];
+      }
+      count_deb +=1;
+      //DEBUG END
+    }
+
+    //RCLCPP_INFO(this->get_logger(), "li_deb: %f",li_deb);
+    //RCLCPP_INFO(this->get_logger(), "di_deb: %f",di_deb);
+    //RCLCPP_INFO(this->get_logger(), "ind_deb: %d",ind_deb);
+    RCLCPP_INFO(this->get_logger(), "alpha_deb: %f",alpha_deb*180/M_PI);
+    RCLCPP_INFO(this->get_logger(), "point_deb: %f",point_deb);
+    //RCLCPP_INFO(this->get_logger(), "count_deb: %d",count_deb);
+    
+    return di_min;
+    //return points;
+  }
+
   geometry_msgs::msg::Twist clamp_cmd(geometry_msgs::msg::Twist twist){
     geometry_msgs::msg::Twist new_twist = twist;
     
     if (scan_data_ != nullptr){
-      r_secu_2 = std::max(sqrt(pow(new_twist.linear.x,2)+pow(new_twist.linear.y,2))*r_secu_2_max,r_secu_2_min);
+      double absolute_speed = sqrt(pow(new_twist.linear.x,2)+pow(new_twist.linear.y,2)); //0 to 1
+      if(absolute_speed<=0.4){
+        r_secu_2 = r_secu_2_min;
+      }
+      else{
+        r_secu_2 = std::min(r_secu_1+pow(absolute_speed,2)+0.6,r_secu_2_max);
+      }
       //cmd direction from 0 to 2pi
       double cmd_angle = atan2(new_twist.linear.y,new_twist.linear.x) + angle_offset;
       //area limit
       double cmd_angle_start = clamp_angle(cmd_angle-field_of_view/2);
       double cmd_angle_end = clamp_angle(cmd_angle+field_of_view/2);
       //all points in the rectangular area in front of the direction
-      std::vector<double> points = get_points(*scan_data_,cmd_angle_start,cmd_angle_end,r_secu_1,r_secu_2,field_of_view);
+      //std::vector<double> points = get_points(*scan_data_,cmd_angle_start,cmd_angle_end,r_secu_1,r_secu_2,field_of_view);
       //nearest obstacle
-      double dmin = *min_element(points.begin(),points.end());
+      double dmin = get_points(*scan_data_,cmd_angle_start,cmd_angle_end,r_secu_1,r_secu_2,field_of_view); //*min_element(points.begin(),points.end());
       //percentage of speed autorized
       double clamp = std::max(0.0,std::min(1.0,(dmin-r_secu_1)/(r_secu_2-r_secu_1)));
       //clamp speeds
-      new_twist.linear.y = clamp*new_twist.linear.y;
-      new_twist.linear.x = clamp*new_twist.linear.x;
-
+      new_twist.linear.y = std::min(clamp*new_twist.linear.y,1.0);
+      new_twist.linear.x = std::min(clamp*new_twist.linear.x,1.0);
+      
+      RCLCPP_INFO(this->get_logger(), "------------");
+      //RCLCPP_INFO(this->get_logger(), "r2: %f",r_secu_2);
+      //RCLCPP_INFO(this->get_logger(), "cmd_angle: %f",cmd_angle*180/M_PI);
+      RCLCPP_INFO(this->get_logger(), "cmd_angle_start: %f",cmd_angle_start*180/M_PI);
+      //RCLCPP_INFO(this->get_logger(), "cmd_angle_end: %f",cmd_angle_end*180/M_PI);
+      //RCLCPP_INFO(this->get_logger(), "clamp1: %f",(dmin-r_secu_1)/(r_secu_2-r_secu_1));
+      //RCLCPP_INFO(this->get_logger(), "clamp2: %f",clamp);
+      RCLCPP_INFO(this->get_logger(), "dmin: %f",dmin);
+      RCLCPP_INFO(this->get_logger(), "////////////");
       //rotation speed clamp
-      if (proximity(*scan_data_,r_secu_1)){
+      if (proximity(*scan_data_,r_secu_1-0.06)){
         new_twist.angular.z = 0.0;
       }
     }
@@ -227,9 +282,9 @@ private:
   sensor_msgs::msg::LaserScan::SharedPtr scan_data_ = nullptr;
 
   //scan security parameters
-  double r_secu_1 = 0.34; //define rectangle area width and distance limit to put speed to 0
+  double r_secu_1 = 0.4; //define rectangle area width and distance limit to put speed to 0
   double r_secu_2_min = 0.6; //define rectangle area lenght and distance limit to start decrease the speed
-  double r_secu_2_max = 1.6;
+  double r_secu_2_max = 2.0;
   double r_secu_2 = 0.6;
   double angle_offset = M_PI; //offset of angle between commands vector and lidars datas
   double field_of_view = M_PI/2; //should be in ]0,pi]

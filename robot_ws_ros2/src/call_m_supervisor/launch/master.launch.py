@@ -9,12 +9,14 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_supervisor').find('call_m_supervisor') 
     bot_model_subpath = 'description/bot/bot_description.urdf.xacro'
 
-    command_master_node = launch_ros.actions.Node(
+    """command_master_node = launch_ros.actions.Node(
        package='call_m_supervisor',
        executable='command_master_node',
        name='command_master_node',
        output='screen',
-    )
+    )"""
+    cmd_debug = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '100x20', '-e', 'ros2', 'run']
+    command_master_node =  launch.actions.ExecuteProcess(cmd=cmd_debug + ['call_m_supervisor', 'command_master_node'], output='screen')
 
     # Use xacro to process the file
     xacro_file = os.path.join(pkg_share,bot_model_subpath)
@@ -30,11 +32,6 @@ def generate_launch_description():
     )
 
     # Execute laser_scan_merger launch file without xterm
-    """scan_merger_node = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'launch', 'laser_scan_merger', 'launch.py'],
-        output='screen',
-        )"""
-        
     scan_merger_node=Node(
         package = 'laser_scan_merger',
         name = 'laser_scan_merger_node',

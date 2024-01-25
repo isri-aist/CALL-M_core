@@ -31,7 +31,7 @@ def generate_launch_description():
 
     # Construct the absolute paths to the launch files
     master_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_supervisor', 'master.launch.py'] + suffix, output='screen')
-    slam_launch = launch.actions.ExecuteProcess(cmd=cmd + ['slam_toolbox', 'online_async_launch.py', 'params_file:='+slam_param]+ suffix, output='screen')
+    slam_launch = launch.actions.ExecuteProcess(cmd=cmd + ['slam_toolbox', 'online_async_launch.py', 'slam_params_file:='+slam_param]+ suffix, output='screen')
     simu_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_simulation', 'simulation.launch.py'], output='screen')
     display_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_monitor', 'display.launch.py'], output='screen')
     teleop_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_teleoperation', 'teleop.launch.py'], output='screen')
@@ -42,7 +42,7 @@ def generate_launch_description():
     #ros2 launch call_m_nav2 localization_launch.py params_file:=/home/jrlintern/Desktop/work/CNRS_AIST_Work_All/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/call_m_nav2/config/nav2_params_diff_simu.yaml map:=/home/jrlintern/Desktop/work/CNRS_AIST_Work_All/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/call_m_nav2/maps/map_test.yaml use_sim_time:=true
     #ros2 launch call_m_nav2 navigation_launch.py params_file:=/home/jrlintern/Desktop/work/CNRS_AIST_Work_All/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/call_m_nav2/config/nav2_params_diff_simu.yaml map_subscribe_transient_local:=true use_sim_time:=true
     #ros2 launch call_m_nav2 navigation_launch.py params_file:= map_subscribe_transient_local:=true use_sim_time:=true
-
+    #ros2 launch slam_toolbox online_async_launch.py params_file:=/home/jrluser/Desktop/call_m_workspace/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/call_m_supervisor/config/mapper_params_online_async.yaml sim_time:=true
 
     if nav_type == "on_fly":
         return LaunchDescription([master_launch,slam_launch,simu_launch,display_launch,teleop_launch,nav2_launch])

@@ -4,6 +4,7 @@ git@github.com:Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
 
 ## Details
 * get_serial_Zed_cameras:
+//A finir
 	
 
 ## Compile and execute a program with CMake:

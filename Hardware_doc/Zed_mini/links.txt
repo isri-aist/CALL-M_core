@@ -1,8 +1,0 @@
-Simple datasheet:
-https://www.generationrobots.com/media/zed-mini-camera-datasheet.pdf
-
-ROS2 Docs:
-https://www.stereolabs.com/docs/ros2/
-
-Parameters:
-https://www.stereolabs.com/docs/ros2/zed-node#configuration-parameters

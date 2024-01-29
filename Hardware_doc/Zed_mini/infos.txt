@@ -1,0 +1,31 @@
+Simple datasheet:
+https://www.generationrobots.com/media/zed-mini-camera-datasheet.pdf
+
+ROS2 Docs:
+https://www.stereolabs.com/docs/ros2/
+
+Parameters:
+https://www.stereolabs.com/docs/ros2/zed-node#configuration-parameters
+
+## Hardware Camera Zed M
+https://www.stereolabs.com/docs/ros2/
+
+Having a nvidia card installed is mandatory to use CUDA, check with:
+```
+nvidia-smi
+```
+
+!!!Cable are not reversible for the Zedm, Arrows need to be on optical side!!!
+
+Launch a camera:
+```
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:=<camera model> camera_name:=<namespace> serial_number:=<serial_number>
+```
+
+Parameters/config:
+https://www.stereolabs.com/docs/ros2/zed-node#configuration-parameters
+
+Serial numbers (obtained with program in 'tools' at root of the github repository):
+camera1: 15255448
+camera2: 15267217
+cameratest: 13024367

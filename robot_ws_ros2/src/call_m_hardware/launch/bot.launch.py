@@ -149,12 +149,12 @@ def generate_launch_description():
 
     return LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='False',description='Flag to enable use_sim_time'),
-        lid1_node,
-        lid2_node,
-        camera_control_driver_node,
-        bot_control_driver,
-        camera_1,
-        camera_2,
+        lid1_node, 
+        lid2_node, 
+        camera_control_driver_node, 
+        bot_control_driver, 
+        camera_1, 
+        camera_2, 
         joint_state_publisher_node,
-        robot_localization_node,
+        robot_localization_node, 
     ])

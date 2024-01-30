@@ -1,0 +1,8 @@
+jetson orin nano NX 16
+
+Install system:
+https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/software_setup.html
+
+Docs, downloads:
+https://developer.nvidia.com/embedded/jetson-linux
+https://developer.nvidia.com/embedded/downloads

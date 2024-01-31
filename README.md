@@ -2,6 +2,11 @@
 https://github.com/Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
 git@github.com:Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
 
+## Clone the repository with all submodules
+```
+git clone --recurse-submodules -j8 <SSH or HTTPS Link>
+```
+
 ## Dependancies (project tested on ros2 humble and ubuntu22.04): 
 ### ROS2 Humble (Desktop install + Bare Bones + Development tools):
 https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html

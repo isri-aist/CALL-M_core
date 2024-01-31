@@ -21,7 +21,7 @@ find_package(rclcpp REQUIRED)
 
 # Install directories
 install(
-  DIRECTORY src launch config
+  DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
 )
 

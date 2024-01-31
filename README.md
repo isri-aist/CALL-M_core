@@ -73,7 +73,15 @@ sudo apt update
 sudo apt install gazebo
 ```
 
-And we need to install the non available packages from source:
+And we need to install the packages gazebo_ros_pkgs and gazebo_ros2_control from source because they don't appear on arm64 apt packages:
+
+dependencies:
+```
+sudo apt install libgazebo-dev
+sudo apt install libcamera-info-manager-dev
+```
+
+Installation of gazebo_ros_pkgs and gazebo_ros2_control:
 In any ros2 workspace:
 ```
 cd src
@@ -88,7 +96,7 @@ This will install the needed packages, no need to compile them again after.
 Details: https://github.com/gazebosim/gazebo-classic/issues/3236
 ARM version doc: https://launchpad.net/~openrobotics/+archive/ubuntu/gazebo11-non-amd64
 
-## Set_up
+## Workspace Set_up
 ### Compile ros2 workspace 'robot_ws_ros2'
 ```
 colcon build --symlink-install

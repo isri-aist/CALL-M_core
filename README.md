@@ -32,13 +32,17 @@ sudo apt  install ros-humble-slam-toolbox
 ```
 
 ### navigation2 (ROS Framework for robot navigation)
-https://navigation.ros.org/getting_started/index.html
+```
+sudo apt install ros-humble-navigation2
+sudo apt install ros-humble-nav2-bringup
+```
+Doc: https://navigation.ros.org/getting_started/index.html
 
 ### Zed mini packages
 Having a nvidia card installed is mandatory to use CUDA.
-Nvidia package (+ drivers):
+Install Nvidia package (+ drivers):
 https://developer.nvidia.com/cuda-downloads
-ZED SDK:
+Install ZED SDK:
 https://www.stereolabs.com/developers/release
 
 ### Joint State Publisher
@@ -47,12 +51,42 @@ sudo apt install ros-humble-joint-state-publisher
 ```
 
 ### If you want to use the simulation (simulation.launch.py):
+
+#### For amd systems:
 ```
+sudo apt install gazebo
 sudo apt install ros-humble-ros2-control
 sudo apt install ros-humble-ros2-controllers
 sudo apt install ros-humble-gazebo-ros-pkgs
 sudo apt install ros-humble-gazebo-ros2-control
 ```
+
+#### For arm systems:
+```
+sudo apt install ros-humble-ros2-control
+sudo apt install ros-humble-ros2-controllers
+```
+The classic gazebo is not working on arm, we need to get arm version.
+```
+sudo add-apt-repository ppa:openrobotics/gazebo11-non-amd64
+sudo apt update
+sudo apt install gazebo
+```
+
+And we need to install the non available packages from source:
+In any ros2 workspace:
+```
+cd src
+git clone --branch ros2 https://github.com/ros-simulation/gazebo_ros_pkgs.git
+git clone --branch humble https://github.com/ros-controls/gazebo_ros2_control.git
+cd ..
+colcon build
+```
+(don't forget to source this workspace)
+This will install the needed packages, no need to compile them again after.
+
+Details: https://github.com/gazebosim/gazebo-classic/issues/3236
+ARM version doc: https://launchpad.net/~openrobotics/+archive/ubuntu/gazebo11-non-amd64
 
 ## Set_up
 ### Compile ros2 workspace 'robot_ws_ros2'

@@ -149,9 +149,9 @@ private:
     //convert linear and angular command into ones adapted to robot
 
     //datas
-    double a1 = (4*M_PI/3)-M_PI/2; //wheel and support 1 position
-    double a2 = -M_PI/2;
-    double a3 = (2*M_PI/3)-M_PI/2;
+    double a1 = (4*M_PI/3)+M_PI; //wheel and support 1 position
+    double a2 = M_PI;
+    double a3 = (2*M_PI/3)+M_PI;
     double r = 0.05;
     double triangle_lenght = 0.32;
     double R = sqrt(((3*(pow(triangle_lenght,4)))/16)+(pow(triangle_lenght,2))/4);

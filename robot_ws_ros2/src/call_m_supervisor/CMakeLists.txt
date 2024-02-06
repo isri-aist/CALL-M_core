@@ -27,7 +27,7 @@ ament_target_dependencies(command_master_node rclcpp geometry_msgs sensor_msgs)
 
 # Install directories
 install(
-  DIRECTORY src launch description config
+  DIRECTORY src launch description
   DESTINATION share/${PROJECT_NAME}
 )
 

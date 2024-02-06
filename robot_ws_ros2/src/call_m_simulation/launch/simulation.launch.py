@@ -37,7 +37,7 @@ def generate_launch_description():
                                 '-entity', 'call_m_bot'],
                     output='screen')
 
-    #ros_control controllers, defined in controllers.yaml in call_m_supervisor package
+    #ros_control controllers, defined in controllers.yaml
     node_controller_wheels = launch.actions.ExecuteProcess(
         cmd=['ros2', 'run', 'controller_manager', 'spawner', 'wheels_cont'],
         output='screen',

@@ -9,7 +9,7 @@ def generate_launch_description():
     DIRECTORIES
     """
     dir_nav2 = get_package_share_directory('call_m_nav2')
-    dir_slam = get_package_share_directory('call_m_supervisor')
+    dir_slam = get_package_share_directory('call_m_start_all')
 
     """
     PARAMETERS

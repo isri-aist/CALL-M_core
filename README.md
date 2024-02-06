@@ -119,6 +119,12 @@ Connect all the components:
 * TriOrb plateforme
 * Servos x2 (only one cable)
 
+If neeeded, or in case of hardware connection problems, try to get permission for using ports:
+```
+sudo usermod -aG dialout $USER
+sudo chmod a+rw /dev/ttyUSB*
+```
+
 Launch this on the robot computer:
 ```
 ros2 launch call_m_start_all call_m_start_full.launch.py

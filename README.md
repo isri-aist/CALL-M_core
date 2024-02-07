@@ -124,6 +124,7 @@ If neeeded, or in case of hardware connection problems, try to get permission fo
 sudo usermod -aG dialout $USER
 sudo chmod a+rw /dev/ttyUSB*
 ```
+!!!Zed mini cameras may need to be replugged on each start up!!!
 
 Launch this on the robot computer:
 ```
@@ -136,6 +137,13 @@ Connect all the components:
 * Lidars x2
 * TriOrb plateforme
 * Servos x2 (only one cable)
+
+If neeeded, or in case of hardware connection problems, try to get permission for using ports:
+```
+sudo usermod -aG dialout $USER
+sudo chmod a+rw /dev/ttyUSB*
+```
+!!!Zed mini cameras may need to be replugged on each start up!!!
 
 Launch the servor on the robot computer:
 ```

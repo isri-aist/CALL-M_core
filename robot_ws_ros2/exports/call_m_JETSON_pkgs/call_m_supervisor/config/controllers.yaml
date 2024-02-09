@@ -1,0 +1,37 @@
+ #We set up the controller manager with the list of controllers to use
+controller_manager:
+  ros__parameters:
+    update_rate: 100 #Hz
+    use_sim_time: true
+
+    #name and type of our first controller (custom names)
+    wheels_cont:
+      type: velocity_controllers/JointGroupVelocityController
+
+    wheels_sup_cont:
+      type: position_controllers/JointGroupPositionController
+
+    cams_cont:
+      type: position_controllers/JointGroupPositionController
+    
+
+#we define our controllers
+wheels_cont: #controller that rotate all the wheels at a given speeds, need to publish input on topic: "wheels_cont/commands" [std_msgs::msg::Float64MultiArray]
+    ros__parameters:
+      joints:
+        - wheel_1_joint
+        - wheel_2_joint
+        - wheel_3_joint
+
+wheels_sup_cont: #controller that rotate wheels support: "wheels_sup_cont/commands" [std_msgs::msg::Float64MultiArray]
+    ros__parameters:
+      joints:
+        - wheel_1_sup_joint
+        - wheel_2_sup_joint
+        - wheel_3_sup_joint
+
+cams_cont: #controller that rotate cameras: "cams_cont/commands" [std_msgs::msg::Float64MultiArray]
+    ros__parameters:
+      joints:
+        - cam1_joint
+        - cam2_joint

@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<robot name="bot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<!-- THIS FILE NEED TO BE INCLUDED IN 'bot_description.urdf.xacro' -->
+
+	<!-- Copied from:  zed_wrapper/urdf/zed_macro.urdf.xacro-->
+
+	<xacro:include filename="$(find zed_wrapper)/urdf/include/materials.urdf.xacro" />
+	<xacro:property name="M_PI"     value="3.1415926535897931" />
+
+	<!--
+		Parameters:
+		- name: the camera's name.  should match the parameter sent to the launch file for this camera
+		- model: the tye of camera, one of zed, zedm, zed2, zed2i
+	-->
+	<xacro:macro name="zed_camera" params="name=zed model=zed x=0.0 y=0.0 z=0.0 rot_z=0.0">
+
+		<xacro:property name="baseline" value="0.06" />
+		<xacro:property name="height" value="0.0265" />
+		<xacro:property name="bottom_slope" value="0.0" /> 
+		<xacro:property name="screw_offset_x" value="0.0" />
+		<xacro:property name="screw_offset_z" value="0.0" />
+		<xacro:property name="optical_offset_x" value="0.0" />
+
+		<!-- Camera mounting point (the threaded screw hole in the bottom) -->
+		<link name="${name}_camera_link">
+			<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.0151 0.131 0.023"/>
+			</geometry>
+			</visual>
+
+			<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.035"/>
+			<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+			</inertial>
+		</link>
+
+		<joint name="${name}_joint" type="continuous">
+			<parent link="base3_link"/>
+			<child link="${name}_camera_link"/>
+			<origin xyz="${x} ${y} ${z}" rpy="0.0 0.0 ${rot_z}"/>
+			<axis xyz="0 1 0"/>
+		</joint>
+		
+		<!-- Camera Center -->
+		<link name="${name}_camera_center">
+		<visual>
+			<origin xyz="${screw_offset_x} 0 ${screw_offset_z}" rpy="0 0 0"/>
+			<geometry>
+			<!--<mesh filename="package://zed_interfaces/meshes/${model}.stl" />-->
+			<box size="0.015 0.130 0.022"/>
+			</geometry>
+			<material name="${model}_mat" />
+		</visual>
+		<collision>
+			<geometry>
+			<!--<mesh filename="package://zed_interfaces/meshes/${model}.stl" />-->
+			<box size="0.015 0.130 0.022"/>
+			</geometry>
+		</collision>
+		</link>
+		<joint name="${name}_camera_center_joint" type="fixed">
+		<parent link="${name}_camera_link"/>
+		<child link="${name}_camera_center"/>
+		<origin xyz="0 0 0" rpy="0 ${bottom_slope} 0" />
+		</joint>
+
+		<!-- Left Camera -->
+		<link name="${name}_left_camera_frame" />
+		<joint name="${name}_left_camera_joint" type="fixed">
+		<parent link="${name}_camera_center"/>
+		<child link="${name}_left_camera_frame"/>
+		<origin xyz="${optical_offset_x} ${baseline/2} 0" rpy="0 0 0" />
+		</joint>
+
+		<link name="${name}_left_camera_optical_frame"/>
+		<joint name="${name}_left_camera_optical_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+		<parent link="${name}_left_camera_frame"/>
+		<child link="${name}_left_camera_optical_frame"/>
+		</joint>
+
+		<!-- Right Camera -->
+		<link name="${name}_right_camera_frame" />
+		<joint name="${name}_right_camera_joint" type="fixed">
+		<parent link="${name}_camera_center"/>
+		<child link="${name}_right_camera_frame"/>
+		<origin xyz="${optical_offset_x} -${baseline/2} 0" rpy="0 0 0" />
+		</joint>
+
+		<link name="${name}_right_camera_optical_frame"/>
+		<joint name="${name}_right_camera_optical_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+		<parent link="${name}_right_camera_frame"/>
+		<child link="${name}_right_camera_optical_frame"/>
+		</joint>
+
+		<!-- IMU -->
+		<!--
+		<link name="${name}_imu_link"/>
+		<joint name="${name}_imu_link_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+		<parent link="${name}_camera_center"/>
+		<child link="${name}_imu_link"/>
+		</joint>
+		-->
+
+	</xacro:macro>
+
+	<xacro:zed_camera name="cam1" model="zedm" x="${(square1_length/2)+0.015/2}" y="0.0" z="${(square3_height/2)-0.03-0.022/2}" rot_z="0.0"/>
+	<xacro:zed_camera name="cam2" model="zedm" x="${-((square1_length/2)+0.015/2)}" y="0.0" z="${(square3_height/2)-0.03-0.022/2}" rot_z="${M_PI}"/>
+
+	<!-- DEPTH sensors, not working in xacro-->
+
+	<!--CAMERA1 FRONT-->
+	<link name="cam1_depth_frame"/>
+
+	<joint name="cam1_depth_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+		<parent link="cam1_camera_link"/>
+		<child link="cam1_depth_frame"/>
+	</joint>
+
+	<gazebo reference="cam1_camera_link">
+		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
+    	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
+        <material>Gazebo/Orange</material>
+		<sensor type="depth" name="cam1">
+		<update_rate>100</update_rate>
+		<camera name="cam1_cam">
+			<horizontal_fov>1.6</horizontal_fov>
+			<image>
+			<width>800</width>
+			<height>800</height>
+			<format>R8G8B8</format>
+			</image>
+			<clip>
+			<near>0.02</near>
+			<far>3</far>
+			</clip>
+			<noise>
+			<type>gaussian</type>
+			<mean>0.0</mean>
+			<stddev>0.007</stddev>
+			</noise>
+		</camera>
+		<plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+			<!--/cam1/zed_node/rgb/image_rect_color-->
+		    <ros>
+                <namespace>cam1</namespace>
+                <remapping>cam1/image_raw:=zed_node/rgb/image_rect_color</remapping>
+                <remapping>cam1/depth/image_raw:=depth/image_rect_raw</remapping>
+                <remapping>cam1/camera_info:=camera_info</remapping>
+                <remapping>cam1/depth/camera_info:=depth/camera_info</remapping>
+                <remapping>cam1/points:=depth/points</remapping>
+            </ros>
+			<baseline>0.2</baseline>
+			<alwaysOn>true</alwaysOn>
+			<updateRate>0.0</updateRate>
+			<frame_name>cam1_depth_frame</frame_name>
+			<pointCloudCutoff>0.5</pointCloudCutoff>
+			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+			<distortionK1>0</distortionK1>
+			<distortionK2>0</distortionK2>
+			<distortionK3>0</distortionK3>
+			<distortionT1>0</distortionT1>
+			<distortionT2>0</distortionT2>
+			<CxPrime>0</CxPrime>
+			<Cx>0</Cx>
+			<Cy>0</Cy>
+			<focalLength>0</focalLength>
+			<hackBaseline>0</hackBaseline>
+		</plugin>
+		</sensor>
+	</gazebo>
+
+	<!--CAMERA2 BACK-->
+	<link name="cam2_depth_frame"/>
+
+	<joint name="cam2_depth_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+		<parent link="cam2_camera_link"/>
+		<child link="cam2_depth_frame"/>
+	</joint>
+
+	<gazebo reference="cam2_camera_link">
+		<!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
+    	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
+        <material>Gazebo/Orange</material>
+		<sensor type="depth" name="cam2">
+		<update_rate>100</update_rate>
+		<camera name="cam2_cam">
+			<horizontal_fov>1.6</horizontal_fov>
+			<image>
+			<width>800</width>
+			<height>800</height>
+			<format>R8G8B8</format>
+			</image>
+			<clip>
+			<near>0.02</near>
+			<far>3</far>
+			</clip>
+			<noise>
+			<type>gaussian</type>
+			<mean>0.0</mean>
+			<stddev>0.007</stddev>
+			</noise>
+		</camera>
+		<plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+			<ros>
+                <namespace>cam2</namespace>
+                <remapping>cam2/image_raw:=zed_node/rgb/image_rect_color</remapping>
+                <remapping>cam2/depth/image_raw:=depth/image_rect_raw</remapping>
+                <remapping>cam2/camera_info:=camera_info</remapping>
+                <remapping>cam2/depth/camera_info:=depth/camera_info</remapping>
+                <remapping>cam2/points:=depth/points</remapping>
+            </ros>
+			<baseline>0.2</baseline>
+			<alwaysOn>true</alwaysOn>
+			<updateRate>0.0</updateRate>
+			<frame_name>cam2_depth_frame</frame_name>
+			<pointCloudCutoff>0.5</pointCloudCutoff>
+			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+			<distortionK1>0</distortionK1>
+			<distortionK2>0</distortionK2>
+			<distortionK3>0</distortionK3>
+			<distortionT1>0</distortionT1>
+			<distortionT2>0</distortionT2>
+			<CxPrime>0</CxPrime>
+			<Cx>0</Cx>
+			<Cy>0</Cy>
+			<focalLength>0</focalLength>
+			<hackBaseline>0</hackBaseline>
+		</plugin>
+		</sensor>
+	</gazebo>
+
+</robot>

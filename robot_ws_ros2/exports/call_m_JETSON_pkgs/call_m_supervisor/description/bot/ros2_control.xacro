@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<robot name="bot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!--we specify joints that will be controlled-->
+    
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <joint name="wheel_1_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_2_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_3_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_1_sup_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_2_sup_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="wheel_3_sup_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="cam1_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+        <joint name="cam2_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+        </joint>
+    </ros2_control>
+    
+    <!--we set up gazebo tag to indicate that we use ros2 control, a controller manager is integrated in it, so we need to indicate wich controller to use in yaml file-->
+    
+    <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+        <parameters>$(find call_m_simulation)/config/controllers.yaml</parameters>
+    </plugin>
+    </gazebo>
+
+</robot>

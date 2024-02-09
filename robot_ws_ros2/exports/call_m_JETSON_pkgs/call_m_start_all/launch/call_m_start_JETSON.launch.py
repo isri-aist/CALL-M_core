@@ -20,14 +20,14 @@ def generate_launch_description():
     LAUNCHES
     """
     #Command to launch xterm and execute ROS 2 launch commands
-    cmd_debug = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x20', '-e', 'ros2', 'launch']
+    #cmd = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x20', '-e', 'ros2', 'launch']
     cmd = ['ros2', 'launch']
     suffix = ['use_sim_time:=false']
 
     # Construct the absolute paths to the launch files
     master_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_supervisor', 'master.launch.py'] + suffix, output='screen')
     slam_launch = launch.actions.ExecuteProcess(cmd=cmd + ['slam_toolbox', 'online_async_launch.py', 'params_file:='+slam_param]+ suffix, output='screen')
-    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_hardware', 'bot.launch.py'], output='screen')
+    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_hardware', 'bot_JETSON.launch.py'], output='screen')
 
     if nav_type == "on_fly":
         return LaunchDescription([master_launch,slam_launch,hardware_launch])

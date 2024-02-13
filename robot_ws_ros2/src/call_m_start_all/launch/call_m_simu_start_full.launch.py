@@ -17,7 +17,7 @@ def generate_launch_description():
     nav_type = "on_fly" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_omni_simu.yaml') #'diff' or 'omni', path to config file
-    nav_tree = os.path.join(dir_nav2, 'behavior_trees', 'navigate_through_poses_w_replanning_and_recovery.xml') #behavior tree to use for navigation #navigate_w_replanning_and_recovery.xml 
+    nav_tree = os.path.join(dir_nav2, 'behavior_trees', 'navigate_through_poses_w_replanning_and_recovery_and_assisted_teleop.xml') #behavior tree to use for navigation #navigate_w_replanning_and_recovery.xml 
     map_loc = os.path.join(dir_nav2, 'maps', 'map_test.yaml') #path to the map if using localization
     slam_param = os.path.join(dir_slam, 'config/mapper_params_online_async.yaml') #path to params for slam
 
@@ -25,7 +25,7 @@ def generate_launch_description():
     LAUNCHES
     """
     #Command to launch xterm and execute ROS 2 launch commands
-    cmd_debug = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x20', '-e', 'ros2', 'launch']
+    cmd_debug = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '120x40', '-e', 'ros2', 'launch']
     cmd = ['ros2', 'launch']
     suffix = ['use_sim_time:=true']
 

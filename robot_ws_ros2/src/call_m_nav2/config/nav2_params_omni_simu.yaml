@@ -330,6 +330,7 @@ behavior_server:
     max_rotational_vel: 1.0
     min_rotational_vel: 0.4
     rotational_acc_lim: 1.4
+    cmd_vel_teleop: cmd_vel_teleop_joy #assissted teleop parameter
 
 robot_state_publisher:
   ros__parameters:

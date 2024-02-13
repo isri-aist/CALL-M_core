@@ -1,6 +1,17 @@
 # triorb_ros2
 This repoditory contains a simple control node for TriOrb.
 
+## Requirements
+- ROS2 Humble
+- Lifecycle of ROS2 python (ros-humble-lifecycle-py via apt)
+- numpy-quaternion (install via pip)
+- triorb-core (download from Github)
+- pyserial (python3-serial via apt)
+~~~
+ $ sudo apt install python3-serial python3-pip ros-humble-lifecycle-py
+ $ sudo pip install numpy-quaternion
+~~~
+
 ## Quick Setup
 ~~~
  $ mkdir -p ~/ros2_ws/src

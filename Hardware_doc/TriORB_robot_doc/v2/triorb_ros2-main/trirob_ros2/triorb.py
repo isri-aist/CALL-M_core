@@ -121,7 +121,8 @@ class TriOrb(Node):
   def publish_odometry(self):
     if self._pub is not None and self._pub.is_activated:
       
-      pose = self._vehicle.get_pos()
+      pose = self._vehicle.get_pos()[0]
+      print(pose)
       if pose is None and self.debug:
         import random
         pose = triorb_core.core_types.TriOrbDrive3Pose()
@@ -164,8 +165,8 @@ class TriOrb(Node):
   #
   # Callback of subscriber
   def cb_cmd_velocity(self, msg):
-    self.vx = msg.lenear.x
-    self.vy = msg.lenear.y
+    self.vx = msg.linear.x
+    self.vy = msg.linear.y
     self.vw = msg.angular.z
     self._vehicle.set_vel_absolute(self.vx, self.vy, self.vw)
     self._watchdog.reset()

@@ -122,7 +122,6 @@ class TriOrb(Node):
     if self._pub is not None and self._pub.is_activated:
       
       pose = self._vehicle.get_pos()[0]
-      print(pose)
       if pose is None and self.debug:
         import random
         pose = triorb_core.core_types.TriOrbDrive3Pose()

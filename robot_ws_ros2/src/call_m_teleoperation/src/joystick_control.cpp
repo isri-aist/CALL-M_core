@@ -154,6 +154,13 @@ class Joystick_control:public rclcpp::Node
         int servo_cam2_pos = 2000;
         int servo_cam_incr = 100;
 
+        //auto mode, security
+        bool auto_mode = false;
+        float chrono = 0.0;
+        int step = 0;
+        float sec_dt = 0.1; //loop dt in seconds
+        float distance_t = 1*sec_dt;
+
         //Functions
         void show_msg(double des_velx,double des_vely,double des_velw){
             if(ioctl(this->js, JSIOCGVERSION, &version) >= 0){
@@ -170,6 +177,7 @@ class Joystick_control:public rclcpp::Node
                 printf("\nCurrent max rotationnal speed: %.2f%.",(this->rotatio_vel/max_rot_sp)*100);
                 printf("\n\nLeft Pad: Linear movements\n");
                 printf("Right Pad: Rotation\n");
+                printf("5: Toggle automatic mode\n");
                 printf("6/8: Set linear speed\n");
                 printf("7/9: Set rotational speed\n");
                 printf("2/0: Front Camera angle\n");
@@ -183,6 +191,9 @@ class Joystick_control:public rclcpp::Node
                 else if(this->event.type == JS_EVENT_AXIS){
                     printf("Axis %zu at (%6d, %6d)\n", this->axis, this->axes[axis].x, this->axes[axis].y);
                 } 
+                if(this->auto_mode){
+                    printf("AUTOMATIC MODE...\n");
+                }
             }
             else{
                 printf("\033[%dm\033[2J\033[1;1f",0);
@@ -287,7 +298,10 @@ class Joystick_control:public rclcpp::Node
                                 servo_cam_msg.id = servo_cam2_id;
                                 servo_cam_msg.position = servo_cam2_pos;
                                 publish_cam_cmd();
-                                break;                                                                                        
+                                break;  
+                            case 5:
+                                if(this->event.value){this->auto_mode = !this->auto_mode;}    
+                                break;                                                                                  
                             default:
                                 break;
                             }
@@ -317,6 +331,64 @@ class Joystick_control:public rclcpp::Node
                     fflush(stdout);
                 }
             }
+
+            /*
+            AUTO SECURITY MODE
+            */
+            if (this->auto_mode){
+                switch (step)
+                {
+                case 0:
+                des_velx = 0;
+                des_vely = 0;
+                des_velw = 0.05;
+                this->chrono += this->sec_dt;
+                if(this->chrono > this->distance_t){
+                    this->chrono = 0;
+                    this->step ++;
+                }
+                break;
+                case 1:
+                des_velx = 0;
+                des_vely = 0;
+                des_velw = -0.05;
+                this->chrono += this->sec_dt;
+                if(this->chrono > this->distance_t){
+                    this->chrono = 0;
+                    this->step ++;
+                }
+                break;
+                case 2:
+                des_velx = 0;
+                des_vely = 0;
+                des_velw = 0.05;
+                this->chrono += this->sec_dt;
+                if(this->chrono > this->distance_t){
+                    this->chrono = 0;
+                    this->step ++;
+                }
+                break;
+                case 3:
+                des_velx = 0;
+                des_vely = 0;
+                des_velw = -0.05;
+                this->chrono += this->sec_dt;
+                if(this->chrono > this->distance_t){
+                    this->chrono = 0;
+                    this->step = 0;
+                }
+                break;        
+                default:
+                break;
+                }
+            }
+            else{
+                this->chrono = 0;
+                this->step = 0;
+            }
+            /*
+            END of AUTO SECURITY MODE
+            */
             
             //RCLCPP_INFO(this->get_logger(),"vx,vy,w:2 (%.2f,%.2f,%.2f)",des_velx,des_vely,des_velw);
 

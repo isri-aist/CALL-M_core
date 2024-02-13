@@ -9,7 +9,7 @@ def generate_launch_description():
             output='screen',
         ),
         launch.actions.ExecuteProcess(
-            cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x30','-e', 'ros2', 'run', 'call_m_teleoperation', 'joystick_control_node'],
+            cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x35','-e', 'ros2', 'run', 'call_m_teleoperation', 'joystick_control_node'],
             output='screen',
         ),
     ])

@@ -40,9 +40,6 @@ class TriOrb(Node):
     self.declare_parameter('watchdog_timeout', 10.0)
     self.declare_parameter('world_frame', 'world')
     self.declare_parameter('robot_frame', 'triorb')
-    self.declare_parameter('debug', False)
-
-    self.debug = self.get_parameter('debug').get_parameter_value().bool_value
    
     self._odom = nav_msgs.msg.Odometry()
     self._odom.header.frame_id = self.get_parameter('world_frame').get_parameter_value().string_value
@@ -82,7 +79,7 @@ class TriOrb(Node):
     self.get_logger().info('on_activate')
     self._vehicle.wakeup()
     self._watchdog.reset()
-    self._pub.on_activate(state)
+    self._pub.on_activate()
 
     return super().on_activate(state)
   #
@@ -91,28 +88,25 @@ class TriOrb(Node):
     self.get_logger().info('on_deactivate')
     self._vehicle.sleep()
     self._watchdog.cancel()
-    self._pub.on_deactivate(state)
+    self._pub.on_deactivate()
     return super().on_deactivate(state)
   #
   # Cleanup
   def on_cleanup(self, state: State) -> TransitionCallbackReturn:
     self.stop()
     self.get_logger().info('on_cleanup')
-    self.destroy_timer(self._timer)
-    self.destroy_publisher(self._pub)
-    del self._vehicle
-    self._vehicle = None
+    self.destory_timer(self._timer)
+    self.destory_publisher(self._pub)
+    self._vehicle.close()
     return TransitionCallbackReturn.SUCCESS
   #
   # Shutdown
   def on_shutdown(self, state: State) -> TransitionCallbackReturn:
-    self.get_logger().info('on_shutdown') 
+    self.get_logger().info('on_shutdown')
     self.stop()
-    self.destroy_timer(self._timer)
-    self.destroy_publisher(self._pub)
-    del self._vehicle
-    self._vehicle = None
-    
+    self.destory_timer(self._timer)
+    self.destory_publisher(self._pub)
+    self._vehicle.close()
     return TransitionCallbackReturn.SUCCESS
 
   #################### Callback functions and basic functions
@@ -122,11 +116,7 @@ class TriOrb(Node):
     if self._pub is not None and self._pub.is_activated:
       
       pose = self._vehicle.get_pos()
-      if pose is None and self.debug:
-        import random
-        pose = triorb_core.core_types.TriOrbDrive3Pose()
-        pose.x = random.random()
-        pose.w = random.random()
+      #pose = triorb_core.core_types.TriOrbDrive3Pose()
       self._odom.pose.pose.position.x = pose.x
       self._odom.pose.pose.position.y = pose.y
 
@@ -136,11 +126,11 @@ class TriOrb(Node):
       self._odom.pose.pose.orientation.z = quat.z
       self._odom.pose.pose.orientation.w = quat.w
 
-      self._odom.twist.twist.linear.x = self.vx
-      self._odom.twist.twist.linear.y = self.vy
+      self._odom.twist.twist.lenear.x = self.vx
+      self._odom.twist.twist.lenear.y = self.vy
       self._odom.twist.twist.angular.z = self.vw
-      self._odom.header.stamp = self.get_clock().now().to_msg()
-      self._pub.publish(self._odom)
+      self._odom_header.stamp = self.get_clock().now()
+      self._pub.publish(odom)
     return
   #
   # Callback of watchdog timer

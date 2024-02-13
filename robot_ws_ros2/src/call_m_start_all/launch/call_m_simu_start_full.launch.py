@@ -14,7 +14,7 @@ def generate_launch_description():
     """
     PARAMETERS
     """
-    nav_type = "none" #'none', 'on_fly' or 'localize'
+    nav_type = "on_fly" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_omni_simu.yaml') #'diff' or 'omni', path to config file
     nav_tree = os.path.join(dir_nav2, 'behavior_trees', 'navigate_through_poses_w_replanning_and_recovery.xml') #behavior tree to use for navigation #navigate_w_replanning_and_recovery.xml 

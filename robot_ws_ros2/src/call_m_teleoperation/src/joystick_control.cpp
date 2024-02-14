@@ -111,6 +111,7 @@ class Joystick_control:public rclcpp::Node
 
             //create pubisher that will publish message of type [vx,vy,w]
             publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop_joy", default_qos);
+            publisher_assisted = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel_teleop", default_qos);
             //publisher for camera servos
             publisher_servo_cam = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("/set_position", default_qos);
             //create timer that will call repetitively the function timer_callback
@@ -124,6 +125,7 @@ class Joystick_control:public rclcpp::Node
         //global variables    
         rclcpp::TimerBase::SharedPtr timer_;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_assisted;
         std::chrono::milliseconds dt = 10ms;
 
         int js;
@@ -161,6 +163,9 @@ class Joystick_control:public rclcpp::Node
         float sec_dt = 0.1; //loop dt in seconds
         float distance_t = 1*sec_dt;
 
+        //assissted mode
+        bool assissted = false;
+
         //Functions
         void show_msg(double des_velx,double des_vely,double des_velw){
             if(ioctl(this->js, JSIOCGVERSION, &version) >= 0){
@@ -177,6 +182,7 @@ class Joystick_control:public rclcpp::Node
                 printf("\nCurrent max rotationnal speed: %.2f%.",(this->rotatio_vel/max_rot_sp)*100);
                 printf("\n\nLeft Pad: Linear movements\n");
                 printf("Right Pad: Rotation\n");
+                printf("4: Toggle assissted mode\n");
                 printf("5: Toggle automatic mode\n");
                 printf("6/8: Set linear speed\n");
                 printf("7/9: Set rotational speed\n");
@@ -191,6 +197,9 @@ class Joystick_control:public rclcpp::Node
                 else if(this->event.type == JS_EVENT_AXIS){
                     printf("Axis %zu at (%6d, %6d)\n", this->axis, this->axes[axis].x, this->axes[axis].y);
                 } 
+                if(this->assissted){
+                    printf("Assissted teleoperation activated.\n");
+                }
                 if(this->auto_mode){
                     printf("AUTOMATIC MODE...\n");
                 }
@@ -301,7 +310,10 @@ class Joystick_control:public rclcpp::Node
                                 break;  
                             case 5:
                                 if(this->event.value){this->auto_mode = !this->auto_mode;}    
-                                break;                                                                                  
+                                break;   
+                            case 4:
+                                if(this->event.value){this->assissted = !this->assissted;}    
+                                break;                                                                                
                             default:
                                 break;
                             }
@@ -416,7 +428,12 @@ class Joystick_control:public rclcpp::Node
             show_msg(commands.linear.x,commands.linear.y,commands.angular.z);
 
             //publish commands
-            publisher_->publish(commands);
+            if(this->assissted){
+                publisher_assisted->publish(commands);
+            }
+            else{
+                publisher_->publish(commands);
+            }
         }
 
         void setup_js()

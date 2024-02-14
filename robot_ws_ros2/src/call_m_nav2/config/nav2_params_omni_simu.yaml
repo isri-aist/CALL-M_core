@@ -53,11 +53,6 @@ bt_navigator:
     # They can be set here or via a RewrittenYaml remap from a parent launch file to Nav2.
     default_nav_to_pose_bt_xml: $(find-pkg-share call_m_nav2)/behavior_trees/navigate_to_pose_w_replanning_and_recovery.xml # or $(find-pkg-share my_package)/behavior_tree/my_nav_to_pose_bt.xml
     default_nav_through_poses_bt_xml: $(find-pkg-share call_m_nav2)/behavior_trees/navigate_through_poses_w_replanning_and_recovery.xml # or $(find-pkg-share my_package)/behavior_tree/my_nav_through_poses_bt.xml
-    #navigators: ['navigate_to_pose', 'navigate_through_poses']
-    #navigate_to_pose:
-    #  plugin: "nav2_bt_navigator/NavigateToPoseNavigator"
-    #navigate_through_poses:
-    #  plugin: "nav2_bt_navigator/NavigateThroughPosesNavigator"
     plugin_lib_names:
       - nav2_compute_path_to_pose_action_bt_node
       - nav2_compute_path_through_poses_action_bt_node
@@ -337,7 +332,7 @@ behavior_server:
     max_rotational_vel: 1.0
     min_rotational_vel: 0.4
     rotational_acc_lim: 1.4
-    cmd_vel_teleop: cmd_vel_teleop_joy #assissted teleop parameter
+    #cmd_vel_teleop: cmd_vel_teleop #assissted teleop parameter, default = cmd_vel_teleop
 
 robot_state_publisher:
   ros__parameters:
@@ -354,16 +349,16 @@ waypoint_follower:
       enabled: True
       waypoint_pause_duration: 200
 
-velocity_smoother:
+velocity_smoother: #don't want to use, so we put high values, the speeds are already set in the controller parameters (see above)
   ros__parameters:
     use_sim_time: True
     smoothing_frequency: 20.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
-    max_velocity: [0.26, 0.0, 1.0]
-    min_velocity: [-0.26, 0.0, -1.0]
-    max_accel: [2.5, 0.0, 3.2]
-    max_decel: [-2.5, 0.0, -3.2]
+    max_velocity: [10.0, 10.0, 10.0] #(Changed for omnidirectionnal behavior)
+    min_velocity: [-10.0, -10.0, -10.0] #(Changed for omnidirectionnal behavior)
+    max_accel: [10.0, 10.0, 10.0] #(Changed for omnidirectionnal behavior)
+    max_decel: [-10.0, -10.0, -10.0] #(Changed for omnidirectionnal behavior)
     odom_topic: "odom"
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]

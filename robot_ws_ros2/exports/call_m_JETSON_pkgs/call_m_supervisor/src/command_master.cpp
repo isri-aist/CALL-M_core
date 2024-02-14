@@ -147,7 +147,7 @@ public:
       "cmd_vel_teleop_joy", sensor_qos, std::bind(&CommandMasterNode::twistCallback_joy, this, std::placeholders::_1));
 
     sub_nav = create_subscription<geometry_msgs::msg::Twist>(
-      "cmd_vel_nav", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
+      "cmd_vel", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
 
     sub_scan = this->create_subscription<sensor_msgs::msg::LaserScan>("scan", sensor_qos, std::bind(&CommandMasterNode::scanCallback, this, std::placeholders::_1));
 

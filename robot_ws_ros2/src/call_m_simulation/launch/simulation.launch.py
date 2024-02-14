@@ -8,12 +8,12 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description():
-
-    # Specify the name of the package and path to xacro file within the package
-    pkg_name = 'call_m_simulation'
-    world_model_subpath = 'description/world/simple_world.sdf'
-    #world_model_subpath = 'description/world/workshop_example.world'
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_simulation').find('call_m_simulation')
+    warehouse_dir = get_package_share_directory('aws_robomaker_small_warehouse_world')
+    # Specify the name of the package and path to xacro file within the package
+    world_model_path = os.path.join(pkg_share, 'description/world/warehouse.world')
+    #world_model_path = os.path.join(pkg_share,'description/world/simple_world.sdf')
+    #world_model_path = os.path.join(pkg_share,'description/world/workshop_example.world')
 
     """
     #joint states published by Gazebo for the simulation, see in URDF files
@@ -65,26 +65,54 @@ def generate_launch_description():
         output='screen',
     )
 
-    # Run the node
-    return LaunchDescription([
-        #launch Gazebo
-        launch.actions.ExecuteProcess(
+    # start the simulation
+    start_gazebo = launch.actions.ExecuteProcess(
                 cmd=[
                     'gazebo',
                     '--verbose',
                     '-s', 'libgazebo_ros_init.so',
                     '-s', 'libgazebo_ros_factory.so',
-                    os.path.join(get_package_share_directory(pkg_name),world_model_subpath),
+                    world_model_path,
                 ],
-                output='screen'),launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',description='Flag to enable use_sim_time'),
+                cwd=[warehouse_dir],
+                output='screen')
+
+    #if not delayed, we may have the error 'controller_manager' don't exist.
+    delayed_controller_manager_spawner = launch.actions.TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package="controller_manager",
+                executable="spawner",
+                arguments=["wheels_cont"],
+            ),
+            Node(
+                package="controller_manager",
+                executable="spawner",
+                arguments=["wheels_sup_cont"],
+            ),
+            Node(
+                package="controller_manager",
+                executable="spawner",
+                arguments=["cams_cont"],
+            )
+        ],
+    )
+
+    # Run the node
+    return LaunchDescription([
+        #launch Gazebo
+        launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',description='Flag to enable use_sim_time'),
+        start_gazebo,
         #Load bot in the simulation
         spawn_entity,
         node_simu_odometry,
         robot_localization_node,
-        node_controller_wheels,
-        node_controller_wheels_sup,
-        node_controller_cams,
+        #node_controller_wheels,
+        #node_controller_wheels_sup,
+        #node_controller_cams,
         node_simu_bot_driver,
+        delayed_controller_manager_spawner,
     ])
 
 

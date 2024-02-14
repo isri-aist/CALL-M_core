@@ -355,10 +355,10 @@ velocity_smoother: #don't want to use, so we put high values, the speeds are alr
     smoothing_frequency: 20.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
-    max_velocity: [10.0, 10.0, 10.0] #(Changed for omnidirectionnal behavior)
-    min_velocity: [-10.0, -10.0, -10.0] #(Changed for omnidirectionnal behavior)
-    max_accel: [10.0, 10.0, 10.0] #(Changed for omnidirectionnal behavior)
-    max_decel: [-10.0, -10.0, -10.0] #(Changed for omnidirectionnal behavior)
+    max_velocity: [1.0, 1.0, 1.0] #(Changed for omnidirectionnal behavior)
+    min_velocity: [-1.0, -1.0, -1.0] #(Changed for omnidirectionnal behavior)
+    max_accel: [1.0, 1.0, 1.0] #(Changed for omnidirectionnal behavior)
+    max_decel: [-1.0, -1.0, -1.0] #(Changed for omnidirectionnal behavior)
     odom_topic: "odom"
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]

@@ -89,17 +89,17 @@ ekf_filter_node:
         #            false, false, false,
         #             true, true, false]
 
-        odom0: /cam1/zed_node/odom
-        odom0_config: [false, false, false,
-                      false,  false,  false,
-                      false, false, false,
-                      false, false, false,
-                      false, false, false]
+        #odom0: /cam1/zed_node/odom
+        #odom0_config: [false, false, false,
+        #              false,  false,  false,
+        #              false, false, false,
+        #              false, false, false,
+        #              false, false, false]
                       
-        odom1: odom_simu
-        odom1_config: [false, false, false,
+        odom0: odom_simu
+        odom0_config: [false, false, false,
                       false,  false,  false,
                       true, true, false,
                       false, false, true,
                       false, false, false]
-        odom1_queue_size: 3
+        odom0_queue_size: 3

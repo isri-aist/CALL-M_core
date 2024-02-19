@@ -36,7 +36,6 @@ def generate_launch_description():
     teleop_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_teleoperation', 'teleop.launch.py'], output='screen')
     nav2_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'navigation_launch.py','params_file:='+nav_mode] + suffix, output='screen')
     nav2_launch_loc = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'localization_launch.py','map:='+map_loc,'params_file:='+nav_mode] + suffix, output='screen')
-    nav2_launch_loc2 = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_nav2', 'navigation_launch.py','params_file:='+nav_mode,'map_subscribe_transient_local:=true'] + suffix, output='screen')
 
     if nav_type == "on_fly":
         return LaunchDescription([master_launch,slam_launch,hardware_launch,display_launch,teleop_launch,nav2_launch])

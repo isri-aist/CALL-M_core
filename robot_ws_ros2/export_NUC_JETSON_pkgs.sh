@@ -42,14 +42,9 @@ cp src/call_m_hardware/package.xml exports/call_m_JETSON_pkgs/call_m_hardware/
 mkdir exports/call_m_JETSON_pkgs/call_m_start_all/
 mkdir exports/call_m_JETSON_pkgs/call_m_start_all/config
 mkdir exports/call_m_JETSON_pkgs/call_m_start_all/launch
-cp -r src/call_m_start_all/config/ exports/call_m_JETSON_pkgs/call_m_start_all/
 cp src/call_m_start_all/launch/call_m_start_JETSON.launch.py exports/call_m_JETSON_pkgs/call_m_start_all/launch/
 cp src/call_m_start_all/CMakeLists.txt exports/call_m_JETSON_pkgs/call_m_start_all/
 cp src/call_m_start_all/package.xml exports/call_m_JETSON_pkgs/call_m_start_all/
-
-#export files for 'call_m_supervisor'
-cp -r src/call_m_supervisor/ exports/call_m_JETSON_pkgs/
-
 
 echo "-- JETSON packages exported in /exports/call_m_JETSON_pkgs/"
 echo "Don't forget to install dependencies in host machine"

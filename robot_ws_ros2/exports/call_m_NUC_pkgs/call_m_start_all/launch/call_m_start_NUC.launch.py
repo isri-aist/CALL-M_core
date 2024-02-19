@@ -14,5 +14,5 @@ def generate_launch_description():
 
     # Construct the absolute paths to the launch files
     hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_hardware', 'bot_NUC.launch.py'], output='screen')
-
+    
     return LaunchDescription([hardware_launch])

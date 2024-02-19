@@ -30,8 +30,7 @@ def generate_launch_description():
         executable='robot_state_publisher',
         output='screen',
         parameters=[{'robot_description': robot_description_raw,
-        'use_sim_time': LaunchConfiguration('use_sim_time'),
-        'rate' : 100}] # add other parameters here if required
+        'use_sim_time': LaunchConfiguration('use_sim_time')}] # add other parameters here if required
     )
 
     # Execute laser_scan_merger launch file without xterm

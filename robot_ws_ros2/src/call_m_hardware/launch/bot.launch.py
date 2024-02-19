@@ -156,5 +156,5 @@ def generate_launch_description():
         camera_1, 
         camera_2, 
         joint_state_publisher_node,
-        robot_localization_node, 
+        robot_localization_node
     ])

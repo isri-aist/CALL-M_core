@@ -9,37 +9,26 @@
 
 #include "servo3moog.h"
 #include "kinema.h"
+#include "func.h"
 
 using std::placeholders::_1;
 
-double constrain(double value, double min, double MAX)
-{
-    if (MAX >= value && value >= min) {
-	return value;
-    } else if (value > MAX) {
-	return MAX;
-    } else if (value < min) {
-	return min;
-    }
-    return min;
-}
-
-void rotate_vect(double &vx, double &vy, double alpha){
-    double temp_vx = vx;
-    double temp_vy = vy;
+void rotate_vect(float &vx, float &vy, float alpha){
+    float temp_vx = vx;
+    float temp_vy = vy;
     vx = cos(alpha)*temp_vx+sin(alpha)*temp_vy;
     vy = -sin(alpha)*temp_vx+cos(alpha)*temp_vy;
     //RCLCPP_INFO(this->get_logger(),"temp: vx=%.2f, vy = %.2f",temp_vx,temp_vy);
     //RCLCPP_INFO(this->get_logger(),"set: vx=%.2f, vy = %.2f",vx,vy);
 }
 
-double val_sign(double val){
+float val_sign(float val){
     if(val<0.0){return -1.0;}
     else{return 1.0;}
 }
 
-double error_cmd(double prev_val,double wanted_val, double max_acc, double max_dcc,double dt){
-    double error = wanted_val-prev_val;
+float error_cmd(float prev_val,float wanted_val, float max_acc, float max_dcc,float dt){
+    float error = wanted_val-prev_val;
     bool acceleration = (val_sign(wanted_val)==val_sign(prev_val) && abs(wanted_val)>abs(prev_val));
     if(acceleration){
         error = val_sign(error)*std::min(abs(error),dt*max_acc);
@@ -139,9 +128,9 @@ class Bot_control_driver : public rclcpp::Node
         RCLCPP_INFO(this->get_logger(), "Goal: Vx:%.2f Vy:%.2f Vw:%.2f ",des_velx,des_vely,des_velw);
 
         //we rotate the speed vector to match wanted frame for the robot
-        double new_des_velx = -des_velx; //we flip x axis
-        double new_des_vely = des_vely;
-        double alpha = 5*M_PI/6;
+        float new_des_velx = -des_velx; //we flip x axis
+        float new_des_vely = des_vely;
+        float alpha = 5*M_PI/6;
         rotate_vect(new_des_velx, new_des_vely, alpha);
 
         //RCLCPP_INFO(this->get_logger(), "Vx:%.2f Vy:%.2f Vw:%.2f ",new_des_velx,new_des_vely,des_velw);
@@ -149,11 +138,11 @@ class Bot_control_driver : public rclcpp::Node
         ///////////////////////////
         //Accelerations mangement//
         ///////////////////////////
-        double wanted_vals[3] = {new_des_velx, new_des_vely, des_velw};
+        float wanted_vals[3] = {new_des_velx, new_des_vely, des_velw};
         tf = clock->now();
-        double dt = (tf-t0).seconds();
+        float dt = (tf-t0).seconds();
         t0 = clock->now();
-        double errors_vals[3];
+        float errors_vals[3];
 
         //max acc and decc are converted to percentage equivalence
         /*errors_vals[0] = error_cmd(former_vals[0],wanted_vals[0],MAX_AX/MAX_VX,MAX_DX/MAX_VX,dt);
@@ -174,12 +163,6 @@ class Bot_control_driver : public rclcpp::Node
         new_des_velx = former_vals[0]+errors_vals[0];
         new_des_vely = former_vals[1]+errors_vals[1];
         des_velw = former_vals[2]+errors_vals[2];
-
-        //we publish odometry feedback, but we need to have them in global frame again
-        double global_vx = new_des_velx;
-        double global_vy = new_des_vely;
-        rotate_vect(global_vx, global_vy, -alpha); //we unrotate
-        publishOdometry(-global_vx, global_vy, des_velw); //we unflip and publish
  
         // convert vehicle vel. -> rotor vel.
         if(former_vals[0] != new_des_velx || former_vals[1] != new_des_vely || former_vals[2] != des_velw){
@@ -194,6 +177,17 @@ class Bot_control_driver : public rclcpp::Node
         else{
             RCLCPP_INFO(this->get_logger(), "Done.");
         }
+        //we get speed from inverted kinematics
+        float odom_vx, odom_vy, odom_w;
+        float *p_odom_vx, *p_odom_vy, *p_odom_w;
+        p_odom_vx = &odom_vx;
+        p_odom_vy = &odom_vy;
+        p_odom_w = &odom_w;
+        rotor2vel(this->rotor_rad_p_sec, p_odom_vx, p_odom_vy, p_odom_w);
+        //we publish odometry feedback, but we need to have them in global frame again, not in the robot frame
+        rotate_vect(odom_vx, odom_vy, -alpha); //we unrotate
+        publishOdometry(-odom_vx, odom_vy, odom_w); //we unflip and publish
+        RCLCPP_INFO(this->get_logger(), "Odometry:(Vx:%.2f Vy:%.2f Vw:%.2f)",-odom_vx, odom_vy, odom_w);
     }
 
     void initialize_params(){
@@ -204,17 +198,17 @@ class Bot_control_driver : public rclcpp::Node
         this->device_name = get_parameter("device_name").as_string();
     }
 
-    void publishOdometry(double vx, double vy, double w)
+    void publishOdometry(float vx, float vy, float w)
     {
         // populate the Odometry message
         estimated_odom.header.stamp = clock->now();
         estimated_odom.header.frame_id = "odom";
         estimated_odom.child_frame_id = "base_link";
 
-        // Set twist (linear and angular velocities, with coefficient for estimations)
-        double kx = 1.0;
-        double ky = 1.0;
-        double kw = 0.86;
+        // Set twist (linear and angular velocities, with coefficient for ajustements if needed)
+        float kx = 1.0;
+        float ky = 1.0;
+        float kw = 1.0;
         estimated_odom.twist.twist.linear.x = vx*kx;
         estimated_odom.twist.twist.linear.y = vy*ky;
         estimated_odom.twist.twist.angular.z = w*kw;
@@ -224,7 +218,7 @@ class Bot_control_driver : public rclcpp::Node
 
         // Set the covariance matrix values
         // Assuming we want to set the same covariance for all elements
-        double covariance_value = 0.0;
+        float covariance_value = 0.0;
         for (size_t i = 0; i < 36; ++i) {
             estimated_odom.pose.covariance[i] = covariance_value;
             estimated_odom.twist.covariance[i] = covariance_value;
@@ -251,13 +245,13 @@ class Bot_control_driver : public rclcpp::Node
     rclcpp::TimerBase::SharedPtr timer_;
     std::string device_name;
 
-    double former_vals[3] = {0.0, 0.0, 0.0};
-    double MAX_AX= 0.3*MAX_VX; //should be >0 m.s-2 Acceleration
-    double MAX_AY= 0.3*MAX_VY; //should be >0 m.s-2
-    double MAX_AW= 0.3*MAX_W; //should be >0 rad.s-2
-    double MAX_DX= 1*MAX_VX; //should be >0 m.s-2  Deceleration
-    double MAX_DY= 1*MAX_VY; //should be >0 m.s-2
-    double MAX_DW= 1*MAX_W; //should be >0 rad.s-2
+    float former_vals[3] = {0.0, 0.0, 0.0};
+    float MAX_AX= 0.3*MAX_VX; //should be >0 m.s-2 Acceleration
+    float MAX_AY= 0.3*MAX_VY; //should be >0 m.s-2
+    float MAX_AW= 0.3*MAX_W; //should be >0 rad.s-2
+    float MAX_DX= 1*MAX_VX; //should be >0 m.s-2  Deceleration
+    float MAX_DY= 1*MAX_VY; //should be >0 m.s-2
+    float MAX_DW= 1*MAX_W; //should be >0 rad.s-2
     rclcpp::Clock::SharedPtr clock;
     rclcpp::Time t0;
     rclcpp::Time tf;

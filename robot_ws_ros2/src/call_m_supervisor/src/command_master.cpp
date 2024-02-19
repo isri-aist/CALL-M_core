@@ -277,7 +277,7 @@ private:
   sensor_msgs::msg::LaserScan::SharedPtr scan_data_ = nullptr;
 
   //scan security parameters
-  double r_secu_1 = 0.4; //define rectangle area width and distance limit to put speed to 0
+  double r_secu_1 = 0.45; //define rectangle area width and distance limit to put speed to 0
   double r_secu_2_min = 0.5; //define rectangle area lenght and distance limit to start decrease the speed
   double r_secu_2 = 0.5;
   double angle_offset = M_PI; //offset of angle between commands vector and lidars datas

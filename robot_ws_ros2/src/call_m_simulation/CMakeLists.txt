@@ -26,6 +26,7 @@ find_package(gazebo_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(rosgraph_msgs)
 
+
 # Add executable
 add_executable(simu_bot_driver_node src/simu_bot_driver.cpp)
 ament_target_dependencies(simu_bot_driver_node rclcpp std_msgs geometry_msgs dynamixel_sdk dynamixel_sdk_custom_interfaces)
@@ -45,6 +46,7 @@ install(TARGETS
   simu_odometry_node
   DESTINATION lib/${PROJECT_NAME}
 )
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

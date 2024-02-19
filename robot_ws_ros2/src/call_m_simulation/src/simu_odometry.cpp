@@ -5,6 +5,16 @@
 #include "nav_msgs/msg/odometry.hpp"
 #include "rosgraph_msgs/msg/clock.hpp"  // Add the clock message
 
+void rotate_vect(float &vx, float &vy, float alpha){
+    float temp_vx = vx;
+    float temp_vy = vy;
+    vx = cos(alpha)*temp_vx+sin(alpha)*temp_vy;
+    vy = -sin(alpha)*temp_vx+cos(alpha)*temp_vy;
+    //RCLCPP_INFO(this->get_logger(),"temp: vx=%.2f, vy = %.2f",temp_vx,temp_vy);
+    //RCLCPP_INFO(this->get_logger(),"set: vx=%.2f, vy = %.2f",vx,vy);
+}
+
+
 class SimuOdometry : public rclcpp::Node
 {
 public:
@@ -35,6 +45,14 @@ private:
       // Extract pose and twist data for call_m_bot
       geometry_msgs::msg::Pose pose = msg->pose[index];
       geometry_msgs::msg::Twist twist = msg->twist[index];
+
+      /*// put twist in robot frame, because they are in world frame initially
+      float alpha = quaternion_to_euler(pose.orientation).z;
+      float new_vx = twist.linear.x;
+      float new_vy = twist.linear.y;
+      rotate_vect(new_vx, new_vy, -alpha); //we adjust rotation
+      twist.linear.x = new_vx; 
+      twist.linear.y = new_vy;*/
 
       // Publish Odometry message with the received timestamp
       publishOdometry(pose, twist, current_timestamp_);

@@ -22,8 +22,8 @@
             camera_flip: false
             serial_number: 15255448  # usually overwritten by launch file
             pub_resolution: 'CUSTOM' # The resolution used for output. 'NATIVE' to use the same `general.grab_resolution` - `CUSTOM` to apply the `general.pub_downscale_factor` downscale factory to reduce bandwidth in transmission
-            pub_downscale_factor: 2.0 # rescale factor used to rescale image before publishing when 'pub_resolution' is 'CUSTOM'
-            pub_frame_rate: 15.0 # frequency of publishing of visual images and depth images
+            pub_downscale_factor: 4.0 # rescale factor used to rescale image before publishing when 'pub_resolution' is 'CUSTOM' (default = 2.0)
+            pub_frame_rate: 30.0 # frequency of publishing of visual images and depth images (default = 15.0)
             gpu_id: -1
             region_of_interest: '[]' # A polygon defining the ROI where the ZED SDK perform the processing ignoring the rest. Coordinates must be normalized to '1.0' to be resolution independent.
             #region_of_interest: '[[0.25,0.33],[0.75,0.33],[0.75,0.5],[0.5,0.75],[0.25,0.5]]' # A polygon defining the ROI where the ZED SDK perform the processing ignoring the rest. Coordinates must be normalized to '1.0' to be resolution independent.
@@ -53,7 +53,7 @@
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE
 
         depth:
-            depth_mode: 'ULTRA' # Matches the ZED SDK setting: 'NONE', 'PERFORMANCE', 'QUALITY', 'ULTRA', 'NEURAL' - Note: if 'NONE' all the modules that requires depth extraction are disabled by default (Pos. Tracking, Obj. Detection, Mapping, ...)
+            depth_mode: 'PERFORMANCE' # Matches the ZED SDK setting: 'NONE', 'PERFORMANCE', 'QUALITY', 'ULTRA', 'NEURAL' - Note: if 'NONE' all the modules that requires depth extraction are disabled by default (Pos. Tracking, Obj. Detection, Mapping, ...) (default = ULTRA)
             depth_stabilization: 1 # Forces positional tracking to start if major than 0 - Range: [0,100]
             openni_depth_mode: false # 'false': 32bit float [meters], 'true': 16bit unsigned int [millimeters]
             point_cloud_freq: 10.0 # [DYNAMIC] - frequency of the pointcloud publishing (equal or less to `grab_frame_rate` value)
@@ -65,11 +65,11 @@
             qos_reliability: 1 # '1': RELIABLE - '2': BEST_EFFORT -
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE 
             min_depth: 0.1 # Min: 0.1, Max: 3.0
-            max_depth: 10.0 # Max: 20.0
+            max_depth: 2.0 # Max: 20.0 (default = 10)
 
         pos_tracking:
             pos_tracking_enabled: true # True to enable positional tracking from start
-            pos_tracking_mode: 'QUALITY' # Matches the ZED SDK setting: 'QUALITY', 'STANDARD'
+            pos_tracking_mode: 'STANDARD' # Matches the ZED SDK setting: 'QUALITY', 'STANDARD' (default = QUALITY)
             imu_fusion: true # enable/disable IMU fusion. When set to false, only the optical odometry will be used.
             publish_tf: false # [usually overwritten by launch file] publish `odom -> camera_link` TF
             publish_map_tf: false # [usually overwritten by launch file] publish `map -> odom` TF

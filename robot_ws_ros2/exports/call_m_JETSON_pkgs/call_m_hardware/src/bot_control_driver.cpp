@@ -187,7 +187,6 @@ class Bot_control_driver : public rclcpp::Node
         //we publish odometry feedback, but we need to have them in global frame again, not in the robot frame
         rotate_vect(odom_vx, odom_vy, -alpha); //we unrotate
         publishOdometry(-odom_vx, odom_vy, odom_w); //we unflip and publish
-        RCLCPP_INFO(this->get_logger(), "Odometry:(Vx:%.2f Vy:%.2f Vw:%.2f)",-odom_vx, odom_vy, odom_w);
     }
 
     void initialize_params(){
@@ -208,7 +207,7 @@ class Bot_control_driver : public rclcpp::Node
         // Set twist (linear and angular velocities, with coefficient for ajustements if needed)
         float kx = 1.0;
         float ky = 1.0;
-        float kw = 1.0;
+        float kw = 0.915058;
         estimated_odom.twist.twist.linear.x = vx*kx;
         estimated_odom.twist.twist.linear.y = vy*ky;
         estimated_odom.twist.twist.angular.z = w*kw;
@@ -224,7 +223,7 @@ class Bot_control_driver : public rclcpp::Node
             estimated_odom.twist.covariance[i] = covariance_value;
         }
 
-        RCLCPP_INFO(this->get_logger(), "Actual(world): Vx:%.2f Vy:%.2f Vw:%.2f ",estimated_odom.twist.twist.linear.x,estimated_odom.twist.twist.linear.y,estimated_odom.twist.twist.angular.z);
+        RCLCPP_INFO(this->get_logger(), "Odometry: Vx:%.2f Vy:%.2f Vw:%.2f ",estimated_odom.twist.twist.linear.x,estimated_odom.twist.twist.linear.y,estimated_odom.twist.twist.angular.z);
 
         // Publish the Odometry message
         odometry_publisher_->publish(estimated_odom);

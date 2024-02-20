@@ -500,6 +500,32 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /waypoints
       Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/Polygon
+      Color: 25; 255; 0
+      Enabled: true
+      Name: Local_footprint
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /local_costmap/published_footprint
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/Polygon
+      Color: 25; 255; 0
+      Enabled: true
+      Name: Global_footprint
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /global_costmap/published_footprint
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -531,7 +557,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -1.5699994564056396
+      Angle: -1.5800001621246338
       Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -563,5 +589,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 3434
-  X: -449
-  Y: 49
+  X: 0
+  Y: 342

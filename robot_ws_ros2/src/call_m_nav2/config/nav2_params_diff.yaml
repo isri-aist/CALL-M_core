@@ -184,21 +184,22 @@ controller_server:
 local_costmap:
   local_costmap:
     ros__parameters:
-      update_frequency: 5.0
-      publish_frequency: 2.0
+      update_frequency: 10.0  #(default = 5.0)
+      publish_frequency: 10.0 #(default = 2.0)
       global_frame: odom
       robot_base_frame: base_link
       use_sim_time: false
-      rolling_window: true
-      width: 3
-      height: 3
+      rolling_window: true 
+      width: 4 #(default = 3.0)
+      height: 4 #(default = 3.0)
       resolution: 0.05
-      robot_radius: 0.6
+      #robot_radius: 0.34
+      footprint: "[[0.2425,0.2425],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.2425]]"
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.6
+        inflation_radius: 0.5
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -215,9 +216,9 @@ local_costmap:
           clearing: True
           marking: True
           data_type: "LaserScan"
-          raytrace_max_range: 3.0
+          raytrace_max_range: 6.0  #(default = 3.0)
           raytrace_min_range: 0.0
-          obstacle_max_range: 2.5
+          obstacle_max_range: 5.5 #(default = 2.5)
           obstacle_min_range: 0.0
         cam1:
           topic: /cam1/zed_node/point_cloud/cloud_registered
@@ -244,7 +245,7 @@ global_costmap:
       global_frame: map
       robot_base_frame: base_link
       use_sim_time: false
-      robot_radius: 0.6
+      robot_radius: 0.34
       resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
@@ -258,9 +259,9 @@ global_costmap:
           clearing: True
           marking: True
           data_type: "LaserScan"
-          raytrace_max_range: 3.0
+          raytrace_max_range: 10.0  #(default = 3.0)
           raytrace_min_range: 0.0
-          obstacle_max_range: 2.5
+          obstacle_max_range: 9.5  #(default = 2.5)
           obstacle_min_range: 0.0
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
@@ -268,7 +269,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.6
+        inflation_radius: 0.5
       always_send_full_costmap: True
 
 map_server:

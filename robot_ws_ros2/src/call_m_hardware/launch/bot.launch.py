@@ -153,8 +153,8 @@ def generate_launch_description():
         lid2_node, 
         camera_control_driver_node, 
         bot_control_driver, 
-        camera_1, 
-        camera_2, 
+        #camera_1, 
+        #camera_2, 
         joint_state_publisher_node,
         robot_localization_node
     ])

@@ -102,5 +102,5 @@ def generate_launch_description():
         lid1_node, 
         lid2_node, 
         camera_1, 
-        camera_2, 
+        #camera_2, 
     ])

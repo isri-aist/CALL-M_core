@@ -48,4 +48,10 @@ def generate_launch_description():
     elif nav_type == "localize":
         return LaunchDescription([master_launch,simu_launch,display_launch,teleop_launch,nav2_launch_loc,nav2_launch])
     else:
-        return LaunchDescription([master_launch,slam_launch,simu_launch,display_launch,teleop_launch])
+        return LaunchDescription([
+            master_launch,
+            slam_launch,
+            simu_launch,
+            display_launch,
+            teleop_launch
+            ])

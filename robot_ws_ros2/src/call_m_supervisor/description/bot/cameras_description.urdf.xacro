@@ -129,7 +129,7 @@
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
 		<sensor type="depth" name="cam1">
-		<update_rate>100</update_rate>
+		<update_rate>30.0</update_rate>
 		<camera name="cam1_cam">
 			<horizontal_fov>1.6</horizontal_fov>
 			<image>
@@ -191,7 +191,7 @@
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
 		<sensor type="depth" name="cam2">
-		<update_rate>100</update_rate>
+		<update_rate>30.0</update_rate>
 		<camera name="cam2_cam">
 			<horizontal_fov>1.6</horizontal_fov>
 			<image>

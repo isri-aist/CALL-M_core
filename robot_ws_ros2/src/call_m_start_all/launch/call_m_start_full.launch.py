@@ -14,7 +14,7 @@ def generate_launch_description():
     """
     PARAMETERS
     """
-    nav_type = "on_fly" #'none', 'on_fly' or 'localize'
+    nav_type = "none" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_diff.yaml') #'diff' or 'omni', path to config file
     map_loc = os.path.join(dir_nav2, 'maps', 'ikeuchi_gate_3f.yaml') #path to the map if using localization
@@ -42,4 +42,10 @@ def generate_launch_description():
     elif nav_type == "localize":
         return LaunchDescription([master_launch,hardware_launch,display_launch,teleop_launch,nav2_launch_loc,nav2_launch])
     else:
-        return LaunchDescription([master_launch,slam_launch,hardware_launch,display_launch,teleop_launch])
+        return LaunchDescription([
+            master_launch,
+            slam_launch,
+            hardware_launch,
+            display_launch,
+            teleop_launch
+            ])

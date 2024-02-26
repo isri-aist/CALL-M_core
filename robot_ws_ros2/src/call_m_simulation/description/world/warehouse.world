@@ -6,7 +6,7 @@
       <ros>
           <namespace>/gazebo</namespace>
       </ros>
-      <update_rate>100.0</update_rate>
+      <update_rate>30.0</update_rate>
     </plugin>
 
     <gravity>0 0 -9.8</gravity>

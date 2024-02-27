@@ -1,8 +1,8 @@
 float REDUCTION_RATIO[] = {-8.800000, -8.800000, -8.800000, -8.800000};
 
 // 0.167m/s=0.6km/h, 0.3m/s=1.08km/h, 1.0m/s=3.60km/h, 1.6666m/s=6km/h
-float MAX_VX = 1.0; // [m/s]
-float MAX_VY = 1.0; // [m/s]
+float MAX_VX = 0.5; // [m/s] default = 1.0 (problem of servomotor when going above 0.6)
+float MAX_VY = 0.5; // [m/s] default = 1.0
 float MAX_W = 1.5 * M_PI; // [rad/s]
 
 int motor_id[] = {1, 2, 3};

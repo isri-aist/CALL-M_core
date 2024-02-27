@@ -187,6 +187,11 @@ class Bot_control_driver : public rclcpp::Node
         //we publish odometry feedback, but we need to have them in global frame again, not in the robot frame
         rotate_vect(odom_vx, odom_vy, -alpha); //we unrotate
         publishOdometry(-odom_vx, odom_vy, odom_w); //we unflip and publish
+
+        //Debug
+        //RCLCPP_INFO(this->get_logger(), "rot1:%.2f",rotor_rad_p_sec[0]);
+        //RCLCPP_INFO(this->get_logger(), "rot2:%.2f",rotor_rad_p_sec[1]);
+        //RCLCPP_INFO(this->get_logger(), "rot3:%.2f",rotor_rad_p_sec[2]);
     }
 
     void initialize_params(){

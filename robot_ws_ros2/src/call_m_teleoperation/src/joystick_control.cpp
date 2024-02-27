@@ -134,9 +134,9 @@ class Joystick_control:public rclcpp::Node
         size_t axis;
         int version;
 
-        double linear_vel = 0.1;
+        double linear_vel = 0.2;
         double rotatio_vel = 0.1;
-        double lin_incr = 0.1;
+        double lin_incr = 0.2;
         double rot_incr = 0.1;
         double max_lin_sp = 1; //we are working with values between -1 and 1 = percentage
         double max_rot_sp = 1; //we are working with values between -1 and 1 = percentage

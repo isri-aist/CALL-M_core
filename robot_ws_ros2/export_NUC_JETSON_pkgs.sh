@@ -11,7 +11,6 @@ mkdir exports/call_m_NUC_pkgs/call_m_hardware/config
 mkdir exports/call_m_NUC_pkgs/call_m_hardware/launch
 cp -r src/call_m_hardware/src/ exports/call_m_NUC_pkgs/call_m_hardware/
 cp src/call_m_hardware/launch/bot_NUC.launch.py exports/call_m_NUC_pkgs/call_m_hardware/launch/
-cp src/call_m_hardware/config/ekf.yaml exports/call_m_NUC_pkgs/call_m_hardware/config/
 cp src/call_m_hardware/CMakeLists.txt exports/call_m_NUC_pkgs/call_m_hardware/
 cp src/call_m_hardware/package.xml exports/call_m_NUC_pkgs/call_m_hardware/
 

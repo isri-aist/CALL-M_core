@@ -218,14 +218,19 @@ private:
       }
 
     // Publish the selected twist message
-    pub_command->publish(clamp_cmd(selected_twist));
+    if(this->llv_secu){
+      pub_command->publish(clamp_cmd(selected_twist));
+    }
+    else{
+      pub_command->publish(selected_twist);
+    }
   }
 
   geometry_msgs::msg::Twist clamp_cmd(geometry_msgs::msg::Twist twist){
     geometry_msgs::msg::Twist new_twist = twist;
     
     if (scan_data_ != nullptr){
-      double absolute_speed = sqrt(pow(new_twist.linear.x,2)+pow(new_twist.linear.y,2)); //0 to 1
+      double absolute_speed = sqrt(pow(new_twist.linear.x,2)+pow(new_twist.linear.y,2))*0.5; //(0 to 1) * max linear speed (not needed if subscribed to odom_simu)
       r_secu_2 = std::max(r_secu_2_min,r_secu_1+pow(absolute_speed,2));
       //cmd direction from 0 to 2pi
       double cmd_angle = atan2(new_twist.linear.y,new_twist.linear.x) + angle_offset;
@@ -282,6 +287,7 @@ private:
   double r_secu_2 = 0.5;
   double angle_offset = M_PI; //offset of angle between commands vector and lidars datas
   double field_of_view = M_PI/2; //should be in ]0,pi]
+  bool llv_secu = true;
 
   // Flags to indicate if new messages have been received on each topic, if no message have been received for an amount of time, we reset the command.
   int teleop_key_active = 0;

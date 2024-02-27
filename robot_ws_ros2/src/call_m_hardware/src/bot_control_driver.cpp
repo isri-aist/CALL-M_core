@@ -58,7 +58,7 @@ class Bot_control_driver : public rclcpp::Node
         RCLCPP_INFO(this->get_logger(), "Set up finished.");
         auto sensor_qos = rclcpp::QoS(rclcpp::SensorDataQoS());
         subscription= this->create_subscription<geometry_msgs::msg::Twist>("cmd_vel_apply", sensor_qos, std::bind(&Bot_control_driver::topic_callback, this, _1));
-        timer_ = create_wall_timer(std::chrono::milliseconds(10), std::bind(&Bot_control_driver::timeout_secu, this));
+        timer_ = create_wall_timer(std::chrono::milliseconds(33), std::bind(&Bot_control_driver::timeout_secu, this));
         RCLCPP_INFO(this->get_logger(), "\033[%dm\033[2J\033[1;1f",0);
         RCLCPP_INFO(this->get_logger(), "ROBOT DRIVER:");
         RCLCPP_INFO(this->get_logger(), "Waiting commands...");

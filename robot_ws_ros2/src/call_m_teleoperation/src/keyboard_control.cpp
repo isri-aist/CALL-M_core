@@ -82,7 +82,7 @@ class Keyboard_control:public rclcpp::Node
         bool auto_mode = false;
         float chrono = 0.0;
         int step = 0;
-        float sec_dt = 0.1; //loop dt in seconds
+        float sec_dt = 0.1; //loop dt in seconds, need to be choose so that there is no bugs with keyboard inputs
         float distance_t = 1*sec_dt;
         int servo_cam1_id=2;
         int servo_cam2_id=3;

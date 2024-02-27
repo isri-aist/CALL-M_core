@@ -1,7 +1,7 @@
  #We set up the controller manager with the list of controllers to use
 controller_manager:
   ros__parameters:
-    update_rate: 100 #Hz
+    update_rate: 30 #Hz
     use_sim_time: true
 
     #name and type of our first controller (custom names)

@@ -126,7 +126,7 @@ class Joystick_control:public rclcpp::Node
         rclcpp::TimerBase::SharedPtr timer_;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_assisted;
-        std::chrono::milliseconds dt = 10ms;
+        std::chrono::milliseconds dt = 33ms;
 
         int js;
         struct js_event event;
@@ -216,8 +216,8 @@ class Joystick_control:public rclcpp::Node
             if(des_velx!=-joy_axe0_y || des_vely!=-joy_axe0_x){
                 des_velx=-joy_axe0_y;
                 des_vely=-joy_axe0_x;
-                //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted
-                if (des_vely!=0 && des_velx!=0){
+                //We want the norm of (vx,vy) to be bounded, we remap the values that were between -1 and 1 to of the norm wanted (for square joysticks)
+                /*if (des_vely!=0 && des_velx!=0){
                     double a = abs(des_velx/des_vely);
                     //double L= sqrt(pow(des_velx,2.0)+pow(des_vely,2.0)); 
                     double new_vx = abs(des_velx)*linear_vel;
@@ -235,6 +235,16 @@ class Joystick_control:public rclcpp::Node
                 else{
                     des_velx =des_velx*this->linear_vel;
                     des_vely =des_vely*this->linear_vel;
+                }*/
+                
+                des_velx =des_velx*this->linear_vel;
+                des_vely =des_vely*this->linear_vel;
+            
+                double N_max= this->linear_vel;
+                double N = sqrt(pow(des_velx,2.0)+pow(des_vely,2.0));
+                if (N > N_max){
+                    des_velx =des_velx*(N_max/N);
+                    des_vely =des_vely*(N_max/N);
                 }
             }
 

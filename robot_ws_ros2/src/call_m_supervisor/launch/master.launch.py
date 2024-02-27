@@ -49,6 +49,7 @@ def generate_launch_description():
             'topic_lid2' : "lidar2/scan",
             'topic_out' : "scan",
             'new_frame' : "base2_link",
+            'rate' : 20.0,
             'sim_time': LaunchConfiguration('use_sim_time'),
         }]
     )

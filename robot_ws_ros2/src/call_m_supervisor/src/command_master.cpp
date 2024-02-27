@@ -160,7 +160,7 @@ public:
     init_twist(twist_nav);
 
     // Set a timer to publish the selected twist message periodically
-    timer_ = create_wall_timer(std::chrono::milliseconds(10), std::bind(&CommandMasterNode::publishTwist, this));
+    timer_ = create_wall_timer(std::chrono::milliseconds(33), std::bind(&CommandMasterNode::publishTwist, this));
   }
 
 private:

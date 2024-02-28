@@ -142,22 +142,22 @@ controller_server:
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
-      min_vel_x: -0.4
+      min_vel_x: -0.8
       min_vel_y: 0.0
-      max_vel_x: 0.4
+      max_vel_x: 0.8
       max_vel_y: 0.0
-      max_vel_theta: 0.3
-      min_speed_xy: -0.4
-      max_speed_xy: 0.4
-      min_speed_theta: -0.3
+      max_vel_theta: 0.2
+      min_speed_xy: -0.8
+      max_speed_xy: 0.8
+      min_speed_theta: -0.2
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
-      acc_lim_x: 0.3
+      acc_lim_x: 0.6
       acc_lim_y: 0.0
-      acc_lim_theta: 1.4
-      decel_lim_x: -1.0
+      acc_lim_theta: 0.3
+      decel_lim_x: -2.0
       decel_lim_y: 0.0
-      decel_lim_theta: -3.2
+      decel_lim_theta: -2.0
       vx_samples: 20
       vy_samples: 5
       vtheta_samples: 20
@@ -209,7 +209,7 @@ local_costmap:
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        observation_sources: scan cam1 cam2
+        observation_sources: scan #cam1 cam2
         scan:
           topic: /scan
           max_obstacle_height: 2.0
@@ -329,9 +329,9 @@ behavior_server:
     transform_tolerance: 0.1
     use_sim_time: false
     simulate_ahead_time: 2.0
-    max_rotational_vel: 1.0
-    min_rotational_vel: 0.4
-    rotational_acc_lim: 1.4
+    max_rotational_vel: 0.4
+    min_rotational_vel: 0.2
+    rotational_acc_lim: 0.3
 
 robot_state_publisher:
   ros__parameters:
@@ -354,10 +354,10 @@ velocity_smoother:
     smoothing_frequency: 20.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
-    max_velocity: [1.0, 1.0, 1.0] #(Changed for omnidirectionnal behavior)
-    min_velocity: [-1.0, -1.0, -1.0] #(Changed for omnidirectionnal behavior)
-    max_accel: [1.0, 1.0, 1.0] #(Changed for omnidirectionnal behavior)
-    max_decel: [-1.0, -1.0, -1.0] #(Changed for omnidirectionnal behavior)
+    max_velocity: [1.0, 1.0, 1.0]
+    min_velocity: [-1.0, -1.0, -1.0] 
+    max_accel: [1.0, 1.0, 1.0] 
+    max_decel: [-1.0, -1.0, -1.0]
     odom_topic: "odom"
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]

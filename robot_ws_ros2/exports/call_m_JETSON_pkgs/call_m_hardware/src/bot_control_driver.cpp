@@ -271,12 +271,12 @@ class Bot_control_driver : public rclcpp::Node
     std::string device_name;
 
     float former_vals[3] = {0.0, 0.0, 0.0};
-    float MAX_AX= 0.3*MAX_VX; //should be >0 m.s-2 Acceleration
-    float MAX_AY= 0.3*MAX_VY; //should be >0 m.s-2
+    float MAX_AX= 0.6*MAX_VX; //should be >0 m.s-2 Acceleration
+    float MAX_AY= 0.6*MAX_VY; //should be >0 m.s-2
     float MAX_AW= 0.3*MAX_W; //should be >0 rad.s-2
-    float MAX_DX= 1*MAX_VX; //should be >0 m.s-2  Deceleration
-    float MAX_DY= 1*MAX_VY; //should be >0 m.s-2
-    float MAX_DW= 1*MAX_W; //should be >0 rad.s-2
+    float MAX_DX= 2*MAX_VX; //should be >0 m.s-2  Deceleration
+    float MAX_DY= 2*MAX_VY; //should be >0 m.s-2
+    float MAX_DW= 2*MAX_W; //should be >0 rad.s-2
     rclcpp::Clock::SharedPtr clock;
     rclcpp::Time t0;
     rclcpp::Time tf;

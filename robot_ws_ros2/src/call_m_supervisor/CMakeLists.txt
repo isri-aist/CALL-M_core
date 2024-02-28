@@ -21,9 +21,13 @@ find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(xacro REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(rosgraph_msgs REQUIRED)
 
 add_executable(command_master_node src/command_master.cpp)
 ament_target_dependencies(command_master_node rclcpp geometry_msgs sensor_msgs)
+
+add_executable(clock_sync_node src/clock_sync.cpp)
+ament_target_dependencies(clock_sync_node rclcpp rosgraph_msgs)
 
 # Install directories
 install(
@@ -34,6 +38,7 @@ install(
 # Install executable
 install(TARGETS
   command_master_node
+  clock_sync_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

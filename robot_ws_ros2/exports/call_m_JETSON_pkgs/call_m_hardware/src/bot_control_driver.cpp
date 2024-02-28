@@ -11,6 +11,8 @@
 #include "kinema.h"
 #include "func.h"
 
+#include "rosgraph_msgs/msg/clock.hpp"  // Add the clock message
+
 using std::placeholders::_1;
 
 void rotate_vect(float &vx, float &vy, float alpha){
@@ -66,6 +68,10 @@ class Bot_control_driver : public rclcpp::Node
         clock = this->get_clock();
         t0 = clock->now();
 
+        //published clock
+        // Subscribe to the clock topic
+        clock_subscription_ = this->create_subscription<rosgraph_msgs::msg::Clock>("/clock", sensor_qos, std::bind(&Bot_control_driver::ClockCallback, this, std::placeholders::_1));
+
         // Register the shutdown callback
         /*rclcpp::on_shutdown([this]() {
             customShutdownHandler();
@@ -77,6 +83,12 @@ class Bot_control_driver : public rclcpp::Node
 
   private:
     //functions
+    void ClockCallback(const rosgraph_msgs::msg::Clock::SharedPtr msg)
+    {
+        // Update the current timestamp when the clock message is received
+        current_timestamp_ = msg->clock;
+    }
+
     void topic_callback(const geometry_msgs::msg::Twist::SharedPtr msg)
     {
         callback_active = 0; //update the security variable
@@ -196,16 +208,25 @@ class Bot_control_driver : public rclcpp::Node
 
     void initialize_params(){
       this->declare_parameter("device_name","/dev/ttyUSB0"); 
+      this->declare_parameter("sim_time",false);
     }
 
     void refresh_params(){
         this->device_name = get_parameter("device_name").as_string();
+        get_parameter("sim_time",sim_time);
     }
 
     void publishOdometry(float vx, float vy, float w)
     {
         // populate the Odometry message
-        estimated_odom.header.stamp = clock->now();
+        if(this->sim_time){
+            estimated_odom.header.stamp = current_timestamp_;
+            RCLCPP_INFO(this->get_logger(), "Subscribed to date sync /clock");
+        }
+        else{
+            estimated_odom.header.stamp = clock->now();
+            RCLCPP_INFO(this->get_logger(), "Using computer date");
+        }
         estimated_odom.header.frame_id = "odom";
         estimated_odom.child_frame_id = "base_link";
 
@@ -262,6 +283,9 @@ class Bot_control_driver : public rclcpp::Node
 
     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odometry_publisher_;
     nav_msgs::msg::Odometry estimated_odom;
+    bool sim_time;
+    rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr clock_subscription_;
+    builtin_interfaces::msg::Time current_timestamp_;
 
 };
 

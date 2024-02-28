@@ -54,6 +54,13 @@ def generate_launch_description():
         }]
     )
 
+    # node to publish /clock used to ensure that robot's computer are synced even wihout internet connection
+    clock_sync_publisher = Node(
+        package='call_m_supervisor',
+        executable='clock_sync_node',
+        output='screen',
+        parameters=[{'sim_time': LaunchConfiguration('use_sim_time')}] # add other parameters here if required
+    )
 
     #joint states published by Gazebo for the simulation and by Hardware launch if hardware
 
@@ -62,4 +69,5 @@ def generate_launch_description():
         scan_merger_node,
         command_master_node,
         node_robot_state_publisher,
+        clock_sync_publisher,
     ])

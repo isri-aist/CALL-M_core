@@ -22,6 +22,7 @@ def generate_launch_description():
         parameters=[
             # YAML files
             config_cam1_file,
+            {'use_sim_time': LaunchConfiguration('use_sim_time')},
         ]
     )
 
@@ -38,6 +39,7 @@ def generate_launch_description():
         parameters=[
             # YAML files
             config_cam2_file,
+            {'use_sim_time': LaunchConfiguration('use_sim_time')},
         ]
     )
 

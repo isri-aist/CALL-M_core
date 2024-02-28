@@ -22,9 +22,10 @@ find_package(geometry_msgs REQUIRED)
 find_package(dynamixel_sdk_custom_interfaces REQUIRED)
 find_package(dynamixel_sdk REQUIRED)
 find_package(nav_msgs REQUIRED)
+find_package(rosgraph_msgs REQUIRED)
 
 add_executable(bot_control_driver_node src/bot_control_driver.cpp src/servo3moog.cpp src/func.cpp src/kinema.cpp)
-ament_target_dependencies(bot_control_driver_node rclcpp geometry_msgs nav_msgs)
+ament_target_dependencies(bot_control_driver_node rclcpp geometry_msgs nav_msgs rosgraph_msgs)
 
 add_executable(camera_control_driver_node src/camera_control_driver.cpp)
 ament_target_dependencies(camera_control_driver_node rclcpp dynamixel_sdk_custom_interfaces dynamixel_sdk)

@@ -143,7 +143,7 @@ If neeeded, or in case of hardware connection problems, try to get permission fo
 sudo usermod -aG dialout $USER
 sudo chmod a+rw /dev/ttyUSB*
 ```
-!!!Zed mini cameras may need to be replugged on each start up!!!
+!!!Zed mini cameras may need to be replugged on each start up if the cable used are USB-A_USB-C!!!(USB-C_USB-C ok)
 
 Launch the servor on the robot computer:
 ```
@@ -154,6 +154,16 @@ Launch the client on any other computer on the same network:
 ```
 ros2 launch call_m_start_all call_m_start_client.launch.py
 ```
+
+### Sync the computers
+```
+sudo apt install chrony
+```
+Configurations files are in /chrony/, they need to replace /etc/chrony/chrony.conf. Servor = remote computer, clients = computers on call_m.
+The IP adresses may need to be changed in the configurations files. 
+
+https://robofoundry.medium.com/how-to-sync-time-between-robot-and-host-machine-for-ros2-ecbcff8aadc4
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-configuring_ntp_using_the_chrony_suite#sect-Stopping_chronyd
 
 ## Workspace details
 * Hardware_doc:

@@ -22,7 +22,6 @@ def generate_launch_description():
         parameters=[
             # YAML files
             config_cam1_file,
-            {'use_sim_time': LaunchConfiguration('use_sim_time')},
         ]
     )
 
@@ -39,12 +38,10 @@ def generate_launch_description():
         parameters=[
             # YAML files
             config_cam2_file,
-            {'use_sim_time': LaunchConfiguration('use_sim_time')},
         ]
     )
 
     return LaunchDescription([
-        launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='False',description='Flag to enable use_sim_time'),
         camera_1, 
         camera_2, 
     ])

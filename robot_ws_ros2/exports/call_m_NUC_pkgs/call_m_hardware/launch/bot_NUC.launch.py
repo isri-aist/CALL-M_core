@@ -68,20 +68,9 @@ def generate_launch_description():
 
     #bot_driver
     bot_control_driver = launch.actions.ExecuteProcess(
-            cmd=['xterm','-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node','--ros-args','-p', 'device_name:='+port_servo_motors_ID,'-p', 'sim_time:=true'],
+            cmd=['xterm','-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node','--ros-args','-p', 'device_name:='+port_servo_motors_ID,'-p', 'sim_time:=false'],
             output='screen',
         )
-    
-    #can use to define use_sim_time from call_m_start_all, but no xterm vizualisation then
-    """bot_control_driver = Node(
-        name='bot_control_driver_node',
-        package='call_m_hardware',
-        executable='bot_control_driver_node',
-        output=None,
-        parameters=[{
-            'sim_time': LaunchConfiguration('use_sim_time'),
-        }],
-    )"""
 
     camera_control_driver_node = Node(
         name='camera_control_driver_node',
@@ -94,7 +83,6 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='False',description='Flag to enable use_sim_time'),
         bot_control_driver, 
         camera_control_driver_node, 
         lid1_node, 

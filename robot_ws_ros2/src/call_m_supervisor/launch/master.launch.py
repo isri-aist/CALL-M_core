@@ -54,7 +54,7 @@ def generate_launch_description():
         }]
     )
 
-    # node to publish /clock used to ensure that robot's computer are synced even wihout internet connection
+    # node to publish /clock used to ensure that robot's computer are synced even wihout internet connection (not needed if using chrony)
     clock_sync_publisher = Node(
         package='call_m_supervisor',
         executable='clock_sync_node',
@@ -69,5 +69,5 @@ def generate_launch_description():
         scan_merger_node,
         command_master_node,
         node_robot_state_publisher,
-        clock_sync_publisher,
+        #clock_sync_publisher,
     ])

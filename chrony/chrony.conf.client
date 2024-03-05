@@ -1,0 +1,13 @@
+# Use your Chrony server as the time source.
+server <IP_of_Server>
+
+# Allow other computers to synchronize with this client.
+allow
+
+# Ignore stratum in source selection. Client time is not considered
+stratumweight 0
+
+# Specify the range for polling intervals.
+maxpoll 10
+minpoll 6
+

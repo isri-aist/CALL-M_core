@@ -1,0 +1,16 @@
+# Use your local clock as the primary time source.
+server 127.127.1.0
+
+# Allow NTP clients to synchronize with this server.
+allow
+
+# Ignore stratum in source selection.
+stratumweight 0
+
+# Do not use the local system clock as a reference.
+local stratum 10
+
+# Specify the range for polling intervals.
+maxpoll 10
+minpoll 6
+

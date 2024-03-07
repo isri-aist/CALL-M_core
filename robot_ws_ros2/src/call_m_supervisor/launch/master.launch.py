@@ -69,5 +69,5 @@ def generate_launch_description():
         scan_merger_node,
         command_master_node,
         node_robot_state_publisher,
-        #clock_sync_publisher,
+        clock_sync_publisher,
     ])

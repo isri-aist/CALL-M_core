@@ -221,15 +221,15 @@ private:
 
   rclcpp::TimerBase::SharedPtr timer_;
   geometry_msgs::msg::Twist cmd_vel;
-  float MAX_VX = 1.5; //m.s-1
-  float MAX_VY = 2.0;
+  float MAX_VX = 0.5; //m.s-1
+  float MAX_VY = 0.5;
   float MAX_W = 1.5 * M_PI; //rad.s-1
-  double MAX_AX= 0.5*MAX_VX; //should be >0 m.s-2 Acceleration
-  double MAX_AY= 0.5*MAX_VY; //should be >0 m.s-2
-  double MAX_AW= 0.5*MAX_W; //should be >0 rad.s-2
-  double MAX_DX= 1*MAX_VX; //should be >0 m.s-2  Deceleration
-  double MAX_DY= 1*MAX_VY; //should be >0 m.s-2
-  double MAX_DW= 1*MAX_W; //should be >0 rad.s-2
+  double MAX_AX= 0.6*MAX_VX; //should be >0 m.s-2 Acceleration
+  double MAX_AY= 0.6*MAX_VY; //should be >0 m.s-2
+  double MAX_AW= 0.6*MAX_W; //should be >0 rad.s-2
+  double MAX_DX= 2*MAX_VX; //should be >0 m.s-2  Deceleration
+  double MAX_DY= 2*MAX_VY; //should be >0 m.s-2
+  double MAX_DW= 2*MAX_W; //should be >0 rad.s-2
   double cam1_angle = 0.0;
   double cam2_angle = 0.0;
   rclcpp::Clock::SharedPtr clock;

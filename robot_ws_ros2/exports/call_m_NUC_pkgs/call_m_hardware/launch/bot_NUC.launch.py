@@ -68,7 +68,7 @@ def generate_launch_description():
 
     #bot_driver
     bot_control_driver = launch.actions.ExecuteProcess(
-            cmd=['xterm','-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node','--ros-args','-p', 'device_name:='+port_servo_motors_ID,'-p', 'sim_time:=false'],
+            cmd=['xterm','-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node','--ros-args','-p', 'device_name:='+port_servo_motors_ID,'-p', 'sim_time:=true'],
             output='screen',
         )
 

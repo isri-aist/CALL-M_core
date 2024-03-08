@@ -11,8 +11,8 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_simulation').find('call_m_simulation')
     warehouse_dir = get_package_share_directory('aws_robomaker_small_warehouse_world')
     # Specify the name of the package and path to xacro file within the package
-    world_model_path = os.path.join(pkg_share, 'description/world/warehouse.world')
-    #world_model_path = os.path.join(pkg_share,'description/world/simple_world.sdf')
+    #world_model_path = os.path.join(pkg_share, 'description/world/warehouse.world')
+    world_model_path = os.path.join(pkg_share,'description/world/simple_world.sdf')
     #world_model_path = os.path.join(pkg_share,'description/world/workshop_example.world')
 
     """

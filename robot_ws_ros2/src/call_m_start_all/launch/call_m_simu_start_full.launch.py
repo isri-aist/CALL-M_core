@@ -17,8 +17,8 @@ def generate_launch_description():
     nav_type = "localize" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_diff_simu.yaml') #'diff' or 'omni', path to config file
-    map_loc = os.path.join(dir_nav2, 'maps', 'map.yaml') #path to the map if using localization
-    slam_param = os.path.join(dir_slam, 'config/mapper_params_online_async.yaml') #path to params for slam
+    map_loc = os.path.join(dir_nav2, 'maps', 'map_test.yaml') #path to the map if using localization
+    slam_param = os.path.join(dir_slam, 'config/mapper_params_online_async_simu.yaml') #path to params for slam
 
     """
     LAUNCHES

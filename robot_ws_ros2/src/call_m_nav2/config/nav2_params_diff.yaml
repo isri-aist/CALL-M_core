@@ -26,7 +26,7 @@ amcl:
     recovery_alpha_fast: 0.0
     recovery_alpha_slow: 0.0
     resample_interval: 1
-    robot_model_type: "nav2_amcl::DifferentialMotionModel" #try 'differential' if this syntax doen't work with AMCL
+    robot_model_type: "nav2_amcl::OmniMotionModel" #AMCL need to compute position by concidering that the robot is omnidirectionnal
     save_pose_rate: 5.0 #default = 0.5
     sigma_hit: 0.2
     tf_broadcast: true

@@ -80,26 +80,26 @@
         <pose frame="">4.73156 -6.750542 -0.2 0 0 0</pose>  <!--  -0.2 onz added-->
 	</model>
 
-        <!--model name="aws_robomaker_warehouse_DeskC_01_001">
+    <model name="aws_robomaker_warehouse_DeskC_01_001">
         <include>
             <uri>model://aws_robomaker_warehouse_DeskC_01</uri>
         </include>
-        <pose frame="">-0.061684 6.135864 0 0 0 0</pose>
+        <pose frame="">-0.061684 6.135864 -0.2 0 0 0</pose> <!--  -0.2 onz added-->
 	</model>
 
         <model name="aws_robomaker_warehouse_DeskC_01_002">
         <include>
             <uri>model://aws_robomaker_warehouse_DeskC_01</uri>
         </include>
-        <pose frame="">-0.061684 3.039 0 0 0 0</pose>
+        <pose frame="">-0.061684 3.039 -0.2 0 0 0</pose> <!--  -0.2 onz added-->
 	</model>
 
         <model name="aws_robomaker_warehouse_DeskC_01_003">
         <include>
             <uri>model://aws_robomaker_warehouse_DeskC_01</uri>
         </include>
-        <pose frame="">-0.061684 -6.6493 0 0 0 0</pose>
-	</model-->
+        <pose frame="">-0.061684 -6.6493 -0.2 0 0 0</pose> <!--  -0.2 onz added-->
+	</model>
 
         <model name="aws_robomaker_warehouse_GroundB_01_001">
         <include>

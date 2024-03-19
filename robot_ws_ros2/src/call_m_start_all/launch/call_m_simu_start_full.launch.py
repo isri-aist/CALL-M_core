@@ -13,7 +13,7 @@ def generate_launch_description():
 
     """
     PARAMETERS
-    """
+    """ 
     nav_type = "localize" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_diff_simu.yaml') #'diff' or 'omni', path to config file

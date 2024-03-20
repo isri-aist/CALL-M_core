@@ -9,7 +9,8 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_supervisor').find('call_m_supervisor') 
     bot_model_subpath = 'description/bot/bot_description.urdf.xacro'
 
-    cmd_debug = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '100x20', '-e', 'ros2', 'run']
+    cmd_debug = ['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '130x40', '-e', 'ros2', 'launch']
+    cmd = ['ros2', 'launch']
 
     command_master_node = launch_ros.actions.Node(
        package='call_m_supervisor',
@@ -33,8 +34,8 @@ def generate_launch_description():
         'use_sim_time': LaunchConfiguration('use_sim_time')}] # add other parameters here if required
     )
 
-    # Execute laser_scan_merger launch file without xterm
-    scan_merger_node=Node(
+    # Execute laser_scan_merger launch file without xterm ow replaced by lasercan_toolbox node)
+    """scan_merger_node=Node(
         package = 'laser_scan_merger',
         name = 'laser_scan_merger_node',
         executable = 'laser_scan_merger_node',
@@ -45,13 +46,27 @@ def generate_launch_description():
             'lidar2_start_angle' : 0.785398163, #45 deg
             'lidar2_end_angle' : 5.497787144, #-45 = 315 deg
             'lidar2_angle_origin_offset' : 3.141592654, #180 deg with rpLidars
-            'topic_lid1' : "lidar1/scan",
+            'topic_lid1' : "lidar1/scan",  
             'topic_lid2' : "lidar2/scan",
             'topic_out' : "scan",
             'new_frame' : "base2_link",
             'rate' : 20.0,
             'sim_time': LaunchConfiguration('use_sim_time'),
         }]
+    )"""
+
+    laserscan_toolbox_params_file = os.path.join(pkg_share,"config/laserscan_toolbox_params.yaml")
+    #laserscan_toolbox=launch.actions.ExecuteProcess(cmd=cmd + ['multi-laserscan-toolbox-ros2', 'laserscan_toolbox.launch.py','params_file:='+laserscan_toolbox_params_file,'use_sim_time:=true'], output='screen')
+    #we use node directly because we want to get use_sim_time from another launch file.
+    laserscan_toolbox=Node(
+        parameters=[
+          laserscan_toolbox_params_file,
+          {'use_sim_time': LaunchConfiguration('use_sim_time')}
+        ],
+        package = 'multi-laserscan-toolbox-ros2',
+        name = 'laserscan_toolbox_node',
+        executable = 'laserscan_toolbox_node',
+        output='screen'
     )
 
     # node to publish /clock used to ensure that robot's computer are synced even wihout internet connection (not needed if using chrony)
@@ -66,7 +81,7 @@ def generate_launch_description():
 
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value="False",description='Flag to enable use_sim_time'),
-        scan_merger_node,
+        laserscan_toolbox,
         command_master_node,
         node_robot_state_publisher,
         clock_sync_publisher,

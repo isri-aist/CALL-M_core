@@ -47,7 +47,7 @@
 				<horizontal>
 					<samples>360</samples>
 					<resolution>1.000000</resolution>
-					<min_angle>3.14159265359</min_angle> <!-- Set to π for 180 degrees (We need to shift all values according to rpLidars)-->
+					<min_angle>3.14159265359</min_angle> <!-- Set to π for 180 degrees  = to simulate RPlidars (We need to shift all values according to rpLidars)-->
 					<max_angle>${6.28318530718+3.14159265359}</max_angle> <!-- Set to 3π for keeping 360 degres range -->
 				</horizontal>
 				</scan>

@@ -3,6 +3,15 @@ This file is not used. It contains pieces of codes that could be useful in the f
 Can be used as a backup for pieces of code.
 -->
 
+<!-- Dummy link may need to be added because KDL does not support root link with inertia. But simulation not working with it-->
+<!--<link name="dummy"></link>
+<joint name="init_joint" type="fixed">
+	<parent link="dummy"/>
+	<child link="base_link"/>
+	<origin xyz="0.0 0.0 ).0}" rpy="0 0 0"/>
+</joint>
+-->
+
 <!-- Robot Support, to be deleted want controlling -->
 <link name="base_sup_link">
     <visual>

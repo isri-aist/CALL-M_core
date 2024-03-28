@@ -77,7 +77,7 @@ def generate_launch_description():
                 cwd=[warehouse_dir],
                 output='screen')
 
-    #if not delayed, we may have the error 'controller_manager' don't exist.
+    #if not delayed, we may have the error 'controller_manager' don't exist at start of the simulation.
     delayed_controller_manager_spawner = launch.actions.TimerAction(
         period=3.0,
         actions=[

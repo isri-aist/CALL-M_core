@@ -131,10 +131,10 @@
 		<sensor type="depth" name="cam1">
 		<update_rate>30.0</update_rate>
 		<camera name="cam1_cam">
-			<horizontal_fov>1.6</horizontal_fov>
+			<horizontal_fov>1.57</horizontal_fov>
 			<image>
-			<width>800</width>
-			<height>800</height>
+			<width>400</width>
+			<height>400</height>
 			<format>R8G8B8</format>
 			</image>
 			<clip>
@@ -193,10 +193,10 @@
 		<sensor type="depth" name="cam2">
 		<update_rate>30.0</update_rate>
 		<camera name="cam2_cam">
-			<horizontal_fov>1.6</horizontal_fov>
+			<horizontal_fov>1.57</horizontal_fov>
 			<image>
-			<width>800</width>
-			<height>800</height>
+			<width>400</width>
+			<height>400</height>
 			<format>R8G8B8</format>
 			</image>
 			<clip>

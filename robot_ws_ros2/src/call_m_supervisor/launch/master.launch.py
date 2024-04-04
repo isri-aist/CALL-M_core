@@ -4,6 +4,11 @@ import os
 import xacro
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
+import re
+
+def remove_comments(text):
+    pattern = r'<!--(.*?)-->'
+    return re.sub(pattern, '', text, flags=re.DOTALL)
 
 def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_supervisor').find('call_m_supervisor') 
@@ -23,7 +28,9 @@ def generate_launch_description():
 
     # Use xacro to process the file
     xacro_file = os.path.join(pkg_share,bot_model_subpath)
-    robot_description_raw = xacro.process_file(xacro_file).toxml()
+    robot_description_raw = remove_comments(xacro.process_file(xacro_file).toxml())
+
+    print(robot_description_raw)
 
     # node to publish TFs of robot model
     node_robot_state_publisher = Node(

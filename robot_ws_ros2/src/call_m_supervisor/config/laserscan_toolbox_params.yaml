@@ -6,7 +6,7 @@ laserscan_toolbox_node:
     new_frame: "base2_link"
 
     #debugging
-    debug: false
+    debug: true
     debug_file_path: "/home/jrluser/Desktop/call_m_workspace/lasertoolbox_debug.txt"
     show_ranges: false
 

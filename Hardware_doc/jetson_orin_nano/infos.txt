@@ -1,5 +1,8 @@
 jetson orin nano NX 16
 
+Datasheet:
+https://developer.download.nvidia.com/assets/embedded/secure/jetson/orin_nx/docs/Jetson_Orin_NX_DS-10712-001_v0.5.pdf?O5vO2jJTgEGd-nxSC-UAwyRCWwiLwft7IzEZhJc98uCjAcdrWuB9tlqa81llG2ydyOAXH8O5zrQl42ww3uQ09_APJcMSpy6yN_K8GZg0tNDUFxkmi0wL0czUwrNgsUghmLN-YxFYmALS21GOLWfqnoS_ju6DvLtllycpovPl2m3lkrVCrKsG6shRyhsi1A==&t=eyJscyI6ImJzZW8iLCJsc2QiOiJodHRwczovL3d3dy5iaW5nLmNvbS8ifQ==
+
 Install system:
 https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/software_setup.html
 

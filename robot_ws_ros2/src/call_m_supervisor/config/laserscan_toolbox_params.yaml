@@ -44,3 +44,4 @@ laserscan_toolbox_node:
       range_max: 100.0 #m
       persistence: false
       timeout: 0.0 #0.0 seconds = all value's date are autorized
+      

@@ -21,3 +21,6 @@
 [submodule "robot_ws_ros2/src/included_external_packages/multi-laserscan-toolbox-ros2"]
 	path = robot_ws_ros2/src/included_external_packages/multi-laserscan-toolbox-ros2
 	url = git@github.com:Noceo200/multi-laserscan-toolbox-ros2.git
+[submodule "robot_ws_ros2/src/included_external_packages/depth-filter-scan-converter"]
+	path = robot_ws_ros2/src/included_external_packages/depth-filter-scan-converter
+	url = git@github.com:Noceo200/depth-filter-scan-converter.git

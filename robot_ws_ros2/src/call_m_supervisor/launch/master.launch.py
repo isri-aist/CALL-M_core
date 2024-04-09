@@ -86,9 +86,37 @@ def generate_launch_description():
 
     #joint states published by Gazebo for the simulation and by Hardware launch if hardware
 
+    #Depth to scan converters
+    #ros2 launch depth-filter-scan-converter depth_filter_scan_converter.launch.py use_sim_time:=true
+    depth_converter_params_file1 = os.path.join(pkg_share,"config/depth_filter_scan_converter_params1.yaml")
+    depth_converter1 = Node(
+        parameters=[
+          depth_converter_params_file1,
+          {'use_sim_time': LaunchConfiguration('use_sim_time')}
+        ],
+        package = 'depth-filter-scan-converter',
+        name = 'depth_filter_scan_converter_node',
+        executable = 'depth_filter_scan_converter_node',
+        output='screen'
+    )
+
+    depth_converter_params_file2 = os.path.join(pkg_share,"config/depth_filter_scan_converter_params2.yaml")
+    depth_converter2 = Node(
+        parameters=[
+          depth_converter_params_file2,
+          {'use_sim_time': LaunchConfiguration('use_sim_time')}
+        ],
+        package = 'depth-filter-scan-converter',
+        name = 'depth_filter_scan_converter_node',
+        executable = 'depth_filter_scan_converter_node',
+        output='screen'
+    )
+
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value="False",description='Flag to enable use_sim_time'),
-        laserscan_toolbox,
+        depth_converter1,
+        depth_converter2,
+        laserscan_toolbox, 
         command_master_node,
         node_robot_state_publisher,
         clock_sync_publisher,

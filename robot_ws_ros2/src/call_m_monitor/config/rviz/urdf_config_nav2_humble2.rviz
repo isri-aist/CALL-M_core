@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded: ~
       Splitter Ratio: 0.5
-    Tree Height: 1192
+    Tree Height: 740
   - Class: nav2_rviz_plugins/Navigation 2
     Name: Navigation 2
   - Class: rviz_common/Views
@@ -343,10 +343,10 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 47
+      Max Intensity: 0
       Min Color: 0; 0; 0
       Min Intensity: 0
-      Name: LaserScan
+      Name: MergedScan
       Position Transformer: XYZ
       Selectable: true
       Size (Pixels): 3
@@ -526,6 +526,74 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /global_costmap/published_footprint
       Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 0; 255; 255
+      Max Intensity: 0.9946548342704773
+      Min Color: 0; 0; 255
+      Min Intensity: 0.0073874578811228275
+      Name: ScanCam1
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cam1/scan
+      Use Fixed Frame: true
+      Use rainbow: false
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 0; 255; 255
+      Max Intensity: 0.9999305605888367
+      Min Color: 0; 0; 255
+      Min Intensity: 0.28250718116760254
+      Name: ScanCam2
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cam2/scan
+      Use Fixed Frame: true
+      Use rainbow: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -580,14 +648,14 @@ Window Geometry:
     collapsed: false
   Displays:
     collapsed: false
-  Height: 2326
+  Height: 1726
   Hide Left Dock: false
   Hide Right Dock: false
   Navigation 2:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000200000000000002710000087afc0200000004fb000000100044006900730070006c006100790073010000006e000005a00000018200fffffffb00000018004e0061007600690067006100740069006f006e00200032010000061a000002ce0000023a00fffffffb0000000a0049006d006100670065010000059e000000e70000000000000000fb0000000a005600690065007700730000000553000001320000013200ffffff00000001000005e80000087afc0200000002fb0000000e00430061006d0065007200610031010000006e000004170000004a00fffffffb0000000e00430061006d00650072006100320100000491000004570000004a00ffffff0000068f0000087a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000002000000000000027100000622fc0200000004fb000000100044006900730070006c006100790073010000006e000003dc0000018200fffffffb00000018004e0061007600690067006100740069006f006e0020003201000004560000023a0000023a00fffffffb0000000a0049006d006100670065010000059e000000e70000000000000000fb0000000a005600690065007700730000000553000001320000013200ffffff00000001000005e800000622fc0200000002fb0000000e00430061006d0065007200610031010000006e000002f40000004a00fffffffb0000000e00430061006d0065007200610032010000036e000003220000004a00ffffff000002cf0000062200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 3840
-  X: 0
-  Y: 0
+  Width: 2880
+  X: 522
+  Y: 170

@@ -23,7 +23,7 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: lidar1 lidar2
+    sources: cam1 #lidar1 lidar2 cam1 cam2
 
     lidar1:
       topic: "lidar1/scan"
@@ -44,4 +44,23 @@ laserscan_toolbox_node:
       range_max: 100.0 #m
       persistence: false
       timeout: 0.0 #0.0 seconds = all value's date are autorized
+
+    cam1:
+      topic: "cam1/scan"
+      start_angle: 0.0 #the values are already specified in scan msg
+      end_angle: 6.283185307
+      scan_angle_offset: 0.0
+      range_min: 0.0 #m
+      range_max: 100.0 #m
+      persistence: true
+      timeout: 0.0 #0.0 seconds = all value's date are autorized
       
+    cam2:
+      topic: "cam2/scan"
+      start_angle: 0.0 #the values are already specified in scan msg
+      end_angle: 6.283185307 
+      scan_angle_offset: 0.0
+      range_min: 0.0 #m
+      range_max: 100.0 #m
+      persistence: true
+      timeout: 0.0 #0.0 seconds = all value's date are autorized

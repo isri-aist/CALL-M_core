@@ -129,17 +129,17 @@
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
 		<sensor type="depth" name="cam1">
-		<update_rate>30.0</update_rate>
+		<update_rate>10.0</update_rate>
 		<camera name="cam1_cam">
 			<horizontal_fov>1.57</horizontal_fov>
 			<image>
-			<width>400</width>
-			<height>400</height>
+			<width>200</width>
+			<height>200</height>
 			<format>R8G8B8</format>
 			</image>
 			<clip>
-			<near>0.02</near>
-			<far>10.0</far>
+			<near>0.01</near>
+			<far>8.0</far>
 			</clip>
 			<noise>
 			<type>gaussian</type>
@@ -161,7 +161,7 @@
 			<alwaysOn>true</alwaysOn>
 			<updateRate>0.0</updateRate>
 			<frame_name>cam1_depth_frame</frame_name>
-			<pointCloudCutoff>0.5</pointCloudCutoff>
+			<pointCloudCutoff>0.1</pointCloudCutoff>
 			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
 			<distortionK1>0</distortionK1>
 			<distortionK2>0</distortionK2>
@@ -191,17 +191,17 @@
     	<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         <material>Gazebo/Orange</material>
 		<sensor type="depth" name="cam2">
-		<update_rate>30.0</update_rate>
+		<update_rate>10.0</update_rate>
 		<camera name="cam2_cam">
 			<horizontal_fov>1.57</horizontal_fov>
 			<image>
-			<width>400</width>
-			<height>400</height>
+			<width>200</width>
+			<height>200</height>
 			<format>R8G8B8</format>
 			</image>
 			<clip>
-			<near>0.02</near>
-			<far>10.0</far>
+			<near>0.01</near>
+			<far>8.0</far>
 			</clip>
 			<noise>
 			<type>gaussian</type>
@@ -222,7 +222,7 @@
 			<alwaysOn>true</alwaysOn>
 			<updateRate>0.0</updateRate>
 			<frame_name>cam2_depth_frame</frame_name>
-			<pointCloudCutoff>0.5</pointCloudCutoff>
+			<pointCloudCutoff>0.1</pointCloudCutoff>
 			<pointCloudCutoffMax>3.0</pointCloudCutoffMax>
 			<distortionK1>0</distortionK1>
 			<distortionK2>0</distortionK2>

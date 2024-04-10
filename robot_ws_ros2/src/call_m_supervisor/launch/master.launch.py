@@ -30,7 +30,7 @@ def generate_launch_description():
     xacro_file = os.path.join(pkg_share,bot_model_subpath)
     robot_description_raw = remove_comments(xacro.process_file(xacro_file).toxml())
 
-    print(robot_description_raw)
+    #print(robot_description_raw)
 
     # node to publish TFs of robot model
     node_robot_state_publisher = Node(
@@ -64,6 +64,7 @@ def generate_launch_description():
 
     laserscan_toolbox_params_file = os.path.join(pkg_share,"config/laserscan_toolbox_params.yaml")
     #laserscan_toolbox=launch.actions.ExecuteProcess(cmd=cmd + ['multi-laserscan-toolbox-ros2', 'laserscan_toolbox.launch.py','params_file:='+laserscan_toolbox_params_file,'use_sim_time:=true'], output='screen')
+    #ros2 launch multi-laserscan-toolbox-ros2 laserscan_toolbox.launch.py params_file:=/home/jrluser/Desktop/call_m_workspace/CNRS_AIST_Mobile_Shopping_Robot/robot_ws_ros2/src/call_m_supervisor/config/laserscan_toolbox_params.yaml use_sim_time:=true
     #we use node directly because we want to get use_sim_time from another launch file.
     laserscan_toolbox=Node(
         parameters=[
@@ -116,7 +117,7 @@ def generate_launch_description():
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value="False",description='Flag to enable use_sim_time'),
         depth_converter1,
         depth_converter2,
-        laserscan_toolbox, 
+        laserscan_toolbox,
         command_master_node,
         node_robot_state_publisher,
         clock_sync_publisher,

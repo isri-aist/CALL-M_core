@@ -4,7 +4,7 @@ depth_filter_scan_converter_node:
     rate: 20.0 #hz, better if equal or inferior to depth sensor publishing speed
 
     #Points cloud filtering settings
-    topic_in: "cam2/depth/points" #"/cam1/zed_node/point_cloud/cloud_registered" #the depth camera can be on a mobile part on the robot, the program will adapt by listening the Tfs cam_depth_frame => ref_frame
+    topic_in: /cam2/zed_node/point_cloud/cloud_registered #"cam2/depth/points" #"/cam2/zed_node/point_cloud/cloud_registered" #the depth camera can be on a mobile part on the robot, the program will adapt by listening the Tfs cam_depth_frame => ref_frame
     ref_frame: "base_link" #reference frame for points 3D position, should be a frame attached to the robot at the floor level and parralel to it. If you use a frame above the floor level like "base_link" usually, you can adjust the offset below with height_offset 
     height_offset: 0.147 #lidar1_link: 0.21 #base_link: 0.147 #height offset from the floor, distance between the floor and ref_frame. (following z axis in ref_frame, usually >0 as ref_frame above the floor)
     min_height: 0.02 #minimum height of a point to be considered (represent height following z axis in ref_frame)
@@ -14,7 +14,7 @@ depth_filter_scan_converter_node:
     range_min: 0.0 #m radius from ref_frame center
     range_max: 5.0 #m radius from ref_frame center (need to be smaller than maximum range of deph camera, otherwise infnite points of camera might be interpreted as obstacles)
     speed_up_h: 4 #int value that allow to skip horizontal lines of points and have a better rate, 1 = all the points, 2 = 1/2 of the point, etc...
-    speed_up_v: 1 #int value that allow to skip vertical lines of points and have a better rate, 1 = all the points, 2 = 1/2 of the point, etc...
+    speed_up_v: 4 #int value that allow to skip vertical lines of points and have a better rate, 1 = all the points, 2 = 1/2 of the point, etc...
     #If the list of points is unordered (msg->header.height == 1) then, for the lines skipping, the code will consider that the real cloud is ordered as a square with msg->header.height = msg->header.width = sqrt(msg->header.width)
 
     compensate_move: false #(NOT WORKING YET, Not useful? Lidar also have this offse appearing in simulation, but not a problem) (OPTIONAL) If moving the robot create temporary offset on the points during the (movement), then the computation time might be not fast enough, and then activate this option can compensate that, but it will slow down the maximum possible rate
@@ -29,7 +29,7 @@ depth_filter_scan_converter_node:
     h_angle_increment: 0.008726647 #0.017453293 rad for 1 degree resolution, horizontale resoltion, a smaller value allow for a scan message with more points (if the cloud allow it)
     #intensities will vary from 0.0 to 1.0 according to [min_height, max_height], holes will have intensity of -1.0
 
-    cliff_detect: true #(OPTIONAL)detect and consider holes or cliffs in the floor as obstacles
+    cliff_detect: false #(OPTIONAL)detect and consider holes or cliffs in the floor as obstacles
     cliff_height: -0.02 #height of points that should be considered as holes and therefore as obstacles
 
     #advanced output scan settings

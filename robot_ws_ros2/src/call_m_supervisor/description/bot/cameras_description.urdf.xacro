@@ -155,7 +155,7 @@
                 <remapping>cam1/depth/image_raw:=depth/image_rect_raw</remapping>
                 <remapping>cam1/camera_info:=camera_info</remapping>
                 <remapping>cam1/depth/camera_info:=depth/camera_info</remapping>
-                <remapping>cam1/points:=depth/points</remapping>
+                <remapping>cam1/points:=zed_node/point_cloud/cloud_registered</remapping>
             </ros>
 			<baseline>0.2</baseline>
 			<alwaysOn>true</alwaysOn>
@@ -216,7 +216,7 @@
                 <remapping>cam2/depth/image_raw:=depth/image_rect_raw</remapping>
                 <remapping>cam2/camera_info:=camera_info</remapping>
                 <remapping>cam2/depth/camera_info:=depth/camera_info</remapping>
-                <remapping>cam2/points:=depth/points</remapping>
+                <remapping>cam2/points:=zed_node/point_cloud/cloud_registered</remapping>
             </ros>
 			<baseline>0.2</baseline>
 			<alwaysOn>true</alwaysOn>

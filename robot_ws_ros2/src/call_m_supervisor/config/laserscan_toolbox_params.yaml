@@ -13,7 +13,7 @@ laserscan_toolbox_node:
     #output settings
     angle_min: 0.0 #0.0
     angle_max: 6.283185307
-    angle_increment: 0.008726647 #0.017453293 for 360 values resolution = 1deg precision
+    angle_increment: 0.004363323 #0.008726647 #0.017453293 for 360 values resolution = 1deg precision
     range_min: 0.0 #m
     range_max: 12.0 #m
 
@@ -23,27 +23,7 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: cam1 cam2 #lidar1_simu lidar2_simu lidar1 lidar2 #cam1 cam2
-
-    lidar1_simu:
-      topic: "lidar1_simu/scan"
-      start_angle: 0.785398163 #45 deg in source frame
-      end_angle: 5.497787144 #-45 = 315 deg in source frame
-      scan_angle_offset: 0.0 #180 deg with rpLidars, but simulation doens't need shift as the start and end angles are well specified in the lidar frame
-      range_min: 0.0 #m
-      range_max: 100.0 #m
-      persistence: false
-      timeout: 0.0 #0.0 seconds = all value's date are autorized
-
-    lidar2_simu:
-      topic: "lidar2_simu/scan"
-      start_angle: 0.785398163 #45 deg in source frame
-      end_angle: 5.497787144 #-45 = 315 deg in source frame
-      scan_angle_offset: 0.0 #180 deg with rpLidars, but simulation doens't need shift as the start and end angles are well specified in the lidar frame
-      range_min: 0.0 #m
-      range_max: 100.0 #m
-      persistence: false
-      timeout: 0.0 #0.0 seconds = all value's date are autorized
+    sources: lidar1 lidar2 #cam1 cam2 #lidar1 lidar2 #cam2 lidar1 lidar2 #cam1 cam2
 
     lidar1:
       topic: "lidar1/scan"

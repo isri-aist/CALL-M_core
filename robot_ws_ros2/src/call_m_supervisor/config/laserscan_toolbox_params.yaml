@@ -4,6 +4,7 @@ laserscan_toolbox_node:
     rate: 10.0 #hz
     topic_out: "scan" 
     new_frame: "base2_link"
+    odom_topic: "odom_simu" #(OPTIONNAL) Only used by persistence feature
 
     #debugging
     debug: true
@@ -23,7 +24,7 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: lidar1 lidar2 #cam1 cam2 #lidar1 lidar2 #cam2 lidar1 lidar2 #cam1 cam2
+    sources: lidar1 lidar2 #cam1 cam2 lidar1 lidar2
 
     lidar1:
       topic: "lidar1/scan"
@@ -32,7 +33,7 @@ laserscan_toolbox_node:
       scan_angle_offset: 0.0 #180 deg with rpLidars, but angles are well specified
       range_min: 0.0 #m
       range_max: 100.0 #m
-      persistence: false
+      persistence: false #check that the parameter odom_topic is well specified
       timeout: 0.0 #0.0 seconds = all value's date are autorized
 
     lidar2:
@@ -47,12 +48,12 @@ laserscan_toolbox_node:
 
     cam1:
       topic: "cam1/scan"
-      start_angle: 0.0 #the values are already specified in scan msg
-      end_angle: 6.283185307
+      start_angle: -0.785398163 #the values are already specified in scan msg, but needed to specify those ones for persistence feature
+      end_angle: 0.785398163
       scan_angle_offset: 0.0
       range_min: 0.0 #m
       range_max: 100.0 #m
-      persistence: true
+      persistence: true #the persitence will take into consideration start_angle and end_angle
       timeout: 0.0 #0.0 seconds = all value's date are autorized
       
     cam2:

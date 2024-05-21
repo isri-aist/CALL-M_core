@@ -24,7 +24,7 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: cam1 cam2 lidar1 lidar2 #cam1 cam2 lidar1 lidar2
+    sources: cam1 cam2 #lidar1 lidar2 #cam1 cam2 lidar1 lidar2
 
     lidar1:
       topic: "lidar1/scan"

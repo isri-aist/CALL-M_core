@@ -14,7 +14,7 @@ def generate_launch_description():
     """
     PARAMETERS
     """
-    nav_type = "localize" #'none', 'on_fly' or 'localize'
+    nav_type = "none" #'none', 'on_fly' or 'localize'
 
     nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_diff.yaml') #'diff' or 'omni', path to config file
     map_loc = os.path.join(dir_nav2, 'maps', 'JRL_LAB2.yaml') #path to the map if using localization

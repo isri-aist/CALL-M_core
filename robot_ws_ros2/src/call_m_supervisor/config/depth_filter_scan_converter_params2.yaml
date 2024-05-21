@@ -1,7 +1,7 @@
 depth_filter_scan_converter_node:
   ros__parameters:
     #node settings
-    rate: 20.0 #hz, better if equal or inferior to depth sensor publishing speed
+    rate: 10.0 #hz, better if equal or inferior to depth sensor publishing speed
 
     #Points cloud filtering settings
     topic_in: /cam2/zed_node/point_cloud/cloud_registered #"cam2/depth/points" #"/cam2/zed_node/point_cloud/cloud_registered" #the depth camera can be on a mobile part on the robot, the program will adapt by listening the Tfs cam_depth_frame => ref_frame

@@ -65,7 +65,7 @@
             qos_reliability: 1 # '1': RELIABLE - '2': BEST_EFFORT -
             qos_durability: 2 # '1': TRANSIENT_LOCAL - '2': VOLATILE 
             min_depth: 0.1 # Min: 0.1, Max: 3.0
-            max_depth: 2.0 # Max: 20.0 (default = 10)
+            max_depth: 10.0 # Max: 20.0 (default = 10)
 
         pos_tracking:
             pos_tracking_enabled: true # True to enable positional tracking from start

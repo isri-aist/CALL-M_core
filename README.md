@@ -203,3 +203,7 @@ See Current used USB port
 ls /dev/ttyUSB*
 ```
 
+connect to Computers:
+```
+ssh -X jrluser@hostname.local
+```

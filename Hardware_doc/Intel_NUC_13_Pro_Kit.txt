@@ -2,7 +2,7 @@ https://www.intel.co.jp/content/www/jp/ja/products/sku/233101/intel-nuc-13-pro-k
 
 user: jrluser
 psw: jrluser
-Device name: gomE01c
+Device name: callm01c
 
 
 Install WI-FI driver:

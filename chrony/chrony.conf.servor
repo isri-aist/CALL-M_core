@@ -1,4 +1,4 @@
-#should be in NUC computer with ip: 192.168.11.11, so JETSON and remote compter will sync on it
+#should be in NUC computer with ip: 150.18.226.30, so JETSON and remote compter will sync on it
 
 # Include configuration files found in /etc/chrony/conf.d.
 confdir /etc/chrony/conf.d

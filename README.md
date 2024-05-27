@@ -1,3 +1,6 @@
+nmcli -f autoconnect-priority,name c 
+nmcli connection modify "Caffe Ubuntu" connection.autoconnect-priority 10
+
 # CNRS_AIST_Mobile_Shopping_Robot
 https://github.com/Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
 git@github.com:Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git

@@ -20,3 +20,7 @@
 [submodule "robot_ws_ros2/src/included_external_packages/depth-filter-scan-converter"]
 	path = robot_ws_ros2/src/included_external_packages/depth-filter-scan-converter
 	url = git@github.com:Noceo200/depth-filter-scan-converter.git
+[submodule "robot_ws_ros2/src/included_external_packages/DynamixelSDK"]
+	path = robot_ws_ros2/src/included_external_packages/DynamixelSDK
+	url = https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+	branch = humble-devel

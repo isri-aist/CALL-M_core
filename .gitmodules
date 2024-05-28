@@ -10,10 +10,6 @@
 [submodule "robot_ws_ros2/src/included_external_packages/laser_scan_merger"]
 	path = robot_ws_ros2/src/included_external_packages/laser_scan_merger
 	url = git@github.com:Noceo200/laser_scan_merger.git
-[submodule "robot_ws_ros2/src/included_external_packages/DynamixelSDK"]
-	path = robot_ws_ros2/src/included_external_packages/DynamixelSDK
-	url = https://github.com/ROBOTIS-GIT/DynamixelSDK.git
-	branch = foxy-devel
 [submodule "robot_ws_ros2/src/included_external_packages/aws-robomaker-small-warehouse-world"]
 	path = robot_ws_ros2/src/included_external_packages/aws-robomaker-small-warehouse-world
 	url = https://github.com/aws-robotics/aws-robomaker-small-warehouse-world.git

@@ -15,7 +15,7 @@ def find_port_by_device_id(device_id):
             if os.path.islink(entry_path):
                 link_target = os.path.realpath(entry_path)
                 if device_id == entry:
-                    #print("Port: ",link_target)
+                    print("Device found: " + device_id+ "\nPort: ",link_target)
                     return link_target
         print("No device found for: ",device_id)
         return 'None'
@@ -26,13 +26,21 @@ def find_port_by_device_id(device_id):
 def generate_launch_description():
     #IDs obtain with 'ls /dev/serial/by-id/' on ubuntu
     servo_motors_ID= 'usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0'
-    cameras_servos_id = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0'
+    cameras_servos_id = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0010-if00-port0'
     lid1_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0011-if00-port0'
     lid2_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0012-if00-port0' 
+    ultrasonic1_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU357-if00-port0"
+    ultrasonic2_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU36L-if00-port0"
+    ultrasonic3_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU3JS-if00-port0"
+    ultrasonic4_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU3MA-if00-port0"
     port_servo_motors_ID=find_port_by_device_id(servo_motors_ID)
     port_cameras_servos=find_port_by_device_id(cameras_servos_id)
     port_lid_1=find_port_by_device_id(lid1_ID)
     port_lid_2=find_port_by_device_id(lid2_ID)
+    port_ultrasonic1 = find_port_by_device_id(ultrasonic1_ID)
+    port_ultrasonic2 = find_port_by_device_id(ultrasonic2_ID)
+    port_ultrasonic3 = find_port_by_device_id(ultrasonic3_ID)
+    port_ultrasonic4 = find_port_by_device_id(ultrasonic4_ID)
 
     lid1_node = Node(
         name='rplidar_composition',

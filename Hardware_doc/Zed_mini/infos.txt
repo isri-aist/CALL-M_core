@@ -26,6 +26,8 @@ Parameters/config:
 https://www.stereolabs.com/docs/ros2/zed-node#configuration-parameters
 
 Serial numbers (obtained with program in 'tools' at root of the github repository):
-camera1: 15255448
-camera2: 15267217
+camera1: 15255448 (callm v1)
+camera2: 15267217 (callm v1)
 cameratest: 13024367
+camera1: 13024367 (callm v2)
+camera2: 11988922 (callm v2)

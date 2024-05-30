@@ -1,3 +1,5 @@
+SOFTWARE to change IDs: 
+
 ros SDK:
 http://wiki.ros.org/dynamixel_sdk
 Manual:

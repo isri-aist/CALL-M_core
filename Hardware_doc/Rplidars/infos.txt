@@ -1,3 +1,5 @@
+SOFTWARE to change IDs: dynamixel wizard on Ubuntu, connect only one servo, go in show packet, and ping ID1 to find it, then click on search in the main window and edit ID
+
 Installation:
 https://index.ros.org/p/rplidar_ros/#foxy
 

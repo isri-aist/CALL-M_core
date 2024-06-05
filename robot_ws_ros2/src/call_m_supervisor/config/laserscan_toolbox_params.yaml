@@ -1,15 +1,18 @@
 laserscan_toolbox_node:
   ros__parameters:
     #common
-    rate: 10.0 #hz
+    rate: 25.0 #hz
     topic_out: "scan" 
     new_frame: "base2_link"
     odom_topic: "odom_simu" #(OPTIONNAL) Only used by persistence feature
+    odom_delay_limit: 3.0 #s, time of odometries to keep in memory, 0.0 = keep only last received odometry
+    extrapolate_odometry: false #define if the program should extrapolate the odometry when the wanted stamp of a LaserScan is after the newest received odometry.
 
     #debugging
     debug: true
     debug_file_path: "/home/jrluser/Desktop/call_m_workspace/lasertoolbox_debug.txt"
     show_ranges: false
+    show_odometry_detail: true
 
     #output settings
     angle_min: 0.0 #0.0
@@ -24,7 +27,7 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: lidar1 lidar2 #lidar1 lidar2 #cam1 cam2 lidar1 lidar2
+    sources: lidar1 lidar2 cam1 cam2 #lidar1 lidar2 #cam1 cam2 lidar1 lidar2
 
     lidar1:
       topic: "lidar1/scan"
@@ -58,10 +61,10 @@ laserscan_toolbox_node:
       
     cam2:
       topic: "cam2/scan"
-      start_angle: 0.0 #the values are already specified in scan msg
-      end_angle: 6.283185307 
+      start_angle: 2.356194491 
+      end_angle: 3.926990817
       scan_angle_offset: 0.0
       range_min: 0.0 #m
       range_max: 100.0 #m
       persistence: false
-      timeout: 0.0 #0.0 seconds = all value's date are autorized
+      timeout: 0.0  

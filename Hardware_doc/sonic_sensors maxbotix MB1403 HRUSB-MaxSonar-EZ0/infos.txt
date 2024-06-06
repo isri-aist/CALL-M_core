@@ -1,0 +1,8 @@
+READ data sent on the port:
+sudo minicom -D /dev/ttyUSB0 -b 57600
+
+ROS blog:
+https://maxbotix.com/blogs/blog/robot-operating-system-ultrasonic-sensor?_pos=1&_sid=8f269e32e&_ss=r
+
+Online doc/files:
+https://maxbotix.com/products/mb1403?_pos=6&_fid=b6078672a&_ss=c

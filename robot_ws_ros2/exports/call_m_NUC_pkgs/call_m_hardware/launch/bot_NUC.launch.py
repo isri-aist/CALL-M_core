@@ -29,10 +29,10 @@ def generate_launch_description():
     cameras_servos_id = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0010-if00-port0'
     lid1_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0011-if00-port0'
     lid2_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0012-if00-port0' 
-    ultrasonic1_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU357-if00-port0"
+    ultrasonic1_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU3MA-if00-port0"
     ultrasonic2_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU36L-if00-port0"
     ultrasonic3_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU3JS-if00-port0"
-    ultrasonic4_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU3MA-if00-port0"
+    ultrasonic4_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU357-if00-port0"
     port_servo_motors_ID=find_port_by_device_id(servo_motors_ID)
     port_cameras_servos=find_port_by_device_id(cameras_servos_id)
     port_lid_1=find_port_by_device_id(lid1_ID)
@@ -90,9 +90,57 @@ def generate_launch_description():
         }],
     )
 
+    ultr1_node = Node(
+        name='sonar_range_node',
+        package='call_m_hardware',
+        executable='sonar_range_node',
+        output='screen',
+        parameters=[{
+            'device_name': port_ultrasonic1,
+            'topic_out':"sonar1/range",
+        }],
+    )
+
+    ultr2_node = Node(
+        name='sonar_range_node',
+        package='call_m_hardware',
+        executable='sonar_range_node',
+        output='screen',
+        parameters=[{
+            'device_name': port_ultrasonic2,
+            'topic_out':"sonar2/range",
+        }],
+    )
+
+    ultr3_node = Node(
+        name='sonar_range_node',
+        package='call_m_hardware',
+        executable='sonar_range_node',
+        output='screen',
+        parameters=[{
+            'device_name': port_ultrasonic3,
+            'topic_out':"sonar3/range",
+        }],
+    )
+
+    ultr4_node = Node(
+        name='sonar_range_node',
+        package='call_m_hardware',
+        executable='sonar_range_node',
+        output='screen',
+        parameters=[{
+            'device_name': port_ultrasonic4,
+            'topic_out':"sonar4/range",
+        }],
+    )
+
     return LaunchDescription([
         bot_control_driver, 
         camera_control_driver_node, 
         lid1_node, 
         lid2_node, 
+        ultr1_node,
+        ultr2_node,
+        ultr3_node,
+        ultr4_node,
     ])

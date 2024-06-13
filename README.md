@@ -207,3 +207,7 @@ connect to Computers:
 ```
 ssh -X jrluser@hostname.local
 ```
+
+Install last verion of sudio code on Ubuntu 22.04 (if default snap package crashes):
+https://github.com/microsoft/vscode/issues/204159#issuecomment-2151226947
+

@@ -1,7 +1,7 @@
 laserscan_toolbox_node:
   ros__parameters:
     #common
-    rate: 25.0 #hz
+    rate: 40.0 #hz
     topic_out: "scan" 
     new_frame: "base2_link"
     odom_topic: "odom_simu" #(OPTIONNAL) Only used by persistence feature
@@ -16,10 +16,11 @@ laserscan_toolbox_node:
 
     #output settings
     angle_min: 0.0 #0.0
-    angle_max: 6.283185307
-    angle_increment: 0.004363323 #0.008726647 #0.017453293 for 360 values resolution = 1deg precision
+    angle_max: 6.283185307 #6.283185307
+    angle_increment: 0.004363323 #0.069 #0.27925268 #0.004363323 #0.008726647 #0.017453293 for 360 values resolution = 1deg precision
     range_min: 0.0 #m
     range_max: 12.0 #m
+    extrapolate_scan: false #If true, the scan merger will try to respect the "rate" by updating the scan according to the new received odometry even if the sensors didn't update new datas, otherwise, the merge will just update the merged scan when it receive new datas from one of the sensor.
 
     #advanced output settings
     auto_set: true #If true, the settings below will be set automatically using the first source
@@ -27,44 +28,52 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: lidar1 lidar2 cam1 cam2 #lidar1 lidar2 #cam1 cam2 lidar1 lidar2
+    sources: cam1 #cam2 #lidar1 lidar2 #cam1 cam2 lidar1 lidar2
 
     lidar1:
       topic: "lidar1/scan"
+      timeout: 0.0 #0.0 seconds = all value's date are autorized
       start_angle: 0.785398163 #45 deg in source frame
       end_angle: 5.497787144 #-45 = 315 deg in source frame
       scan_angle_offset: 0.0 #180 deg with rpLidars, but angles are well specified
       range_min: 0.0 #m
       range_max: 100.0 #m
-      persistence: false #check that the parameter odom_topic is well specified
-      timeout: 0.0 #0.0 seconds = all value's date are autorized
+
+      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
 
     lidar2:
       topic: "lidar2/scan"
+      timeout: 0.0 #0.0 seconds = all value's date are autorized
       start_angle: 1.570796327 #1.570796327 #0.785398163 #45 deg
       end_angle: 3.141592654 #3.141592654 #5.497787144 #-45 = 315 deg
       scan_angle_offset: 0.0 #180 deg with rpLidars, but angles are well specified
       range_min: 0.0 #m
       range_max: 100.0 #m
-      persistence: false
-      timeout: 0.0 #0.0 seconds = all value's date are autorized
+
+      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
 
     cam1:
       topic: "cam1/scan"
+      timeout: 0.0 #0.0 seconds = all value's date are autorized
       start_angle: -0.785398163 #the values are already specified in scan msg, but needed to specify those ones for persistence feature
       end_angle: 0.785398163
       scan_angle_offset: 0.0
       range_min: 0.0 #m
       range_max: 100.0 #m
-      persistence: false #the persitence will take into consideration start_angle and end_angle
-      timeout: 0.0 #0.0 seconds = all value's date are autorized
-      
+
+      persistence: true #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
+
     cam2:
       topic: "cam2/scan"
+      timeout: 0.0  
       start_angle: 2.356194491 
       end_angle: 3.926990817
       scan_angle_offset: 0.0
       range_min: 0.0 #m
       range_max: 100.0 #m
-      persistence: false
-      timeout: 0.0  
+
+      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)

@@ -28,7 +28,7 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: cam1 #cam2 #lidar1 lidar2 #cam1 cam2 lidar1 lidar2
+    sources: cam1 cam2 lidar1 lidar2
 
     lidar1:
       topic: "lidar1/scan"
@@ -63,7 +63,7 @@ laserscan_toolbox_node:
       range_min: 0.0 #m
       range_max: 100.0 #m
 
-      persistence: true #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
+      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
       timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
 
     cam2:

@@ -183,6 +183,11 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/sy
 To change the configurations and customize the navigation, check the README file in the workspace 'robot_ws_ros2'.
 
 ## Useful tips:
+Save a map:
+```
+ros2 run nav2_map_server map_saver_cli -f "map_name" --ros-args -p map_subscribe_transient_local:=true
+```
+
 Check if Nvidia card is available:
 ```
 nvidia-smi
@@ -208,6 +213,6 @@ connect to Computers:
 ssh -X jrluser@hostname.local
 ```
 
-Install last verion of sudio code on Ubuntu 22.04 (if default snap package crashes):
+Install last verion of sutdio code on Ubuntu 22.04 (if default snap package crashes):
 https://github.com/microsoft/vscode/issues/204159#issuecomment-2151226947
 

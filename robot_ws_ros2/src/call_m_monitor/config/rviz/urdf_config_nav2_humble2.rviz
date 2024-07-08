@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded: ~
       Splitter Ratio: 0.5
-    Tree Height: 740
+    Tree Height: 1032
   - Class: nav2_rviz_plugins/Navigation 2
     Name: Navigation 2
   - Class: rviz_common/Views
@@ -151,6 +151,16 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        support1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        support2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         wheel_1_link:
           Alpha: 1
           Show Axes: false
@@ -242,6 +252,10 @@ Visualization Manager:
           Value: true
         odom:
           Value: true
+        support1_link:
+          Value: true
+        support2_link:
+          Value: true
         wheel_1_link:
           Value: true
         wheel_1_sup_link:
@@ -287,6 +301,9 @@ Visualization Manager:
                       cam2_right_camera_optical_frame:
                         {}
                   cam2_depth_frame:
+                    {}
+                support1_link:
+                  support2_link:
                     {}
               base_footprint:
                 {}
@@ -343,7 +360,7 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 0
+      Max Intensity: 0.9996462464332581
       Min Color: 0; 0; 0
       Min Intensity: 0
       Name: MergedScan
@@ -541,9 +558,9 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 0; 255; 255
-      Max Intensity: 0.9946548342704773
+      Max Intensity: 0.9996981024742126
       Min Color: 0; 0; 255
-      Min Intensity: 0.0073874578811228275
+      Min Intensity: 0.009632839821279049
       Name: ScanCam1
       Position Transformer: XYZ
       Selectable: true
@@ -575,9 +592,9 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 0; 255; 255
-      Max Intensity: 0.9999305605888367
+      Max Intensity: 0.9761547446250916
       Min Color: 0; 0; 255
-      Min Intensity: 0.28250718116760254
+      Min Intensity: 0.00016845295613165945
       Name: ScanCam2
       Position Transformer: XYZ
       Selectable: true
@@ -593,6 +610,52 @@ Visualization Manager:
         Value: /cam2/scan
       Use Fixed Frame: true
       Use rainbow: false
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/PointStamped
+      Color: 204; 41; 204
+      Enabled: true
+      History Length: 1
+      Name: PointStamped
+      Radius: 0.20000000298023224
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /vector_field
+      Value: true
+    - Alpha: 1
+      Angular Arrow Scale: 2
+      Angular Color: 204; 204; 51
+      Arrow Width: 0.5
+      Class: rviz_default_plugins/TwistStamped
+      Enabled: true
+      Hide Small Values: true
+      History Length: 1
+      Linear Arrow Scale: 2
+      Linear Color: 204; 51; 51
+      Name: TwistStamped
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cmd_vel_vector
       Value: true
   Enabled: true
   Global Options:
@@ -619,6 +682,14 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: initialpose
     - Class: nav2_rviz_plugins/GoalTool
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
   Transformation:
     Current:
       Class: rviz_default_plugins/TF
@@ -648,12 +719,12 @@ Window Geometry:
     collapsed: false
   Displays:
     collapsed: false
-  Height: 2326
+  Height: 2086
   Hide Left Dock: false
   Hide Right Dock: false
   Navigation 2:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000200000000000002710000087afc0200000004fb000000100044006900730070006c006100790073010000006e000005a00000018200fffffffb00000018004e0061007600690067006100740069006f006e00200032010000061a000002ce0000023a00fffffffb0000000a0049006d006100670065010000059e000000e70000000000000000fb0000000a005600690065007700730000000553000001320000013200ffffff00000001000005e80000087afc0200000002fb0000000e00430061006d0065007200610031010000006e000004170000004a00fffffffb0000000e00430061006d00650072006100320100000491000004570000004a00ffffff0000068f0000087a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000200000000000002710000078afc0200000004fb000000100044006900730070006c006100790073010000006e000005000000018200fffffffb00000018004e0061007600690067006100740069006f006e00200032010000057a0000027e0000023a00fffffffb0000000a0049006d006100670065010000059e000000e70000000000000000fb0000000a005600690065007700730000000553000001320000013200ffffff00000001000003530000078afc0200000002fb0000000e00430061006d0065007200610031010000006e000003a30000004a00fffffffb0000000e00430061006d0065007200610032010000041d000003db0000004a00ffffff000009240000078a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 3840

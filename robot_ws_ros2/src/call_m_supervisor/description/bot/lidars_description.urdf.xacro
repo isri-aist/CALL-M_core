@@ -73,7 +73,7 @@
 		</gazebo>
 	</xacro:macro>
 
-	<xacro:lidar prefix="lidar1" x="${-((square1_length/2)-0.0508)}" y="${-((square1_length/2)-0.0508)}" alpha="${pi/4}" />
-	<xacro:lidar prefix="lidar2" x="${(square1_length/2)-0.0508}" y="${(square1_length/2)-0.0508}" alpha="${-3*pi/4}" />
+	<xacro:lidar prefix="lidar2" x="${-((square1_length/2)-0.0508)}" y="${-((square1_length/2)-0.0508)}" alpha="${pi/4}" />
+	<xacro:lidar prefix="lidar1" x="${(square1_length/2)-0.0508}" y="${(square1_length/2)-0.0508}" alpha="${-3*pi/4}" />
 
 </robot>

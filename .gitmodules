@@ -24,3 +24,6 @@
 	path = robot_ws_ros2/src/included_external_packages/DynamixelSDK
 	url = https://github.com/ROBOTIS-GIT/DynamixelSDK.git
 	branch = humble-devel
+[submodule "robot_ws_ros2/src/included_external_packages/triorb-core"]
+	path = robot_ws_ros2/src/included_external_packages/triorb-core
+	url = https://github.com/TriOrb-Inc/triorb-core.git

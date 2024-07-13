@@ -11,6 +11,12 @@ git clone --recurse-submodules -j8 <SSH or HTTPS Link>
 ### ROS2 Humble (Desktop install + Bare Bones + Development tools):
 https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
+### TriOrb control
+```
+sudo apt install python3-serial python3-pip ros-humble-lifecycle-py
+sudo pip install numpy-quaternion
+```
+
 ### Xterm: to open several terminal automaticcally with ros2 launch files
 ```
 sudo apt install xterm

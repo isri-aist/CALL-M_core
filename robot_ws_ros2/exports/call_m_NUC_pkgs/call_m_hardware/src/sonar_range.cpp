@@ -113,6 +113,7 @@ private:
 
         if (i != 0) {
             sensor_msgs::msg::Range rangeMsg;
+            //TBM to finish, message need o be filled correctly
             rangeMsg.range = range;
             rangeMsg.header.stamp = this->get_clock()->now();
             //RCLCPP_INFO(this->get_logger(), "Sonar msg: %s range: %f", rxBuf, range);

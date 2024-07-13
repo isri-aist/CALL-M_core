@@ -17,7 +17,7 @@ This repoditory contains a simple control node for TriOrb.
  $ mkdir -p ~/ros2_ws/src
  $ cd ~/ros2_ws/src
  $ git clone https://github.com/TriOrb-Inc/triorb-core
- $ git clone https://github.com/haraisao/triorb_ros2
+ $ git cloen https://github.com/haraisao/triorb_ros2
  $ cd ~/ros2_ws
  $ source /opt/ros/humble/setup.bash
  $ colcon build --symlink-install

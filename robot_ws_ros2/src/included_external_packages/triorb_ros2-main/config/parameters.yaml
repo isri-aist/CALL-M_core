@@ -3,6 +3,6 @@ triorb:
     triorb_port: '/dev/ttyACM0'
     odom_duration: 1.0
     watchdog_timeout: 10.0
-    world_frame: 'map'
-    robot_frame: 'base_link'
+    world_frame: 'world'
+    robot_frame: 'triorb'
     debug: false

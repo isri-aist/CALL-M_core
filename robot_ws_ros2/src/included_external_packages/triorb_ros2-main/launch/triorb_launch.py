@@ -13,7 +13,7 @@ from launch.events import Shutdown
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    joy_argument_ = DeclareLaunchArgument('joy_node', default_value="true")
+    """joy_argument_ = DeclareLaunchArgument('joy_node', default_value="true")
     joy_ = LaunchConfiguration('joy_node')
 
     # Joy node
@@ -25,12 +25,11 @@ def generate_launch_description():
                             'config', 'parameters.yaml')
     joy_twist_node = Node( package='joy_twist', executable='joy_twist',
                            output='screen',
-                           parameters=[config_1_])
+                           parameters=[config_1_])"""
 
     # trirob
     config_ = os.path.join(get_package_share_directory('triorb_ros2'),
                             'config', 'parameters.yaml')
-                            
     triorb_node = Node(package='triorb_ros2', executable='triorb',
                        name='triorb', output='screen',
                        parameters=[config_], 

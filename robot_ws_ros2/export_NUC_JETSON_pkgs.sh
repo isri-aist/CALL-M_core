@@ -22,6 +22,9 @@ cp src/call_m_start_all/launch/call_m_start_NUC.launch.py exports/call_m_NUC_pkg
 cp src/call_m_start_all/CMakeLists.txt exports/call_m_NUC_pkgs/call_m_start_all/
 cp src/call_m_start_all/package.xml exports/call_m_NUC_pkgs/call_m_start_all/
 
+#export files for 'call_m_teleoperation' can be useful if needed to control robot by pluging a joystick directly into it
+cp -r src/call_m_teleoperation/ exports/call_m_NUC_pkgs/
+
 echo "-- NUC packages exported in /exports/call_m_NUC_pkgs/"
 
 #JETSON packages
@@ -46,4 +49,4 @@ cp src/call_m_start_all/CMakeLists.txt exports/call_m_JETSON_pkgs/call_m_start_a
 cp src/call_m_start_all/package.xml exports/call_m_JETSON_pkgs/call_m_start_all/
 
 echo "-- JETSON packages exported in /exports/call_m_JETSON_pkgs/"
-echo "Don't forget to install dependencies in host machine"
+echo "Don't forget to install dependencies and 'included_external_packages' of workspace manually in host machine"

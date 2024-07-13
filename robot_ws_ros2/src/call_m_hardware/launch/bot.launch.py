@@ -25,7 +25,7 @@ def find_port_by_device_id(device_id):
 
 def generate_launch_description():
     #IDs obtain with 'ls /dev/serial/by-id/' on ubuntu
-    servo_motors_ID= 'usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0'
+    #servo_motors_ID= 'usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0'
     cameras_servos_id = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0010-if00-port0'
     lid1_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0011-if00-port0'
     lid2_ID = 'usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0012-if00-port0' 
@@ -33,7 +33,7 @@ def generate_launch_description():
     ultrasonic2_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU36L-if00-port0"
     ultrasonic3_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU3JS-if00-port0"
     ultrasonic4_ID = "usb-MaxBotix_MB1403_HRUSB-MaxSonar-EZ0_MB7VU357-if00-port0"
-    port_servo_motors_ID=find_port_by_device_id(servo_motors_ID)
+    #port_servo_motors_ID=find_port_by_device_id(servo_motors_ID)
     port_cameras_servos=find_port_by_device_id(cameras_servos_id)
     port_lid_1=find_port_by_device_id(lid1_ID)
     port_lid_2=find_port_by_device_id(lid2_ID)
@@ -75,8 +75,12 @@ def generate_launch_description():
     )
 
     #bot_driver
-    bot_control_driver = launch.actions.ExecuteProcess(
+    """bot_control_driver = launch.actions.ExecuteProcess(
             cmd=['xterm','-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'run', 'call_m_hardware', 'bot_control_driver_node','--ros-args','-p', 'device_name:='+port_servo_motors_ID,'-p', 'sim_time:=true'],
+            output='screen',
+        )"""
+    bot_control_driver_v2 = launch.actions.ExecuteProcess(
+            cmd=['xterm','-fn', 'xft:fixed:size=12', '-geometry', '100x20','-e', 'ros2', 'launch', 'triorb_ros2', 'triorb_launch.py'],
             output='screen',
         )
 
@@ -134,8 +138,59 @@ def generate_launch_description():
         }],
     )
 
+    pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_hardware').find('call_m_hardware')
+
+    # ZED Wrapper nodes
+    config_cam1_file = os.path.join(pkg_share, 'config/cam1_zedm.yaml')
+    camera_1 = Node(
+        package='zed_wrapper',
+        namespace='cam1',
+        executable='zed_wrapper',
+        name='zed_node',
+        output='screen',
+        # prefix=['xterm -e valgrind --tools=callgrind'],
+        # prefix=['xterm -e gdb -ex run --args'],
+        #prefix=['gdbserver localhost:3000'],
+        parameters=[
+            # YAML files
+            config_cam1_file,
+        ]
+    )
+
+    config_cam2_file = os.path.join(pkg_share, 'config/cam2_zedm.yaml')
+    camera_2 = Node(
+        package='zed_wrapper',
+        namespace='cam2',
+        executable='zed_wrapper',
+        name='zed_node',
+        output='screen',
+        # prefix=['xterm -e valgrind --tools=callgrind'],
+        # prefix=['xterm -e gdb -ex run --args'],
+        #prefix=['gdbserver localhost:3000'],
+        parameters=[
+            # YAML files
+            config_cam2_file,
+        ]
+    )
+
+    #joint states published by Gazebo for the simulation, but with hardware we need to publish them for RVIZ
+    joint_state_publisher_node = Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher',
+        name='joint_state_publisher',
+    )
+
+    robot_localization_node = launch_ros.actions.Node(
+       package='robot_localization',
+       executable='ekf_node',
+       name='ekf_filter_node',
+       output='screen',
+       parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+       #parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}, {'debug': True}, {'debug_out_file': os.path.join(pkg_share, 'config/ekf_debug.txt')}]
+    )
+
     return LaunchDescription([
-        bot_control_driver, 
+        bot_control_driver_v2, 
         camera_control_driver_node, 
         lid1_node, 
         lid2_node, 
@@ -143,4 +198,8 @@ def generate_launch_description():
         ultr2_node,
         ultr3_node,
         ultr4_node,
+        camera_1, 
+        camera_2, 
+        robot_localization_node,
+        joint_state_publisher_node,
     ])

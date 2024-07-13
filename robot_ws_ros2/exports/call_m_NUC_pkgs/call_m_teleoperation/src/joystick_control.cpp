@@ -230,8 +230,7 @@ class Joystick_control:public rclcpp::Node
                 msg_status = "No response, please start or restart the TriOrb node and press '"+ update_status_direction +"' to reconnect";
             }
             else{
-                current_status = "Unmanaged";
-                msg_status = "Unmanaged status with ID: " + std::to_string(stat_id);
+                msg_status = "Unknow status with ID: " + std::to_string(stat_id);
             }
         }
 
@@ -426,7 +425,7 @@ class Joystick_control:public rclcpp::Node
                             if(direction == configure_state_direction){ 
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise)
                                 update_msg_status(stat_id);
-                                if (stat_id == 0) { //lifecycle_msgs::msg::State::PRIMARY_STATE_UNCONFIGURED
+                                if (stat_id == lifecycle_msgs::msg::State::PRIMARY_STATE_UNCONFIGURED) {
                                     change_state(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE); 
                                     update_msg_status(lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE);     
                                 }
@@ -676,11 +675,10 @@ class Joystick_control:public rclcpp::Node
                 auto request = std::make_shared<lifecycle_msgs::srv::GetState::Request>();
                 auto result = this->get_state_client_->async_send_request(request);
 
-                if(result.wait_for(5s) == std::future_status::ready){
+                if(result.wait_for(1s) == std::future_status::ready){
                     int id = result.get()->current_state.id;
                     return id;
                 }
-
             }
             else{
                 lifecycle_ready = false;

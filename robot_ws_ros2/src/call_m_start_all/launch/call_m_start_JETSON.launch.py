@@ -13,6 +13,6 @@ def generate_launch_description():
     cmd = ['ros2', 'launch']
 
     # Construct the absolute paths to the launch files
-    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_hardware', 'bot_JETSON.launch.py'], output='screen')
+    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_drivers', 'bot_JETSON.launch.py'], output='screen')
     
     return LaunchDescription([hardware_launch])

@@ -11,7 +11,7 @@
 
   <depend>rclcpp</depend>
 
-  <exec_depend>call_m_hardware</exec_depend>
+  <exec_depend>call_m_drivers</exec_depend>
   <exec_depend>call_m_monitor</exec_depend>
   <exec_depend>call_m_simulation</exec_depend>
   <exec_depend>call_m_nav2</exec_depend>

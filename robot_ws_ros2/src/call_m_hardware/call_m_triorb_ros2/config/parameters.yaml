@@ -1,0 +1,9 @@
+triorb:
+  ros__parameters:
+    triorb_port: '/dev/ttyACM0'
+    odom_duration: 1.0
+    watchdog_timeout: 10.0
+    world_frame: 'map'
+    robot_frame: 'base_link'
+    debug: false
+

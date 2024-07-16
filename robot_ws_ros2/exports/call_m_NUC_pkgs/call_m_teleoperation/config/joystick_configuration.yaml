@@ -36,6 +36,6 @@ joystick_control_node:
     #(TO Do, add button to switch to Triorb control or Arm control, could use one of the pad button to switch)
 
     #output configurations
-    rate: 30.0 #hz
+    rate: 50.0 #hz
     topic_main_cmd: "cmd_vel_teleop_joy" #topic to publish when in default mode
     topic_assissted_cmd: "cmd_vel_teleop_assist" #topic to publish when in assissted mode

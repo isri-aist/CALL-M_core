@@ -30,7 +30,7 @@ def generate_launch_description():
 
     # Construct the absolute paths to the launch files
     master_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_supervisor', 'master.launch.py'] + suffix, output='screen')
-    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_hardware', 'bot_CLIENT.launch.py'], output='screen')
+    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_drivers', 'bot_CLIENT.launch.py'], output='screen')
     slam_launch = launch.actions.ExecuteProcess(cmd=cmd + ['slam_toolbox', 'online_async_launch.py', 'slam_params_file:='+slam_param]+ suffix, output='screen')
     display_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_monitor', 'display.launch.py'], output='screen')
     teleop_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_teleoperation', 'teleop.launch.py'], output='screen')

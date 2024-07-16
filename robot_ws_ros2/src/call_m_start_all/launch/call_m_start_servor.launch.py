@@ -27,7 +27,7 @@ def generate_launch_description():
     # Construct the absolute paths to the launch files
     master_launch =  launch.actions.ExecuteProcess(cmd=cmd + ['call_m_supervisor', 'master.launch.py'] + suffix, output='screen')
     slam_launch = launch.actions.ExecuteProcess(cmd=cmd + ['slam_toolbox', 'online_async_launch.py', 'params_file:='+slam_param]+ suffix, output='screen')
-    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_hardware', 'bot.launch.py'], output='screen')
+    hardware_launch = launch.actions.ExecuteProcess(cmd=cmd + ['call_m_drivers', 'bot.launch.py'], output='screen')
 
     if nav_type == "on_fly":
         return LaunchDescription([master_launch,slam_launch,hardware_launch])

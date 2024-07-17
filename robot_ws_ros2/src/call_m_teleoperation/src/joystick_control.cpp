@@ -114,11 +114,11 @@ class Joystick_control:public rclcpp::Node
             initialize_common_params();
             refresh_common_params();
 
-            // Create a lifecycle node for the /triorb node
+            // Create a lifecycle node for the /controlled_managed_node_name node
             RCLCPP_INFO(this->get_logger(),"\njoystick_control_node started...");
-            RCLCPP_INFO(this->get_logger(),"\nTrying to connect to 'triorb' node...");
+            RCLCPP_INFO(this->get_logger(),"\nTrying to connect to '%s' node...",controlled_managed_node_name.c_str());
             create_lifecycleclient();
-            RCLCPP_INFO(this->get_logger(),"\nGetting TriOrb state...");
+            RCLCPP_INFO(this->get_logger(),"\nGetting %s state...",controlled_managed_node_name.c_str());
             stat_id = get_state(); 
             update_msg_status(stat_id);
 
@@ -166,6 +166,7 @@ class Joystick_control:public rclcpp::Node
         double rate;
         std::string topic_main_cmd;
         std::string topic_assissted_cmd;
+        std::string controlled_managed_node_name;
 
         //global variables    
         rclcpp::TimerBase::SharedPtr timer_;
@@ -205,10 +206,11 @@ class Joystick_control:public rclcpp::Node
         //assissted mode
         bool assissted = false;
 
-        //arming Triorb
+        //arming controlled_managed_node_name
         bool lifecycle_ready = false;
         int stat_id;
         std::string current_status = "None";
+        std::string status_details = "None";
         std::string msg_status = "None";
         rclcpp::Client<lifecycle_msgs::srv::GetState>::SharedPtr get_state_client_;
         rclcpp::Client<lifecycle_msgs::srv::ChangeState>::SharedPtr change_state_client_;
@@ -227,11 +229,11 @@ class Joystick_control:public rclcpp::Node
                 current_status = "Active";
             }
             else if(stat_id == -1){
-                current_status = "OFF: "+current_status;
-                msg_status = "No response, please start or restart the TriOrb node and press '"+ update_status_direction +"' to reconnect";
+                current_status = "OFF: "+status_details;
+                msg_status = "No response, please start or restart the "+ controlled_managed_node_name +" node and press '"+ update_status_direction +"' to reconnect";
             }
             else{
-                current_status = "Unmanaged: "+current_status; //former current status shold contain the label of last update status from service
+                current_status = "Unmanaged: "+status_details; //former current status should contain the label of last update status from service
                 msg_status = "Unmanaged status with ID: " + std::to_string(stat_id);
             }
         }
@@ -261,8 +263,8 @@ class Joystick_control:public rclcpp::Node
                 printf("%d/%d: Back Camera angle\n",back_camera_down_button,back_camera_up_button);
                 printf("%s|%s|%s|%s: configure|activate|deactivate|update",configure_state_direction.c_str(),activate_state_direction.c_str(),deactivate_state_direction.c_str(),update_status_direction.c_str());
                 printf("\nChange the joystick mode if not corresponding.\n\n");
-                printf("TriOrb status: %s",current_status.c_str());
-                printf("\nTriOrb instructions: %s\n\n",msg_status.c_str());
+                printf("%s status: %s",controlled_managed_node_name.c_str(),current_status.c_str());
+                printf("\n%s instructions: %s\n\n",controlled_managed_node_name.c_str(),msg_status.c_str());
                 printf("Current commands: (%.2f,%.2f,%.2f)\n",des_velx,des_vely,des_velw);
                 printf("Total linear speed command: %.2f%\n",sqrt(pow(des_velx,2)+pow(des_vely,2))*100);
                 if(this->event.type == JS_EVENT_BUTTON){
@@ -426,7 +428,7 @@ class Joystick_control:public rclcpp::Node
 
                             if(direction == configure_state_direction){ 
                                 RCLCPP_INFO(this->get_logger(),"\033[%dm\033[2J\033[1;1f");
-                                RCLCPP_INFO(this->get_logger(),"\nConfiguring TriOrb..");
+                                RCLCPP_INFO(this->get_logger(),"\nConfiguring %s...",controlled_managed_node_name.c_str());
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise)
                                 if (stat_id == 0) { //TDM lifecycle_msgs::msg::State::PRIMARY_STATE_UNCONFIGURED
                                     change_state(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE); 
@@ -438,7 +440,7 @@ class Joystick_control:public rclcpp::Node
                             }
                             else if(direction == activate_state_direction){ 
                                 RCLCPP_INFO(this->get_logger(),"\033[%dm\033[2J\033[1;1f");
-                                RCLCPP_INFO(this->get_logger(),"\nActivating TriOrb..");
+                                RCLCPP_INFO(this->get_logger(),"\nActivating %s...",controlled_managed_node_name.c_str());
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise)
                                 if (stat_id == 0) { //TDM lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE
                                     change_state(lifecycle_msgs::msg::Transition::TRANSITION_ACTIVATE); 
@@ -450,7 +452,7 @@ class Joystick_control:public rclcpp::Node
                             }
                             else if(direction == deactivate_state_direction){ 
                                 RCLCPP_INFO(this->get_logger(),"\033[%dm\033[2J\033[1;1f");
-                                RCLCPP_INFO(this->get_logger(),"\nDeactivating TriOrb..");
+                                RCLCPP_INFO(this->get_logger(),"\nDeactivating %s...",controlled_managed_node_name.c_str());
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise) 
                                 if (stat_id == 0) { //DM lifecycle_msgs::msg::State::PRIMARY_STATE_ACTIVE
                                     change_state(lifecycle_msgs::msg::Transition::TRANSITION_DEACTIVATE); 
@@ -463,11 +465,11 @@ class Joystick_control:public rclcpp::Node
                             else if(direction == update_status_direction){ 
                                 if(!lifecycle_ready){
                                     RCLCPP_INFO(this->get_logger(),"\033[%dm\033[2J\033[1;1f");
-                                    RCLCPP_INFO(this->get_logger(),"\nTrying to connect to 'triorb' node...");
+                                    RCLCPP_INFO(this->get_logger(),"\nTrying to connect to '%s' node...",controlled_managed_node_name.c_str());
                                     create_lifecycleclient();
                                 }
                                 RCLCPP_INFO(this->get_logger(),"\033[%dm\033[2J\033[1;1f");
-                                RCLCPP_INFO(this->get_logger(),"\nGetting TriOrb state...");
+                                RCLCPP_INFO(this->get_logger(),"\nGetting %s state...",controlled_managed_node_name.c_str());
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise) 
                                 update_msg_status(stat_id);
                             }
@@ -613,6 +615,8 @@ class Joystick_control:public rclcpp::Node
             this->declare_parameter("rate", 30.0);
             this->declare_parameter("topic_main_cmd", "cmd_vel_teleop_joy");
             this->declare_parameter("topic_assissted_cmd", "cmd_vel_teleop_assist");
+            this->declare_parameter("controlled_managed_node_name", "/my_managed_node");
+            
         }
 
         void refresh_common_params(){
@@ -645,6 +649,8 @@ class Joystick_control:public rclcpp::Node
             this->get_parameter("rate", rate);
             this->get_parameter("topic_main_cmd", topic_main_cmd);
             this->get_parameter("topic_assissted_cmd", topic_assissted_cmd);
+            this->get_parameter("controlled_managed_node_name", controlled_managed_node_name);
+            
         }
 
         /**
@@ -653,7 +659,7 @@ class Joystick_control:public rclcpp::Node
         void create_lifecycleclient() {
             //auto service_callback_group = nullptr;
             //std::string ch_state = name+"/change_state";
-            this->change_state_client_ = this->create_client<lifecycle_msgs::srv::ChangeState>("/triorb/change_state",rmw_qos_profile_services_default);
+            this->change_state_client_ = this->create_client<lifecycle_msgs::srv::ChangeState>(controlled_managed_node_name+"/change_state",rmw_qos_profile_services_default);
 
             /*while(!change_state_client_->wait_for_service(5s)){
             if(!rclcpp::ok()){
@@ -664,15 +670,15 @@ class Joystick_control:public rclcpp::Node
             }*/
 
             if(!change_state_client_->wait_for_service(5s)){
-                current_status = "Failed to connect to 'triorb/change_state' (step 1/2)";
+                status_details = "Failed to connect to '"+controlled_managed_node_name+"/change_state' (step 1/2)";
                 return;
             }
 
             //std::string get_state = name+"/get_state";
-            this->get_state_client_ = this->create_client<lifecycle_msgs::srv::GetState>("/triorb/get_state",rmw_qos_profile_services_default);
+            this->get_state_client_ = this->create_client<lifecycle_msgs::srv::GetState>(controlled_managed_node_name+"/get_state",rmw_qos_profile_services_default);
 
             if(!change_state_client_->wait_for_service(5s)){
-                current_status = "Failed to connect to 'triorb/get_state' (step 2/2)";
+                status_details = "Failed to connect to '"+ controlled_managed_node_name + "/get_state' (step 2/2)";
                 return;
             }
 
@@ -687,11 +693,11 @@ class Joystick_control:public rclcpp::Node
         */
         int get_state() {
             
-            //Check if working from terminal: ros2 service call /triorb/get_state lifecycle_msgs/srv/GetState "{}"
+            //Check if working from terminal: ros2 service call /controlled_managed_node_name/get_state lifecycle_msgs/srv/GetState "{}"
 
             if(lifecycle_ready){
                 if (!this->get_state_client_->service_is_ready()) {
-                    current_status = "Service not ready";
+                    status_details = "Service not ready";
                     return -1;
                 }
 
@@ -700,17 +706,17 @@ class Joystick_control:public rclcpp::Node
  
                 if(result.wait_for(2s) == std::future_status::ready){
                     int id = result.get()->current_state.id;
-                    current_status = result.get()->current_state.label; //class variable
+                    status_details = result.get()->current_state.label; //class variable
                     return id;
                 }
                 else{
-                    current_status = "Service active, but no answer received";
+                    status_details = "Service active, but no answer received";
                     return 0;
                 }
 
             }
             else{
-                current_status = "Client not initialized, "+current_status;
+                //detail updated if init client function 'create_lifecyleclient'
                 return -1;
             }
         }
@@ -718,7 +724,7 @@ class Joystick_control:public rclcpp::Node
         /*DEFAULT
         int get_state() {
             
-            //Check if working from terminal: ros2 service call /triorb/get_state lifecycle_msgs/srv/GetState "{}"
+            //Check if working from terminal: ros2 service call /controlled_managed_node_name/get_state lifecycle_msgs/srv/GetState "{}"
 
             if(lifecycle_ready){
                 if (!this->get_state_client_->service_is_ready()) {

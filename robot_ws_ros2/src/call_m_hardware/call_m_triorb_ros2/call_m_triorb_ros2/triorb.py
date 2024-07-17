@@ -35,12 +35,15 @@ class TriOrb(Node):
   def on_configure(self, state: State) -> TransitionCallbackReturn:
     self.get_logger().info('on_configure')
 
-    self.declare_parameter('triorb_port', '/dev/ttyACM0')
-    self.declare_parameter('odom_duration', 1.0)
-    self.declare_parameter('watchdog_timeout', 10.0)
-    self.declare_parameter('world_frame', 'world')
-    self.declare_parameter('robot_frame', 'triorb')
-    self.declare_parameter('debug', False)
+    try:
+      self.declare_parameter('triorb_port', '/dev/ttyACM0')
+      self.declare_parameter('odom_duration', 1.0)
+      self.declare_parameter('watchdog_timeout', 10.0)
+      self.declare_parameter('world_frame', 'world')
+      self.declare_parameter('robot_frame', 'triorb')
+      self.declare_parameter('debug', False)
+    except:
+      pass
 
     self.debug = self.get_parameter('debug').get_parameter_value().bool_value
    
@@ -60,7 +63,12 @@ class TriOrb(Node):
     self.port = self.get_parameter('triorb_port').get_parameter_value().string_value
 
     self.get_logger().info('open port: %s' % self.port)
-    self._vehicle = triorb_core.robot(self.port)
+    try:
+      self._vehicle = triorb_core.robot(self.port, self)
+    except:
+      self._vehicle = triorb_core.robot(self.port, self) 
+      self.get_logger().info('Fail to connect port: %s' % self.port)
+      return TransitionCallbackReturn.FAILURE
 
     self._pub = self.create_lifecycle_publisher(nav_msgs.msg.Odometry, '/odom',  10)
     self._odom_duration = self.get_parameter('odom_duration').get_parameter_value().double_value
@@ -74,25 +82,28 @@ class TriOrb(Node):
     self._watchdog = self.create_timer(self._watchdog_timeout, self.cb_watchdog, callback_group=self._watchdog_callback)
     self._watchdog.cancel()
 
-    self._sub_vel = self.create_subscription(geometry_msgs.msg.Twist, '/cmd_vel_teleop_joy', self.cb_cmd_velocity, 10)
+    self.topic_out = '/cmd_vel_teleop_joy'
+    self._sub_vel = self.create_subscription(geometry_msgs.msg.Twist, self.topic_out, self.cb_cmd_velocity, 10)
+
     return TransitionCallbackReturn.SUCCESS
+  
   #
   # Activate
   def on_activate(self, state: State) -> TransitionCallbackReturn:
     self.get_logger().info('on_activate')
-    self._vehicle.wakeup()
-    self._watchdog.reset()
-    self._pub.on_activate(state)
-
-    return super().on_activate(state)
+    self.get_logger().info('Waiting command on topic "%s"' % self.topic_out)
+    #TDM uncomment: self._vehicle.wakeup()
+    #TDM uncomment:self._watchdog.reset()
+    #self._pub.on_activate(state)
+    return TransitionCallbackReturn.SUCCESS
   #
   # Deactivate
   def on_deactivate(self, state: State) -> TransitionCallbackReturn:
     self.get_logger().info('on_deactivate')
-    self._vehicle.sleep()
-    self._watchdog.cancel()
-    self._pub.on_deactivate(state)
-    return super().on_deactivate(state)
+    #TDM uncomment:self._vehicle.sleep()
+    #TDM uncomment:self._watchdog.cancel()
+    #TDM uncomment:self._pub.on_deactivate(state)
+    return TransitionCallbackReturn.SUCCESS
   #
   # Cleanup
   def on_cleanup(self, state: State) -> TransitionCallbackReturn:
@@ -110,8 +121,13 @@ class TriOrb(Node):
     self.stop()
     self.destroy_timer(self._timer)
     self.destroy_publisher(self._pub)
-    del self._vehicle
-    self._vehicle = None
+    try:
+      self._vehicle.sleep()
+      del self._vehicle
+      self._vehicle = None
+    except:
+      pass
+    self.get_logger().info('on_shutdown finished') 
     
     return TransitionCallbackReturn.SUCCESS
 
@@ -120,33 +136,38 @@ class TriOrb(Node):
   # Callback of timer 
   def publish_odometry(self):
     if self._pub is not None and self._pub.is_activated:
-      
-      pose = self._vehicle.get_pos()[0]
-      print(pose)
-      if pose is None and self.debug:
-        import random
-        pose = triorb_core.core_types.TriOrbDrive3Pose()
-        pose.x = random.random()
-        pose.w = random.random()
-      self._odom.pose.pose.position.x = pose.x
-      self._odom.pose.pose.position.y = pose.y
+      try:
+        pose = self._vehicle.get_pos()[0]
+        #print(pose)
+        
+        """if pose is None and self.debug:
+          import random
+          pose = triorb_core.core_types.TriOrbDrive3Pose()
+          pose.x = random.random()
+          pose.w = random.random()"""
 
-      quat=quaternion.from_euler_angles(0,0,pose.w)
-      self._odom.pose.pose.orientation.x = quat.x
-      self._odom.pose.pose.orientation.y = quat.y
-      self._odom.pose.pose.orientation.z = quat.z
-      self._odom.pose.pose.orientation.w = quat.w
+        self._odom.pose.pose.position.x = pose.x
+        self._odom.pose.pose.position.y = pose.y
 
-      self._odom.twist.twist.linear.x = self.vx
-      self._odom.twist.twist.linear.y = self.vy
-      self._odom.twist.twist.angular.z = self.vw
-      self._odom.header.stamp = self.get_clock().now().to_msg()
-      self._pub.publish(self._odom)
+        quat=quaternion.from_euler_angles(0,0,pose.w)
+        self._odom.pose.pose.orientation.x = quat.x
+        self._odom.pose.pose.orientation.y = quat.y
+        self._odom.pose.pose.orientation.z = quat.z
+        self._odom.pose.pose.orientation.w = quat.w
+
+        self._odom.twist.twist.linear.x = self.vx
+        self._odom.twist.twist.linear.y = self.vy
+        self._odom.twist.twist.angular.z = self.vw
+        self._odom.header.stamp = self.get_clock().now().to_msg()
+        self._pub.publish(self._odom)
+      except:
+        self.get_logger().warn("Couldn't publish odometry, robot disconnected? ") 
     return
+  
   #
   # Callback of watchdog timer
   def cb_watchdog(self):
-    self.get_logger().info('watchdog')
+    self.get_logger().info('watchdog, robot stopped')
     self.stop()
     self._watchdog.cancel()
     return
@@ -168,7 +189,7 @@ class TriOrb(Node):
     self.vx = msg.linear.x
     self.vy = msg.linear.y
     self.vw = msg.angular.z
-    self._vehicle.set_vel_absolute(self.vx, self.vy, self.vw)
+    self._vehicle.set_vel_relative(self.vx, self.vy, self.vw)
     self._watchdog.reset()
     return
   
@@ -182,7 +203,7 @@ def main():
   executor.add_node(node)
 
   try:
-    node.get_logger().info('Start control')
+    node.get_logger().info('Ready, Waiting to be configured...')
     executor.spin()
   except KeyboardInterrupt:
     node.stop()

@@ -62,12 +62,11 @@ class TriOrb(Node):
     self.vw = 0.0
     self.port = self.get_parameter('triorb_port').get_parameter_value().string_value
 
-    self.get_logger().info('open port: %s' % self.port)
+    self.get_logger().info('open port: '+self.port)
     try:
       self._vehicle = triorb_core.robot(self.port, self)
     except:
-      self._vehicle = triorb_core.robot(self.port, self) 
-      self.get_logger().info('Fail to connect port: %s' % self.port)
+      self.get_logger().info('Fail to connect port: ' +self.port)
       return TransitionCallbackReturn.FAILURE
 
     self._pub = self.create_lifecycle_publisher(nav_msgs.msg.Odometry, '/odom',  10)
@@ -82,8 +81,8 @@ class TriOrb(Node):
     self._watchdog = self.create_timer(self._watchdog_timeout, self.cb_watchdog, callback_group=self._watchdog_callback)
     self._watchdog.cancel()
 
-    self.topic_out = '/cmd_vel_teleop_joy'
-    self._sub_vel = self.create_subscription(geometry_msgs.msg.Twist, self.topic_out, self.cb_cmd_velocity, 10)
+    self.topic_in = '/cmd_vel_teleop_joy'
+    self._sub_vel = self.create_subscription(geometry_msgs.msg.Twist, self.topic_in, self.cb_cmd_velocity, 10)
 
     return TransitionCallbackReturn.SUCCESS
   
@@ -91,7 +90,7 @@ class TriOrb(Node):
   # Activate
   def on_activate(self, state: State) -> TransitionCallbackReturn:
     self.get_logger().info('on_activate')
-    self.get_logger().info('Waiting command on topic "%s"' % self.topic_out)
+    self.get_logger().info('Waiting command on topic"' + self.topic_in)
     #TDM uncomment: self._vehicle.wakeup()
     #TDM uncomment:self._watchdog.reset()
     #self._pub.on_activate(state)

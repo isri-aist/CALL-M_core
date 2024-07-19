@@ -42,7 +42,7 @@ sudo apt  install ros-humble-slam-toolbox
 sudo apt install ros-humble-navigation2
 sudo apt install ros-humble-nav2-bringup
 ```
-Doc: https://navigation.ros.org/getting_started/index.html
+Doc: https://docs.nav2.org/getting_started/index.html#installation
 
 ### Zed mini packages
 Having a nvidia card installed is mandatory to use CUDA.

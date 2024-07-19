@@ -24,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'triorb = call_m_triorb_ros2.triorb:main'
+            'triorb = call_m_triorb_ros2.triorb_v2:main'
         ],
     },
 )

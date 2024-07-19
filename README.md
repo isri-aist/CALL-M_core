@@ -171,6 +171,12 @@ The IP adresses may need to be changed in the configurations files.
 https://robofoundry.medium.com/how-to-sync-time-between-robot-and-host-machine-for-ros2-ecbcff8aadc4
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-configuring_ntp_using_the_chrony_suite#sect-Stopping_chronyd
 
+Or allow them to synchronise on network automatically:
+```
+sudo apt install systemd-timesyncd
+sudo systemctl start systemd-timesyncd
+```
+
 ## Workspace details
 * Hardware_doc:
 	Contains informations and links to help set up the components.

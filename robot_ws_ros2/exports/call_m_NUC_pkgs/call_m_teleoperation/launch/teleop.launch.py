@@ -14,7 +14,7 @@ def generate_launch_description():
             output='screen',
         ),
         launch.actions.ExecuteProcess(
-            cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '60x40','-e', 'ros2', 'run', 'call_m_teleoperation', 'joystick_control_node','--ros-args','--params-file',joystick_param_file],
+            cmd=['xterm', '-fn', 'xft:fixed:size=12', '-geometry', '70x40','-e', 'ros2', 'run', 'call_m_teleoperation', 'joystick_control_node','--ros-args','--params-file',joystick_param_file],
             output='screen',
         ),
     ])

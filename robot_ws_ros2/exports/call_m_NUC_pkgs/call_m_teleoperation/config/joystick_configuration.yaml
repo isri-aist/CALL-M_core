@@ -19,7 +19,7 @@ joystick_control_node:
     configure_state_direction: "left" #configure Triorb
     activate_state_direction: "up" #Activate Triorb
     deactivate_state_direction: "down" #Deactivate Triorb
-    update_status_direction: "right" #button to connect to the Triorb or to update the status
+    reconnect_direction: "right" #button to connect to the Triorb or to reconnect
 
     #mobile base config (we stay between 0.0 and 1.0 for call_m, this is a percentage, the call_m_supervisor package will then manage the good speed to send)
     max_linear_speed_axis_value_input: 32767.0 #check your gamepad on read mode to get it
@@ -35,7 +35,9 @@ joystick_control_node:
     #keybiding for arm control
     #(TO Do, add button to switch to Triorb control or Arm control, could use one of the pad button to switch)
 
-    #output configurations
+    #ROS2 interfaces configurations
     rate: 50.0 #hz
     topic_main_cmd: "cmd_vel_teleop_joy" #topic to publish when in default mode
     topic_assissted_cmd: "cmd_vel_teleop_assist" #topic to publish when in assissted mode
+    controlled_managed_node_name: "triorb"
+    input_node_state_topic_name: "triorb_node_state" #topic on which to receive state of the node

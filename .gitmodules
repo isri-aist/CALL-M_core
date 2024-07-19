@@ -1,9 +1,6 @@
 [submodule "robot_ws_ros2/src/included_external_packages/nmea_msgs"]
 	path = robot_ws_ros2/src/included_external_packages/nmea_msgs
 	url = https://github.com/ros-drivers/nmea_msgs.git
-[submodule "robot_ws_ros2/src/included_external_packages/zed-ros2-wrapper"]
-	path = robot_ws_ros2/src/included_external_packages/zed-ros2-wrapper
-	url = https://github.com/stereolabs/zed-ros2-wrapper.git
 [submodule "robot_ws_ros2/src/included_external_packages/rplidar_ros"]
 	path = robot_ws_ros2/src/included_external_packages/rplidar_ros
 	url = https://github.com/allenh1/rplidar_ros.git

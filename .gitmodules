@@ -24,3 +24,7 @@
 [submodule "robot_ws_ros2/src/included_external_packages/triorb-core"]
 	path = robot_ws_ros2/src/included_external_packages/triorb-core
 	url = https://github.com/TriOrb-Inc/triorb-core.git
+[submodule "robot_ws_ros2/src/included_external_packages/zed-ros2-wrapper"]
+	path = robot_ws_ros2/src/included_external_packages/zed-ros2-wrapper
+	url = git@github.com:stereolabs/zed-ros2-wrapper.git
+	branch = master

@@ -29,5 +29,5 @@ leapsectz right/UTC
 local stratum 1
 
 # Allow NTP clients to synchronize with this server.
-allow 192.168.11.0/24
+allow 150.18.226.0/24
 

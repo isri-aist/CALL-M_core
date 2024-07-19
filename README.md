@@ -218,6 +218,10 @@ connect to Computers:
 ```
 ssh -X jrluser@hostname.local
 ```
+Or with IPs:
+callm01c (NUC): 150.18.226.30
+callm01v (JETSON): 150.18.226.22
+BUFFALO router: 150.18.66.94
 
 Install last verion of sutdio code on Ubuntu 22.04 (if default snap package crashes):
 https://github.com/microsoft/vscode/issues/204159#issuecomment-2151226947

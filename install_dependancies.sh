@@ -54,6 +54,7 @@ sudo apt-get install -y cuda-drivers
 
 #last instructions
 echo ""
+echo ""
 echo "Don't forget the following steps: "
 echo "1: Sourcing the setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"
 echo "2: Install ZED mini SDK manually: https://www.stereolabs.com/developers/release"

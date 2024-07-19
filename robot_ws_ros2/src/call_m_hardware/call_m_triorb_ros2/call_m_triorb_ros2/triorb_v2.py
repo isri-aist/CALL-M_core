@@ -21,6 +21,7 @@ import triorb_core
 import std_msgs.msg
 import geometry_msgs.msg
 import nav_msgs.msg
+import time
 
 class TriOrb(LifecycleNode):
     def __init__(self):
@@ -105,6 +106,7 @@ class TriOrb(LifecycleNode):
             self._pub.on_activate(state)
             self.get_logger().info('Waiting command on topic '+self.topic_in)
         except:
+            #time.sleep(5) #tests
             self.get_logger().error('Failed to activate')
             return TransitionCallbackReturn.FAILURE
         return TransitionCallbackReturn.SUCCESS

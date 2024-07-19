@@ -219,12 +219,24 @@ class Joystick_control:public rclcpp::Node
         std::string msg_status = "None"; //instructions for current stat to start robot
         rclcpp::Client<lifecycle_msgs::srv::ChangeState>::SharedPtr change_state_client_;
         std::shared_ptr<rclcpp::Subscription<lifecycle_msgs::msg::State>> sub_stat_notification_; 
+        int waiting_transition_id = -1;
 
         void stat_notification_callback(lifecycle_msgs::msg::State::ConstSharedPtr msg)
         {
             stat_id = msg->id;
             status_details = "Stat "+ msg->label + " with ID: "+to_string(msg->id);
-            update_msg_status(stat_id);
+        }
+
+        void check_if_trans_finished(int wanted_id){
+            if(stat_id==-1){
+                waiting_transition_id =-1; //we stop the waiting
+            }
+            else if(stat_id != wanted_id){
+                stat_id = -2;
+            }
+            else{
+                waiting_transition_id =-1;
+            }
         }
 
         void update_msg_status(int stat_id_val){
@@ -243,6 +255,10 @@ class Joystick_control:public rclcpp::Node
             else if(stat_id_val == -1){
                 current_status = "OFF: "+status_details;
                 msg_status = "No response, please start or restart the "+ controlled_managed_node_name +" node and press '"+ reconnect_direction +"' to reconnect";
+            }
+            else if(stat_id_val == -2){
+                current_status = "Busy";
+                msg_status = "Changing for state " + to_string(waiting_transition_id) + "... Check connection by pressing '" + reconnect_direction + "' if longer than expected.";
             }
             else{
                 current_status = "Unmanaged Status";
@@ -322,7 +338,7 @@ class Joystick_control:public rclcpp::Node
                 }
                 else{
                     des_velx =des_velx*this->linear_vel;
-                    des_vely =des_vely*this->linear_vel;
+                    des_vely =des_vely*this->linearf_vel;
                 }*/
                 
                 des_velx =des_velx*this->linear_vel;
@@ -443,7 +459,8 @@ class Joystick_control:public rclcpp::Node
                                 RCLCPP_INFO(this->get_logger(),"\nConfiguring %s...",controlled_managed_node_name.c_str());
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise)
                                 if (stat_id == lifecycle_msgs::msg::State::PRIMARY_STATE_UNCONFIGURED) { 
-                                    change_state(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);  
+                                    change_state(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);   
+                                    waiting_transition_id = lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE;
                                 }
                             }
                             else if(direction == activate_state_direction){ 
@@ -451,7 +468,8 @@ class Joystick_control:public rclcpp::Node
                                 RCLCPP_INFO(this->get_logger(),"\nActivating %s...",controlled_managed_node_name.c_str());
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise)
                                 if (stat_id == lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE) { 
-                                    change_state(lifecycle_msgs::msg::Transition::TRANSITION_ACTIVATE);   
+                                    change_state(lifecycle_msgs::msg::Transition::TRANSITION_ACTIVATE);  
+                                    waiting_transition_id = lifecycle_msgs::msg::State::PRIMARY_STATE_ACTIVE;  
                                 }
                             }
                             else if(direction == deactivate_state_direction){ 
@@ -459,24 +477,29 @@ class Joystick_control:public rclcpp::Node
                                 RCLCPP_INFO(this->get_logger(),"\nDeactivating %s...",controlled_managed_node_name.c_str());
                                 stat_id = get_state(); //we don't put it above because we want to compute that only when clicked (would slow down node otherwise) 
                                 if (stat_id == lifecycle_msgs::msg::State::PRIMARY_STATE_ACTIVE) {
-                                    change_state(lifecycle_msgs::msg::Transition::TRANSITION_DEACTIVATE);      
+                                    change_state(lifecycle_msgs::msg::Transition::TRANSITION_DEACTIVATE);  
+                                    waiting_transition_id = lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE;
                                 }
                             }
                             else if(direction == reconnect_direction){ 
-                                if(true){
-                                    RCLCPP_INFO(this->get_logger(),"\033[%dm\033[2J\033[1;1f");
-                                    RCLCPP_INFO(this->get_logger(),"\nTrying to connect to '%s' node...",controlled_managed_node_name.c_str());
-                                    create_lifecycleclient();
-                                    stat_id = get_state();
-                                }
+                                RCLCPP_INFO(this->get_logger(),"\033[%dm\033[2J\033[1;1f");
+                                RCLCPP_INFO(this->get_logger(),"\nTrying to connect to '%s' node...",controlled_managed_node_name.c_str());
+                                create_lifecycleclient();
+                                stat_id = get_state();
                             }
-                            update_msg_status(stat_id); //in case of errors
+
+                            if(waiting_transition_id>0){ //if not -1 = we are waiting for a transition an id
+                                check_if_trans_finished(waiting_transition_id);
+                            }
                         }
                     }
+
                     refresh_speeds(); //we update sent speeds
                     fflush(stdout);
                 }
             }
+
+            update_msg_status(stat_id); //we update stat_id messages
 
             /*
             AUTO SECURITY MODE
@@ -690,7 +713,6 @@ class Joystick_control:public rclcpp::Node
             if(lifecycle_ready){
                 if(!change_state_client_->wait_for_service(5s)){ //we check if the triorb node is still alive
                     status_details = "Service '"+controlled_managed_node_name+"/change_state' disconnected?";
-                    lifecycle_ready = false;
                     return -1;
                 }
                 //otherwise we just return current state

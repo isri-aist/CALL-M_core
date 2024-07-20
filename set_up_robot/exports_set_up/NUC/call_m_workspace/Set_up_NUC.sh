@@ -3,11 +3,10 @@
 #install utilities
 sudo apt install -y terminator
 sudo apt install -y filezilla
-sudo apt install -y git
 
 #Install Chrony
 sudo apt install -y chrony
-sudo cp /call_m_workspace/chrony/chrony.conf.client /etc/chrony/chrony.conf
+sudo cp /call_m_workspace/chrony/chrony.conf.server /etc/chrony/chrony.conf
 
 #ROS2
 sudo apt install -y software-properties-common
@@ -21,17 +20,38 @@ sudo apt install -y ros-humble-desktop
 sudo apt install -y ros-humble-ros-base
 sudo apt install -y ros-dev-tools
 
+#Triorb control
+sudo apt install -y python3-serial python3-pip ros-humble-lifecycle-py
+sudo pip install numpy-quaternion
+
 #Xterm
 sudo apt install -y xterm
 
-#Install zed wrapper package
-cd /call_m_workspace/robot_ws_ros2/src/included_external_packages/
-git clone --recurse-submodules -j8 -b master https://github.com/stereolabs/zed-ros2-wrapper.git
+#Xacro
+sudo apt install -y ros-humble-xacro
+
+#robot localization
+sudo apt install -y ros-humble-robot-localization
+
+#slam
+sudo apt install -y ros-humble-slam-toolbox
+
+#navigation2
+sudo apt install -y ros-humble-navigation2
+sudo apt install -y ros-humble-nav2-bringup
+
+#joint state publisher
+sudo apt install -y ros-humble-joint-state-publisher
+
+#Gazebo
+sudo apt install -y gazebo
+sudo apt install -y ros-humble-ros2-control
+sudo apt install -y ros-humble-ros2-controllers
+sudo apt install -y ros-humble-gazebo-ros-pkgs
+sudo apt install -y ros-humble-gazebo-ros2-control
 
 #last instructions
 echo ""
 echo ""
 echo "Don't forget the following steps: "
-echo "0: CUDA Should already be installed in the JETSON, check and install it if needed"
-echo "1: Sourcing the ROS2 setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"
-echo "2: Install ZED mini SDK manually (JETSON Version!!!): https://www.stereolabs.com/developers/release"
+echo "1: Sourcing the setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"

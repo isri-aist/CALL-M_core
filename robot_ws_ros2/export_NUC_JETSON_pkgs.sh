@@ -1,57 +1,72 @@
-rm -r exports/
-mkdir exports/
-touch exports/COLCON_IGNORE
-mkdir exports/call_m_JETSON_pkgs/ exports/call_m_NUC_pkgs/
+#!/bin/bash
 
-#NUC packages
-#export files for 'call_m_hardware/call_m_drivers' NUC version
-mkdir exports/call_m_NUC_pkgs/call_m_hardware/
-mkdir exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
-mkdir exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/src
-mkdir exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/config
-mkdir exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/launch
-cp -r src/call_m_hardware/call_m_drivers/src/ exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
-cp src/call_m_hardware/call_m_drivers/launch/bot_NUC.launch.py exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/launch/
-cp src/call_m_hardware/call_m_drivers/CMakeLists.txt exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
-cp src/call_m_hardware/call_m_drivers/package.xml exports/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
+# Remove and recreate directories
+rm -r exports_packages/
+mkdir exports_packages/
+touch exports_packages/COLCON_IGNORE
+mkdir -p exports_packages/call_m_JETSON_pkgs/ exports_packages/call_m_NUC_pkgs/
 
-#export files for 'call_m_hardware/call_m_triorb_ros2' NUC version
-cp -r src/call_m_hardware/call_m_triorb_ros2/ exports/call_m_NUC_pkgs/call_m_hardware/
+# Check if parameter is provided and handle NUC packages
+if [ "$1" = 1 ] || [ "$1" = 3 ]; then
+    # NUC packages
+    # Export files for 'call_m_hardware/call_m_drivers' NUC version
+    mkdir -p exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/src
+    mkdir -p exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/config
+    mkdir -p exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/launch
+    cp -r src/call_m_hardware/call_m_drivers/src/ exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
+    cp src/call_m_hardware/call_m_drivers/launch/bot_NUC.launch.py exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/launch/
+    cp src/call_m_hardware/call_m_drivers/CMakeLists.txt exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
+    cp src/call_m_hardware/call_m_drivers/package.xml exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
 
-#export files for 'call_m_start_all' NUC version
-mkdir exports/call_m_NUC_pkgs/call_m_start_all/
-mkdir exports/call_m_NUC_pkgs/call_m_start_all/config
-mkdir exports/call_m_NUC_pkgs/call_m_start_all/launch
-cp src/call_m_start_all/launch/call_m_start_NUC.launch.py exports/call_m_NUC_pkgs/call_m_start_all/launch/
-cp src/call_m_start_all/CMakeLists.txt exports/call_m_NUC_pkgs/call_m_start_all/
-cp src/call_m_start_all/package.xml exports/call_m_NUC_pkgs/call_m_start_all/
+    # Export files for 'call_m_hardware/call_m_triorb_ros2' NUC version
+    cp -r src/call_m_hardware/call_m_triorb_ros2/ exports_packages/call_m_NUC_pkgs/call_m_hardware/
 
-#export files for 'call_m_teleoperation' can be useful if needed to control robot by pluging a joystick directly into it
-cp -r src/call_m_teleoperation/ exports/call_m_NUC_pkgs/
+    # Export files for 'call_m_start_all' NUC version
+    mkdir -p exports_packages/call_m_NUC_pkgs/call_m_start_all/config
+    mkdir -p exports_packages/call_m_NUC_pkgs/call_m_start_all/launch
+    cp src/call_m_start_all/launch/call_m_start_NUC.launch.py exports_packages/call_m_NUC_pkgs/call_m_start_all/launch/
+    cp src/call_m_start_all/CMakeLists.txt exports_packages/call_m_NUC_pkgs/call_m_start_all/
+    cp src/call_m_start_all/package.xml exports_packages/call_m_NUC_pkgs/call_m_start_all/
 
-echo "-- NUC packages exported in /exports/call_m_NUC_pkgs/"
+    # Export files for 'call_m_teleoperation'
+    cp -r src/call_m_teleoperation/ exports_packages/call_m_NUC_pkgs/
 
-#JETSON packages
-#export files for 'call_m_hardware/call_m_drivers' JETSON version
-mkdir exports/call_m_JETSON_pkgs/call_m_hardware/
-mkdir exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
-mkdir exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/src
-mkdir exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config
-mkdir exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/launch
-cp -r src/call_m_hardware/call_m_drivers/src/ exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
-cp src/call_m_hardware/call_m_drivers/config/cam1_zedm.yaml exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config/
-cp src/call_m_hardware/call_m_drivers/config/cam2_zedm.yaml exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config/
-cp src/call_m_hardware/call_m_drivers/launch/bot_JETSON.launch.py exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/launch/
-cp src/call_m_hardware/call_m_drivers/CMakeLists.txt exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
-cp src/call_m_hardware/call_m_drivers/package.xml exports/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
+    echo "-- NUC packages exported in /exports_packages/call_m_NUC_pkgs/"
+fi
 
-#export files for 'call_m_start_all' JETSON version
-mkdir exports/call_m_JETSON_pkgs/call_m_start_all/
-mkdir exports/call_m_JETSON_pkgs/call_m_start_all/config
-mkdir exports/call_m_JETSON_pkgs/call_m_start_all/launch
-cp src/call_m_start_all/launch/call_m_start_JETSON.launch.py exports/call_m_JETSON_pkgs/call_m_start_all/launch/
-cp src/call_m_start_all/CMakeLists.txt exports/call_m_JETSON_pkgs/call_m_start_all/
-cp src/call_m_start_all/package.xml exports/call_m_JETSON_pkgs/call_m_start_all/
+# Check if parameter is provided and handle JETSON packages
+if [ "$1" = 2 ] || [ "$1" = 3 ]; then
+    # JETSON packages
+    # Export files for 'call_m_hardware/call_m_drivers' JETSON version
+    mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/src
+    mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config
+    mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/launch
+    cp -r src/call_m_hardware/call_m_drivers/src/ exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
+    cp src/call_m_hardware/call_m_drivers/config/cam1_zedm.yaml exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config/
+    cp src/call_m_hardware/call_m_drivers/config/cam2_zedm.yaml exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config/
+    cp src/call_m_hardware/call_m_drivers/launch/bot_JETSON.launch.py exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/launch/
+    cp src/call_m_hardware/call_m_drivers/CMakeLists.txt exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
+    cp src/call_m_hardware/call_m_drivers/package.xml exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
 
-echo "-- JETSON packages exported in /exports/call_m_JETSON_pkgs/"
-echo "Don't forget to install dependencies and 'included_external_packages' of workspace manually in host machine"
+    # Export files for 'call_m_start_all' JETSON version
+    mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_start_all/config
+    mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_start_all/launch
+    cp src/call_m_start_all/launch/call_m_start_JETSON.launch.py exports_packages/call_m_JETSON_pkgs/call_m_start_all/launch/
+    cp src/call_m_start_all/CMakeLists.txt exports_packages/call_m_JETSON_pkgs/call_m_start_all/
+    cp src/call_m_start_all/package.xml exports_packages/call_m_JETSON_pkgs/call_m_start_all/
+
+    echo "-- JETSON packages exported in /exports_packages/call_m_JETSON_pkgs/"
+fi
+
+# Update NUC packages
+if [ "$1" = 1 ] || [ "$1" = 3 ]; then
+    echo "Updating NUC packages..."
+    scp -r exports_packages/call_m_NUC_pkgs/ jrluser@callm01c.local:/home/jrluser/call_m_workspace/robot_ws_ros2/src/
+fi
+
+# Update JETSON packages
+if [ "$1" = 2 ] || [ "$1" = 3 ]; then
+    echo "Updating JETSON packages..."
+    scp -r exports_packages/call_m_JETSON_pkgs/ jrluser@callm01v.local:/home/jrluser/call_m_workspace/robot_ws_ros2/src/
+fi
+

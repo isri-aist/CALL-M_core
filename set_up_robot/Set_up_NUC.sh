@@ -1,3 +1,13 @@
+#!/bin/bash
+
+#install utilities
+sudo apt install -y terminator
+sudo apt install -y filezilla
+
+#Install Chrony
+sudo apt install -y chrony
+sudo cp /call_m_workspace/chrony/chrony.conf.server /etc/chrony/chrony.conf
+
 #ROS2
 sudo apt install -y software-properties-common
 sudo add-apt-repository universe
@@ -5,7 +15,7 @@ sudo apt update && sudo apt install curl -y
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 sudo apt install -y ros-humble-desktop
 sudo apt install -y ros-humble-ros-base
 sudo apt install -y ros-dev-tools
@@ -44,4 +54,4 @@ sudo apt install -y ros-humble-gazebo-ros2-control
 echo ""
 echo ""
 echo "Don't forget the following steps: "
-echo "1: Sourcing the setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"
+echo "1: Sourcing the ROS2 setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"

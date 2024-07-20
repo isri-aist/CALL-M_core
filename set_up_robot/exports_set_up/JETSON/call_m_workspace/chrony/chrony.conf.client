@@ -19,9 +19,8 @@ maxupdateskew 100.0
 # real-time clock. Note that it can’t be used along with the 'rtcfile' directive.
 rtcsync
 
-# Step the system clock instead of slewing it if the adjustment is larger than
-# one second, but only in the first three clock updates.
-makestep 1 -1
+# This setting allows Chrony to step the system clock if the time difference is greater than one second, and it will apply this correction any time it finds such a discrepancy.
+makestep 1 1
 
 # Get TAI-UTC offset and leap seconds from the system tz database.
 # This directive must be commented out when using time sources serving
@@ -29,8 +28,14 @@ makestep 1 -1
 leapsectz right/UTC
 
 #added: Ip of host computer to sync with
+#minpoll = minimum time to check times difference (min time = 2^minpoll), similar for maxpoll, so if (minpoll = 0, maxpoll = 5) : 1sec to 32s (longest time interval between checks)
 server 150.18.226.30 minpoll 0 maxpoll 5 maxdelay .005
+
+#allow time synchronisation
 allow
-#do not use local clock unless it is the only source available (server should have stra>
+
+#do not use local clock unless it is the only source available
 local stratum 10
 
+# Track and correct the clock's drift.
+driftfile /var/lib/chrony/drift

@@ -17,10 +17,15 @@ else
       echo "Building REMOTE..."
       bash clean_build.sh
       # Export packages to robot's computers
-      bash export_NUC_JETSON "$@"
+      echo ""
+      bash export_NUC_JETSON_pkgs.sh "$@"
+      echo ""
       # Build robot's computers
+      echo ""
       echo "Building NUC..."
-      ssh jrluser@callm01c << EOF
+      echo ""
+      ssh jrluser@callm01c.local << EOF
+      	source /opt/ros/humble/setup.bash
         cd call_m_workspace/robot_ws_ros2
         bash clean_build.sh
 EOF
@@ -30,10 +35,15 @@ EOF
       echo "Building REMOTE..."
       bash clean_build.sh
       # Export packages to robot's computers
-      bash export_NUC_JETSON "$@"
+      echo ""
+      bash export_NUC_JETSON_pkgs.sh "$@"
+      echo ""
       # Build robot's computers
+      echo ""
       echo "Building JETSON..."
-      ssh jrluser@callm01v << EOF
+      echo ""
+      ssh jrluser@callm01v.local << EOF
+      	source /opt/ros/humble/setup.bash
         cd call_m_workspace/robot_ws_ros2
         bash clean_build.sh
 EOF
@@ -43,16 +53,24 @@ EOF
       echo "Building REMOTE..."
       bash clean_build.sh
       # Export packages to robot's computers
-      bash export_NUC_JETSON "$@"
+      echo ""
+      bash export_NUC_JETSON_pkgs.sh "$@"
+      echo ""
       # Build NUC
+      echo ""
       echo "Building NUC..."
-      ssh jrluser@callm01c << EOF
+      echo ""
+      ssh jrluser@callm01c.local << EOF
+      	source /opt/ros/humble/setup.bash
         cd call_m_workspace/robot_ws_ros2
         bash clean_build.sh
 EOF
       # Build JETSON
+      echo ""
       echo "Building JETSON..."
-      ssh jrluser@callm01v << EOF
+      echo ""
+      ssh jrluser@callm01v.local << EOF
+      	source /opt/ros/humble/setup.bash
         cd call_m_workspace/robot_ws_ros2
         bash clean_build.sh
 EOF
@@ -62,4 +80,8 @@ EOF
     exit 1
   fi
 fi
+
+echo ""
+echo "It might be needed to restart the Terminals for new installed nodes or files"
+echo ""
 

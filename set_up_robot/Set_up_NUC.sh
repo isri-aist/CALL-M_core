@@ -6,7 +6,7 @@ sudo apt install -y filezilla
 
 #Install Chrony
 sudo apt install -y chrony
-sudo cp /call_m_workspace/chrony/chrony.conf.server /etc/chrony/chrony.conf
+sudo cp chrony/chrony.conf.server /etc/chrony/chrony.conf
 
 #ROS2
 sudo apt install -y software-properties-common

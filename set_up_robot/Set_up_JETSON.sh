@@ -7,7 +7,7 @@ sudo apt install -y git
 
 #Install Chrony
 sudo apt install -y chrony
-sudo cp /call_m_workspace/chrony/chrony.conf.client /etc/chrony/chrony.conf
+sudo cp chrony/chrony.conf.client /etc/chrony/chrony.conf
 
 #ROS2
 sudo apt install -y software-properties-common
@@ -25,7 +25,7 @@ sudo apt install -y ros-dev-tools
 sudo apt install -y xterm
 
 #Install zed wrapper package
-cd /call_m_workspace/robot_ws_ros2/src/included_external_packages/
+cd robot_ws_ros2/src/included_external_packages/
 git clone --recurse-submodules -j8 -b master https://github.com/stereolabs/zed-ros2-wrapper.git
 
 #last instructions

@@ -6,7 +6,7 @@ sudo apt install -y filezilla
 
 #Install Chrony
 sudo apt install -y chrony
-sudo cp /call_m_workspace/chrony/chrony.conf.server /etc/chrony/chrony.conf
+sudo cp /chrony/chrony.conf.server /etc/chrony/chrony.conf
 
 #ROS2
 sudo apt install -y software-properties-common
@@ -54,4 +54,4 @@ sudo apt install -y ros-humble-gazebo-ros2-control
 echo ""
 echo ""
 echo "Don't forget the following steps: "
-echo "1: Sourcing the setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"
+echo "1: Sourcing the ROS2 setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"

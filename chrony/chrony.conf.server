@@ -26,7 +26,14 @@ makestep 1 3
 leapsectz right/UTC
 
 # Use the local system clock as a reference.
-local stratum 1
+# External NTP servers to use.
+server 0.centos.pool.ntp.org iburst
+server 1.centos.pool.ntp.org iburst
+server 2.centos.pool.ntp.org iburst
+server 3.centos.pool.ntp.org iburst
+
+#Configures the client to use its local clock as a last resort if no other sources are available
+local stratum 10
 
 # Allow NTP clients to synchronize with this server.
 allow 150.18.226.0/24

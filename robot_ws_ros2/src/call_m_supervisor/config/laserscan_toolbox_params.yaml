@@ -9,7 +9,7 @@ laserscan_toolbox_node:
     extrapolate_odometry: false #define if the program should extrapolate the odometry when the wanted stamp of a LaserScan is after the newest received odometry.
 
     #debugging
-    debug: true
+    debug: false
     debug_file_path: "/home/jrluser/Desktop/call_m_workspace/lasertoolbox_debug.txt"
     show_ranges: false
     show_odometry_detail: true

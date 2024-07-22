@@ -24,8 +24,25 @@ sudo apt install -y ros-dev-tools
 #Xterm
 sudo apt install -y xterm
 
-#Install zed wrapper package
+#Xacro
+sudo apt install -y ros-humble-xacro
+
+#robot localization
+sudo apt install -y ros-humble-robot-localization
+
+#slam
+sudo apt install -y ros-humble-slam-toolbox
+
+#navigation2
+sudo apt install -y ros-humble-navigation2
+sudo apt install -y ros-humble-nav2-bringup
+
+#joint state publisher
+sudo apt install -y ros-humble-joint-state-publisher
+
+#Install zed wrapper package and dependancies
 cd robot_ws_ros2/src/included_external_packages/
+sudo rm -r /zed-ros2-wrapper
 git clone --recurse-submodules -j8 -b master https://github.com/stereolabs/zed-ros2-wrapper.git
 
 #last instructions

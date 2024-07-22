@@ -82,6 +82,7 @@ EOF
 fi
 
 echo ""
+echo "!!!Don't forget to source the workspace setup.bash file in .bashrc!!!"
 echo "It might be needed to restart the Terminals for new installed nodes or files"
 echo ""
 

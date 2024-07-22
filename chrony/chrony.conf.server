@@ -33,8 +33,10 @@ server 2.centos.pool.ntp.org iburst
 server 3.centos.pool.ntp.org iburst
 
 #Configures the client to use its local clock as a last resort if no other sources are available
-local stratum 10
+local stratum 4
 
-# Allow NTP clients to synchronize with this server.
-allow 150.18.226.0/24
+# Allow specific NTP clients to synchronize with this server.
+#allow 150.18.226.0/24
 
+#Allow any NTP clients to synchronize
+allow

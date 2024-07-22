@@ -40,15 +40,27 @@ sudo apt install -y ros-humble-nav2-bringup
 #joint state publisher
 sudo apt install -y ros-humble-joint-state-publisher
 
+#NVIDIA: Cuda base installer for JETSON, arm64
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/sbsa/cuda-ubuntu2204.pin
+sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/12.5.1/local_installers/cuda-repo-ubuntu2204-12-5-local_12.5.1-555.42.06-1_arm64.deb
+sudo dpkg -i cuda-repo-ubuntu2204-12-5-local_12.5.1-555.42.06-1_arm64.deb
+sudo cp /var/cuda-repo-ubuntu2204-12-5-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cuda-toolkit-12-5
+
+#NVIDIA: Cuda driver installer for JETSON, arm64
+sudo apt-get install -y cuda-drivers
+
 #Install zed wrapper package and dependancies
 cd robot_ws_ros2/src/included_external_packages/
-sudo rm -r /zed-ros2-wrapper
+sudo rm -r zed-ros2-wrapper/
 git clone --recurse-submodules -j8 -b master https://github.com/stereolabs/zed-ros2-wrapper.git
 
 #last instructions
 echo ""
 echo ""
 echo "Don't forget the following steps: "
-echo "0: CUDA Should already be installed in the JETSON, check and install it if needed"
+echo "Check that the CUDA version used is the latest: 'nvcc --version' Upgrade if needed https://docs.nvidia.com/cuda/cuda-for-tegra-appnote/index.html#installing-the-cuda-upgrade-package"
 echo "1: Sourcing the ROS2 setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"
 echo "2: Install ZED mini SDK manually (JETSON Version!!!): https://www.stereolabs.com/developers/release"

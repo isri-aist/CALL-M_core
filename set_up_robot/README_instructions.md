@@ -64,6 +64,9 @@ sudo apt-get update
 sudo apt-get install backport-iwlwifi-dkms
 ```
 - Restart the computer, WI-FI should be available.
+```
+sudo reboot
+```
 
 For faster connection:
 - Open '/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf' and set wifi.powersave = 2
@@ -114,6 +117,7 @@ bash Set_up_JETSON.sh
 ```
 - Source ROS2: add the line 'source /opt/ros/humble/setup.bash" in home/.bashrc file
 - Install ZED SDK, NVIDIA Jetson version, Manually: https://www.stereolabs.com/developers/release
+- Restart the computer
 
 ## Set up NUC
 - connect to the NUC with (replace X by robot's number):
@@ -126,6 +130,7 @@ cd call_m_workspace/
 bash Set_up_NUC.sh
 ```
 - Source ROS2: add the line 'source /opt/ros/humble/setup.bash" in home/.bashrc file
+- Restart the computer 
 
 # Install and run CALLM workspace
 - You can close all ssh connections with the JETSON an the NUC

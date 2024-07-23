@@ -61,6 +61,7 @@ git clone --recurse-submodules -j8 -b master https://github.com/stereolabs/zed-r
 echo ""
 echo ""
 echo "Don't forget the following steps: "
-echo "Check that the CUDA version used is the latest: 'nvcc --version' Upgrade if needed https://docs.nvidia.com/cuda/cuda-for-tegra-appnote/index.html#installing-the-cuda-upgrade-package"
+echo "Check that the CUDA version used is the last supported one: 'nvcc --version' Upgrade if needed https://docs.nvidia.com/cuda/cuda-for-tegra-appnote/index.html#installing-the-cuda-upgrade-package"
 echo "1: Sourcing the ROS2 setup script in .bashrc (hidden file in /home/): source /opt/ros/humble/setup.bash"
 echo "2: Install ZED mini SDK manually (JETSON Version!!!): https://www.stereolabs.com/developers/release"
+

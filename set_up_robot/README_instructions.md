@@ -30,7 +30,7 @@ sdkmanager
 
 ### 3) After flash, Set up Ubuntu on the JETSON using a keyboard, a mouse and the connected screen
 - name: jrluser
-- computer name: callm0Xv (X = callm robot number)
+- computer name: callmXv (X = callm robot number)
 - username: jrluser
 - password: jrluser
 - login automatically: yes
@@ -72,7 +72,7 @@ For faster connection:
 ### 1) Install Ubuntu 22.04 (Via USB bootable device or any other means)
 ### 2) Set up Ubuntu
 - name: jrluser
-- computer name: callm0Xc (X = callm robot number)
+- computer name: callmXc (X = callm robot number)
 - username: jrluser
 - password: jrluser
 - login automatically: yes
@@ -98,13 +98,13 @@ bash 1_Set_up_USER_dev_amd64.sh
 ```
 - Send necessary files to JETSON and NUC with (replace X by robot's number):
 ```
-bash 2_export_set_up_files.sh callm0Xc.local call0Xv.local
+bash 2_export_set_up_files.sh X
 ```
 
 ## Set up JETSON
 - connect to the JETSON with (replace X by robot's number):
 ```
-ssh -X jrluser@callm0Xv.local
+ssh -X jrluser@callmXv.local
 ```
 
 - Set up with:
@@ -118,7 +118,7 @@ bash Set_up_JETSON.sh
 ## Set up NUC
 - connect to the NUC with (replace X by robot's number):
 ```
-ssh -X jrluser@callm0Xc.local
+ssh -X jrluser@callmXc.local
 ```
 - Set up with:
 ```

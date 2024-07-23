@@ -48,7 +48,7 @@ cp ../robot_ws_ros2/clean_build.sh exports_set_up/JETSON/call_m_workspace/robot_
 echo "-- JETSON set_up files exported in /exports_set_up/JETSON/"
 
 #send NUC files
-scp -r exports_set_up/NUC/call_m_workspace/ jrluser@$1:/home/jrluser/
+scp -r exports_set_up/NUC/call_m_workspace/ jrluser@callm$1c.local:/home/jrluser/
 
 #send JETSON files
-scp -r exports_set_up/JETSON/call_m_workspace/ jrluser@$2:/home/jrluser/
+scp -r exports_set_up/JETSON/call_m_workspace/ jrluser@callm$1v.local:/home/jrluser/

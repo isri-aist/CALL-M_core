@@ -1,4 +1,4 @@
-# Install and set up for CALLM robot 
+# Flash and set up computers for CALLM robot 
 Last update: july 2024
 ## JETSON ORIN 16G, Ubuntu 22.04
 ### 1) Install sdkmanager on this computer
@@ -95,7 +95,7 @@ sudo apt update && sudo apt upgrade
 
 # Set up CALLM workspace (JETSON and NUC)
 - First, the JETSON, the NUC and your computer should be on the same network
-- Set up your computer with:
+- Set up your computer with (press 'enter' for all inputs, keep default installation):
 ```
 bash 1_Set_up_USER_dev_amd64.sh
 ```
@@ -110,13 +110,14 @@ bash 2_export_set_up_files.sh X
 ssh -X jrluser@callmXv.local
 ```
 
-- Set up with:
+- Set up with (press 'enter' for all inputs, keep default installation):
 ```
 cd call_m_workspace/
 bash Set_up_JETSON.sh
 ```
 - Source ROS2: add the line 'source /opt/ros/humble/setup.bash" in home/.bashrc file
 - Install ZED SDK, NVIDIA Jetson version, Manually: https://www.stereolabs.com/developers/release
+  (press 'enter' for all inputs, keep default installation))
 - Restart the computer
 
 ## Set up NUC
@@ -124,7 +125,7 @@ bash Set_up_JETSON.sh
 ```
 ssh -X jrluser@callmXc.local
 ```
-- Set up with:
+- Set up with (press 'enter' for all inputs, keep default installation):
 ```
 cd call_m_workspace/
 bash Set_up_NUC.sh
@@ -133,5 +134,6 @@ bash Set_up_NUC.sh
 - Restart the computer 
 
 # Install and run CALLM workspace
+- Restart your computer to ensure everything is correctly installed
 - You can close all ssh connections with the JETSON an the NUC
 - In the CALLM github root repository, open /robot_ws_ros2/README.md, and follow instructions

@@ -115,9 +115,27 @@ ssh -X jrluser@callmXv.local
 cd call_m_workspace/
 bash Set_up_JETSON.sh
 ```
+Change CUDA version to 12.5 (This is the one installed in Set_up_JETSON.sh)
+* For that, replace or add those line in .bashrc file:
+```
+export PATH=/usr/local/cuda-12.5/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64:$LD_LIBRARY_PATH
+```
+- Update the computer
+```
+sudo apt update && sudo apt upgrade
+```
+- Restart the computer
 - Source ROS2: add the line 'source /opt/ros/humble/setup.bash" in home/.bashrc file
 - Install ZED SDK, NVIDIA Jetson version, Manually: https://www.stereolabs.com/developers/release
-  (press 'enter' for all inputs, keep default installation))
+* You can use filezilla to transfer the file from your computer to the JETSON: 'filezilla' in Jetson terminal
+* Then 
+```
+chmod u+x <filename>
+./<filename>
+```
+(press 'enter' for all inputs, keep default installation))
+
 - Restart the computer
 
 ## Set up NUC
@@ -135,5 +153,4 @@ bash Set_up_NUC.sh
 
 # Install and run CALLM workspace
 - Restart your computer to ensure everything is correctly installed
-- You can close all ssh connections with the JETSON an the NUC
 - In the CALLM github root repository, open /robot_ws_ros2/README.md, and follow instructions

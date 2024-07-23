@@ -41,6 +41,7 @@ sudo apt install -y ros-humble-nav2-bringup
 sudo apt install -y ros-humble-joint-state-publisher
 
 #NVIDIA: Cuda base installer for JETSON, aarch_jetson
+#https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/arm64/cuda-ubuntu2204.pin
 sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
 wget https://developer.download.nvidia.com/compute/cuda/12.5.1/local_installers/cuda-tegra-repo-ubuntu2204-12-5-local_12.5.1-1_arm64.deb

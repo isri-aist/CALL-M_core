@@ -1,6 +1,6 @@
 # Install and set up for CALLM robot 
 Last update: july 2024
-## JETSON ORIN 16G
+## JETSON ORIN 16G, Ubuntu 22.04
 ### 1) Install sdkmanager on this computer
 ```
 sudo apt install sdkmanager
@@ -68,7 +68,7 @@ sudo apt-get install backport-iwlwifi-dkms
 For faster connection:
 - Open '/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf' and set wifi.powersave = 2
 
-## NUC
+## NUC, Ubuntu 22.04
 ### 1) Install Ubuntu 22.04 (Via USB bootable device or any other means)
 ### 2) Set up Ubuntu
 - name: jrluser
@@ -96,16 +96,17 @@ sudo apt update && sudo apt upgrade
 ```
 bash 1_Set_up_USER_dev_amd64.sh
 ```
-- Send necessary files to JETSON and NUC with:
+- Send necessary files to JETSON and NUC with (replace X by robot's number):
 ```
-bash 2_export_set_up_files.sh
+bash 2_export_set_up_files.sh callm0Xc.local call0Xv.local
 ```
 
 ## Set up JETSON
-- connect to the JETSON with (X = robot number):
+- connect to the JETSON with (replace X by robot's number):
 ```
 ssh -X jrluser@callm0Xv.local
 ```
+
 - Set up with:
 ```
 cd call_m_workspace/
@@ -115,7 +116,7 @@ bash Set_up_JETSON.sh
 - Install ZED SDK, NVIDIA Jetson version, Manually: https://www.stereolabs.com/developers/release
 
 ## Set up NUC
-- connect to the NUC with (X = robot number):
+- connect to the NUC with (replace X by robot's number):
 ```
 ssh -X jrluser@callm0Xc.local
 ```
@@ -126,6 +127,6 @@ bash Set_up_NUC.sh
 ```
 - Source ROS2: add the line 'source /opt/ros/humble/setup.bash" in home/.bashrc file
 
-# Install CALLM workspace
+# Install and run CALLM workspace
 - You can close all ssh connections with the JETSON an the NUC
 - In the CALLM github root repository, open /robot_ws_ros2/README.md, and follow instructions

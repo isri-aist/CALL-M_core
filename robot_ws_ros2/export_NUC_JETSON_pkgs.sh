@@ -7,7 +7,7 @@ touch exports_packages/COLCON_IGNORE
 mkdir -p exports_packages/call_m_JETSON_pkgs/ exports_packages/call_m_NUC_pkgs/
 
 # Check if parameter is provided and handle NUC packages
-if [ "$1" = 1 ] || [ "$1" = 3 ]; then
+if [ "$1" = 2 ] || [ "$1" = 4 ]; then
     # NUC packages
     # Export files for 'call_m_hardware/call_m_drivers' NUC version
     mkdir -p exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/src
@@ -35,7 +35,7 @@ if [ "$1" = 1 ] || [ "$1" = 3 ]; then
 fi
 
 # Check if parameter is provided and handle JETSON packages
-if [ "$1" = 2 ] || [ "$1" = 3 ]; then
+if [ "$1" = 3 ] || [ "$1" = 4 ]; then
     # JETSON packages
     # Export files for 'call_m_hardware/call_m_drivers' JETSON version
     mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/src
@@ -59,14 +59,14 @@ if [ "$1" = 2 ] || [ "$1" = 3 ]; then
 fi
 
 # Update NUC packages
-if [ "$1" = 1 ] || [ "$1" = 3 ]; then
+if [ "$1" = 2 ] || [ "$1" = 4 ]; then
     echo "Updating NUC packages..."
-    scp -r exports_packages/call_m_NUC_pkgs/ jrluser@callm01c.local:/home/jrluser/call_m_workspace/robot_ws_ros2/src/
+    scp -r exports_packages/call_m_NUC_pkgs/ jrluser@callm$2c.local:/home/jrluser/call_m_workspace/robot_ws_ros2/src/
 fi
 
 # Update JETSON packages
-if [ "$1" = 2 ] || [ "$1" = 3 ]; then
+if [ "$1" = 3 ] || [ "$1" = 4 ]; then
     echo "Updating JETSON packages..."
-    scp -r exports_packages/call_m_JETSON_pkgs/ jrluser@callm01v.local:/home/jrluser/call_m_workspace/robot_ws_ros2/src/
+    scp -r exports_packages/call_m_JETSON_pkgs/ jrluser@callm$2v.local:/home/jrluser/call_m_workspace/robot_ws_ros2/src/
 fi
 

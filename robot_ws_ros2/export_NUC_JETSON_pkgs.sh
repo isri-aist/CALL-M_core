@@ -22,14 +22,16 @@ if [ "$1" = 2 ] || [ "$1" = 4 ]; then
     cp -r src/call_m_hardware/call_m_triorb_ros2/ exports_packages/call_m_NUC_pkgs/call_m_hardware/
 
     # Export files for 'call_m_start_all' NUC version
-    mkdir -p exports_packages/call_m_NUC_pkgs/call_m_start_all/config
-    mkdir -p exports_packages/call_m_NUC_pkgs/call_m_start_all/launch
-    cp src/call_m_start_all/launch/call_m_hardware_start.launch.py exports_packages/call_m_NUC_pkgs/call_m_start_all/launch/
-    cp src/call_m_start_all/CMakeLists.txt exports_packages/call_m_NUC_pkgs/call_m_start_all/
-    cp src/call_m_start_all/package.xml exports_packages/call_m_NUC_pkgs/call_m_start_all/
+    cp -r src/call_m_start_all/ exports_packages/call_m_NUC_pkgs/
 
-    # Export files for 'call_m_teleoperation'
+    # Export files for 'call_m_teleoperation', just in case needed
     cp -r src/call_m_teleoperation/ exports_packages/call_m_NUC_pkgs/
+    
+    # Export files for 'call_m_supervisor'
+    cp -r src/call_m_supervisor/ exports_packages/call_m_NUC_pkgs/
+    
+    # Export files for 'call_m_nav2'
+    cp -r src/call_m_nav2/ exports_packages/call_m_NUC_pkgs/
 
     echo "-- NUC packages exported in /exports_packages/call_m_NUC_pkgs/"
 fi

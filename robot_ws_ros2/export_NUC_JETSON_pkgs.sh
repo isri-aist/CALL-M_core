@@ -14,7 +14,7 @@ if [ "$1" = 2 ] || [ "$1" = 4 ]; then
     mkdir -p exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/config
     mkdir -p exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/launch
     cp -r src/call_m_hardware/call_m_drivers/src/ exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
-    cp src/call_m_hardware/call_m_drivers/launch/bot_NUC.launch.py exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/launch/
+    cp src/call_m_hardware/call_m_drivers/launch/bot.launch.py exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/launch/
     cp src/call_m_hardware/call_m_drivers/CMakeLists.txt exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
     cp src/call_m_hardware/call_m_drivers/package.xml exports_packages/call_m_NUC_pkgs/call_m_hardware/call_m_drivers/
 
@@ -24,7 +24,7 @@ if [ "$1" = 2 ] || [ "$1" = 4 ]; then
     # Export files for 'call_m_start_all' NUC version
     mkdir -p exports_packages/call_m_NUC_pkgs/call_m_start_all/config
     mkdir -p exports_packages/call_m_NUC_pkgs/call_m_start_all/launch
-    cp src/call_m_start_all/launch/call_m_start_NUC.launch.py exports_packages/call_m_NUC_pkgs/call_m_start_all/launch/
+    cp src/call_m_start_all/launch/call_m_hardware_start.launch.py exports_packages/call_m_NUC_pkgs/call_m_start_all/launch/
     cp src/call_m_start_all/CMakeLists.txt exports_packages/call_m_NUC_pkgs/call_m_start_all/
     cp src/call_m_start_all/package.xml exports_packages/call_m_NUC_pkgs/call_m_start_all/
 
@@ -44,18 +44,36 @@ if [ "$1" = 3 ] || [ "$1" = 4 ]; then
     cp -r src/call_m_hardware/call_m_drivers/src/ exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
     cp src/call_m_hardware/call_m_drivers/config/cam1_zedm.yaml exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config/
     cp src/call_m_hardware/call_m_drivers/config/cam2_zedm.yaml exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/config/
-    cp src/call_m_hardware/call_m_drivers/launch/bot_JETSON.launch.py exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/launch/
+    cp src/call_m_hardware/call_m_drivers/launch/bot.launch.py exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/launch/
     cp src/call_m_hardware/call_m_drivers/CMakeLists.txt exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
     cp src/call_m_hardware/call_m_drivers/package.xml exports_packages/call_m_JETSON_pkgs/call_m_hardware/call_m_drivers/
 
     # Export files for 'call_m_start_all' JETSON version
     mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_start_all/config
     mkdir -p exports_packages/call_m_JETSON_pkgs/call_m_start_all/launch
-    cp src/call_m_start_all/launch/call_m_start_JETSON.launch.py exports_packages/call_m_JETSON_pkgs/call_m_start_all/launch/
+    cp src/call_m_start_all/launch/call_m_hardware_start.launch.py exports_packages/call_m_JETSON_pkgs/call_m_start_all/launch/
     cp src/call_m_start_all/CMakeLists.txt exports_packages/call_m_JETSON_pkgs/call_m_start_all/
     cp src/call_m_start_all/package.xml exports_packages/call_m_JETSON_pkgs/call_m_start_all/
 
     echo "-- JETSON packages exported in /exports_packages/call_m_JETSON_pkgs/"
+fi
+
+#Cleaning NUC former Packages
+if [ "$1" = 2 ] || [ "$1" = 4 ]; then
+     echo "Cleaning NUC packages..."
+      ssh jrluser@callm$2c.local << EOF
+        cd call_m_workspace/robot_ws_ros2/src
+        rm -r call_m_NUC_pkgs
+EOF
+fi
+
+#Cleaning JETSON former Packages
+if [ "$1" = 3 ] || [ "$1" = 4 ]; then
+     echo "Cleaning JETSON packages..."
+      ssh jrluser@callm$2v.local << EOF
+        cd call_m_workspace/robot_ws_ros2/src
+        rm -r call_m_JETSON_pkgs
+EOF
 fi
 
 # Update NUC packages

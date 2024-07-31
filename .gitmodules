@@ -28,3 +28,6 @@
 	path = robot_ws_ros2/src/included_external_packages/zed-ros2-wrapper
 	url = git@github.com:stereolabs/zed-ros2-wrapper.git
 	branch = master
+[submodule "robot_ws_ros2/src/included_external_packages/ros2-vector-field-controller"]
+	path = robot_ws_ros2/src/included_external_packages/ros2-vector-field-controller
+	url = https://github.com/Noceo200/ros2-vector-field-controller.git

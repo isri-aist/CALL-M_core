@@ -2,7 +2,7 @@
 https://github.com/Noceo200/CALL-M_core.git
 
 This workspace contain all the necessary files and ROS2 packages to install, build and operate the omnidirectionnal robot CALLM. This robot is developed to be automnomous or teleoperated with collision safe assisstance.
-|<div style="text-align: center;"><img src="resources/medias/robot_hard.png" alt="image" style="max-height: 300px;"></div>|<div style="text-align: center;"><img src="resources/medias/robot_sim.png" alt="image" style="max-height: 300px;"></div>|
+|<img src="resources/medias/robot_hard.png" alt="image" style="max-height: 300px;">|<img src="resources/medias/robot_sim.png" alt="image" style="max-height: 300px;">|
 |:--:|:--:|
 
 # Requirements

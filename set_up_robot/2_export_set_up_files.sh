@@ -12,6 +12,9 @@ cp ../chrony/chrony.conf.server exports_set_up/NUC/call_m_workspace/chrony/
 
 #export files for ros2 workspace, only external packages, NUC version
 mkdir -p exports_set_up/NUC/call_m_workspace/robot_ws_ros2/src/included_external_packages/
+cp -r ../robot_ws_ros2/src/included_external_packages/multi-laserscan-toolbox-ros2/ exports_set_up/NUC/call_m_workspace/robot_ws_ros2/src/included_external_packages/
+cp -r ../robot_ws_ros2/src/included_external_packages/depth-filter-scan-converter/ exports_set_up/NUC/call_m_workspace/robot_ws_ros2/src/included_external_packages/
+cp -r ../robot_ws_ros2/src/included_external_packages/ros2-vector-field-controller/ exports_set_up/NUC/call_m_workspace/robot_ws_ros2/src/included_external_packages/
 cp -r ../robot_ws_ros2/src/included_external_packages/DynamixelSDK/ exports_set_up/NUC/call_m_workspace/robot_ws_ros2/src/included_external_packages/
 cp -r ../robot_ws_ros2/src/included_external_packages/nmea_msgs/ exports_set_up/NUC/call_m_workspace/robot_ws_ros2/src/included_external_packages/
 cp -r ../robot_ws_ros2/src/included_external_packages/rplidar_ros/ exports_set_up/NUC/call_m_workspace/robot_ws_ros2/src/included_external_packages/

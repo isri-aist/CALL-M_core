@@ -1,9 +1,0 @@
-- change code for parameter declaration in c++ code, "bot_control_driver" and "camera_control_driver" and "laser_scan_merger" : syntax for declare_parameter and get_parameter not the same
-- laser_scan_merger: change pth to include tf2_sensor_msgs.h in c++ file.
-Use #include "tf2_ros/buffer.h" rather than #include "tf2_sensor_msgs/tf2_sensor_msgs.h"
-- Change "spawner.py" to "spawner" for controller_manager runs in "simulation.launch.py"
-- In Lidar URDF, need to put different name for plugin gazebo, change "scan" to "${prefix}_scan"
-- Add QOS management to all my node, put them to the profile "sensors" that use a 'best effort' reliability rather than 'reliable' : Only for Subscribers
-- Add use_map_saver : true to mapper_params_online_async
-- update all call_m_nav2 package launches files.
-- update all call_m_nav2 package configs files.

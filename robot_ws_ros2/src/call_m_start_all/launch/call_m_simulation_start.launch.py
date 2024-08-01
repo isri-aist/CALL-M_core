@@ -17,12 +17,6 @@ def generate_launch_description():
     PARAMETERS
     """ 
 
-    declare_param_robot_id = DeclareLaunchArgument(
-        'robot_id',
-        default_value='_no_id',
-        description='robot id for identifications'
-    )
-
     declare_param_mode = DeclareLaunchArgument(
         'mode',
         default_value='none (Please specify)',
@@ -58,7 +52,6 @@ def generate_launch_description():
 
     # Return the launch description
     return LaunchDescription([
-        declare_param_robot_id,
         declare_param_mode,
         declare_param_nav_type,
         declare_param_nav_mode,

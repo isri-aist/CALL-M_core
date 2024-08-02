@@ -153,4 +153,4 @@ bash Set_up_NUC.sh
 
 # Install and run CALLM workspace
 - Restart your computer to ensure everything is correctly installed
-- In the CALLM github root repository, open /robot_ws_ros2/README.md, and follow instructions
+- In the CALLM github root repository, open /robot_ws_ros2/README.md, and follow QUICK START section.

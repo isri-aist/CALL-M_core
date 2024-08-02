@@ -1,11 +1,6 @@
-# CNRS_AIST_Mobile_Shopping_Robot, divers tools and programs
-https://github.com/Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
-git@github.com:Noceo200/CNRS_AIST_Mobile_Shopping_Robot.git
-
-## Details
-* get_serial_Zed_cameras:
-//A finir
-	
+# CALL-M_core, divers tools and programs
+https://github.com/Noceo200/CALL-M_core.git
+git@github.com:Noceo200/CALL-M_core.git
 
 ## Compile and execute a program with CMake:
 Open the terminal in the CmakeList.txt emplacement:

@@ -134,13 +134,26 @@ The only parameter to be careful with is 'mode', all computer should be API mode
 * callm01c (NUC): 150.18.226.30
 * callm01v (JETSON): 150.18.226.22
 * BUFFALO router: 150.18.66.94
+```
+ssh -X jrluser@<IP>
+```
+or
+```
+ssh -X jrluser@<NAME>.local
+```
+example: ssh -X jrluser@callm01c.local to access the NUC 
 
 # SOFTWARE INFORMATIONS
 
 ## VISUAL API
 Here are the recommended way for using the robot. Those APIs are similar for simulated robot and Real robot. Any external program might use the topics to control the robot. But, if needed the CALL-M workspace already contains packages for controllers and visualization.
 
-
+<div style="text-align: center;">
+  <img src="resources/medias/api_visu1.png" alt="image" style="max-height: 500px;">
+</div>
+<div style="text-align: center;">
+  <img src="resources/medias/API_visu_2.png" alt="image" style="max-height: 500px;">
+</div>
 
 ## Workspace informations
 
@@ -180,6 +193,11 @@ This section is used as a TO DO list of features that still need to be implement
 | Allow to set up configs file at launch | It would be convenient to allow any user to specify different configurations files to use instead of the defaults ones. The files paths would be given directly in the launch command as it is currently with the parameter 'nav_mode' for example | Launch files parameters | To do |
 
 # CHANGES LOG
+
+## 2024/08/03
+### Change topic names
+* /cmd_vel_apply  ---> cmd_vel (speeds commands to apply the robot)
+* /cmd_vel ---> /cmd_vel_nav (cmd received from navigation system)
 
 ## 2024/08/01 
 ### Update NUC packages for API mode

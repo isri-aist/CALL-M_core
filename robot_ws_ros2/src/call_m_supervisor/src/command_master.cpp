@@ -144,15 +144,15 @@ public:
       "cmd_vel_teleop_key", sensor_qos, std::bind(&CommandMasterNode::twistCallback_key, this, std::placeholders::_1));
 
     sub_teleop_joy = create_subscription<geometry_msgs::msg::Twist>(
-      "cmd_vel_teleop_joy", sensor_qos, std::bind(&CommandMasterNode::twistCallback_joy, this, std::placeholders::_1));
+      "cmd_vel_teleop", sensor_qos, std::bind(&CommandMasterNode::twistCallback_joy, this, std::placeholders::_1));
 
     sub_nav = create_subscription<geometry_msgs::msg::Twist>(
-      "cmd_vel", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
+      "cmd_vel_nav", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
 
     sub_scan = this->create_subscription<sensor_msgs::msg::LaserScan>("scan", sensor_qos, std::bind(&CommandMasterNode::scanCallback, this, std::placeholders::_1));
 
     // Initialize publisher
-    pub_command = create_publisher<geometry_msgs::msg::Twist>("cmd_vel_apply", default_qos); //QOS to reliable
+    pub_command = create_publisher<geometry_msgs::msg::Twist>("cmd_vel", default_qos); //QOS to reliable
 
     // Initialize variables to store received twist messages
     init_twist(twist_teleop_key);
@@ -287,7 +287,7 @@ private:
   double r_secu_2 = 0.5;
   double angle_offset = 0.0; //offset of angle between commands vector and lidars datas
   double field_of_view = M_PI/2; //should be in ]0,pi]
-  bool llv_secu = true; //activate or not the low level collision avoidance
+  bool llv_secu = false; //activate or not the low level collision avoidance
 
   // Flags to indicate if new messages have been received on each topic, if no message have been received for an amount of time, we reset the command.
   int teleop_key_active = 0;

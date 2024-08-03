@@ -93,7 +93,7 @@ class TriOrb(LifecycleNode):
         self._watchdog = self.create_timer(self._watchdog_timeout, self.cb_watchdog, callback_group=self._watchdog_callback)
         self._watchdog.cancel()
 
-        self.topic_in = '/cmd_vel'
+        self.topic_in = '/cmd_vel_apply'
         self._sub_vel = self.create_subscription(geometry_msgs.msg.Twist, self.topic_in, self.cb_cmd_velocity, 10)
 
         return TransitionCallbackReturn.SUCCESS

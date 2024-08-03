@@ -152,7 +152,7 @@ public:
     sub_scan = this->create_subscription<sensor_msgs::msg::LaserScan>("scan", sensor_qos, std::bind(&CommandMasterNode::scanCallback, this, std::placeholders::_1));
 
     // Initialize publisher
-    pub_command = create_publisher<geometry_msgs::msg::Twist>("cmd_vel", default_qos); //QOS to reliable
+    pub_command = create_publisher<geometry_msgs::msg::Twist>("cmd_vel_apply", default_qos); //QOS to reliable
 
     // Initialize variables to store received twist messages
     init_twist(twist_teleop_key);

@@ -817,7 +817,7 @@
             <mxRectangle x="40" y="100" width="250" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rSVRgfcn430CL0DK6edP-49" value="/cmd_vel&lt;br&gt;(geometry_msgs::msg::Twist)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;size=8;fontStyle=2;fontSize=11;" parent="rSVRgfcn430CL0DK6edP-48" vertex="1">
+        <mxCell id="rSVRgfcn430CL0DK6edP-49" value="/cmd_vel_apply&lt;br&gt;(geometry_msgs::msg::Twist)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;size=8;fontStyle=2;fontSize=11;" parent="rSVRgfcn430CL0DK6edP-48" vertex="1">
           <mxGeometry x="260" y="130" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rSVRgfcn430CL0DK6edP-50" value="/cmd_vel_teleop_key&lt;br&gt;(geometry_msgs::msg::Twist)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;size=8;fontStyle=2;fontColor=#000000;fontSize=11;" parent="rSVRgfcn430CL0DK6edP-48" vertex="1">
@@ -979,7 +979,7 @@
         <mxCell id="rSVRgfcn430CL0DK6edP-139" value="&lt;b&gt;Description&lt;/b&gt;&lt;br&gt;Listen to to speeds commands and control the simulated robot joints." style="text;html=1;strokeColor=#6c8ebf;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#7EA6E0;" parent="rSVRgfcn430CL0DK6edP-138" vertex="1">
           <mxGeometry y="30" width="560" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="rSVRgfcn430CL0DK6edP-144" value="/cmd_vel&lt;br&gt;(geometry_msgs::msg::Twist)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;size=8;fontStyle=2;fontSize=11;" parent="rSVRgfcn430CL0DK6edP-138" vertex="1">
+        <mxCell id="rSVRgfcn430CL0DK6edP-144" value="/cmd_vel_apply&lt;br&gt;(geometry_msgs::msg::Twist)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;size=8;fontStyle=2;fontSize=11;" parent="rSVRgfcn430CL0DK6edP-138" vertex="1">
           <mxGeometry x="20.000000000000114" y="80" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rSVRgfcn430CL0DK6edP-145" value="/set_position&lt;br&gt;(dynamixel_sdk_custom_interfaces::msg::SetPosition)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;size=8;fontStyle=2;fontSize=11;" parent="rSVRgfcn430CL0DK6edP-138" vertex="1">

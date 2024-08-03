@@ -196,8 +196,7 @@ This section is used as a TO DO list of features that still need to be implement
 
 ## 2024/08/03
 ### Change topic names
-* /cmd_vel_apply  ---> cmd_vel (speeds commands to apply the robot)
-* /cmd_vel ---> /cmd_vel_nav (cmd received from navigation system)
+* /cmd_vel ---> /cmd_vel_nav in call_m_supervisor (cmd received from navigation system)
 
 ## 2024/08/01 
 ### Update NUC packages for API mode

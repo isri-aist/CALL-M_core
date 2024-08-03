@@ -152,7 +152,7 @@ Here are the recommended way for using the robot. Those APIs are similar for sim
   <img src="resources/medias/api_visu1.png" alt="image" style="max-height: 500px;">
 </div>
 <div style="text-align: center;">
-  <img src="resources/medias/api_visu2.png" alt="image" style="max-height: 500px;">
+  <img src="resources/medias/api_visu_2.png" alt="image" style="max-height: 500px;">
 </div>
 
 ## Workspace informations

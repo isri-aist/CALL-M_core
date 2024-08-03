@@ -197,6 +197,7 @@ This section is used as a TO DO list of features that still need to be implement
 ## 2024/08/03
 ### Change topic names
 * /cmd_vel ---> /cmd_vel_nav in call_m_supervisor (cmd received from navigation system)
+* Removed low level collison avoidance system, now managed by vector field controller when the user decide to use it through assissted teleoperation commands.
 
 ## 2024/08/01 
 ### Update NUC packages for API mode

@@ -1,5 +1,5 @@
 # CALL-M_core
-https://github.com/Noceo200/CALL-M_core.git
+https://github.com/isri-aist/CALL-M_core
 
 This workspace contains all the necessary files and ROS2 packages to install, build and operate the omnidirectionnal robot CALLM. This robot is developed to be automnomous or teleoperated with collision safe assisstance.
 <div style="text-align: center;">

@@ -31,27 +31,27 @@ bash clean_build.sh
 ```
 * Source the workspace in /home/user/.bashrc, add the following line:
 ```
-source /<your_path>/CALL-M_core/robot_ws_ros2/src/install/setup.bash
+source /<your_path>/CALL-M_core/robot_ws_ros2/install/setup.bash
 ```
 * Restart your terminal, workspace is installed.
 ### Example of running simulation
 ```
-ros2 launch call_m_start_all call_m_simulation.launch.py mode:=COMPLETE nav_type:=none
+ros2 launch call_m_start_all call_m_simulation_start.launch.py mode:=COMPLETE nav_type:=none
 ```
 The simulation and all controllers should start, the robot should be building a map when you move it around. For that, you can connect a joystick or select the Xterm windows with the keyboard instructions, and operate from here.
 * Details for parameters are given in the section ["Simulation PARAMETERS"](#simulation)
 ### Example of operating the real robot
 * execute on the NUC:
 ```
-ros2 launch call_m_start_all call_m_hardware.launch.py version:=NUC mode:=DRIVERS
+ros2 launch call_m_start_all call_m_hardware_start.launch.py version:=NUC mode:=DRIVERS
 ```
 * execute on the JETSON:
 ```
-ros2 launch call_m_start_all call_m_hardware.launch.py version:=JETSON
+ros2 launch call_m_start_all call_m_hardware_start.launch.py version:=JETSON
 ```
 * execute on the terminal (your Laptop):
 ```
-ros2 launch call_m_start_all call_m_hardware.launch.py version:=CLIENT mode:=DRIVERS nav_type:=none
+ros2 launch call_m_start_all call_m_hardware_start.launch.py version:=CLIENT mode:=DRIVERS nav_type:=none
 ```
 * For the real robot to move, the TriOrb needs to be activated, so you can follow the Joystick instructions or do it manually by executing those commands, one by one in the same order:
 ```

@@ -37,7 +37,7 @@ joystick_control_node:
 
     #ROS2 interfaces configurations
     rate: 50.0 #hz
-    topic_main_cmd: "cmd_vel_teleop_joy" #topic to publish when in default mode
+    topic_main_cmd: "cmd_vel_teleop" #topic to publish when in default mode
     topic_assissted_cmd: "cmd_vel_teleop_assist" #topic to publish when in assissted mode
     controlled_managed_node_name: "triorb"
     input_node_state_topic_name: "triorb_node_state" #topic on which to receive state of the node

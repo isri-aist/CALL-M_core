@@ -37,7 +37,7 @@
 		    <!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
     		<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
         	<material>Gazebo/Orange</material>
-			<sensor name="${prefix}" type="ray">
+			<sensor name="${prefix}" type="gpu_ray">
 			<!--<pose>0 0 0.0225 0 0 0</pose> (seems to be ignored)-->
 			<always_on>true</always_on>
 			<visualize>true</visualize>

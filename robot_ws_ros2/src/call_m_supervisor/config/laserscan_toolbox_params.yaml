@@ -28,7 +28,7 @@ laserscan_toolbox_node:
     scan_time: 0.0 #s
 
     #sources
-    sources: lidar1 lidar2 cam1 cam2
+    sources: lidar1 lidar2 cam1 cam2 #lidar1 lidar2 cam1 cam2
 
     lidar1:
       topic: "lidar1/scan"
@@ -39,8 +39,8 @@ laserscan_toolbox_node:
       range_min: 0.0 #m
       range_max: 100.0 #m
 
-      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
-      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
+      persistence: false #(not working well yet, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept 
 
     lidar2:
       topic: "lidar2/scan"
@@ -51,20 +51,20 @@ laserscan_toolbox_node:
       range_min: 0.0 #m
       range_max: 100.0 #m
 
-      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
-      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
+      persistence: false #(not working well yet, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept 
 
     cam1:
       topic: "cam1/scan"
       timeout: 0.0 #0.0 seconds = all value's date are autorized
-      start_angle: -0.20 #0.785398163, the values are already specified in scan msg, but needed to specify those ones for persistence feature
-      end_angle: 0.20
+      start_angle: -0.785398163 #0.785398163, the values are already specified in scan msg, but needed to specify those ones for persistence feature
+      end_angle: 0.785398163
       scan_angle_offset: 0.0
       range_min: 0.0 #m
       range_max: 100.0 #m
 
-      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
-      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
+      persistence: false #(not working well yet, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept 
 
     cam2:
       topic: "cam2/scan"
@@ -75,5 +75,5 @@ laserscan_toolbox_node:
       range_min: 0.0 #m
       range_max: 100.0 #m
 
-      persistence: false #(TDM,to  delete, not working, small odometry errors (due to computation) integrated in persistent scan)
-      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept (TDM to delete)
+      persistence: false #(not working well yet, small odometry errors (due to computation) integrated in persistent scan)
+      timeout_persistence: 0.0 #0.0 timeout for points to keep in persistent scan = all values kept

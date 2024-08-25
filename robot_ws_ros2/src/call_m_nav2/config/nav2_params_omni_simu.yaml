@@ -210,9 +210,29 @@ local_costmap:
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        observation_sources: scan #cam1 cam2
-        scan:
+        observation_sources: merged_scan #lid1 lid2 cam1 cam2
+        merged_scan:
           topic: /scan
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 6.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 5.5 #(default = 2.5)
+          obstacle_min_range: 0.0
+        lid1:
+          topic: /lidar1/scan
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 6.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 5.5 #(default = 2.5)
+          obstacle_min_range: 0.0
+        lid2:
+          topic: /lidar2/scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -254,8 +274,8 @@ global_costmap:
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
-        observation_sources: scan
-        scan:
+        observation_sources: merged_scan #lid1 lid2 cam1 cam2
+        merged_scan:
           topic: /scan
           max_obstacle_height: 2.0
           clearing: True
@@ -265,6 +285,38 @@ global_costmap:
           raytrace_min_range: 0.0
           obstacle_max_range: 9.5  #(default = 2.5)
           obstacle_min_range: 0.0
+        lid1:
+          topic: /lidar1/scan
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 10.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 9.5  #(default = 2.5)
+          obstacle_min_range: 0.0
+        lid2:
+          topic: /lidar2/scan
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 10.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 9.5  #(default = 2.5)
+          obstacle_min_range: 0.0
+        cam1:
+          topic: /cam1/depth/points
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "PointCloud2"
+        cam2:
+          topic: /cam2/depth/points
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "PointCloud2"
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True

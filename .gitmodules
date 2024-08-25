@@ -31,3 +31,6 @@
 [submodule "robot_ws_ros2/src/included_external_packages/ros2-vector-field-controller"]
 	path = robot_ws_ros2/src/included_external_packages/ros2-vector-field-controller
 	url = https://github.com/Noceo200/ros2-vector-field-controller.git
+[submodule "robot_ws_ros2/src/included_external_packages/ros2_gazebo_robot_monitor"]
+	path = robot_ws_ros2/src/included_external_packages/ros2_gazebo_robot_monitor
+	url = https://github.com/Noceo200/ros2_gazebo_robot_monitor.git

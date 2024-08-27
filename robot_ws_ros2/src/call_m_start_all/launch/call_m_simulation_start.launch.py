@@ -31,8 +31,7 @@ def generate_launch_description():
 
     declare_param_nav_mode = DeclareLaunchArgument(
         'nav_mode',
-        #default_value=os.path.join(dir_nav2, 'config', 'nav2_params_omni_simu.yaml'),
-        default_value=os.path.join(dir_nav2, 'config', 'nav2_params_omni_simu_tempo.yaml'),
+        default_value=os.path.join(dir_nav2, 'config', 'nav2_params_omni_simu.yaml'),
         description='Navigation mode: NAV2 configuration file.'
     )
 

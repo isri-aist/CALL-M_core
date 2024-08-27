@@ -115,9 +115,9 @@ def generate_launch_description():
 
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value="False",description='Flag to enable use_sim_time'),
-        #depth_converter1,
-        #depth_converter2,
-        #laserscan_toolbox,
+        depth_converter1,
+        depth_converter2,
+        laserscan_toolbox,
         command_master_node,
         node_robot_state_publisher,
         clock_sync_publisher,

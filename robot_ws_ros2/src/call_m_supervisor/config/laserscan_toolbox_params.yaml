@@ -16,7 +16,7 @@ laserscan_toolbox_node:
 
     #output settings
     angle_min: 0.0 #0.0
-    angle_max: 6.283185307 #6.283185307
+    angle_max: 6.283185307 #6.283185307 
     angle_increment: 0.004363323 #0.069 #0.27925268 #0.004363323 #0.008726647 #0.017453293 for 360 values resolution = 1deg precision
     range_min: 0.0 #m
     range_max: 12.0 #m

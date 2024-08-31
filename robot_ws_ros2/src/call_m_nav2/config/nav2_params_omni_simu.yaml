@@ -37,7 +37,7 @@ amcl:
     z_max: 0.05
     z_rand: 0.5
     z_short: 0.05
-    scan_topic: /scan
+    scan_topic: /scan 
 
 bt_navigator:
   ros__parameters:
@@ -278,7 +278,7 @@ global_costmap:
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
-        observation_sources: merged_scan #merged_scan lid1 lid2 cam1 cam2
+        observation_sources: merged_scan #merged_scan lid1 lid2 cam1 cam2 
         merged_scan:
           topic: /scan
           max_obstacle_height: 1.5

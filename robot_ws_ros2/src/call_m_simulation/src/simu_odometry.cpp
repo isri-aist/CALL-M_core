@@ -31,7 +31,7 @@ public:
     clock_subscription_ = this->create_subscription<rosgraph_msgs::msg::Clock>("/clock", sensor_qos, std::bind(&SimuOdometry::ClockCallback, this, std::placeholders::_1));
 
     // Initialize publisher
-    odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom_simu", default_qos);
+    odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom_triorb", default_qos);
   }
 
 private:

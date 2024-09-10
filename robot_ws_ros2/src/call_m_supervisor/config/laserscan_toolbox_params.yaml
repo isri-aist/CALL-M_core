@@ -4,7 +4,7 @@ laserscan_toolbox_node:
     rate: 40.0 #hz
     topic_out: "scan" 
     new_frame: "base2_link"
-    odom_topic: "odom_simu" #(OPTIONNAL) Only used by persistence feature
+    odom_topic: "odometry/filtered" #(OPTIONNAL) Only used by persistence feature
     odom_delay_limit: 3.0 #s, time of odometries to keep in memory, 0.0 = keep only last received odometry
     extrapolate_odometry: false #define if the program should extrapolate the odometry when the wanted stamp of a LaserScan is after the newest received odometry.
 

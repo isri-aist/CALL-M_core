@@ -82,7 +82,7 @@ class TriOrb(LifecycleNode):
             self.get_logger().error('Fail to connect port: ' +self.port)
             return TransitionCallbackReturn.FAILURE
 
-        self._pub = self.create_lifecycle_publisher(nav_msgs.msg.Odometry, '/odom',  10)
+        self._pub = self.create_lifecycle_publisher(nav_msgs.msg.Odometry, '/odom_triorb',  10)
         self._odom_duration = self.get_parameter('odom_duration').get_parameter_value().double_value
         #self._timer_callback = MutuallyExclusiveCallbackGroup()
         self._timer_callback = None

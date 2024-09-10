@@ -230,7 +230,7 @@ private:
     geometry_msgs::msg::Twist new_twist = twist;
     
     if (scan_data_ != nullptr){
-      double absolute_speed = sqrt(pow(new_twist.linear.x,2)+pow(new_twist.linear.y,2))*0.5; //(0 to 1) * max linear speed (not needed if subscribed to odom_simu)
+      double absolute_speed = sqrt(pow(new_twist.linear.x,2)+pow(new_twist.linear.y,2))*0.5; //(0 to 1) * max linear speed (not needed if subscribed to odom)
       r_secu_2 = std::max(r_secu_2_min,r_secu_1+pow(absolute_speed,2));
       //cmd direction from 0 to 2pi
       double cmd_angle = atan2(new_twist.linear.y,new_twist.linear.x) + angle_offset;

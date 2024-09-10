@@ -188,7 +188,7 @@ class TriOrb(LifecycleNode):
         return
 
     #
-    # Callback of watchdog timerlinear.x
+    # Callback of watchdog timer
     def cb_watchdog(self):
         self.get_logger().info('watchdog, robot stopped')
         self.stop()

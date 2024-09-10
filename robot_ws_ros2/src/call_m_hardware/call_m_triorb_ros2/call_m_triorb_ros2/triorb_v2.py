@@ -11,6 +11,7 @@ from typing import Optional
 
 import numpy as np
 import quaternion
+import math
 
 from rclpy.timer import Timer
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
@@ -163,9 +164,13 @@ class TriOrb(LifecycleNode):
                 pose = triorb_core.core_types.TriOrbDrive3Pose()
                 pose.x = random.random()
                 pose.w = random.random()"""
+                
+                pi = math.pi                                                    # rotation matrix
+                _posex = math.cos(-pi/2) * pose.x - math.sin(-pi/2) * pose.y     #  0 1 0
+                _posey = math.sin(-pi/2) * pose.x + math.cos(-pi/2) * pose.y     # -1 0 0
 
-                self._odom.pose.pose.position.x = pose.x
-                self._odom.pose.pose.position.y = pose.y
+                self._odom.pose.pose.position.x = _posex
+                self._odom.pose.pose.position.y = _posey
 
                 quat=quaternion.from_euler_angles(0,0,pose.w)
                 self._odom.pose.pose.orientation.x = quat.x
@@ -202,11 +207,15 @@ class TriOrb(LifecycleNode):
         self.vw = 0.0
         return
     #
-    # Callback of subscriber
+    # Callback of subscriber            //Sunio modified this
     def cb_cmd_velocity(self, msg):
-        self.vx = msg.linear.x
-        self.vy = msg.linear.y
-        self.vw = msg.angular.z
+        pi = math.pi                                                            # rotation matrix
+        _x = math.cos(pi/2) * msg.linear.x - math.sin(pi/2) * msg.linear.y      # 0 -1 0
+        _y = math.sin(pi/2) * msg.linear.x + math.cos(pi/2) * msg.linear.y      # 1  0 0
+        _z = msg.angular.z                                                      # 0  0 1
+        self.vx = _x
+        self.vy = _y
+        self.vw = _z
         self._vehicle.set_vel_relative(self.vx, self.vy, self.vw)
         self._watchdog.reset()
         return

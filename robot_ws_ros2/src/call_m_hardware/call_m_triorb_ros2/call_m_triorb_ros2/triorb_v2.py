@@ -24,6 +24,14 @@ import geometry_msgs.msg
 import nav_msgs.msg
 import time
 
+def transform_3D_frame(X,R):
+    """
+    X: Initial vector to rotate.
+    R: 3D rotation matrix.
+    """
+    new_X = np.dot(X,R)
+    return new_X
+
 class TriOrb(LifecycleNode):
     def __init__(self):
         super().__init__('triorb')
@@ -33,6 +41,18 @@ class TriOrb(LifecycleNode):
         self.declare_parameter('state_pub_duration', 1.0)
         self._state_pub_duration = self.get_parameter('state_pub_duration').get_parameter_value().double_value
         self._state_pub_timer = self.create_timer(self._state_pub_duration, self.publish_state)
+
+        #Frame rotation matrix
+        self.R = np.array([
+                    [0,-1,0],
+                    [1,0,0],
+                    [0,0,-1]
+                    ])
+        self.R_inv = np.array([
+                    [0,1,0],
+                    [-1,0,0],
+                    [0,0,-1]
+                    ])
         
     # Publish the state of the node
     def publish_state(self):
@@ -165,22 +185,26 @@ class TriOrb(LifecycleNode):
                 pose.x = random.random()
                 pose.w = random.random()"""
                 
-                pi = math.pi                                                    # rotation matrix
-                _posex = math.cos(-pi/2) * pose.x - math.sin(-pi/2) * pose.y     #  0 1 0
-                _posey = math.sin(-pi/2) * pose.x + math.cos(-pi/2) * pose.y     # -1 0 0
+                #Unrotate position vector to match wanted frame
+                pose_array = np.array([[pose.x],[pose.y],[pose.w]])
+                new_pose_array = transform_3D_frame(pose_array,self.R_inv)
 
-                self._odom.pose.pose.position.x = _posex
-                self._odom.pose.pose.position.y = _posey
+                self._odom.pose.pose.position.x = new_pose_array[0,0]
+                self._odom.pose.pose.position.y = new_pose_array[1,0]
+                quat=quaternion.from_euler_angles(0,0,new_pose_array[2,0])
 
-                quat=quaternion.from_euler_angles(0,0,pose.w)
                 self._odom.pose.pose.orientation.x = quat.x
                 self._odom.pose.pose.orientation.y = quat.y
                 self._odom.pose.pose.orientation.z = quat.z
                 self._odom.pose.pose.orientation.w = quat.w
 
-                self._odom.twist.twist.linear.x = self.vx
-                self._odom.twist.twist.linear.y = self.vy
-                self._odom.twist.twist.angular.z = self.vw
+                #Unrotate speed vector to match wanted frame
+                speed_array = np.array([[self.vx],[self.vy],[self.vw]])
+                new_speed_array = transform_3D_frame(speed_array,self.R_inv)
+
+                self._odom.twist.twist.linear.x = new_speed_array[0,0]
+                self._odom.twist.twist.linear.y = new_speed_array[1,0]
+                self._odom.twist.twist.angular.z = new_speed_array[2,0]
                 self._odom.header.stamp = self.get_clock().now().to_msg()
                 self._pub.publish(self._odom)
             except:
@@ -209,13 +233,13 @@ class TriOrb(LifecycleNode):
     #
     # Callback of subscriber            //Sunio modified this
     def cb_cmd_velocity(self, msg):
-        pi = math.pi                                                            # rotation matrix
-        _x = math.cos(pi/2) * msg.linear.x - math.sin(pi/2) * msg.linear.y      # 0 -1 0
-        _y = math.sin(pi/2) * msg.linear.x + math.cos(pi/2) * msg.linear.y      # 1  0 0
-        _z = msg.angular.z                                                      # 0  0 1
-        self.vx = _x
-        self.vy = _y
-        self.vw = _z
+
+        #rotate commands to match wanted frame
+        speed_array = np.array([[msg.linear.x],[msg.linear.y],[msg.angular.z]])
+        new_speed_array = transform_3D_frame(speed_array,self.R)
+
+        self.vx,self.vy,self.vw = new_speed_array.flatten()
+
         self._vehicle.set_vel_relative(self.vx, self.vy, self.vw)
         self._watchdog.reset()
         return

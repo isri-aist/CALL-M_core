@@ -29,7 +29,7 @@ def transform_3D_frame(X,R):
     X: Initial vector to rotate.
     R: 3D rotation matrix.
     """
-    new_X = np.dot(X,R)
+    new_X = np.dot(R,X)
     return new_X
 
 class TriOrb(LifecycleNode):
@@ -231,7 +231,7 @@ class TriOrb(LifecycleNode):
         self.vw = 0.0
         return
     #
-    # Callback of subscriber            //Sunio modified this
+    # Callback of subscriber
     def cb_cmd_velocity(self, msg):
 
         #rotate commands to match wanted frame

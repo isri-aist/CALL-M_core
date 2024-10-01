@@ -113,11 +113,24 @@ def generate_launch_description():
         output='screen'
     )
 
+    vector_field_params_file = os.path.join(pkg_share,"config/vector_field_controller_config.yaml")
+    vector_field_controller = Node(
+        parameters=[
+          vector_field_params_file,
+          {'use_sim_time': LaunchConfiguration('use_sim_time')}
+        ],
+        package = 'ros2_vector_field_controller',
+        name = 'vector_field_controller_node',
+        executable = 'vector_field_controller_node',
+        output='screen'
+    )
+
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value="False",description='Flag to enable use_sim_time'),
         depth_converter1,
         depth_converter2,
         laserscan_toolbox,
+        vector_field_controller,
         command_master_node,
         node_robot_state_publisher,
         clock_sync_publisher,

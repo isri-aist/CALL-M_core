@@ -149,6 +149,9 @@ public:
     sub_nav = create_subscription<geometry_msgs::msg::Twist>(
       "cmd_vel_nav", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav, this, std::placeholders::_1));
 
+    sub_nav_field = create_subscription<geometry_msgs::msg::Twist>(
+      "cmd_vel_nav_field", sensor_qos, std::bind(&CommandMasterNode::twistCallback_nav_field, this, std::placeholders::_1));
+
     sub_scan = this->create_subscription<sensor_msgs::msg::LaserScan>("scan", sensor_qos, std::bind(&CommandMasterNode::scanCallback, this, std::placeholders::_1));
 
     // Initialize publisher
@@ -158,6 +161,7 @@ public:
     init_twist(twist_teleop_key);
     init_twist(twist_teleop_joy);
     init_twist(twist_nav);
+    init_twist(twist_nav_field);
 
     // Set a timer to publish the selected twist message periodically
     timer_ = create_wall_timer(std::chrono::milliseconds(33), std::bind(&CommandMasterNode::publishTwist, this));
@@ -186,6 +190,13 @@ private:
     nav_active =0;  
   }
 
+  void twistCallback_nav_field(const geometry_msgs::msg::Twist::SharedPtr msg)
+  {
+    //MAIN CODE to get commands from vector field controller
+    if(!is_same(twist_nav_field,*msg)){twist_nav_field = *msg;} 
+    nav_field_active =0;  
+  }
+
   void publishTwist()
   {
     geometry_msgs::msg::Twist selected_twist;
@@ -194,10 +205,12 @@ private:
     if(teleop_key_active >= iteration_to_reset){init_twist(twist_teleop_key);}
     if(teleop_joy_active >= iteration_to_reset){init_twist(twist_teleop_joy);}
     if(nav_active >= iteration_to_reset){init_twist(twist_nav);}
+    if(nav_field_active >= iteration_to_reset){init_twist(twist_nav_field);}
 
     teleop_key_active ++; //to avoid int memory limit
     teleop_joy_active ++;
     nav_active ++;
+    nav_field_active ++;
 
     //choice of linear commands to apply
     if(is_command(twist_teleop_key)){
@@ -207,6 +220,10 @@ private:
     else if(is_command(twist_teleop_joy)){
       selected_twist=twist_teleop_joy;
       //RCLCPP_INFO(this->get_logger(),"Joystick controlling...");
+      }
+    else if(is_command(twist_nav_field)){
+      selected_twist=twist_nav_field;
+      //RCLCPP_INFO(this->get_logger(),"Vector field controlling...");
       }
     else if(is_command(twist_nav)){
       selected_twist=twist_nav;
@@ -272,6 +289,7 @@ private:
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_teleop_key; 
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_teleop_joy;
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_nav;
+  rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_nav_field;
   rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr sub_scan;
 
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_command;
@@ -279,6 +297,7 @@ private:
   geometry_msgs::msg::Twist twist_teleop_key;
   geometry_msgs::msg::Twist twist_teleop_joy;
   geometry_msgs::msg::Twist twist_nav;
+  geometry_msgs::msg::Twist twist_nav_field;
   sensor_msgs::msg::LaserScan::SharedPtr scan_data_ = nullptr;
 
   //scan security parameters
@@ -293,6 +312,7 @@ private:
   int teleop_key_active = 0;
   int teleop_joy_active = 0;
   int nav_active = 0;
+  int nav_field_active = 0;
   int iteration_to_reset = 100; //= 1 sec if publisher frequence is 10ms
 
   rclcpp::TimerBase::SharedPtr timer_;

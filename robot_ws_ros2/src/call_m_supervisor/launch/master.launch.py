@@ -124,6 +124,12 @@ def generate_launch_description():
         executable = 'vector_field_controller_node',
         output='screen'
     )
+    active_vector_field_point_following = launch.actions.ExecuteProcess(
+            cmd=['ros2 topic pub -r 10 /vector_field_controller_alive std_msgs/msg/Bool "data: true" > /dev/null'],
+            shell=True,
+            output='screen'
+        )
+
 
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value="False",description='Flag to enable use_sim_time'),
@@ -131,6 +137,7 @@ def generate_launch_description():
         depth_converter2,
         laserscan_toolbox,
         vector_field_controller,
+        active_vector_field_point_following,
         command_master_node,
         node_robot_state_publisher,
         clock_sync_publisher,

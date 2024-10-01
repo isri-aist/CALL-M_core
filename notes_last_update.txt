@@ -1,5 +1,0 @@
-* Vector field not managing orientation Yet (future update possible by using pose rather than point as input)
-* Differential controller not implemented
-* Using former NAV2 version also possible (just change launch files in ...)
-
-* Rafa as collaborator, can add new collaborators?

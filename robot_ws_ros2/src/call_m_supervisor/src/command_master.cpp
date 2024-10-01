@@ -213,7 +213,7 @@ private:
       //RCLCPP_INFO(this->get_logger(),"Nav2 controlling...");
       }
     else{
-      init_twist(selected_twist);
+      init_twist(selected_twist); //Speed to 0 if nothing is received
       //RCLCPP_INFO(this->get_logger(),"Waiting commands...");
       }
 

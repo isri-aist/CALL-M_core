@@ -58,5 +58,18 @@ ros2 lifecycle set /triorb activate
 
 * Check PARAMETERS in the [main README File](../README.md)
 
-### ROS2 structure
-// Update draw.io
+### ROS2 structure, nodes, subscribed & published topics
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="Diagram.drawio.svg">Open Image</a>
+    </td>
+  </tr>
+</table>
+
+<div style="text-align: center;">
+<img src="Diagram.drawio.svg" alt="image" style="max-height: 1500px;">|
+</div>
+
+This diagram can be edited on [draw.io](https://app.diagrams.net/) by opening the file <a href="Diagram.drawio">Diagram.drawio</a>.

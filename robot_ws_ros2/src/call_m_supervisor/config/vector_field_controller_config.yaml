@@ -30,7 +30,7 @@ vector_field_controller_node:
     kr_slope: 30.0 #modify the curve, how abrupt it is to lose effect
 
     #visual options
-    publish_field: true #reduce performances
+    publish_field: false #reduce performances
     output_field_topic: "vector_field" #on which topic to publish the vector field (marker array)
     field_grid_reso_x: 60 #how many points to show
     field_grid_reso_y: 60

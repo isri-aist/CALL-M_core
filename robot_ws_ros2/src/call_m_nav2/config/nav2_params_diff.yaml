@@ -37,7 +37,7 @@ amcl:
     z_max: 0.05
     z_rand: 0.5
     z_short: 0.05
-    scan_topic: scan
+    scan_topic: /scan 
 
 bt_navigator:
   ros__parameters:
@@ -51,7 +51,7 @@ bt_navigator:
     # nav2_bt_navigator/navigate_to_pose_w_replanning_and_recovery.xml
     # nav2_bt_navigator/navigate_through_poses_w_replanning_and_recovery.xml
     # They can be set here or via a RewrittenYaml remap from a parent launch file to Nav2.
-    default_nav_to_pose_bt_xml: $(find-pkg-share call_m_nav2)/behavior_trees/navigate_w_recovery_and_replanning_only_if_path_becomes_invalid.xml # or $(find-pkg-share my_package)/behavior_tree/my_nav_to_pose_bt.xml
+    default_nav_to_pose_bt_xml: $(find-pkg-share call_m_nav2)/behavior_trees/navigate_to_pose_w_replanning_and_recovery_fast_n_clear.xml # or $(find-pkg-share my_package)/behavior_tree/my_nav_to_pose_bt.xml
     default_nav_through_poses_bt_xml: $(find-pkg-share call_m_nav2)/behavior_trees/navigate_through_poses_w_replanning_and_recovery.xml # or $(find-pkg-share my_package)/behavior_tree/my_nav_through_poses_bt.xml
     plugin_lib_names:
       - nav2_compute_path_to_pose_action_bt_node
@@ -193,45 +193,69 @@ local_costmap:
       width: 4 #(default = 3.0)
       height: 4 #(default = 3.0)
       resolution: 0.05
-      robot_radius: 0.34
-      #footprint: "[[0.2425,0.2425],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.2425]]"
-      plugins: ["voxel_layer", "inflation_layer"]
+      robot_radius: 0.36 #0.36
+      #footprint: "[[0.2425,0.5025],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.5025]]"
+      plugins: ["obstacle_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.5
-      voxel_layer:
-        plugin: "nav2_costmap_2d::VoxelLayer"
+        inflation_radius: 0.7
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
-        publish_voxel_map: True
-        origin_z: 0.0
-        z_resolution: 0.05
-        z_voxels: 16
-        max_obstacle_height: 2.0
-        mark_threshold: 0
-        observation_sources: scan #cam1 cam2
-        scan:
+        observation_sources: merged_scan #merged_scan lid1 lid2 cam1 cam2
+        merged_scan:
           topic: /scan
-          max_obstacle_height: 2.0
+          max_obstacle_height: 1.5
           clearing: True
           marking: True
           data_type: "LaserScan"
-          raytrace_max_range: 6.0  #(default = 3.0)
+          raytrace_max_range: 10.0  #(default = 3.0)
           raytrace_min_range: 0.0
-          obstacle_max_range: 5.5 #(default = 2.5)
+          obstacle_max_range: 12.0  #(default = 2.5)
+          obstacle_min_range: 0.0
+        lid1:
+          topic: /lidar1/scan
+          max_obstacle_height: 1.5
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 10.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 12.0  #(default = 2.5)
+          obstacle_min_range: 0.0
+        lid2:
+          topic: /lidar2/scan
+          max_obstacle_height: 1.5
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 10.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 12.0  #(default = 2.5)
           obstacle_min_range: 0.0
         cam1:
           topic: /cam1/zed_node/point_cloud/cloud_registered
-          max_obstacle_height: 2.0
+          max_obstacle_height: 1.5
+          min_obstacle_height: 0.02
           clearing: True
           marking: True
           data_type: "PointCloud2"
+          raytrace_max_range: 8.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 8.0 #(default = 2.5)
+          obstacle_min_range: 0.0
         cam2:
           topic: /cam2/zed_node/point_cloud/cloud_registered
-          max_obstacle_height: 2.0
+          max_obstacle_height: 1.5
+          min_obstacle_height: 0.02
           clearing: True
           marking: True
           data_type: "PointCloud2"
+          raytrace_max_range: 8.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 8.0 #(default = 2.5)
+          obstacle_min_range: 0.0
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True
@@ -240,28 +264,71 @@ local_costmap:
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 5.0
-      publish_frequency: 5.0
+      update_frequency: 10.0
+      publish_frequency: 10.0
       global_frame: map
       robot_base_frame: base_link
-      use_sim_time: false
-      robot_radius: 0.34
+      use_sim_time: False
+      robot_radius: 0.36 #we keep circle footprint for global planning, because as it omnidirectionnal, the robot should be able to manage with its shap locally
+      #footprint: "[[0.2425,0.5025],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.5025]]"
       resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
-        observation_sources: scan
-        scan:
+        observation_sources: merged_scan #merged_scan lid1 lid2 cam1 cam2 
+        merged_scan:
           topic: /scan
-          max_obstacle_height: 2.0
+          max_obstacle_height: 1.5
           clearing: True
           marking: True
           data_type: "LaserScan"
           raytrace_max_range: 10.0  #(default = 3.0)
           raytrace_min_range: 0.0
-          obstacle_max_range: 9.5  #(default = 2.5)
+          obstacle_max_range: 12.0  #(default = 2.5)
+          obstacle_min_range: 0.0
+        lid1:
+          topic: /lidar1/scan
+          max_obstacle_height: 1.5
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 10.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 12.0  #(default = 2.5)
+          obstacle_min_range: 0.0
+        lid2:
+          topic: /lidar2/scan
+          max_obstacle_height: 1.5
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 10.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 12.0  #(default = 2.5)
+          obstacle_min_range: 0.0
+        cam1:
+          topic: /cam1/zed_node/point_cloud/cloud_registered
+          max_obstacle_height: 1.5
+          min_obstacle_height: 0.02
+          clearing: True
+          marking: True
+          data_type: "PointCloud2"
+          raytrace_max_range: 8.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 8.0 #(default = 2.5)
+          obstacle_min_range: 0.0
+        cam2:
+          topic: /cam2/zed_node/point_cloud/cloud_registered
+          max_obstacle_height: 1.5
+          min_obstacle_height: 0.02
+          clearing: True
+          marking: True
+          data_type: "PointCloud2"
+          raytrace_max_range: 8.0  #(default = 3.0)
+          raytrace_min_range: 0.0
+          obstacle_max_range: 8.0 #(default = 2.5)
           obstacle_min_range: 0.0
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
@@ -269,7 +336,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.5
+        inflation_radius: 0.7
       always_send_full_costmap: True
 
 map_server:

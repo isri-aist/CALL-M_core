@@ -188,12 +188,15 @@ This section is used as a TO DO list of features that still need to be implement
 | Label | Detail | Location of interest | Status |
 | :-- | :--: | :--: | --: |
 | Update CALLM model in simulation | The current model dosen't contains UR5 arm and ultrasonic sensors | robot_ws_ros2/ src/ call_m_supervisor/description/ bot/ | To do |
-| Change control axis | Currently sending a positive speed on X axis correspond to a Y axis motion, other controls are also not mapped correctly, the correction to do is just a rotation transformation on the speed vector in the drivers of the TriOrb, but this transformation should also be inversly applied to the Odometry sent by the Triorb | robot_ws_ros2/ src/ call_m_hardware/ call_m_triorb_ros2/ call_m_triorb_ros2/ triorb_v2.py | To do |
 | Allow namespace configuration at launch | Currently everything is running without a namespace, so it is impossible to launch several simulations or real robots on the same network. One of the branch on the github (['namespace_control_update_tentative'](https://github.com/Noceo200/CALL-M_core/tree/namespace_control_upgrade_tentative?tab=readme-ov-file)) is already trying to solve that | Launch files parameters | Paused |
 | Allow to set up configs file at launch | It would be convenient to allow any user to specify different configurations files to use instead of the defaults ones. The files paths would be given directly in the launch command as it is currently with the parameter 'nav_mode' for example | Launch files parameters | To do |
-| Change NAV2 behavior tree | Currently NAV2 is still using its own controller to try to send commands to the robot on the topic /cmd_vel, but this computing is useless as we are now using the vector field controller. So NAV2 behavior tree should only be computing path planning using the costmaps as an infinite way, without processing any controllers. | robot_ws_ros2/ src/ call_m_nav2/ | To do |
+| Change NAV2 behavior tree | Currently NAV2 is still using its own controller, but this computing is useless if we decide of using the vector field controller inside NAV2 loops (currently both can be used independantly). So NAV2 behavior tree should only be computing path planning using the costmaps as an infinite way, without processing any controllers. | robot_ws_ros2/ src/ call_m_nav2/ | To do |
 
 # CHANGES LOG
+
+## 2024/10/02
+### Add New API with vector field controller
+* Vector Field controller added to the workspace for assisted teleoperation and point following.
 
 ## 2024/08/03
 ### Change topic names

@@ -15,7 +15,7 @@ vector_field_controller_node:
     robot_frame: "base_link"
     map_frame: "map"
     control_type: "omni" #(only omni available for now) controller type 'diff' (differential) or 'omni' (omnidirectionnal)
-    max_spd_norm: 0.8 #used for repulsive, attractive and final commands clamping, the output command will not have a norm higher than this value
+    max_spd_norm: 0.4 #used for repulsive, attractive and final commands clamping, the output command will not have a norm higher than this value
     zero_padding_radius: 0.01 #define minimal norm of speeds commands to be receive on 'input_cmd_topic' before to apply it. (allows to avoid sending too small values as command to the hardware)
 
     #linear attractivity

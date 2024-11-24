@@ -25,7 +25,7 @@ vector_field_controller_node:
 
     #exponential repulsivity
     #check formulas to avoid INFINITY values 'kr_height*(exp(kr_slope*(kr_dist-x)))'' : https://www.desmos.com/calculator
-    kr_dist: 0.8 #repulsivity coefficient, specify the radius around the point before the effect start to exponentially disapear, can be negative
+    kr_dist: 0.4 #repulsivity coefficient, specify the radius around the point before the effect start to exponentially disapear, can be negative
     kr_height: 1.0 #linearly mutiply the repulsive forces
     kr_slope: 30.0 #modify the curve, how abrupt it is to lose effect
 

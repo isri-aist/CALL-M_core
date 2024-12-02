@@ -13,10 +13,10 @@
 	branch = ros2
 [submodule "robot_ws_ros2/src/included_external_packages/multi-laserscan-toolbox-ros2"]
 	path = robot_ws_ros2/src/included_external_packages/multi-laserscan-toolbox-ros2
-	url = git@github.com:Noceo200/multi-laserscan-toolbox-ros2.git
+	url = https://github.com/Noceo200/multi-laserscan-toolbox-ros2.git
 [submodule "robot_ws_ros2/src/included_external_packages/depth-filter-scan-converter"]
 	path = robot_ws_ros2/src/included_external_packages/depth-filter-scan-converter
-	url = git@github.com:Noceo200/depth-filter-scan-converter.git
+	url = https://github.com/Noceo200/depth-filter-scan-converter.git
 [submodule "robot_ws_ros2/src/included_external_packages/DynamixelSDK"]
 	path = robot_ws_ros2/src/included_external_packages/DynamixelSDK
 	url = https://github.com/ROBOTIS-GIT/DynamixelSDK.git
@@ -26,7 +26,7 @@
 	url = https://github.com/TriOrb-Inc/triorb-core.git
 [submodule "robot_ws_ros2/src/included_external_packages/zed-ros2-wrapper"]
 	path = robot_ws_ros2/src/included_external_packages/zed-ros2-wrapper
-	url = git@github.com:stereolabs/zed-ros2-wrapper.git
+	url = https://github.com/stereolabs/zed-ros2-wrapper.git
 	branch = master
 [submodule "robot_ws_ros2/src/included_external_packages/ros2-vector-field-controller"]
 	path = robot_ws_ros2/src/included_external_packages/ros2-vector-field-controller

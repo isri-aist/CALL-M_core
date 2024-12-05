@@ -1,0 +1,13 @@
+# Goal
+int32 position
+int32 speed
+int32 force
+
+---
+# Result
+bool success
+int32 final_position
+
+---
+# Feedback
+string status

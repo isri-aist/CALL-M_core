@@ -1,0 +1,5 @@
+# Request definition for RemoveCollisionObject service
+string object_id   # The ID of the collision object to remove
+---
+# Response definition
+bool success        # True if the object was successfully removed

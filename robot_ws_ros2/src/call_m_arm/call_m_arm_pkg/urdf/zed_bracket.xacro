@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="zed_bracket">
+
+  <!-- Bracket link -->
+  <xacro:macro name="zed_bracket" params="parent_link bracket_x bracket_y bracket_z bracket_roll bracket_pitch bracket_yaw">
+    <link name="bracket_link">
+      <visual>
+        <origin xyz="${bracket_x} ${bracket_y} ${bracket_z}" 
+                rpy="${bracket_roll} ${bracket_pitch} ${bracket_yaw}"/>
+        <geometry>
+          <mesh filename="package://call_m_arm_pkg/urdf/resources/zed_mini_eef.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="bracket_material">
+          <color rgba="0.5 0.5 0.5 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="${bracket_x} ${bracket_y} ${bracket_z}" 
+                rpy="${bracket_roll} ${bracket_pitch} ${bracket_yaw}"/>
+        <geometry>
+          <mesh filename="package://call_m_arm_pkg/urdf/resources/zed_mini_eef.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Joint connecting the bracket to the specified parent link -->
+    <joint name="bracket_joint" type="fixed">
+      <parent link="${parent_link}"/>
+      <child link="bracket_link"/>
+      <origin xyz="${bracket_x} ${bracket_y} ${bracket_z}" 
+              rpy="${bracket_roll} ${bracket_pitch} ${bracket_yaw}"/>
+    </joint>
+  </xacro:macro>
+
+</robot>

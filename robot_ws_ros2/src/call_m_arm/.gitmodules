@@ -1,0 +1,16 @@
+[submodule "ros2_robotiq_gripper"]
+	path = ros2_robotiq_gripper
+	url = https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
+	branch = humble
+[submodule "serial"]
+	path = serial
+	url = https://github.com/tylerjw/serial.git
+	branch = ros2
+[submodule "gpd"]
+	path = gpd
+	url = https://github.com/Deivideich/gpd.git
+	branch = master
+[submodule "gpd_ros2"]
+	path = gpd_ros2
+	url = https://github.com/Deivideich/gpd_ros2.git
+	branch = master

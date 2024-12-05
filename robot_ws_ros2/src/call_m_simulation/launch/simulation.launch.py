@@ -9,10 +9,10 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='call_m_simulation').find('call_m_simulation')
-    warehouse_dir = get_package_share_directory('aws_robomaker_small_warehouse_world')
+    #warehouse_dir = get_package_share_directory('aws_robomaker_small_warehouse_world')
     # Specify the name of the package and path to xacro file within the package
     #world_model_path = os.path.join(pkg_share, 'description/world/warehouse.world')
-    world_model_path = os.path.join(pkg_share, 'description/world/warehouse_actors.world')
+    #world_model_path = os.path.join(pkg_share, 'description/world/warehouse_actors.world')
     #world_model_path = os.path.join(pkg_share, 'description/world/warehouse_holes.world')
     #world_model_path = os.path.join(pkg_share,'description/world/simple_world.sdf')
 
@@ -73,9 +73,8 @@ def generate_launch_description():
                     '--verbose',
                     '-s', 'libgazebo_ros_init.so',
                     '-s', 'libgazebo_ros_factory.so',
-                    world_model_path,
+                    #world_model_path,
                 ],
-                cwd=[warehouse_dir],
                 output='screen')
 
     #if not delayed, we may have the error 'controller_manager' don't exist at start of the simulation.

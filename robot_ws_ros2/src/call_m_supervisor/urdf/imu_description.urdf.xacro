@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <robot name="bot" xmlns:xacro="http://ros.org/wiki/xacro">
 
-	<!-- THIS FILE NEED TO BE INCLUDED IN 'bot_description.urdf.xacro' -->
 
     <link name="imu_link">
     <visual>
@@ -65,7 +64,6 @@
             </z>
         </angular_velocity>
         <linear_acceleration>
-        <!--If values are noisy: https://answers.gazebosim.org//question/810/is-it-possible-to-reduce-inertial-sensor-noise-by-adjusting-gazebo-parameters/-->
             <x>
             <noise type="gaussian">
                 <mean>0.0</mean>

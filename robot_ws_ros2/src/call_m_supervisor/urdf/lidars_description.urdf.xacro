@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<robot name="bot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<!-- THIS FILE NEED TO BE INCLUDED IN 'bot_description.urdf.xacro' -->
+
+	<!--2 LIDAR-->
+	<xacro:macro name="lidar" params="prefix x y alpha">
+		<link name="${prefix}_link">
+			<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.125"/>
+			<inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+			</inertial>
+
+			<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.0508" length="${0.05}"/>
+			</geometry>
+			</collision>
+
+			<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.0508" length="${0.1}"/>
+			</geometry>
+			</visual>
+		</link>
+
+		<joint name="${prefix}_joint" type="fixed">
+			<parent link="base_link"/>
+			<child link="${prefix}_link"/>
+			<origin xyz="${x} ${y} ${square1_height/2+0.1/2}" rpy="0 0 ${alpha}"/>
+		</joint>
+			
+		<gazebo reference="${prefix}_link">
+		    <!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
+    		<!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
+        	<material>Gazebo/Orange</material>
+			<sensor name="${prefix}" type="ray">	<!--use "gpu_ray" instead of "ray" only when having a dedicated gpu--> 
+			<!--<pose>0 0 0.0225 0 0 0</pose> (seems to be ignored)-->
+			<always_on>true</always_on>
+			<visualize>true</visualize>
+			<update_rate>10.0</update_rate>
+			<ray>
+				<scan>
+				<horizontal>
+					<samples>360</samples>
+					<resolution>1.000000</resolution>
+					<min_angle>3.14159265359</min_angle> <!-- Set to π for 180 degrees  = to simulate RPlidars (We need to shift all values according to rpLidars)-->
+					<max_angle>${6.28318530718+3.14159265359}</max_angle> <!-- Set to 3π for keeping 360 degres range -->
+				</horizontal>
+				</scan>
+				<range>
+				<min>0.07</min>
+				<max>12.0</max>
+				<resolution>0.015000</resolution>
+				</range>
+				<noise>
+				<type>gaussian</type>
+				<mean>0.0</mean>
+				<stddev>0.01</stddev>
+				</noise>
+			</ray>
+			<plugin name="${prefix}_scan" filename="libgazebo_ros_ray_sensor.so">
+				<ros>
+				<remapping>~/out:=${prefix}/scan</remapping>
+				</ros>
+				<output_type>sensor_msgs/LaserScan</output_type>
+				<frame_name>${prefix}_link</frame_name>
+			</plugin>
+			</sensor>
+		</gazebo>
+	</xacro:macro>
+
+	<xacro:lidar prefix="lidar2" x="${-((square1_length/2)-0.0508)}" y="${-((square1_length/2)-0.0508)}" alpha="${pi/4}" />
+	<xacro:lidar prefix="lidar1" x="${(square1_length/2)-0.0508}" y="${(square1_length/2)-0.0508}" alpha="${-3*pi/4}" />
+
+</robot>

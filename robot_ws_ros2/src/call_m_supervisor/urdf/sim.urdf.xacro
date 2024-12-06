@@ -10,7 +10,7 @@
    <xacro:arg name="ur_type" default="ur5e"/>
 
    <!-- parameters -->
-   <xacro:arg name="tf_prefix" default="" />
+   <xacro:arg name="tf_prefix" default="/ur5e/" />
    <xacro:arg name="joint_limit_params" default="$(find ur_description)/config/$(arg ur_type)/joint_limits.yaml"/>
    <xacro:arg name="kinematics_params" default="$(find ur_description)/config/$(arg ur_type)/default_kinematics.yaml"/>
    <xacro:arg name="physical_params" default="$(find ur_description)/config/$(arg ur_type)/physical_parameters.yaml"/>
@@ -133,8 +133,6 @@
 
    <xacro:if value="$(arg sim_gazebo)">
     <!-- Gazebo plugins -->
-    <gazebo reference="box-link">
-    </gazebo>
     <gazebo>
       <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
         <parameters>$(arg simulation_controllers)</parameters>
@@ -155,7 +153,7 @@
   </xacro:if>
 
 <xacro:include filename="$(find call_m_arm_pkg)/urdf/fake_gripper.xacro"/>
-<xacro:fake_gripper parent_link="tool0" gripper_x="0" gripper_y="0" gripper_z="0.0" gripper_roll="0" gripper_pitch="0" gripper_yaw="1.57"/>
+<xacro:fake_gripper parent_link="$(arg tf_prefix)tool0" gripper_x="0" gripper_y="0" gripper_z="0.0" gripper_roll="0" gripper_pitch="0" gripper_yaw="1.57"/>
 
   <link name="zed_eef_link">
     <visual>
@@ -179,7 +177,7 @@
 
   <!-- Joint connecting the bracket to the specified parent link -->
   <joint name="zed_eef_joint" type="fixed">
-    <parent link="tool0"/>
+    <parent link="$(arg tf_prefix)tool0"/>
     <child link="zed_eef_link"/>
     <origin rpy="0.785 0 1.57" xyz="-0.08 0 0"/>
   </joint>

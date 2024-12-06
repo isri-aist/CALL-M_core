@@ -31,7 +31,7 @@ ament_target_dependencies(clock_sync_node rclcpp rosgraph_msgs)
 
 # Install directories
 install(
-  DIRECTORY src launch description config
+  DIRECTORY src launch description config urdf
   DESTINATION share/${PROJECT_NAME}
 )
 

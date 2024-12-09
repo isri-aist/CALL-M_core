@@ -8,7 +8,7 @@
 #    https://www.universal-robots.com/articles/ur-articles/max-joint-torques
 #    retrieved: 2020-06-16, last modified: 2020-06-09
 joint_limits:
-  ur5e/shoulder_pan_joint:
+  shoulder_pan_joint:
     # acceleration limits are not publicly available
     has_acceleration_limits: false
     has_effort_limits: true
@@ -18,7 +18,7 @@ joint_limits:
     max_position: !degrees  360.0
     max_velocity: !degrees  180.0
     min_position: !degrees -360.0
-  ur5e/shoulder_lift_joint:
+  shoulder_lift_joint:
     # acceleration limits are not publicly available
     has_acceleration_limits: false
     has_effort_limits: true
@@ -28,7 +28,7 @@ joint_limits:
     max_position: !degrees  360.0
     max_velocity: !degrees  180.0
     min_position: !degrees -360.0
-  ur5e/elbow_joint:
+  elbow_joint:
     # acceleration limits are not publicly available
     has_acceleration_limits: false
     has_effort_limits: true
@@ -48,7 +48,7 @@ joint_limits:
     max_position: !degrees  180.0
     max_velocity: !degrees  180.0
     min_position: !degrees -180.0
-  ur5e/wrist_1_joint:
+  wrist_1_joint:
     # acceleration limits are not publicly available
     has_acceleration_limits: false
     has_effort_limits: true
@@ -58,7 +58,7 @@ joint_limits:
     max_position: !degrees  360.0
     max_velocity: !degrees  180.0
     min_position: !degrees -360.0
-  ur5e/wrist_2_joint:
+  wrist_2_joint:
     # acceleration limits are not publicly available
     has_acceleration_limits: false
     has_effort_limits: true
@@ -68,7 +68,7 @@ joint_limits:
     max_position: !degrees  360.0
     max_velocity: !degrees  180.0
     min_position: !degrees -360.0
-  ur5e/wrist_3_joint:
+  wrist_3_joint:
     # acceleration limits are not publicly available
     has_acceleration_limits: false
     has_effort_limits: true

@@ -78,12 +78,12 @@ force_torque_sensor_broadcaster:
 joint_trajectory_controller:
   ros__parameters:
     joints:
-      - /ur5e/shoulder_pan_joint
-      - /ur5e/shoulder_lift_joint
-      - /ur5e/elbow_joint
-      - /ur5e/wrist_1_joint
-      - /ur5e/wrist_2_joint
-      - /ur5e/wrist_3_joint
+      - ur5e/shoulder_pan_joint
+      - ur5e/shoulder_lift_joint
+      - ur5e/elbow_joint
+      - ur5e/wrist_1_joint
+      - ur5e/wrist_2_joint
+      - ur5e/wrist_3_joint
     command_interfaces:
       - position
     state_interfaces:
@@ -95,22 +95,22 @@ joint_trajectory_controller:
     constraints:
       stopped_velocity_tolerance: 0.2
       goal_time: 0.0
-      /ur5e/shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/elbow_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/elbow_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
 
 scaled_joint_trajectory_controller:
   ros__parameters:
     joints:
-      - /ur5e/shoulder_pan_joint
-      - /ur5e/shoulder_lift_joint
-      - /ur5e/elbow_joint
-      - /ur5e/wrist_1_joint
-      - /ur5e/wrist_2_joint
-      - /ur5e/wrist_3_joint
+      - ur5e/shoulder_pan_joint
+      - ur5e/shoulder_lift_joint
+      - ur5e/elbow_joint
+      - ur5e/wrist_1_joint
+      - ur5e/wrist_2_joint
+      - ur5e/wrist_3_joint
     command_interfaces:
       - position
     state_interfaces:
@@ -122,30 +122,30 @@ scaled_joint_trajectory_controller:
     constraints:
       stopped_velocity_tolerance: 0.2
       goal_time: 0.0
-      /ur5e/shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/elbow_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
-      /ur5e/wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/elbow_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
+      ur5e/wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
 
 forward_velocity_controller:
   ros__parameters:
     joints:
-      - /ur5e/shoulder_pan_joint
-      - /ur5e/shoulder_lift_joint
-      - /ur5e/elbow_joint
-      - /ur5e/wrist_1_joint
-      - /ur5e/wrist_2_joint
-      - /ur5e/wrist_3_joint
+      - ur5e/shoulder_pan_joint
+      - ur5e/shoulder_lift_joint
+      - ur5e/elbow_joint
+      - ur5e/wrist_1_joint
+      - ur5e/wrist_2_joint
+      - ur5e/wrist_3_joint
     interface_name: velocity
 
 forward_position_controller:
   ros__parameters:
     joints:
-      - /ur5e/shoulder_pan_joint
-      - /ur5e/shoulder_lift_joint
-      - /ur5e/elbow_joint
-      - /ur5e/wrist_1_joint
-      - /ur5e/wrist_2_joint
-      - /ur5e/wrist_3_joint
+      - ur5e/shoulder_pan_joint
+      - ur5e/shoulder_lift_joint
+      - ur5e/elbow_joint
+      - ur5e/wrist_1_joint
+      - ur5e/wrist_2_joint
+      - ur5e/wrist_3_joint

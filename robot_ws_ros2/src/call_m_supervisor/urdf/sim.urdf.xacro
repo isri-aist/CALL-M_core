@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="call_m_arm">
+	<link name="world">
+		
+	</link>
 
+	<joint name="world-base_link" type="fixed">
+		<parent link="world"/>
+		<child link="base_link"/>
+		<origin xyz="0.0 -1.0 0.2" rpy="0.0 0.0 0.0"/>
+	</joint>
+	
   	<!-- Define robot constants -->
 	<!-- If changed, check also 'simu_bot_driver.cpp' for publish_command() -->
 	<!-- If need to change orientation, just change wheels, see wheels positions below + check lidars posiions and orientation in 'lidars_description.urdf.xacro'-->
@@ -270,7 +279,7 @@
    <xacro:arg name="ur_type" default="ur5e"/>
 
    <!-- parameters -->
-   <xacro:arg name="tf_prefix" default="/ur5e/" />
+   <xacro:arg name="tf_prefix" default="ur5e/" />
    <xacro:arg name="joint_limit_params" default="$(find ur_description)/config/$(arg ur_type)/joint_limits.yaml"/>
    <xacro:arg name="kinematics_params" default="$(find ur_description)/config/$(arg ur_type)/default_kinematics.yaml"/>
    <xacro:arg name="physical_params" default="$(find ur_description)/config/$(arg ur_type)/physical_parameters.yaml"/>

@@ -1,10 +1,10 @@
 moveit_setup_assistant_config:
   urdf:
-    package: call_m_arm_pkg
-    relative_path: urdf/dummy.urdf.xacro
+    package: call_m_supervisor
+    relative_path: urdf/sim.urdf.xacro
   srdf:
     relative_path: config/call_m_arm.srdf
   package_settings:
     author_name: david
-    author_email: david@david.david
-    generated_timestamp: 1730428770
+    author_email: david@hotmail.com
+    generated_timestamp: 1733729374

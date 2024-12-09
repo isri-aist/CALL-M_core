@@ -3,14 +3,8 @@
 	<link name="world">
 		
 	</link>
-
-	<joint name="world-base_link" type="fixed">
-		<parent link="world"/>
-		<child link="base_link"/>
-		<origin xyz="0.0 -1.0 0.2" rpy="0.0 0.0 0.0"/>
-	</joint>
-	
-  	<!-- Define robot constants -->
+  	<!-- De
+	fine robot constants -->
 	<!-- If changed, check also 'simu_bot_driver.cpp' for publish_command() -->
 	<!-- If need to change orientation, just change wheels, see wheels positions below + check lidars posiions and orientation in 'lidars_description.urdf.xacro'-->
 	<xacro:property name="square1_length" value="0.48"/>
@@ -76,6 +70,13 @@
 		</collision>
 		<xacro:box_inertia m="15" w="${square1_length}" d="${square1_length}" h="${square1_height}"/>
 	</link>
+
+		<joint name="world-base_link" type="fixed">
+		<parent link="world"/>
+		<child link="base_link"/>
+		<origin xyz="0.0 -1.0 0.2" rpy="0.0 0.0 0.0"/>
+	</joint>
+	
 
 	<!-- Others Robot structures -->
 	<link name="base2_link">

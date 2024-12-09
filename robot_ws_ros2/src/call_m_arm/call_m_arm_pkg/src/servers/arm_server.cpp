@@ -29,7 +29,7 @@ public:
     : rclcpp::Node("robot_control", options),
       node_(std::make_shared<rclcpp::Node>("move_group_interface",
                 rclcpp::NodeOptions().parameter_overrides({rclcpp::Parameter("use_sim_time", true)}))),
-      move_group_interface_(node_, "ur_manipulator"),
+      move_group_interface_(node_, "ur5e/ur_manipulator"),
       executor_(std::make_shared<rclcpp::executors::SingleThreadedExecutor>()) {
         move_group_interface_.setPoseReferenceFrame("base");
     
@@ -184,7 +184,7 @@ private:
     std::shared_ptr<call_m_custom_msgs::srv::GetJointValues::Response> response){
           // Retrieve the current joint values from MoveIt
         std::vector<double> joint_values;
-        move_group_interface_.getCurrentState()->copyJointGroupPositions(move_group_interface_.getCurrentState()->getRobotModel()->getJointModelGroup("ur_manipulator"), joint_values);
+        move_group_interface_.getCurrentState()->copyJointGroupPositions(move_group_interface_.getCurrentState()->getRobotModel()->getJointModelGroup("ur5e/ur_manipulator"), joint_values);
 
         // Fill the response with the joint values
         response->joints = joint_values;

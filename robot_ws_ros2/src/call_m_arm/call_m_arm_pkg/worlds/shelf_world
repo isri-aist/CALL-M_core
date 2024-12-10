@@ -1,0 +1,453 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>3262 1000000</sim_time>
+      <real_time>94 590287101</real_time>
+      <wall_time>1733792884 790136052</wall_time>
+      <iterations>93230</iterations>
+      <model name='four_level_shelf'>
+        <pose>0.909058 -0.82138 0.01 -1e-06 -0 -1.57744</pose>
+        <scale>1 1 1</scale>
+        <link name='base'>
+          <pose>0.909058 -0.82138 0.01 -1e-06 -0 -1.57744</pose>
+          <velocity>-2e-06 1e-06 0.000624 0.001158 7.2e-05 -3.4e-05</velocity>
+          <acceleration>-0.161702 -0.077676 1.09476 2.24061 -1.02224 -0.040623</acceleration>
+          <wrench>-0.161702 -0.077676 1.09476 0 -0 0</wrench>
+        </link>
+        <link name='level_1'>
+          <pose>0.909059 -0.821379 0.46 -1e-06 -0 -1.57744</pose>
+          <velocity>-4e-06 -0.00039 0.000619 0.001149 5.8e-05 -0.000149</velocity>
+          <acceleration>-0.614666 -0.931461 1.0916 2.22352 -1.01773 -0.133737</acceleration>
+          <wrench>-0.614666 -0.931461 1.0916 0 -0 0</wrench>
+        </link>
+        <link name='level_2'>
+          <pose>0.90906 -0.821379 0.86 -1e-06 -0 -1.57744</pose>
+          <velocity>1e-06 -0.000836 0.000615 0.001142 4.6e-05 -0.000158</velocity>
+          <acceleration>-1.01493 -1.79427 1.08832 2.20978 -1.01464 -0.141508</acceleration>
+          <wrench>-1.01493 -1.79427 1.08832 0 -0 0</wrench>
+        </link>
+        <link name='level_3'>
+          <pose>0.90906 -0.821379 1.26 -2e-06 -0 -1.57744</pose>
+          <velocity>6e-06 -0.001282 0.000612 0.001136 3.8e-05 -0.000166</velocity>
+          <acceleration>-1.41558 -2.65749 1.08518 2.19984 -1.01273 -0.147989</acceleration>
+          <wrench>-1.41558 -2.65749 1.08518 0 -0 0</wrench>
+        </link>
+        <link name='level_4'>
+          <pose>0.909061 -0.821379 1.66 -2e-06 -0 -1.57744</pose>
+          <velocity>1.1e-05 -0.001728 0.00061 0.001132 3.3e-05 -0.000172</velocity>
+          <acceleration>-1.81706 -3.52261 1.08247 2.19336 -1.01179 -0.153018</acceleration>
+          <wrench>-1.81706 -3.52261 1.08247 0 -0 0</wrench>
+        </link>
+        <link name='vertical_supports'>
+          <pose>1.10786 -0.823491 0.825 -2.1e-05 -0 -1.58065</pose>
+          <velocity>-0.003415 3.4e-05 -4.1e-05 -4.1e-05 -0.00414 0</velocity>
+          <acceleration>-0.048003 0.000473 -0.000595 -0.000574 -0.058186 1e-06</acceleration>
+          <wrench>-0.048003 0.000473 -0.000595 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-2.25408 -3.42362 3.50013 0 0.607645 0.721021</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='four_level_shelf'>
+      <pose>0 0 0.5 0 -0 0</pose>
+      <link name='base'>
+        <collision name='base_collision'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_visual'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='level_1'>
+        <pose>0 0 0.45 0 -0 0</pose>
+        <collision name='level_1_collision'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='level_1_visual'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='level_2'>
+        <pose>0 0 0.85 0 -0 0</pose>
+        <collision name='level_2_collision'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='level_2_visual'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='level_3'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <collision name='level_3_collision'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='level_3_visual'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='level_4'>
+        <pose>0 0 1.65 0 -0 0</pose>
+        <collision name='level_4_collision'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='level_4_visual'>
+          <geometry>
+            <box>
+              <size>1 0.4 0.02</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='vertical_supports'>
+        <pose>0 0.2 0 0 -0 0</pose>
+        <collision name='vertical_supports_collision'>
+          <geometry>
+            <box>
+              <size>1 0.02 1.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='vertical_supports_visual'>
+          <geometry>
+            <box>
+              <size>1 0.02 1.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='support_to_base' type='fixed'>
+        <parent>__default__</parent>
+        <child>__default__</child>
+        <origin xyz='0.0 0.0 0.0' rpy='0.0 0.0 0.0'/>
+      </joint>
+      <joint name='base_to_level_1' type='fixed'>
+        <parent>base</parent>
+        <child>level_1</child>
+      </joint>
+      <joint name='level_1_to_level_2' type='fixed'>
+        <parent>level_1</parent>
+        <child>level_2</child>
+      </joint>
+      <joint name='level_2_to_level_3' type='fixed'>
+        <parent>level_2</parent>
+        <child>level_3</child>
+      </joint>
+      <joint name='level_3_to_level_4' type='fixed'>
+        <parent>level_3</parent>
+        <child>level_4</child>
+      </joint>
+    </model>
+  </world>
+</sdf>

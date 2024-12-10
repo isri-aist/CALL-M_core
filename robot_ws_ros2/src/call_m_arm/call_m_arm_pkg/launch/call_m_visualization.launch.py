@@ -12,10 +12,10 @@ import os
 def generate_launch_description():
     # Find package and file paths
     pkg_share = launch_ros.substitutions.FindPackageShare(
-        package="call_m_arm_pkg"
-    ).find("call_m_arm_pkg")
+        package="call_m_supervisor"
+    ).find("call_m_supervisor")
     default_model_path = os.path.join(
-        pkg_share, "urdf", "ur_robotiq.xacro"
+        pkg_share, "urdf", "sim.urdf.xacro"
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz", "view_urdf.rviz")
 

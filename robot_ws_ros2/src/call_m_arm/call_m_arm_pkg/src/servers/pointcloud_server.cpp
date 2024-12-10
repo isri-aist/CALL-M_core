@@ -70,13 +70,13 @@ private:
         geometry_msgs::msg::TransformStamped transform_stamped;
         try {
             transform_stamped = tf_buffer_->lookupTransform(
-                "base",                // Target frame
+                "ur5e/base",                // Target frame
                 msg->header.frame_id,  // Source frame
                 rclcpp::Time(0),       // Get the latest transform
                 rclcpp::Duration::from_seconds(1.0)
             );
         } catch (tf2::TransformException &ex) {
-            RCLCPP_WARN(this->get_logger(), "Transform error from %s to base: %s", msg->header.frame_id.c_str(), ex.what());
+            RCLCPP_WARN(this->get_logger(), "Transform error from %s to ur5e/base: %s", msg->header.frame_id.c_str(), ex.what());
             return;
         }
 

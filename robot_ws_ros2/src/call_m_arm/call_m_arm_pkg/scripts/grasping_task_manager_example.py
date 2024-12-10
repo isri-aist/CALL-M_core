@@ -14,7 +14,7 @@ ARM_STAND_UP_BACK_POSE = [float(x) for x in [0, -1.57, 0, 0, 0, 3.14]]
 ARM_STAND_UP_LEFT_POSE = [float(x) for x in [1.5708, -1.57, 0, 0, 0, 3.14]]
 ARM_STAND_UP_FRONT_POSE = [float(x) for x in [3.14159, -1.57, 0, 0, 0, 3.14]]
 ARM_STAND_UP_RIGHT_POSE = [float(x) for x in [4.71239, -1.57, 0, 0, 0, 3.14]]
-ARM_OBJECT_VIEW_POSE = [float(x) for x in [0, -0.628319, 1.76278, -3.57792, -1.5708, -1.5708]]
+ARM_OBJECT_VIEW_POSE = [float(x) for x in [1.41372, -1.74533, 2.26893, -0.174533, 1.43117, 1.5708]]
 GRIPPER_DISTANCE = 0.12
 
 class ArmServer(Node):
@@ -47,7 +47,7 @@ class ArmServer(Node):
     def wait_for_services(self):
         if self.use_sim:
             services = [
-                ('arn_move_to_pose', self.arm_move_to_pose_client),
+                ('arm_move_to_pose', self.arm_move_to_pose_client),
                 ('arm_move_to_joints', self.arm_move_to_joints_client),
                 ('arm_move_cartesian', self.arm_move_cartesian_client),
                 ('detect_grasps', self.grasp_detection_client),
@@ -60,7 +60,7 @@ class ArmServer(Node):
             ]
         else:
             services = [
-                ('arn_move_to_pose', self.arm_move_to_pose_client),
+                ('arm_move_to_pose', self.arm_move_to_pose_client),
                 ('arm_move_to_joints', self.arm_move_to_joints_client),
                 ('arm_move_cartesian', self.arm_move_cartesian_client),
                 ('detect_grasps', self.grasp_detection_client),
@@ -397,7 +397,7 @@ class ArmServer(Node):
 
 def cartesian_demo(arm_server):
     arm_server.get_logger().info('Starting simple demo...')
-    # arm_server.scan_environment()
+    #arm_server.scan_environment()
     if arm_server.send_move_to_joints_request(ARM_OBJECT_VIEW_POSE):
         current_pose = arm_server.get_end_effector_pose()
         
@@ -463,7 +463,7 @@ def cartesian_demo(arm_server):
                     #arm_server.send_gripper_command_request(True)
                     time.sleep(5)
                     arm_server.send_move_to_joints_request(ARM_OBJECT_VIEW_POSE)
-                    arm_server.send_remove_object_collision_object_request("temporary_collision_object")
+                    #arm_server.send_remove_object_collision_object_request("temporary_collision_object")
                     #arm_server.send_gripper_command_request(False)
 
 def joint_demo(arm_server):

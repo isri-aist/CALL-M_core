@@ -31,7 +31,7 @@ public:
                 rclcpp::NodeOptions().parameter_overrides({rclcpp::Parameter("use_sim_time", true)}))),
       move_group_interface_(node_, "ur5e/ur_manipulator"),
       executor_(std::make_shared<rclcpp::executors::SingleThreadedExecutor>()) {
-        move_group_interface_.setPoseReferenceFrame("base");
+        move_group_interface_.setPoseReferenceFrame("ur5e/base");
     
         // Create the services
         arm_move_to_pose_service_ = this->create_service<call_m_custom_msgs::srv::ArmMoveToPose>(
@@ -204,7 +204,7 @@ private:
         // Create a CollisionObject
         moveit_msgs::msg::CollisionObject collision_object;
         collision_object.id = request->object_id;
-        collision_object.header.frame_id = "base";
+        collision_object.header.frame_id = "ur5e/base";
 
         // Define the shape of the object as a box with specified dimensions
         shape_msgs::msg::SolidPrimitive primitive;
@@ -268,7 +268,7 @@ private:
         // Wait for the transform from 'base' to 'tool0'
         geometry_msgs::msg::TransformStamped transform_stamped;
         transform_stamped = tf_buffer.lookupTransform(
-            "base", "tool0", tf2::TimePointZero, std::chrono::seconds(1)
+            "ur5e/base", "ur5e/tool0", tf2::TimePointZero, std::chrono::seconds(1)
         );
 
         // Extract position and orientation

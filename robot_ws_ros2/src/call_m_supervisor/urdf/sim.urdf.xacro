@@ -71,12 +71,11 @@
 		<xacro:box_inertia m="15" w="${square1_length}" d="${square1_length}" h="${square1_height}"/>
 	</link>
 
-		<joint name="world-base_link" type="fixed">
+	<joint name="world-base_link" type="fixed">
 		<parent link="world"/>
 		<child link="base_link"/>
 		<origin xyz="0.0 -1.0 0.2" rpy="0.0 0.0 0.0"/>
 	</joint>
-	
 
 	<!-- Others Robot structures -->
 	<link name="base2_link">
@@ -362,13 +361,11 @@
      script_sender_port="$(arg script_sender_port)"
      trajectory_port="$(arg trajectory_port)"
      >
-     <origin xyz="0.14 0 0.32" rpy="0 0 1.57" />          <!-- position robot in the world -->
+     <origin xyz="0.0 0 0.44" rpy="0 0 1.57" />          <!-- position robot in the world -->
    </xacro:ur_robot>
 
 
 	<xacro:include filename="ros2_control.xacro"/>
-
-
 
 <xacro:include filename="$(find call_m_arm_pkg)/urdf/fake_gripper.xacro"/>
 <xacro:fake_gripper parent_link="$(arg tf_prefix)tool0" gripper_x="0" gripper_y="0" gripper_z="0.0" gripper_roll="0" gripper_pitch="0" gripper_yaw="1.57"/>

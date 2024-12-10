@@ -177,7 +177,7 @@ def launch_setup(context, *args, **kwargs):
         launch_arguments={
             "gui": gazebo_gui,
             "world": PathJoinSubstitution(
-                [FindPackageShare("call_m_arm_pkg"), "worlds", "shelf_world"]
+                [FindPackageShare("call_m_arm_pkg"), "worlds", "table_can_world"]
             ),
         }.items(),
     )

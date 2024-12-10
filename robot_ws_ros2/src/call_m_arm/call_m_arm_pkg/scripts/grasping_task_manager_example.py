@@ -462,7 +462,13 @@ def cartesian_demo(arm_server):
                 if arm_server.send_cartesian_move_request(waypoints_):
                     #arm_server.send_gripper_command_request(True)
                     time.sleep(5)
-                    arm_server.send_move_to_joints_request(ARM_OBJECT_VIEW_POSE)
+                    reversed_waypoints = copy.deepcopy(waypoints_)
+                    reversed_waypoints.poses.reverse()  # Reverse the poses
+                    
+                    if arm_server.send_cartesian_move_request(reversed_waypoints):
+                        arm_server.get_logger().info('Returned to the initial position.')
+
+                    #arm_server.send_move_to_joints_request(ARM_OBJECT_VIEW_POSE)
                     #arm_server.send_remove_object_collision_object_request("temporary_collision_object")
                     #arm_server.send_gripper_command_request(False)
 

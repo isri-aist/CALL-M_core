@@ -240,6 +240,7 @@ class TriOrb(LifecycleNode):
 
         self.vx,self.vy,self.vw = new_speed_array.flatten()
 
+        # self._vehicle.set_vel_relative(self.vx, self.vy, self.vw, acc=2000, dec=2000) #PArameters to work with acceleration
         self._vehicle.set_vel_relative(self.vx, self.vy, self.vw)
         self._watchdog.reset()
         return

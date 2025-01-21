@@ -354,5 +354,43 @@
      <origin xyz="0 0 0.44" rpy="0 0 0" />          <!-- position robot in the world -->
    </xacro:ur_robot>
 
+	<!--Addition of bracket-->
+	<xacro:include filename="$(find call_m_arm_pkg)/urdf/zed_bracket.xacro"/>
 
+	<!-- Call the bracket Xacro with specified arguments -->
+	<xacro:zed_bracket
+		parent_link="$(arg tf_prefix)tool0"           
+		bracket_x="0.0"                   
+		bracket_y="0.0"                  
+		bracket_z="0.0"                    
+		bracket_roll="0.785"                
+		bracket_pitch="0.0"              
+		bracket_yaw="0.0" />  
+	<!--==================================================-->
+
+	<!--Addition of auxiliary link to correct the orientation of the robotiq adaptor -->
+	<link name="auxiliar_bracket_link"/>
+
+	<joint name="auxiliar_bracket_link_to_ur_adaptor" type="fixed">
+		<parent link="bracket_link"/>
+		<child link="auxiliar_bracket_link"/>
+		<origin xyz="0.0 0.007 0" rpy="-0.785 0.0 0."/> <!-- Placeholder transform -->
+	</joint> 
+	<!-- =================================================-->
+	
+	<!-- Addition of Robotiq Gripper Adaptor to the bracket frame-->
+	
+	<xacro:include filename="$(find robotiq_description)/urdf/ur_to_robotiq_adapter.urdf.xacro"/>
+	
+	<xacro:ur_to_robotiq prefix="ur_" parent="auxiliar_bracket_link" child="gripper_link" rotation="1.57"/>       
+	
+	<!--===================================================-->
+	
+	<!--Addition of Robotiq Gripper to the end effector-->
+	<xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_85_macro.urdf.xacro" />
+	
+	<xacro:robotiq_gripper name="RobotiqGripperHardwareInterface" prefix="" parent="gripper_link" use_fake_hardware="false" sim_ignition="false" include_ros2_control="false">
+		<origin xyz="0 0 0" rpy="0.0 0 1.57" />
+	</xacro:robotiq_gripper>
+	<!--==================================================-->
 </robot>

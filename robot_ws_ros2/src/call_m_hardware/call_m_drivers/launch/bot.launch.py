@@ -72,6 +72,12 @@ def run_launch_with_parameters(context):
     if(not check_args(version,mode)):
         return
 
+    if(version == "NUC" and mode=="ARM"):
+        return [
+            bot_control_driver(),
+            camera_control_driver_node(),
+        ] + lid_nodes() + ultr_nodes()
+
     if(version == "NUC" and mode=="API"):
         return [
             joint_state_publisher_node,
@@ -121,7 +127,7 @@ def check_args(version,mode):
     if(version not in check_version):
         print("ERROR: version: Unknow parameter: ",version)
         return False 
-    check_mode = ["DRIVERS","API"]
+    check_mode = ["DRIVERS","API","ARM"]
     if(mode not in check_mode):
         print("ERROR: mode: Unknow parameter: ",mode)
         return False   

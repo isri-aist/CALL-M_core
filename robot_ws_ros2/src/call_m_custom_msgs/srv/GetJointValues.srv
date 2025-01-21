@@ -1,0 +1,7 @@
+# GetJointValues.srv
+
+# Request (leave empty since no data is needed to get the arm joints)
+
+---
+# Response: joint values
+float64[] joints

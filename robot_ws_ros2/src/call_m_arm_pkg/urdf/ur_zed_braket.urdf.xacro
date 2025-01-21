@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="simple_robot">
+
+    <!-- Parameters -->
+    <xacro:property name="base_length" value="1.0" />
+    <xacro:property name="arm_length" value="0.5" />
+    <xacro:property name="link_radius" value="0.05" />
+
+    <!-- Base link -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder length="${base_length}" radius="${link_radius}" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 1 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${base_length}" radius="${link_radius}" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Joint 1 (Revolute) -->
+    <joint name="joint1" type="revolute">
+        <parent link="base_link" />
+        <child link="link1" />
+        <origin xyz="0 0 ${base_length / 2}" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0" />
+    </joint>
+
+    <!-- Link 1 -->
+    <link name="link1">
+        <visual>
+            <geometry>
+                <cylinder length="${arm_length}" radius="${link_radius}" />
+            </geometry>
+            <material name="green">
+                <color rgba="0 1 0 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${arm_length}" radius="${link_radius}" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Joint 2 (Fixed) -->
+    <joint name="joint2" type="fixed">
+        <parent link="link1" />
+        <child link="end_effector" />
+        <origin xyz="0 0 ${arm_length / 2}" rpy="0 0 0" />
+    </joint>
+
+    <!-- End Effector -->
+    <link name="end_effector">
+        <visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+</robot>

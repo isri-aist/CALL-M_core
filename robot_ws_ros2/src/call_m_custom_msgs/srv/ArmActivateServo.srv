@@ -1,0 +1,4 @@
+#Nothing needed since this is a empty service
+bool activate
+---
+bool success

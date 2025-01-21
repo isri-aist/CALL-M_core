@@ -1,0 +1,5 @@
+#Path to save the pointcloud and pointcloud topic
+string path 
+string topic
+---
+bool success

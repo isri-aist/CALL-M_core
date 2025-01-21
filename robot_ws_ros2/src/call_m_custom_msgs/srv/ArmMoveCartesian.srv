@@ -1,0 +1,4 @@
+geometry_msgs/PoseArray waypoints
+float64 time
+---
+bool success

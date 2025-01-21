@@ -124,7 +124,7 @@
 
   <!-- Call the bracket Xacro with specified arguments -->
   <xacro:zed_bracket
-      parent_link="/ur5e/tool0"           
+      parent_link="$(arg tf_prefix)tool0"           
       bracket_x="0.0"                   
       bracket_y="0.0"                  
       bracket_z="0.0"                    

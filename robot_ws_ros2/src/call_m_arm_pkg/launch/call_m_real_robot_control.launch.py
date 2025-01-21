@@ -481,7 +481,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_package_real",
-            default_value="call_m_arm_pkg",
+            default_value="call_m_supervisor",
             description="Description package with robot URDF/XACRO files. Usually the argument "
             "is not set, it enables use of a custom description.",
         )
@@ -489,7 +489,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_file_real",
-            default_value="ur_robotiq.xacro",
+            default_value="bot_description_w_arm.urdf.xacro",
             description="URDF/XACRO description file with the robot.",
         )
     )

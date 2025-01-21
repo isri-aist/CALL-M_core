@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+
+<robot name="bot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<!-- Define robot constants -->
+	<!-- If changed, check also 'simu_bot_driver.cpp' for publish_command() -->
+	<!-- If need to change orientation, just change wheels, see wheels positions below + check lidars posiions and orientation in 'lidars_description.urdf.xacro'-->
+	<xacro:property name="square1_length" value="0.48"/>
+	<xacro:property name="square1_height" value="0.03"/> 
+	<xacro:property name="square2_length" value="0.277"/>
+	<xacro:property name="square2_height" value="0.072"/> 
+	<xacro:property name="square3_height" value="0.36"/>
+	<xacro:property name="support1_width" value="0.26"/>
+	<xacro:property name="support2_height" value="0.33"/>
+
+	<xacro:property name="wheels_radius" value="0.05"/> 
+	<xacro:property name="triangle_lenght" value="0.32"/> <!-- Side's Triangle length-->
+	<xacro:property name="wheels_distance" value="${sqrt(((3*(triangle_lenght**4))/16)+((triangle_lenght**2)/4))}"/> <!-- Radius between origin and wheels-->
+	<xacro:property name="wheels_zoffset" value="0.03"/>
+
+	<!-- Define some commonly used intertial properties  -->
+	<xacro:macro name="box_inertia" params="m w h d">
+		<inertial>
+		<origin xyz="0 0 0" rpy="${pi/2} 0 ${pi/2}"/>      
+		<mass value="${m}"/>
+		<inertia ixx="${(m/12) * (h*h + d*d)}" ixy="0.0" ixz="0.0" iyy="${(m/12) * (w*w + d*d)}" iyz="0.0" izz="${(m/12) * (w*w + h*h)}"/>
+		</inertial>
+	</xacro:macro>
+
+	<xacro:macro name="cylinder_inertia" params="m r h">
+		<inertial>
+		<origin xyz="0 0 0" rpy="${pi/2} 0 0" />      
+		<mass value="${m}"/>
+		<inertia ixx="${(m/12) * (3*r*r + h*h)}" ixy = "0" ixz = "0" iyy="${(m/12) * (3*r*r + h*h)}" iyz = "0" izz="${(m/2) * (r*r)}"/> 
+		</inertial>
+	</xacro:macro>
+
+	<xacro:macro name="sphere_inertia" params="m r">
+		<inertial>
+		<mass value="${m}"/>
+		<inertia ixx="${(2/5) * m * (r*r)}" ixy="0.0" ixz="0.0" iyy="${(2/5) * m * (r*r)}" iyz="0.0" izz="${(2/5) * m * (r*r)}"/>
+		</inertial>
+	</xacro:macro>
+
+	<link name="base_link">
+		<visual>
+		<geometry>
+			<box size="${square1_length} ${square1_length} ${square1_height}"/>
+		</geometry>
+		<material name="Cyan">
+			<color rgba="0 1.0 1.0 1.0"/>
+		</material>
+		</visual>
+		<collision>
+		<geometry>
+			<box size="${square1_length} ${square1_length} ${square1_height}"/>
+		</geometry>
+		</collision>
+		<xacro:box_inertia m="15" w="${square1_length}" d="${square1_length}" h="${square1_height}"/>
+	</link>
+
+	<!-- Others Robot structures -->
+	<link name="base2_link">
+		<visual>
+		<geometry>
+			<box size="${square2_length} ${square2_length} ${square2_height}"/>
+		</geometry>
+		<material name="Cyan">
+			<color rgba="0 1.0 1.0 1.0"/>
+		</material>
+		</visual>
+		<collision>
+		<geometry>
+			<box size="${square2_length} ${square2_length} ${square2_height*0.8}"/>
+		</geometry>
+		</collision>
+		<xacro:box_inertia m="0.5" w="${square2_length}" d="${square2_length}" h="${square2_height}"/>
+	</link>
+	<joint name="base2_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="base2_link"/>
+		<origin xyz="0.0 0.0 ${(square1_height/2)+(square2_height/2)}" rpy="0 0 0"/>
+	</joint>
+
+	<link name="support1_link">
+		<visual>
+		<geometry>
+			<box size="${square1_length} ${support1_width} ${square1_height}"/>
+		</geometry>
+		<material name="Cyan">
+			<color rgba="0 1.0 1.0 1.0"/>
+		</material>
+		</visual>
+		<collision>
+		<geometry>
+			<box size="${square1_length} ${support1_width} ${square1_height}"/>
+		</geometry>
+		</collision>
+		<xacro:box_inertia m="0.5" w="${square1_length}" d="${support1_width}" h="${square1_height}"/>
+	</link>
+	<joint name="support1_joint" type="fixed">
+		<parent link="base3_link"/>
+		<child link="support1_link"/>
+		<origin xyz="0.0 ${square1_length/2 + support1_width/2} ${square1_height/2 - square3_height/2}" rpy="0 0 0"/>
+	</joint>
+
+	<link name="support2_link">
+		<visual>
+		<geometry>
+			<box size="${square1_length} ${square1_height} ${support2_height}"/>
+		</geometry>
+		<material name="Cyan">
+			<color rgba="0 1.0 1.0 1.0"/>
+		</material>
+		</visual>
+		<collision>
+		<geometry>
+			<box size="${square1_length} ${square1_height} ${support2_height}"/>
+		</geometry>
+		</collision>
+		<xacro:box_inertia m="0.5" w="${square1_length}" d="${square1_height}" h="${support2_height}"/>
+	</link>
+	<joint name="support2_joint" type="fixed">
+		<parent link="support1_link"/>
+		<child link="support2_link"/>
+		<origin xyz="0.0 ${support1_width/2 - square1_height/2} ${support2_height/2 + square1_height/2}" rpy="0 0 0"/>
+	</joint>
+
+	<link name="base3_link">
+		<visual>
+		<geometry>
+			<box size="${square1_length} ${square1_length} ${square3_height}"/>
+		</geometry>
+		<material name="Cyan">
+			<color rgba="0 1.0 1.0 1.0"/>
+		</material>
+		</visual>
+		<collision>
+		<geometry>
+			<box size="${square1_length} ${square1_length} ${square3_height}"/>
+		</geometry>
+		</collision>
+		<xacro:box_inertia m="0.5" w="${square1_length}" d="${square1_length}" h="${square3_height}"/>
+	</link>
+	<joint name="base3_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="base3_link"/>
+		<origin xyz="0.0 0.0 ${(square1_height/2)+square2_height+(square3_height/2)}" rpy="0 0 0"/>
+	</joint>
+
+	<link name="base4_link">
+		<visual>
+		<geometry>
+			<box size="${square1_length/4} ${square1_length/30} ${0.04}"/>
+		</geometry>
+		<material name="Green">
+			<color rgba="1.0 0.0 1.0 1.0"/>
+		</material>
+		</visual>
+	</link>
+	<joint name="base4_joint" type="fixed">
+		<parent link="base3_link"/>
+		<child link="base4_link"/>
+		<origin xyz="${square1_length/2-square1_length/4} 0.0 ${(square3_height/2)+0.02}" rpy="0 0 0"/>
+	</joint>
+
+	<!-- Robot Footprint-->
+	<link name="base_footprint">
+		<xacro:box_inertia m="0" w="0" d="0" h="0"/>
+	</link>
+
+	<joint name="base_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="base_footprint"/>
+		<origin xyz="0.0 0.0 ${-(wheels_radius*2+wheels_zoffset+square1_height/2)}" rpy="0 0 0"/>
+	</joint>
+
+	  <!-- 3 Wheels and there support to simulate sphere joint -->
+	<xacro:macro name="wheel" params="prefix angle type">
+
+		<!--wheel support-->
+		<link name="${prefix}_sup_link">
+		<visual>
+			<geometry>
+				<cylinder radius="${wheels_radius}" length="${wheels_zoffset}"/>
+			</geometry>
+			<material name="Gray">
+			<color rgba="0.5 0.5 0.5 1.0"/>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+			<cylinder radius="${wheels_radius}" length="${wheels_zoffset/2}"/>
+			</geometry>
+		</collision>
+		<xacro:cylinder_inertia m="2" r="${wheels_radius}" h="${wheels_zoffset}"/>
+		</link>
+		<joint name="${prefix}_sup_joint" type="continuous">
+			<parent link="base_link"/>
+			<child link="${prefix}_sup_link"/>
+			<origin xyz="${wheels_distance*cos(angle)} ${wheels_distance*sin(angle)} ${-((wheels_zoffset/2)+(square1_height/2))}" rpy="0 0 0"/>
+			<axis xyz="0 0 1"/>
+
+		</joint>
+
+		<!--wheel-->
+		<link name="${prefix}_link">
+		<visual>
+			<geometry>
+				<sphere radius="${wheels_radius}"/>
+			</geometry>
+			<material name="Gray">
+			<color rgba="0.5 0.5 0.5 1.0"/>
+			</material>
+		</visual>
+		<xacro:if value="${type == 'sphere'}">
+			<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<sphere radius="${wheels_radius}"/>
+			</geometry>
+			</collision>
+			<xacro:sphere_inertia m="0.5" r="${wheels_radius}"/>
+		</xacro:if>
+		<xacro:if value="${type == 'cylinder'}">
+			<collision>
+			<origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+			<geometry>
+				<cylinder radius="${wheels_radius}" length="${wheels_radius*2}"/>
+			</geometry>
+			</collision>
+			<xacro:cylinder_inertia m="0.5" r="${wheels_radius}" h="${wheels_radius*2}"/>
+		</xacro:if>
+		</link>
+		<joint name="${prefix}_joint" type="continuous">
+			<parent link="${prefix}_sup_link"/>
+			<child link="${prefix}_link"/>
+			<origin xyz="0.0 0.0 ${-wheels_radius-wheels_zoffset/2}" rpy="0 0 0"/>
+			<axis xyz="0 1 0"/>
+		</joint>
+	</xacro:macro>
+
+			<xacro:wheel prefix="wheel_2" angle="${pi}" type="sphere" />
+	<xacro:wheel prefix="wheel_3" angle="${(2*pi/3)+pi}" type="sphere" />
+	<xacro:wheel prefix="wheel_1" angle="${(-2*pi/3)+pi}" type="sphere" />
+	<xacro:include filename="lidars_description.urdf.xacro"/>
+	<xacro:include filename="cameras_description_former.urdf.xacro"/>
+	<xacro:include filename="imu_description.urdf.xacro"/>
+	<xacro:include filename="gazebo_template.urdf.xacro"/>
+
+	<gazebo reference="base4_link">
+		<material>Gazebo/Purple</material>
+	</gazebo>
+
+	<!--Keep this at the end, Used as debug, whrn changing the color we can know if the model loaded by gazebo is really this one or a previous working version.if the color of base2_link match the color specified on Gazebo, then everything worked correctly-->
+	<gazebo reference="base2_link">
+		<material>Gazebo/Green</material>
+	</gazebo>
+	
+   <!-- robot name parameter -->
+   <xacro:arg name="name" default="ur"/>
+   <!-- import main macro -->
+   <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
+
+   <!-- possible 'ur_type' values: ur3, ur3e, ur5, ur5e, ur10, ur10e, ur16e, ur20, ur30 -->
+   <!-- the default value should raise an error in case this was called without defining the type -->
+   <xacro:arg name="ur_type" default="ur5e"/>
+
+   <!-- parameters -->
+   <xacro:arg name="tf_prefix" default="" />
+   <xacro:arg name="joint_limit_params" default="$(find ur_description)/config/$(arg ur_type)/joint_limits.yaml"/>
+   <xacro:arg name="kinematics_params" default="$(find ur_description)/config/$(arg ur_type)/default_kinematics.yaml"/>
+   <xacro:arg name="physical_params" default="$(find ur_description)/config/$(arg ur_type)/physical_parameters.yaml"/>
+   <xacro:arg name="visual_params" default="$(find ur_description)/config/$(arg ur_type)/visual_parameters.yaml"/>
+   <xacro:arg name="transmission_hw_interface" default=""/>
+   <xacro:arg name="safety_limits" default="false"/>
+   <xacro:arg name="safety_pos_margin" default="0.15"/>
+   <xacro:arg name="safety_k_position" default="20"/>
+   <!-- ros2_control related parameters -->
+   <xacro:arg name="headless_mode" default="false" />
+   <xacro:arg name="robot_ip" default="0.0.0.0" />
+   <xacro:arg name="script_filename" default=""/>
+   <xacro:arg name="output_recipe_filename" default=""/>
+   <xacro:arg name="input_recipe_filename" default=""/>
+   <xacro:arg name="reverse_ip" default="0.0.0.0"/>
+   <xacro:arg name="script_command_port" default="50004"/>
+   <xacro:arg name="reverse_port" default="50001"/>
+   <xacro:arg name="script_sender_port" default="50002"/>
+   <xacro:arg name="trajectory_port" default="50003"/>
+   <!--   tool communication related parameters-->
+   <xacro:arg name="use_tool_communication" default="false" />
+   <xacro:arg name="tool_voltage" default="0" />
+   <xacro:arg name="tool_parity" default="0" />
+   <xacro:arg name="tool_baud_rate" default="115200" />
+   <xacro:arg name="tool_stop_bits" default="1" />
+   <xacro:arg name="tool_rx_idle_chars" default="1.5" />
+   <xacro:arg name="tool_tx_idle_chars" default="3.5" />
+   <xacro:arg name="tool_device_name" default="/tmp/ttyUR" />
+   <xacro:arg name="tool_tcp_port" default="54321" />
+
+     <!-- Simulation parameters -->
+   <xacro:arg name="use_fake_hardware" default="false" />
+   <xacro:arg name="fake_sensor_commands" default="false" />
+   <xacro:arg name="sim_gazebo" default="false" />
+   <xacro:arg name="sim_ignition" default="false" />
+   <xacro:arg name="simulation_controllers" default="" />
+
+   <!-- initial position for simulations (Fake Hardware, Gazebo, Ignition) -->
+   <xacro:arg name="initial_positions_file" default="$(find ur_description)/config/initial_positions.yaml"/>
+
+   <!-- convert to property to use substitution in function -->
+   <xacro:property name="initial_positions_file" default="$(arg initial_positions_file)"/>
+   <xacro:property name="is_sim_gazebo" value="$(arg sim_gazebo)"/>
+   <xacro:property name="is_sim_ignition" value="$(arg sim_ignition)"/>
+
+   <!-- arm -->
+   <xacro:ur_robot
+     name="$(arg name)"
+     tf_prefix="$(arg tf_prefix)"
+     parent="base_link"
+     joint_limits_parameters_file="$(arg joint_limit_params)"
+     kinematics_parameters_file="$(arg kinematics_params)"
+     physical_parameters_file="$(arg physical_params)"
+     visual_parameters_file="$(arg visual_params)"
+     transmission_hw_interface="$(arg transmission_hw_interface)"
+     safety_limits="$(arg safety_limits)"
+     safety_pos_margin="$(arg safety_pos_margin)"
+     safety_k_position="$(arg safety_k_position)"
+     use_fake_hardware="$(arg use_fake_hardware)"
+     fake_sensor_commands="$(arg fake_sensor_commands)"
+     sim_gazebo="$(arg sim_gazebo)"
+     sim_ignition="$(arg sim_ignition)"
+     headless_mode="$(arg headless_mode)"
+     initial_positions="${xacro.load_yaml(initial_positions_file)}"
+     use_tool_communication="$(arg use_tool_communication)"
+     tool_voltage="$(arg tool_voltage)"
+     tool_parity="$(arg tool_parity)"
+     tool_baud_rate="$(arg tool_baud_rate)"
+     tool_stop_bits="$(arg tool_stop_bits)"
+     tool_rx_idle_chars="$(arg tool_rx_idle_chars)"
+     tool_tx_idle_chars="$(arg tool_tx_idle_chars)"
+     tool_device_name="$(arg tool_device_name)"
+     tool_tcp_port="$(arg tool_tcp_port)"
+     robot_ip="$(arg robot_ip)"
+     script_filename="$(arg script_filename)"
+     output_recipe_filename="$(arg output_recipe_filename)"
+     input_recipe_filename="$(arg input_recipe_filename)"
+     reverse_ip="$(arg reverse_ip)"
+     script_command_port="$(arg script_command_port)"
+     reverse_port="$(arg reverse_port)"
+     script_sender_port="$(arg script_sender_port)"
+     trajectory_port="$(arg trajectory_port)"
+     >
+     <origin xyz="0 0 0.44" rpy="0 0 0" />          <!-- position robot in the world -->
+   </xacro:ur_robot>
+
+
+</robot>

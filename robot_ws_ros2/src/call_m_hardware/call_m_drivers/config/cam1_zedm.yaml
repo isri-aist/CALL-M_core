@@ -179,6 +179,5 @@
             debug_body_tracking: false
             debug_roi: false
             debug_streaming: false
-            debug_advanced: false            debug_advanced: false
             debug_advanced: false
             

@@ -10,7 +10,7 @@ def generate_launch_description():
     """
     DIRECTORIES
     """
-    dir_nav2 = get_package_share_directory('call_m_nav2')
+    #dir_nav2 = get_package_share_directory('call_m_nav2')
     dir_slam = get_package_share_directory('call_m_start_all')
 
     """
@@ -39,13 +39,15 @@ def generate_launch_description():
 
     declare_param_nav_mode = DeclareLaunchArgument(
         'nav_mode',
-        default_value=os.path.join(dir_nav2, 'config', 'nav2_params_omni.yaml'),
+        #default_value=os.path.join(dir_nav2, 'config', 'nav2_params_omni.yaml'),
+        default_value='default',
         description='Navigation mode: NAV2 configuration file.'
     )
 
     declare_param_map_loc = DeclareLaunchArgument(
         'map_loc',
-        default_value=os.path.join(dir_nav2, 'maps', 'JRL_LAB2.yaml'),
+        #default_value=os.path.join(dir_nav2, 'maps', 'JRL_LAB2.yaml'),
+        default_value='default',
         description='Map: yaml file of known map to navigate in. (used only if nav_type = localize)'
     )
 
@@ -80,6 +82,14 @@ def run_launch_with_parameters(context):
     nav_mode = context.launch_configurations['nav_mode']
     map_loc = context.launch_configurations['map_loc']
     slam_param = context.launch_configurations['slam_param']
+
+    # Conditional loading of nav2 directory
+    if version != "JETSON":
+        dir_nav2 = get_package_share_directory('call_m_nav2')
+        if nav_mode == "default":
+            nav_mode = os.path.join(dir_nav2, 'config', 'nav2_params_omni.yaml')
+        if map_loc == "default":
+            map_loc = os.path.join(dir_nav2, 'maps', 'JRL_LAB2.yaml')
 
     if(not check_args(version,mode,nav_type,nav_mode,map_loc,slam_param)):
         return
@@ -158,16 +168,25 @@ def check_args(version,mode,nav_type,nav_mode,map_loc,slam_param):
     check_nav_type = ["none","on_fly","localize"]
     if(nav_type not in check_nav_type):
         print("ERROR: nav_type: Unknow parameter: ",nav_type)
-        return False      
+        return False
+    """      
     if(not os.path.isfile(nav_mode)):
         print("ERROR: nav_mode: Couldn't find: ",nav_mode)
         return False
     if(not os.path.isfile(map_loc)):
         print("ERROR: map_loc: Couldn't find: ",map_loc)
         return False
-    if(not os.path.isfile(slam_param)):
-        print("ERROR: slam_param: Couldn't find: ",slam_param)
-        return False
+    """
+    if version != "JETSON":
+        if nav_mode == "default" or not os.path.isfile(nav_mode):
+            print("ERROR: nav_mode: Couldn't find: ",nav_mode)
+            return False
+        if map_loc == "default" or not os.path.isfile(map_loc):
+            print("ERROR: map_loc: Couldn't find: ",map_loc)
+            return False
+        if(not os.path.isfile(slam_param)):
+            print("ERROR: slam_param: Couldn't find: ",slam_param)
+            return False
     
     feedback = f"""
     LOADED PARAMETERS:

@@ -304,12 +304,12 @@ local_costmap:
       height: 4 #(default = 3.0)
       resolution: 0.05
       robot_radius: 0.5050 #0.36
-      # footprint: "[[0.2425,0.5025],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.5025]]"
+      footprint: "[[0.2425,0.5025],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.5025]]"
       plugins: ["obstacle_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.7
+        inflation_radius: 0.65
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -380,7 +380,7 @@ global_costmap:
       robot_base_frame: base_link
       use_sim_time: True
       robot_radius: 0.5050 #we keep circle footprint for global planning, because as it omnidirectionnal, the robot should be able to manage with its shap locally
-      # footprint: "[[0.2425,0.5025],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.5025]]"
+      footprint: "[[0.2425,0.5025],[0.2425,-0.2425],[-0.2425,-0.2425],[-0.2425,0.5025]]"
       resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
